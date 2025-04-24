@@ -1,0 +1,37 @@
+// order 1
+@import  "bootstrap/dist/css/bootstrap.min.css";
+
+// order 2
+@import "elegant-icon";
+@import "animate";
+
+// order 3
+@import "variables";
+@import "predefine";
+@import "button";
+@import "header";
+@import "banner";
+@import "features";
+@import "video";
+@import "tag";
+@import "testimonial";
+@import "keyframe";
+@import "doclist";
+@import "status-chart";
+@import "related-communities";
+@import "journalism";
+@import "community";
+@import "community-posts";
+@import "shortcode";
+@import "typography";
+@import "forum";
+@import "forum-single";
+@import "blog";
+@import "signup";
+@import "contact";
+@import "error";
+@import "body_dark";
+@import "footer";
+
+// order 4
+@import "responsive";
