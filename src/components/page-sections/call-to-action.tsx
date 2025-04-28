@@ -19,7 +19,7 @@ export default function CallToAction() {
                             </div>
                         </div>
                         <div className="col-lg-3 wow fadeInRight">
-                            <a href="#" className="action_btn">
+                            <a href="" className="action_btn">
                                 View All Docs <i className="arrow_right"></i>
                             </a>
                         </div>

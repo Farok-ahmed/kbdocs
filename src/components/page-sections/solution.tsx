@@ -20,7 +20,7 @@ export default function Solution() {
                                 Horse play barmy Oxford bonnet are you taking
                                 the piss cheeky mufty nice one young delinquent.
                             </p>
-                            <a href="#" className="learn_btn c_blue">
+                            <a href="" className="learn_btn c_blue">
                                 Go To Documentation
                                 <i className="arrow_right"></i>
                             </a>
@@ -37,7 +37,7 @@ export default function Solution() {
                                 Horse play barmy Oxford bonnet are you taking
                                 the piss cheeky mufty nice one young delinquent.
                             </p>
-                            <a href="#" className="learn_btn c_blue">
+                            <a href="" className="learn_btn c_blue">
                                 Go To Documentation
                                 <i className="arrow_right"></i>
                             </a>
@@ -46,7 +46,7 @@ export default function Solution() {
                 </div>
                 <div className="text-center">
                     <a
-                        href="#"
+                        href=""
                         className="doc_border_btn all_doc_btn wow fadeInUp"
                         data-wow-delay="0.6s"
                     >

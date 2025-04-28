@@ -17,7 +17,7 @@ export default function ThemeDoc() {
                         <div className="media theme_doc_item wow fadeInUp">
                             <img src="img/home_two/cloud1.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">
                                         Grow Your Business
                                     </h4>
@@ -36,7 +36,7 @@ export default function ThemeDoc() {
                         >
                             <img src="img/home_two/Lock_is_open.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">Knowledge Base</h4>
                                 </a>
                                 <p>
@@ -53,7 +53,7 @@ export default function ThemeDoc() {
                         >
                             <img src="img/home_two/Support.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">Online Support</h4>
                                 </a>
                                 <p>
@@ -67,7 +67,7 @@ export default function ThemeDoc() {
                         <div className="media theme_doc_item wow fadeInUp">
                             <img src="img/home_two/usser.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">
                                         Account Management
                                     </h4>
@@ -86,7 +86,7 @@ export default function ThemeDoc() {
                         >
                             <img src="img/home_two/pencil.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">
                                         Formatting Content
                                     </h4>
@@ -105,7 +105,7 @@ export default function ThemeDoc() {
                         >
                             <img src="img/home_two/Channel.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">Great Products</h4>
                                 </a>
                                 <p>
@@ -119,7 +119,7 @@ export default function ThemeDoc() {
                         <div className="media theme_doc_item wow fadeInUp">
                             <img src="img/home_two/Duplicate.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">Documentation</h4>
                                 </a>
                                 <p>
@@ -136,7 +136,7 @@ export default function ThemeDoc() {
                         >
                             <img src="img/home_two/Bell.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">
                                         Dedicated Widgets
                                     </h4>
@@ -155,7 +155,7 @@ export default function ThemeDoc() {
                         >
                             <img src="img/home_two/Tune-up.png" alt="" />
                             <div className="media-body">
-                                <a href="#">
+                                <a href="">
                                     <h4 className="c_head">
                                         Working with Docs
                                     </h4>

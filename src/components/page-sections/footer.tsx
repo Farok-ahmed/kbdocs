@@ -1,5 +1,8 @@
 "use client";
 
+import { pages } from "@/utils/pages";
+import Link from "next/link";
+
 export default function Footer() {
     return (
         <footer className="footer_area footer_p_top f_bg_color">
@@ -36,9 +39,9 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-lg-4 col-sm-6">
                             <div className="f_widget subscribe_widget wow fadeInUp">
-                                <a href="index.html" className="f_logo">
+                                <Link href="" className="f_logo">
                                     <img src="img/logo.png" alt="" />
-                                </a>
+                                </Link>
                                 <h4 className="c_head">
                                     Subscribe to our newsletter
                                 </h4>
@@ -57,24 +60,24 @@ export default function Footer() {
                                 </form>
                                 <ul className="list-unstyled f_social_icon">
                                     <li>
-                                        <a href="#">
+                                        <Link href="">
                                             <i className="social_facebook"></i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="">
                                             <i className="social_twitter"></i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="">
                                             <i className="social_vimeo"></i>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="">
                                             <i className="social_linkedin"></i>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -87,25 +90,25 @@ export default function Footer() {
                                 <h3 className="f_title">Company</h3>
                                 <ul className="list-unstyled link_list">
                                     <li>
-                                        <a href="#">About Us</a>
+                                        <Link href="">About Us</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Testimonials</a>
+                                        <Link href="">Testimonials</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Affiliates</a>
+                                        <Link href="">Affiliates</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Partners</a>
+                                        <Link href="">Partners</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Careers</a>
+                                        <Link href="">Careers</Link>
                                     </li>
                                     <li>
-                                        <a href="#">KbDoc for Good</a>
+                                        <Link href="">KbDoc for Good</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Contact Us</a>
+                                        <Link href="">Contact Us</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -118,25 +121,27 @@ export default function Footer() {
                                 <h3 className="f_title">Support</h3>
                                 <ul className="list-unstyled link_list">
                                     <li>
-                                        <a href="index-cool.html">Help Desk</a>
+                                        <Link href={pages.helpDesk}>
+                                            Help Desk
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">Knowledge Base</a>
+                                        <Link href="">Knowledge Base</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Live Chat</a>
+                                        <Link href="">Live Chat</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Integrations</a>
+                                        <Link href="">Integrations</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Reports</a>
+                                        <Link href="">Reports</Link>
                                     </li>
                                     <li>
-                                        <a href="#">iOS & Android</a>
+                                        <Link href="">iOS & Android</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Messages</a>
+                                        <Link href="">Messages</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -149,27 +154,31 @@ export default function Footer() {
                                 <h3 className="f_title">Doc Pages</h3>
                                 <ul className="list-unstyled link_list">
                                     <li>
-                                        <a href="doclist.html">Doc Topic</a>
+                                        <Link href="/doclist">Doc Topic</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Free Training</a>
+                                        <Link href="">Free Training</Link>
                                     </li>
                                     <li>
-                                        <a href="doc-archive.html">
+                                        <Link href="/doc-archive">
                                             Doc Archive
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="changelog.html">Changelog</a>
+                                        <Link href="/changelog">Changelog</Link>
                                     </li>
                                     <li>
-                                        <a href="Onepage.html">Onepage Docs</a>
+                                        <Link href="/one-page">
+                                            Onepage Docs
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">Conversion Tracking</a>
+                                        <Link href="">Conversion Tracking</Link>
                                     </li>
                                     <li>
-                                        <a href="cheatsheet.html">Cheatseet</a>
+                                        <Link href="/cheat-sheet">
+                                            Cheat Sheet
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -181,8 +190,8 @@ export default function Footer() {
             <div className="footer_bottom text-center">
                 <div className="container">
                     <p>
-                        © 2020 All Rights Reserved by{" "}
-                        <a href="index.html">KbDoc</a>
+                        © {new Date().getFullYear()} All Rights Reserved by{" "}
+                        <Link href="/">KbDoc</Link>
                     </p>
                 </div>
             </div>

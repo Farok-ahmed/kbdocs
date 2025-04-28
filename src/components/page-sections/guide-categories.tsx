@@ -26,37 +26,37 @@ export default function () {
                             </div>
                             <ul className="list-unstyled tag_list">
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Setup home page layout
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         BBpress sidebar layout styles
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Knowledgebase page setup
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Creating home page blocks
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do i add FAQ post
                                     </a>
                                 </li>
                             </ul>
-                            <a href="#" className="doc_border_btn">
+                            <a href="" className="doc_border_btn">
                                 More<i className="arrow_right"></i>
                             </a>
                         </div>
@@ -72,37 +72,37 @@ export default function () {
                             </div>
                             <ul className="list-unstyled tag_list">
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How To Install Manual Theme
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Theme license information
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do i create tree structure menu
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do I login forum section
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do I login forum section
                                     </a>
                                 </li>
                             </ul>
-                            <a href="#" className="doc_border_btn">
+                            <a href="" className="doc_border_btn">
                                 More<i className="arrow_right"></i>
                             </a>
                         </div>
@@ -118,37 +118,37 @@ export default function () {
                             </div>
                             <ul className="list-unstyled tag_list">
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Mailbox and User Settings
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Preparing your server for installation
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Managing Docs in KbDoc
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do i add FAQ post
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Creating home page blocks
                                     </a>
                                 </li>
                             </ul>
-                            <a href="#" className="doc_border_btn">
+                            <a href="" className="doc_border_btn">
                                 More<i className="arrow_right"></i>
                             </a>
                         </div>
@@ -161,37 +161,37 @@ export default function () {
                             </div>
                             <ul className="list-unstyled tag_list">
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Do I need to know coding
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Managing Docs in KbDoc
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Working with Conversations
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Copying Email to KbDoc
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Knowledgebase page setup
                                     </a>
                                 </li>
                             </ul>
-                            <a href="#" className="doc_border_btn">
+                            <a href="" className="doc_border_btn">
                                 More<i className="arrow_right"></i>
                             </a>
                         </div>
@@ -207,37 +207,37 @@ export default function () {
                             </div>
                             <ul className="list-unstyled tag_list">
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Setup home page layout
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         BBpress sidebar layout styles
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Knowledgebase page setup
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Creating home page blocks
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do i add FAQ post
                                     </a>
                                 </li>
                             </ul>
-                            <a href="#" className="doc_border_btn">
+                            <a href="" className="doc_border_btn">
                                 More<i className="arrow_right"></i>
                             </a>
                         </div>
@@ -253,37 +253,37 @@ export default function () {
                             </div>
                             <ul className="list-unstyled tag_list">
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do I contact Customer Care?
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How to enable labs features
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Knowledgebase page setup
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         How do I login forum section
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="">
                                         <i className="icon_document_alt"></i>
                                         Mailbox and User Settings
                                     </a>
                                 </li>
                             </ul>
-                            <a href="#" className="doc_border_btn">
+                            <a href="" className="doc_border_btn">
                                 More<i className="arrow_right"></i>
                             </a>
                         </div>
@@ -291,7 +291,7 @@ export default function () {
                 </div>
                 <div className="text-center">
                     <a
-                        href="#"
+                        href=""
                         className="doc_border_btn all_doc_btn wow fadeinUp"
                     >
                         View All Docs<i className="arrow_right"></i>
