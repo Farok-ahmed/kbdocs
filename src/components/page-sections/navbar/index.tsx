@@ -11,8 +11,6 @@ import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
 
 export default function Navbar() {
-    const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [isScrollDown, setIsScrollDown] = useState<boolean>();
   const [isExpanded, setIsExpanded] = useState(false);
   const pathname = usePathname();
   const isHelpDesk = pathname === pages.helpDesk;
@@ -27,14 +25,14 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollTop =
-                window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollTop > lastScrollTop) setIsScrollDown(true);
-      else if (currentScrollTop < lastScrollTop) setIsScrollDown(false);
-      else setIsScrollDown(undefined);
+      if (currentScrollTop > lastScrollTop) {
+        setIsScrollDown(true);
+      } else if (currentScrollTop < lastScrollTop) {
+        setIsScrollDown(false);
+      } else {
+        setIsScrollDown(undefined);
+      }
 
       setLastScrollTop(currentScrollTop);
     };
@@ -45,6 +43,29 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
+
+  //   useEffect(() => {
+  //     const handleScroll = () => {
+  //       const currentScrollTop =
+  //         window.pageYOffset || document.documentElement.scrollTop;
+  //     useEffect(() => {
+  //         const handleScroll = () => {
+  //             const currentScrollTop =
+  //                 window.pageYOffset || document.documentElement.scrollTop;
+
+  //       if (currentScrollTop > lastScrollTop) setIsScrollDown(true);
+  //       else if (currentScrollTop < lastScrollTop) setIsScrollDown(false);
+  //       else setIsScrollDown(undefined);
+
+  //       setLastScrollTop(currentScrollTop);
+  //     };
+
+  //     window.addEventListener("scroll", handleScroll);
+
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll);
+  //     };
+  //   }, [lastScrollTop]);
 
   return (
     <>
@@ -231,7 +252,7 @@ export default function Navbar() {
                 <ul className="dropdown-menu dropdown_menu_two">
                   <li className="nav-item">
                     <Link href="/doc-archive" className="nav-link">
-                      <img src="img/tick.png" alt="" />
+                      <img src="/img/tick.png" alt="" />
                       <div className="text">
                         <h5>KbDoc</h5>
                         <p>Launch Simple Websites</p>
@@ -240,7 +261,7 @@ export default function Navbar() {
                   </li>
                   <li className="nav-item">
                     <Link href="/doclist" className="nav-link">
-                      <img src="img/sheet.png" alt="" />
+                      <img src="/img/sheet.png" alt="" />
                       <div className="text">
                         <h5>docall</h5>
                         <p>Digital Assets Subscription</p>
@@ -249,7 +270,7 @@ export default function Navbar() {
                   </li>
                   <li className="nav-item">
                     <Link href="/" className="nav-link">
-                      <img src="img/shopping-bag.png" alt="" />
+                      <img src="/img/shopping-bag.png" alt="" />
                       <div className="text">
                         <h5>Docenvato</h5>
                         <p>Tutorials & Courses</p>
@@ -258,7 +279,7 @@ export default function Navbar() {
                   </li>
                   <li className="nav-item">
                     <Link href="/" className="nav-link">
-                      <img src="img/gear.png" alt="" />
+                      <img src="/img/gear.png" alt="" />
                       <div className="text">
                         <h5>Tools</h5>
                         <p>Hire a Freelancer</p>

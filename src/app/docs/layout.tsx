@@ -4,8 +4,8 @@ import Navbar from "@/components/page-sections/navbar";
 import Link from "next/link";
 import { useState } from "react";
 import FontSwitcher from "./_components/font-switcher";
-import OSSelector from "./_components/os-selector";
 import ModeSwitcher from "./_components/mode-switcher";
+import OSSelector from "./_components/os-selector";
 import Search from "./_components/search";
 import Sidebar from "./_components/sidebar";
 
@@ -43,13 +43,13 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                             </button>
                             <Link className="sticky_logo" href="/">
                                 <img
-                                    src="img/logo-w.png"
-                                    srcSet="img/logo-w2x.png 2x"
+                                    src="/img/logo-w.png"
+                                    srcSet="/img/logo-w2x.png 2x"
                                     alt="logo"
                                 />
                                 <img
-                                    src="img/logo.png"
-                                    srcSet="img/logo-2x.png 2x"
+                                    src="/img/logo.png"
+                                    srcSet="/img/logo-2x.png 2x"
                                     alt="logo"
                                 />
                             </Link>
@@ -70,7 +70,7 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                         </div>
                         <div className="mobile_logo">
                             <Link href="">
-                                <img src="img/logo.png" alt="logo" />
+                                <img src="/img/logo.png" alt="logo" />
                             </Link>
                         </div>
                     </div>
@@ -406,7 +406,7 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                                                 className="nav-link"
                                             >
                                                 <img
-                                                    src="img/tick.png"
+                                                    src="/img/tick.png"
                                                     alt=""
                                                 />
                                                 <div className="text">
@@ -423,7 +423,7 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                                                 className="nav-link"
                                             >
                                                 <img
-                                                    src="img/sheet.png"
+                                                    src="/img/sheet.png"
                                                     alt=""
                                                 />
                                                 <div className="text">
@@ -438,7 +438,7 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                                         <li className="nav-item">
                                             <Link href="/" className="nav-link">
                                                 <img
-                                                    src="img/shopping-bag.png"
+                                                    src="/img/shopping-bag.png"
                                                     alt=""
                                                 />
                                                 <div className="text">
@@ -450,7 +450,7 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                                         <li className="nav-item">
                                             <Link href="/" className="nav-link">
                                                 <img
-                                                    src="img/gear.png"
+                                                    src="/img/gear.png"
                                                     alt=""
                                                 />
                                                 <div className="text">
@@ -511,38 +511,38 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                 <section className="breadcrumb_area">
                     <img
                         className="p_absolute bl_left"
-                        src="img/v.svg"
+                        src="/img/v.svg"
                         alt=""
                     />
                     <img
                         className="p_absolute bl_right"
-                        src="img/home_one/b_leaf.svg"
+                        src="/img/home_one/b_leaf.svg"
                         alt=""
                     />
                     <img
                         className="p_absolute star"
-                        src="img/home_one/banner_bg.png"
+                        src="/img/home_one/banner_bg.png"
                         alt=""
                     />
                     <img
                         className="p_absolute wave_shap_one"
-                        src="img/blog-classic/shap_01.png"
+                        src="/img/blog-classic/shap_01.png"
                         alt=""
                     />
                     <img
                         className="p_absolute wave_shap_two"
-                        src="img/blog-classic/shap_02.png"
+                        src="/img/blog-classic/shap_02.png"
                         alt=""
                     />
                     <img
                         className="p_absolute one wow fadeInRight"
-                        src="img/home_one/b_man_two.png"
+                        src="/img/home_one/b_man_two.png"
                         alt=""
                     />
                     <img
                         className="p_absolute two wow fadeInUp"
                         data-wow-delay="0.2s"
-                        src="img/home_one/flower.png"
+                        src="/img/home_one/flower.png"
                         alt=""
                     />
                     <Search />
@@ -642,7 +642,7 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
                 <footer className="simple_footer">
                     <img
                         className="leaf_right"
-                        src="img/home_one/leaf_footter.png"
+                        src="/img/home_one/leaf_footter.png"
                         alt=""
                     />
                     <div className="container">
