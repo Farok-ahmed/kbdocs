@@ -11,6 +11,8 @@ import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
 
 export default function Navbar() {
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [isScrollDown, setIsScrollDown] = useState<boolean>();
   const [isExpanded, setIsExpanded] = useState(false);
   const pathname = usePathname();
   const isHelpDesk = pathname === pages.helpDesk;
@@ -25,6 +27,10 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
 
       if (currentScrollTop > lastScrollTop) setIsScrollDown(true);
       else if (currentScrollTop < lastScrollTop) setIsScrollDown(false);
@@ -45,9 +51,9 @@ export default function Navbar() {
       <TopBar isHelpDesk={isHelpDesk} />
       <nav
         className={`navbar navbar-expand-lg navbar_fixed menu_two ${
-          isHelpDesk ? "mt-40" : ""
+          isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
         }`}
-        style={{ top: isScrollDown ? -100 : 0 }}
+        style={{ top: isScrollDown && lastScrollTop > 100 ? -100 : 0 }}
         id="sticky"
       >
         <div className="container">

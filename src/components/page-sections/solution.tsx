@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Solution() {
     return (
         <section className="doc_solution_area sec_pad">
@@ -20,10 +22,10 @@ export default function Solution() {
                                 Horse play barmy Oxford bonnet are you taking
                                 the piss cheeky mufty nice one young delinquent.
                             </p>
-                            <a href="" className="learn_btn c_blue">
+                            <Link href="" className="learn_btn c_blue">
                                 Go To Documentation
                                 <i className="arrow_right"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-sm-6">
@@ -37,21 +39,21 @@ export default function Solution() {
                                 Horse play barmy Oxford bonnet are you taking
                                 the piss cheeky mufty nice one young delinquent.
                             </p>
-                            <a href="" className="learn_btn c_blue">
+                            <Link href="" className="learn_btn c_blue">
                                 Go To Documentation
                                 <i className="arrow_right"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className="text-center">
-                    <a
+                    <Link
                         href=""
                         className="doc_border_btn all_doc_btn wow fadeInUp"
                         data-wow-delay="0.6s"
                     >
                         Live Chat Now<i className="icon_chat_alt"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

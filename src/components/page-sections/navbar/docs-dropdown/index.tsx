@@ -105,7 +105,7 @@ export default function DocsDropDown() {
                                             <Link href="/categories">
                                                 <p>More Categories</p>
                                             </Link>
-                                            <Link href="/doclist">
+                                            <Link href="/docs">
                                                 <p>All docs</p>
                                             </Link>
                                         </div>
