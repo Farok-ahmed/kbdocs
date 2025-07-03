@@ -1,16 +1,28 @@
+import Breadcrumb from "@/components/breadcrumb";
 import DefaultLayout from "@/components/layout";
 import AnswerActionForum from "@/components/page-sections/forums-page/answer-action";
-import Breadcrumb from "@/components/page-sections/forums-page/breadcrumb";
 import CallToActionForums from "@/components/page-sections/forums-page/call-to-action";
 import ForumPosts from "@/components/page-sections/forums-page/forum-posts";
 import ForumSidebar from "@/components/page-sections/forums-page/forum-sidebar";
 import ForumsHeaders from "@/components/page-sections/forums-page/forums-headers";
+import { BreadcrumbProps, CategoryProps } from "@/types/breadcrumb-types";
 
 const ForumsPage = () => {
+  // Example categories, you can replace this with your actual data
+  const categories: CategoryProps[] = [
+    { id: 1, name: "Doc Archive" },
+    { id: 2, name: "Doc list" },
+    { id: 3, name: "KbDoc" },
+  ];
+  // Breadcurmb component
+  const breadcrumb: BreadcrumbProps[] = [
+    { name: "Home", link: "/" },
+    { name: "Forums", link: "/forums" },
+  ];
   return (
     <>
       <DefaultLayout>
-        <Breadcrumb />
+        <Breadcrumb breadcrumb={breadcrumb} categories={categories} />
         <section className="doc_blog_grid_area sec_pad forum-page-content">
           <div className="container">
             <div className="row">

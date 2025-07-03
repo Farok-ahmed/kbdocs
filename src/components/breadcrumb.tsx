@@ -1,30 +1,12 @@
 "use client";
+import { BreadcrumbProps, CategoryProps } from "@/types/breadcrumb-types";
 import Link from "next/link";
 
-// typescript type define Category
-export interface Category {
-  id: number;
-  name: string;
-}
-
-export interface BreadcrumbProps {
-  name: string;
-  link: string;
-}
-
-const Breadcrumb = () => {
-  // Example categories, you can replace this with your actual data
-  const categories: Category[] = [
-    { id: 1, name: "Doc Archive" },
-    { id: 2, name: "Doc list" },
-    { id: 3, name: "KbDoc" },
-  ];
-  // Breadcurmb component
-  const breadcrumb: BreadcrumbProps[] = [
-    { name: "Home", link: "/" },
-    { name: "Docs", link: "/docs" },
-    { name: "KbDoc WordPress Theme", link: "/docs/kbdoc-wordpress-theme" },
-  ];
+type Props = {
+  breadcrumb: BreadcrumbProps[];
+  categories: CategoryProps[];
+};
+const Breadcrumb = ({ breadcrumb, categories }: Props) => {
   // Handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -107,6 +89,8 @@ const Breadcrumb = () => {
                         index === breadcrumb.length - 1 ? "page" : undefined
                       }
                     >
+                      {/* breadcrumb active class add */}
+
                       <Link
                         className={`${
                           index === breadcrumb.length - 1 ? "active" : ""
