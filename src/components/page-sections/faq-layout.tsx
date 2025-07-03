@@ -1,17 +1,33 @@
 "use client";
-import { useState } from "react";
+import { FC, useState } from "react";
 
-const FaqLayout = ({ data }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+// Define types
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
 
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
+export interface FaqCategory {
+  id: number | string;
+  title: string;
+  icon: string;
+  content: FaqItem[];
+}
 
-  const handleNavClick = (index) => {
+interface FaqLayoutProps {
+  data: FaqCategory[];
+}
+
+const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+
+  const handleNavClick = (index: number) => {
     setActiveIndex(index);
     setOpenFaqIndex(0);
   };
 
-  const handleFaqClick = (index) => {
+  const handleFaqClick = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
@@ -19,15 +35,11 @@ const FaqLayout = ({ data }) => {
 
   return (
     <div className="row">
-      {/* ====== Left Navigation Menu ====== */}
+      {/* Left Navigation */}
       <div className="col-lg-4 col-md-5">
         <div className="fact_navigation_info">
           <h4 className="c_head">Quick Navigation</h4>
-          <ul
-            className="nav nav-tabs fact_navigation"
-            id="myTab"
-            role="tablist"
-          >
+          <ul className="nav nav-tabs fact_navigation" role="tablist">
             {data.map((item, index) => (
               <li className="nav-item" key={item.id}>
                 <a
@@ -42,8 +54,7 @@ const FaqLayout = ({ data }) => {
                     handleNavClick(index);
                   }}
                 >
-                  <i className={item.icon}></i>
-                  {item.title}
+                  <i className={item.icon}></i> {item.title}
                 </a>
               </li>
             ))}
@@ -51,16 +62,14 @@ const FaqLayout = ({ data }) => {
         </div>
       </div>
 
-      {/* ====== Right Content & Accordion Area ====== */}
+      {/* Right Accordion Content */}
       <div className="col-lg-8 col-md-7">
-        <div className="tab-content pl_70" id="myTabContent">
-          {/* This single tab-pane is now fully dynamic */}
+        <div className="tab-content pl_70">
           <div
             className="tab-pane faq_tab_pane fade show active"
             role="tabpanel"
           >
             <div className="accordion doc_faq_info" id="accordionExample">
-              {/* Check if there's content to display */}
               {activeContent.length > 0 ? (
                 activeContent.map((faqItem, index) => {
                   const isFaqOpen = openFaqIndex === index;
@@ -94,7 +103,6 @@ const FaqLayout = ({ data }) => {
                   );
                 })
               ) : (
-                // Display a message if the content array is empty
                 <div className="card">
                   <div className="card-body">
                     No information available for this topic.

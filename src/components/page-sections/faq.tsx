@@ -1,4 +1,4 @@
-import FaqLayout from "./faqLayout";
+import FaqLayout from "./faq-layout";
 
 export default function Faq() {
   const items = [
