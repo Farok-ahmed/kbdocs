@@ -12,7 +12,7 @@ const mainNavItems = [
   {
     id: "shortcodes",
     title: "Shortcodes",
-    href: "docs/shortcodes",
+    href: "/docs/shortcodes",
     icon: "/img/side-nav/briefcase.png",
     active: false,
     children: [
@@ -28,7 +28,7 @@ const mainNavItems = [
   {
     id: "layouts",
     title: "Layouts",
-    href: "layouts",
+    href: "/docs/layouts",
     icon: "/img/side-nav/coding.png",
     active: false,
     children: [
