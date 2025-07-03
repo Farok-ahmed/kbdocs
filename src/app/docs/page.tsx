@@ -1,0 +1,740 @@
+"use client";
+
+import Link from "next/link";
+
+export default function DocsPage() {
+    return new Array(10).fill("nothing ");
+
+    return (
+        <>
+            <div id="post" className="documentation_info">
+                <article className="documentation_body" id="documentation">
+                    <div className="shortcode_title">
+                        <h1>Documentation</h1>
+                        <p>
+                            <span>Welcome to KbDoc !</span> Get familiar with
+                            the Stripe products and explore their features:
+                        </p>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/home_one/icon/folder.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Working with Docs</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/home_one/icon/envelope.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Formatting Content</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/home_one/icon/smartphone.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Mobile App</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/home_one/icon/management.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Account Management</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/home_one/icon/newspaper.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Productivity</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img src="img/side-nav/issuin.png" alt="" />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Issuing</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/side-nav/terminals.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Terminal</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6">
+                            <div className="media documentation_item">
+                                <div className="icon">
+                                    <img
+                                        src="img/home_one/icon/android.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="media-body">
+                                    <Link href="">
+                                        <h5>Getting Started</h5>
+                                    </Link>
+                                    <p>
+                                        He lost his bottle bubble and squeak
+                                        knackered.!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <div className="border_bottom"></div>
+                <article className="get_started" id="getting">
+                    <h4 className="c_head">Getting started</h4>
+                    <p>
+                        Owt to do with me chinwag get stuffed mate baking cakes
+                        blow off vagabond knackered faff about boot a load of
+                        old tosh <Link href="">Richard Charles</Link>, cor
+                        blimey guvnor cheers fantastic butty.
+                    </p>
+                    <h4 className="c_head">Accept payments</h4>
+                    <p>
+                        James Bond knackered cup of char show off show off pick
+                        your nose and blow off faff about it's all gone to pot
+                        tosser that so I said,{" "}
+                        <Link href="">young delinquent</Link> happy days do one
+                        bite your arm off ummm I'm telling gutted mate amongst a
+                        blinding shot, nice one blatant only a quid smashing A
+                        bit of how's your father plastered me old mucker.{" "}
+                    </p>
+                    <p>
+                        My lady bloke A bit of how's your father boot so I said{" "}
+                        <Link href="">William twit pear shaped</Link> bobby
+                        sloshed bum bag brolly,{" "}
+                        <Link href="">have it blag he lost his</Link> bottle
+                        brilliant gutted.
+                    </p>
+                    <p>
+                        <Link href="">
+                            Plastered cack bog-standard hanky panky owt
+                        </Link>{" "}
+                        to do with me young delinquent chancer
+                    </p>
+                    <h4 className="c_head">Build a marketplace</h4>
+                    <p>
+                        Owt to do with me chinwag get stuffed mate baking cakes
+                        blow off vagabond knackered faff about boot a load of
+                        old tosh <Link href="">Richard Charles</Link>, cor
+                        blimey guvnor cheers fantastic butty{" "}
+                        <Link href="">A bit of how's your father down</Link> the
+                        pub plastered bugger{" "}
+                        <Link href="">all mate such a fibber</Link> lemon
+                        squeezy.
+                    </p>
+                    <Link href="">
+                        <h4 className="c_head load-order-2">
+                            Add payments to your platform
+                        </h4>
+                    </Link>
+                    <p>
+                        Don't get shirty with me what a plonker on your bike
+                        mate bugger all mate chip shop bits and bobs smashing
+                        mush bugger cup of char, in my flat my lady naff bubble
+                        and squeak tosser pukka barmy bog the bee's knees,
+                        elizabeth dropped a clanger cheesed.
+                    </p>
+                    <h4 className="c_head">Extend Stripe's offerings</h4>
+                    <p>
+                        Naff wellies such a fibber up the duff some dodgy chav
+                        sloshed blow off golly gosh{" "}
+                        <Link href="">jolly good hotpot gutted mate</Link>, me
+                        old mucker cras mush.
+                    </p>
+                    <div className="link">
+                        <p>
+                            Spiffing good time blimey smashing bevvy hunky-dory
+                            cor blimey guvnor elizabeth bite your arm off,
+                            bamboozled A bit of how's your father it's all gone
+                            to pot bodge.
+                        </p>
+                    </div>
+                </article>
+                <div className="border_bottom"></div>
+                <article className="test_version" id="version">
+                    <h4 className="c_head">Test KbDoc Version</h4>
+                    <p>
+                        Try the KbDoc API in seconds. Create your first
+                        customer, charge, and more by following the steps below.
+                    </p>
+                    <ul
+                        className="nav nav-tabs v_menu"
+                        id="myTab"
+                        role="tablist"
+                    >
+                        <li className="nav-item">
+                            <Link
+                                className="nav-link active"
+                                id="card-tab"
+                                data-toggle="tab"
+                                href="#card"
+                                role="tab"
+                                aria-controls="card"
+                                aria-selected="true"
+                            >
+                                <span>1</span>Card
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                className="nav-link"
+                                id="customer-tab"
+                                data-toggle="tab"
+                                href="#customer"
+                                role="tab"
+                                aria-controls="customer"
+                                aria-selected="false"
+                            >
+                                <span>2</span>Customer
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                className="nav-link"
+                                id="charge-tab"
+                                data-toggle="tab"
+                                href="#charge"
+                                role="tab"
+                                aria-controls="charge"
+                                aria-selected="false"
+                            >
+                                <span>3</span>Charge
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                className="nav-link"
+                                id="sub-tab"
+                                data-toggle="tab"
+                                href="#sub"
+                                role="tab"
+                                aria-controls="sub"
+                                aria-selected="false"
+                            >
+                                <span>4</span>Subscription
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                className="nav-link"
+                                id="success-tab"
+                                data-toggle="tab"
+                                href="#success"
+                                role="tab"
+                                aria-controls="success"
+                                aria-selected="false"
+                            >
+                                <span>5</span>Success!
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className="tab-content" id="myTabContent">
+                        <div
+                            className="tab-pane fade show active"
+                            id="card"
+                            role="tabpanel"
+                            aria-labelledby="card-tab"
+                        >
+                            <p>
+                                Twit brilliant he legged it he nicked it amongst
+                                hotpot chinwag spend a penny lemon squeezy he
+                                lost his bottle porkies, Why it's your round
+                                happy days.
+                            </p>
+                            <div className="version">
+                                <div className="v_head">
+                                    KbDoc run hello-world
+                                </div>
+                                <div className="v_middle">
+                                    <p>
+                                        Unable to find image{" "}
+                                        <span className="red">
+                                            'hello-world:latest'
+                                        </span>{" "}
+                                        locally
+                                    </p>
+                                    <p>
+                                        latest: Pulling from library/hello-world
+                                    </p>
+                                    <p>
+                                        ca4f61b1923c: Pull{" "}
+                                        <span className="green">complete</span>
+                                    </p>
+                                    <p>
+                                        Digest:
+                                        sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                                    </p>
+                                    <p>
+                                        Status: Downloaded newer image for
+                                        hello-world:latest
+                                    </p>
+                                </div>
+                                <div className="v_footer">
+                                    <p>
+                                        Hello from KbDoc!
+                                        <br /> This message shows that your
+                                        installation appears to be working
+                                        correctly. <br />
+                                        ...
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                <span>Usage:</span> Click "Submit" to create a
+                                token.
+                            </p>
+                        </div>
+                        <div
+                            className="tab-pane fade"
+                            id="customer"
+                            role="tabpanel"
+                            aria-labelledby="customer-tab"
+                        >
+                            <p>
+                                Twit brilliant he legged it he nicked it amongst
+                                hotpot chinwag spend a penny lemon squeezy he
+                                lost his bottle porkies, Why it's your round
+                                happy days.
+                            </p>
+                            <div className="version">
+                                <div className="v_head">
+                                    KbDoc run hello-world
+                                </div>
+                                <div className="v_middle">
+                                    <p>
+                                        Unable to find image{" "}
+                                        <span className="red">
+                                            'hello-world:latest'
+                                        </span>{" "}
+                                        locally
+                                    </p>
+                                    <p>
+                                        latest: Pulling from library/hello-world
+                                    </p>
+                                    <p>
+                                        ca4f61b1923c: Pull{" "}
+                                        <span className="green">complete</span>
+                                    </p>
+                                    <p>
+                                        Digest:
+                                        sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                                    </p>
+                                    <p>
+                                        Status: Downloaded newer image for
+                                        hello-world:latest
+                                    </p>
+                                </div>
+                                <div className="v_footer">
+                                    <p>
+                                        Hello from KbDoc!
+                                        <br /> This message shows that your
+                                        installation appears to be working
+                                        correctly. <br />
+                                        ...
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                <span>Usage:</span> Click "Submit" to create a
+                                token.
+                            </p>
+                        </div>
+                        <div
+                            className="tab-pane fade"
+                            id="charge"
+                            role="tabpanel"
+                            aria-labelledby="charge-tab"
+                        >
+                            <p>
+                                Twit brilliant he legged it he nicked it amongst
+                                hotpot chinwag spend a penny lemon squeezy he
+                                lost his bottle porkies, Why it's your round
+                                happy days.
+                            </p>
+                            <div className="version">
+                                <div className="v_head">
+                                    KbDoc run hello-world
+                                </div>
+                                <div className="v_middle">
+                                    <p>
+                                        Unable to find image{" "}
+                                        <span className="red">
+                                            'hello-world:latest'
+                                        </span>{" "}
+                                        locally
+                                    </p>
+                                    <p>
+                                        latest: Pulling from library/hello-world
+                                    </p>
+                                    <p>
+                                        ca4f61b1923c: Pull{" "}
+                                        <span className="green">complete</span>
+                                    </p>
+                                    <p>
+                                        Digest:
+                                        sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                                    </p>
+                                    <p>
+                                        Status: Downloaded newer image for
+                                        hello-world:latest
+                                    </p>
+                                </div>
+                                <div className="v_footer">
+                                    <p>
+                                        Hello from KbDoc!
+                                        <br /> This message shows that your
+                                        installation appears to be working
+                                        correctly. <br />
+                                        ...
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                <span>Usage:</span> Click "Submit" to create a
+                                token.
+                            </p>
+                        </div>
+                        <div
+                            className="tab-pane fade"
+                            id="sub"
+                            role="tabpanel"
+                            aria-labelledby="sub-tab"
+                        >
+                            <p>
+                                Twit brilliant he legged it he nicked it amongst
+                                hotpot chinwag spend a penny lemon squeezy he
+                                lost his bottle porkies, Why it's your round
+                                happy days.
+                            </p>
+                            <div className="version">
+                                <div className="v_head">
+                                    KbDoc run hello-world
+                                </div>
+                                <div className="v_middle">
+                                    <p>
+                                        Unable to find image{" "}
+                                        <span className="red">
+                                            'hello-world:latest'
+                                        </span>{" "}
+                                        locally
+                                    </p>
+                                    <p>
+                                        latest: Pulling from library/hello-world
+                                    </p>
+                                    <p>
+                                        ca4f61b1923c: Pull{" "}
+                                        <span className="green">complete</span>
+                                    </p>
+                                    <p>
+                                        Digest:
+                                        sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                                    </p>
+                                    <p>
+                                        Status: Downloaded newer image for
+                                        hello-world:latest
+                                    </p>
+                                </div>
+                                <div className="v_footer">
+                                    <p>
+                                        Hello from KbDoc!
+                                        <br /> This message shows that your
+                                        installation appears to be working
+                                        correctly. <br />
+                                        ...
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                <span>Usage:</span> Click "Submit" to create a
+                                token.
+                            </p>
+                        </div>
+                        <div
+                            className="tab-pane fade"
+                            id="success"
+                            role="tabpanel"
+                            aria-labelledby="success-tab"
+                        >
+                            <p>
+                                Twit brilliant he legged it he nicked it amongst
+                                hotpot chinwag spend a penny lemon squeezy he
+                                lost his bottle porkies, Why it's your round
+                                happy days.
+                            </p>
+                            <div className="version">
+                                <div className="v_head">
+                                    KbDoc run hello-world
+                                </div>
+                                <div className="v_middle">
+                                    <p>
+                                        Unable to find image{" "}
+                                        <span className="red">
+                                            'hello-world:latest'
+                                        </span>{" "}
+                                        locally
+                                    </p>
+                                    <p>
+                                        latest: Pulling from library/hello-world
+                                    </p>
+                                    <p>
+                                        ca4f61b1923c: Pull{" "}
+                                        <span className="green">complete</span>
+                                    </p>
+                                    <p>
+                                        Digest:
+                                        sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                                    </p>
+                                    <p>
+                                        Status: Downloaded newer image for
+                                        hello-world:latest
+                                    </p>
+                                </div>
+                                <div className="v_footer">
+                                    <p>
+                                        Hello from KbDoc!
+                                        <br /> This message shows that your
+                                        installation appears to be working
+                                        correctly. <br />
+                                        ...
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                <span>Usage:</span> Click "Submit" to create a
+                                token.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <div className="border_bottom"></div>
+                <article className="developer" id="developer">
+                    <h4 className="c_head">Not a developer?</h4>
+                    <p>
+                        Some dodgy chav bonnet victoria sponge{" "}
+                        <Link href="">jolly good bits and bobs</Link> James Bond
+                        wind up the BBC he lost his bottle a cheesed off such a
+                        fibber, say cras have it I spiffing good time up the
+                        kyver hotpot cup of char tomfoolery chap lost the plot,
+                        crikey brilliant what a plonker morish{" "}
+                        <Link href="">baking cakes that burke bugger up</Link>{" "}
+                        the duff cor blimey guvnor.
+                    </p>
+                </article>
+                <div className="border_bottom"></div>
+                <article className="help_text" id="help">
+                    <h4 className="c_head">We're here to help!</h4>
+                    <div className="help_info">
+                        <div className="help_item">
+                            <Link href="">
+                                <h4>Support</h4>
+                            </Link>
+                            <p>
+                                Car boot absolutely bladder the full monty
+                                ruddy.
+                            </p>
+                        </div>
+                        <div className="help_item">
+                            <Link href="">
+                                <h4>
+                                    Samples{" "}
+                                    <i className="arrow_carrot-right"></i>
+                                </h4>
+                            </Link>
+                            <p>
+                                Car boot absolutely bladder the full monty
+                                ruddy.
+                            </p>
+                        </div>
+                        <div className="help_item">
+                            <Link href="">
+                                <h4>API Discussion Board</h4>
+                            </Link>
+                            <p>
+                                Car boot absolutely bladder the full monty
+                                ruddy.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="border_bottom"></div>
+                    <div className="row question_box">
+                        <div className="col-lg-6">
+                            <div className="question_text">
+                                <h4>Questions?</h4>
+                                <p>
+                                    Cheeky that bubble and squeak fanny around
+                                    bleeder hunky-dory daft{" "}
+                                    <Link href="">bonnet brolly victoria</Link>{" "}
+                                    sponge show off show off pick your nose and
+                                    blow off{" "}
+                                    <Link href="">my good sir, cobblers</Link>{" "}
+                                    dropped.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="question_text question_text_two">
+                                <h4>Sign up for the Developer Digest</h4>
+                                <p>
+                                    Share your email so KbDoc can send you
+                                    updates about the API and developer
+                                    platform.
+                                </p>
+                                <form
+                                    className="mailchimp signup_form"
+                                    method="post"
+                                >
+                                    <div className="input-group">
+                                        <input
+                                            type="text"
+                                            className="form-control memail"
+                                            placeholder="Email"
+                                        />
+                                        <div className="input-group-append">
+                                            <button type="submit">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p
+                                        className="mchimp-errmessage"
+                                        style={{
+                                            display: "none",
+                                        }}
+                                    ></p>
+                                    <p
+                                        className="mchimp-sucmessage"
+                                        style={{
+                                            display: "none",
+                                        }}
+                                    ></p>
+                                </form>
+                                <p>
+                                    You can unsubscribe at any time. Read our
+                                    privacy policy <Link href="">here</Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div className="border_bottom"></div>
+                        <div className="row feedback_link">
+                            <div className="col-lg-6">
+                                <h6>
+                                    <i className="icon_mail_alt"></i>
+                                    Still stuck?{" "}
+                                    <Link
+                                        href=""
+                                        data-toggle="modal"
+                                        data-target="#exampleModal3"
+                                    >
+                                        How can we help?
+                                    </Link>
+                                </h6>
+                            </div>
+                            <div className="col-lg-6">
+                                <p>
+                                    Was this page helpful?{" "}
+                                    <Link href="" className="h_btn">
+                                        Yes
+                                    </Link>
+                                    <Link href="" className="h_btn">
+                                        No
+                                    </Link>
+                                </p>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </>
+    );
+}

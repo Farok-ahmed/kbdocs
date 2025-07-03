@@ -3,8 +3,7 @@
     display: flex;
     position: relative;
     z-index: 1;
-    height: 100vh;
-    min-height: 620px;
+    min-height: min(620px, 100vh);
 }
 .error_dot{
     position: absolute;

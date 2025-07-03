@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ClientWrapper from "./client-wrapper";
+import PreLoader from "@/components/preloader";
 import "@/styles/style.scss";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
+                <PreLoader />
                 <ClientWrapper>{children}</ClientWrapper>
             </body>
         </html>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Faq() {
     return (
         <section className="doc_faq_area_two sec_pad">
@@ -22,7 +24,7 @@ export default function Faq() {
                                 role="tablist"
                             >
                                 <li className="nav-item">
-                                    <a
+                                    <Link
                                         className="nav-link active"
                                         id="online-tab"
                                         data-toggle="tab"
@@ -33,10 +35,10 @@ export default function Faq() {
                                     >
                                         <i className="icon_folder-alt"></i>
                                         Purchasing Online
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a
+                                    <Link
                                         className="nav-link"
                                         id="formOne-tab"
                                         data-toggle="tab"
@@ -47,10 +49,10 @@ export default function Faq() {
                                     >
                                         <i className="icon_cloud-upload_alt"></i>
                                         Post Forms
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a
+                                    <Link
                                         className="nav-link"
                                         id="pricingOne-tab"
                                         data-toggle="tab"
@@ -61,10 +63,10 @@ export default function Faq() {
                                     >
                                         <i className="icon_key_alt"></i>
                                         Pricing & Support
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a
+                                    <Link
                                         className="nav-link"
                                         id="profileOne-tab"
                                         data-toggle="tab"
@@ -75,10 +77,10 @@ export default function Faq() {
                                     >
                                         <i className="icon_lightbulb_alt"></i>
                                         Registration & Profile
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a
+                                    <Link
                                         className="nav-link"
                                         id="return-tab"
                                         data-toggle="tab"
@@ -89,10 +91,10 @@ export default function Faq() {
                                     >
                                         <i className="icon_bag_alt"></i>
                                         Returns
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a
+                                    <Link
                                         className="nav-link"
                                         id="car-tab"
                                         data-toggle="tab"
@@ -103,7 +105,7 @@ export default function Faq() {
                                     >
                                         <i className="icon_menu-square_alt2"></i>
                                         Care & Repair
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

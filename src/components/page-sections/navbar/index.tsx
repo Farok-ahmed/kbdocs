@@ -11,15 +11,14 @@ import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
 
 export default function Navbar() {
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [isScrollDown, setIsScrollDown] = useState<boolean>();
     const [isExpanded, setIsExpanded] = useState(false);
     const pathname = usePathname();
     const isHelpDesk = pathname === pages.helpDesk;
     const isCoolKnowledgeBase = pathname === pages.coolKnowledgeBase;
     const isHomePage =
         pathname === pages.home || isHelpDesk || isCoolKnowledgeBase;
-
-    const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [isScrollDown, setIsScrollDown] = useState<boolean>();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,9 +44,9 @@ export default function Navbar() {
             <TopBar isHelpDesk={isHelpDesk} />
             <nav
                 className={`navbar navbar-expand-lg navbar_fixed menu_two ${
-                    isHelpDesk ? "mt-40" : ""
+                    isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
                 }`}
-                style={{ top: isScrollDown ? -100 : 0 }}
+                style={{ top: isScrollDown && lastScrollTop > 100 ? -100 : 0 }}
                 id="sticky"
             >
                 <div className="container">
@@ -277,7 +276,7 @@ export default function Navbar() {
                                     </li>
                                     <li className="nav-item">
                                         <Link
-                                            href="/doclist"
+                                            href="/docs"
                                             className="nav-link"
                                         >
                                             <img src="img/sheet.png" alt="" />
@@ -290,10 +289,7 @@ export default function Navbar() {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link
-                                            href="/"
-                                            className="nav-link"
-                                        >
+                                        <Link href="/" className="nav-link">
                                             <img
                                                 src="img/shopping-bag.png"
                                                 alt=""
@@ -305,10 +301,7 @@ export default function Navbar() {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link
-                                            href="/"
-                                            className="nav-link"
-                                        >
+                                        <Link href="/" className="nav-link">
                                             <img src="img/gear.png" alt="" />
                                             <div className="text">
                                                 <h5>Tools</h5>

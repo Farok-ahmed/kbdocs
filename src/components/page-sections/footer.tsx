@@ -154,7 +154,7 @@ export default function Footer() {
                                 <h3 className="f_title">Doc Pages</h3>
                                 <ul className="list-unstyled link_list">
                                     <li>
-                                        <Link href="/doclist">Doc Topic</Link>
+                                        <Link href="/docs">Doc Topic</Link>
                                     </li>
                                     <li>
                                         <Link href="">Free Training</Link>

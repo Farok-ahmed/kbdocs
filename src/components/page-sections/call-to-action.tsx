@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CallToAction() {
     return (
         <section className="doc_action_area_two">
@@ -19,9 +21,9 @@ export default function CallToAction() {
                             </div>
                         </div>
                         <div className="col-lg-3 wow fadeInRight">
-                            <a href="" className="action_btn">
+                            <Link href="" className="action_btn">
                                 View All Docs <i className="arrow_right"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

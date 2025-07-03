@@ -1,10 +1,12 @@
+"use client";
+
 import { pages } from "@/utils/pages";
 import Link from "next/link";
 
 export default function NotFound() {
     return (
         <>
-            <section className="error_area bg_color">
+            <section className="error_area bg_color pb-5">
                 <div className="error_dot one"></div>
                 <div className="error_dot two"></div>
                 <div className="error_dot three"></div>
@@ -56,7 +58,7 @@ export default function NotFound() {
                             check out our latest collections for Fashion, Chair,
                             Decoration...
                         </p>
-                        <form action="#" className="error_search">
+                        <form onSubmit={e => e.preventDefault()} className="error_search">
                             <input
                                 type="text"
                                 className="form-control"

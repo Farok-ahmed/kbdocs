@@ -9,7 +9,7 @@ export const docsDropDownMenu = [
             },
             {
                 title: "Doc Topic",
-                link: "/doclist",
+                link: "/docs",
             },
         ],
     },
@@ -127,7 +127,7 @@ export const docsDropDownMenu = [
         items: [
             {
                 title: "Doc Topics",
-                link: "/doclist",
+                link: "/docs",
             },
             {
                 title: "One Page",
