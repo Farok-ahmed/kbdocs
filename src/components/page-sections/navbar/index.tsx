@@ -260,7 +260,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link href="/doclist" className="nav-link">
+                    <Link href="/docs" className="nav-link">
                       <img src="/img/sheet.png" alt="" />
                       <div className="text">
                         <h5>docall</h5>
