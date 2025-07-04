@@ -101,7 +101,7 @@ const mainNavItems = [
   {
     id: "changelog",
     title: "Change Log",
-    href: "/changelog",
+    href: "/docs/changelog",
     icon: "/img/side-nav/document2.png",
     active: false,
     children: [],
