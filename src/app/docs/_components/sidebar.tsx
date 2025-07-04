@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 const mainNavItems = [
   {
@@ -16,13 +18,21 @@ const mainNavItems = [
     icon: "/img/side-nav/briefcase.png",
     active: false,
     children: [
-      { id: "tabs", title: "Tabs", href: "/tab", active: true },
-      { id: "accordion", title: "Accordion", href: "/accordion" },
-      { id: "notices", title: "Notices", href: "/notice" },
-      { id: "table", title: "Table", href: "/table" },
-      { id: "lightbox", title: "Image Lightbox", href: "/lightbox" },
-      { id: "tooltip", title: "Tooltip", href: "/tooltip" },
-      { id: "can-use", title: "Can I Use", href: "/can-use" },
+      { id: "tabs", title: "Tabs", href: "/docs/shortcodes/tab", active: true },
+      {
+        id: "accordion",
+        title: "Accordion",
+        href: "/docs/shortcodes/accordion",
+      },
+      { id: "notices", title: "Notices", href: "/docs/shortcodes/notice" },
+      { id: "table", title: "Table", href: "/docs/shortcodes/table" },
+      {
+        id: "lightbox",
+        title: "Image Lightbox",
+        href: "/docs/shortcodes/lightbox",
+      },
+      { id: "tooltip", title: "Tooltip", href: "/docs/shortcodes/tooltip" },
+      { id: "can-use", title: "Can I Use", href: "/docs/shortcodes/can-use" },
     ],
   },
   {
@@ -137,6 +147,10 @@ const bottomNavItems = [
 ];
 
 export default function Sidebar() {
+  const [openItemId, setOpenItemId] = useState<string | null>(null);
+  const handleOpen = (itemId: string) => {
+    setOpenItemId(openItemId === itemId ? null : itemId);
+  };
   return (
     <aside className="doc_left_sidebarlist" style={{ paddingBottom: 70 }}>
       {/* Toggle Controls */}
@@ -151,6 +165,7 @@ export default function Sidebar() {
         <ul className="list-unstyled nav-sidebar">
           {mainNavItems.map((item) => (
             <li
+              onClick={() => handleOpen(item.id)}
               key={item.id}
               className={`nav-item ${item.active ? "active" : ""}`}
             >
@@ -164,13 +179,27 @@ export default function Sidebar() {
                   <span className="icon">
                     <i className="arrow_carrot-down"></i>
                   </span>
-                  <ul className="list-unstyled dropdown_nav">
+                  {openItemId === item.id && (
+                    <ul
+                      className="list-unstyled dropdown_nav"
+                      style={{
+                        display: openItemId === item.id ? "block" : "none",
+                      }}
+                    >
+                      {item.children.map((child) => (
+                        <li key={child.id}>
+                          <Link href={child.href}>{child.title}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {/* <ul className="list-unstyled dropdown_nav">
                     {item.children.map((child) => (
                       <li key={child.id}>
                         <Link href={child.href}>{child.title}</Link>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </>
               )}
             </li>
