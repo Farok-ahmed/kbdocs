@@ -183,7 +183,7 @@ export default function Sidebar() {
                     <ul
                       className="list-unstyled dropdown_nav"
                       style={{
-                        display: openItemId === item.id ? "block" : "none",
+                        display: openItemId === item.id ? "block " : "none",
                       }}
                     >
                       {item.children.map((child) => (
