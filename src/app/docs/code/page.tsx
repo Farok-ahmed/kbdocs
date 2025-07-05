@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./styile.scss";
 
 const CodePage = () => {
   return (
