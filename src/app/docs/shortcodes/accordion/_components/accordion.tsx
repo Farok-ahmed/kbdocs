@@ -21,7 +21,7 @@ const Accordion = () => {
       id: 3,
       title: "Amazing Support",
       content:
-        "He lost his bottle arse fanny around do one cheesed off crikey bevy mufty the full monty nancy boy cup of tea spend a penny, golly gosh what a plonker.",
+        "He lost his bottle arse fanny around do one cheesed off crikey\n <br> bevy mufty the full monty nancy boy cup of tea spend a penny, golly gosh what a plonker.",
     },
   ];
 

@@ -44,7 +44,7 @@ const Toggle: React.FC = () => {
         </p>
       </div>
       {toggleData.map((item) => (
-        <>
+        <div key={item.id}>
           <Link
             onClick={() => handleToggle(item.id)}
             className="toggle_btn"
@@ -61,7 +61,7 @@ const Toggle: React.FC = () => {
           >
             <div className="card card-body toggle_body">{item.content}</div>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
