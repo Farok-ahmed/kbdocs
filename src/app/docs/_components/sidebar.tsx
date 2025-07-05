@@ -64,7 +64,7 @@ const mainNavItems = [
   {
     id: "tour",
     title: "Tour",
-    href: "/tour",
+    href: "/docs/tour",
     icon: "/img/side-nav/chat1.png",
     active: false,
     children: [
