@@ -71,7 +71,7 @@ const mainNavItems = [
       {
         id: "image-hotspots",
         title: "Image Hotspots",
-        href: "/image-pointing",
+        href: "/docs/tour/image-pointing",
       },
       {
         id: "app-interface",
