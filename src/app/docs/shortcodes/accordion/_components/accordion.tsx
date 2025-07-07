@@ -57,7 +57,9 @@ const Accordion = () => {
                 <h5 className="mb-0">
                   <button
                     onClick={() => toggle(item.id)}
-                    className="btn btn-link collapsed"
+                    className={`btn btn-link collapsed ${
+                      isOpen === item.id ? "" : ""
+                    }`}
                     data-toggle="collapse"
                     data-target="#collapseOne"
                     aria-expanded="false"
@@ -74,12 +76,14 @@ const Accordion = () => {
               </div>
               <div
                 id="collapseOne"
-                className={`collapse ${isOpen === item.id ? "show" : ""}`}
+                className={`accordion-content ${
+                  isOpen === item.id ? "show" : ""
+                }`}
                 aria-labelledby="headingOne"
                 data-parent="#accordion"
                 style={{}}
               >
-                <div className="card-body toggle_body">{item.content}</div>
+                <div className="">{item.content}</div>
               </div>
             </div>
           ))}

@@ -1,5 +1,5 @@
 import Accordion from "./_components/accordion";
-import Toggle from "./_components/toggle";
+import ToggleTwo from "./_components/accordion-two";
 
 const AccordionPage = () => {
   return (
@@ -12,7 +12,8 @@ const AccordionPage = () => {
             products and explore their features:
           </p>
         </div>
-        <Toggle />
+
+        <ToggleTwo />
         <Accordion />
 
         <footer>
