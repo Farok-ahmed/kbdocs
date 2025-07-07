@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-
+import "./style.scss";
 const mainNavItems = [
   {
     id: "home",
@@ -168,7 +168,7 @@ export default function Sidebar() {
             <li
               onClick={() => handleOpen(item.id)}
               key={item.id}
-              className={`nav-item ${item.active ? "active" : ""}`}
+              className={`nav-item  ${openItemId === item.id ? "active" : ""}`}
             >
               <Link href={item.href} className="nav-link">
                 <img src={item.icon} alt="" />
@@ -180,20 +180,22 @@ export default function Sidebar() {
                   <span className="icon">
                     <i className="arrow_carrot-down"></i>
                   </span>
-                  {openItemId === item.id && (
-                    <ul
-                      className="list-unstyled dropdown_nav"
-                      style={{
-                        display: openItemId === item.id ? "block " : "none",
-                      }}
-                    >
+                  <ul
+                    className={`list-unstyled dropdown_nav open ${
+                      openItemId === item.id ? "menu-active" : ""
+                    }`}
+                  >
+                    <div>
                       {item.children.map((child) => (
                         <li key={child.id}>
                           <Link href={child.href}>{child.title}</Link>
                         </li>
                       ))}
-                    </ul>
-                  )}
+                    </div>
+                  </ul>
+                  {/* {openItemId === item.id && (
+                    
+                  )} */}
                   {/* <ul className="list-unstyled dropdown_nav">
                     {item.children.map((child) => (
                       <li key={child.id}>
