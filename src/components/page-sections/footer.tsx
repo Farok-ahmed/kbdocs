@@ -43,7 +43,11 @@ export default function Footer() {
                   <img src="/img/logo.png" alt="" />
                 </Link>
                 <h4 className="c_head">Subscribe to our newsletter</h4>
-                <form action="#" className="footer_subscribe_form">
+                <form
+                  action="#"
+                  onSubmit={(e) => e.preventDefault()}
+                  className="footer_subscribe_form"
+                >
                   <input
                     type="email"
                     placeholder="Email"
@@ -103,7 +107,7 @@ export default function Footer() {
                     <Link href="">KbDoc for Good</Link>
                   </li>
                   <li>
-                    <Link href="">Contact Us</Link>
+                    <Link href="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -119,7 +123,7 @@ export default function Footer() {
                     <Link href={pages.helpDesk}>Help Desk</Link>
                   </li>
                   <li>
-                    <Link href="">Knowledge Base</Link>
+                    <Link href="/">Knowledge Base</Link>
                   </li>
                   <li>
                     <Link href="">Live Chat</Link>
@@ -156,7 +160,7 @@ export default function Footer() {
                     <Link href="/doc-archive">Doc Archive</Link>
                   </li>
                   <li>
-                    <Link href="/changelog">Changelog</Link>
+                    <Link href="/docs/changelog">Changelog</Link>
                   </li>
                   <li>
                     <Link href="/one-page">Onepage Docs</Link>
@@ -165,7 +169,7 @@ export default function Footer() {
                     <Link href="">Conversion Tracking</Link>
                   </li>
                   <li>
-                    <Link href="/cheat-sheet">Cheat Sheet</Link>
+                    <Link href="/docs/cheatsheet">Cheat Sheet</Link>
                   </li>
                 </ul>
               </div>

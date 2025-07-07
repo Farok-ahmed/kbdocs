@@ -42,7 +42,7 @@ const mainNavItems = [
     icon: "/img/side-nav/coding.png",
     active: false,
     children: [
-      { id: "both-sidebar", title: "Both Sidebar", href: "/layouts" },
+      { id: "both-sidebar", title: "Both Sidebar", href: "/docs/layouts" },
       {
         id: "left-sidebar",
         title: "Left Sidebar",
@@ -76,7 +76,7 @@ const mainNavItems = [
       {
         id: "app-interface",
         title: "Application Interface",
-        href: "/tour",
+        href: "/docs/tour",
       },
     ],
   },
@@ -91,6 +91,7 @@ const mainNavItems = [
       { id: "code", title: "Code", href: "/docs/code" },
       { id: "image", title: "Image", href: "/docs/image" },
       { id: "video", title: "Video", href: "/docs/video" },
+      { id: "Cheatsheet", title: "Cheatsheet", href: "/docs/cheatsheet" },
       {
         id: "keyboard",
         title: "Keyboard Shortcuts",

@@ -6,6 +6,7 @@ import ForumPosts from "@/components/page-sections/forums-page/forum-posts";
 import ForumSidebar from "@/components/page-sections/forums-page/forum-sidebar";
 import ForumsHeaders from "@/components/page-sections/forums-page/forums-headers";
 import { BreadcrumbProps, CategoryProps } from "@/types/breadcrumb-types";
+import "./style.scss"; // Importing the style for the forums page
 
 const ForumsPage = () => {
   // Example categories, you can replace this with your actual data
