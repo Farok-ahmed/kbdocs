@@ -1,3 +1,6 @@
+"use client";
+import CountUp from "react-countup";
+
 const DocCounter = () => {
   return (
     <>
@@ -30,25 +33,33 @@ const DocCounter = () => {
           <div className="row">
             <div className="col-lg-3 col-md-3 col-sm-6">
               <div className="doc_fact_item wow fadeInUp">
-                <div className="counter">5486</div>
+                <div className="counter">
+                  <CountUp start={0} end={5486} />
+                </div>
                 <p>Happy Customer</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6">
               <div className="doc_fact_item wow fadeInUp" data-wow-delay="0.2s">
-                <div className="counter">642</div>
+                <div className="counter">
+                  <CountUp start={0} end={642} />
+                </div>
                 <p>Cups of Coffee</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6">
               <div className="doc_fact_item wow fadeInUp" data-wow-delay="0.4s">
-                <div className="counter">100</div>
+                <div className="counter">
+                  <CountUp start={0} end={100} />
+                </div>
                 <p>Finished Projects</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6">
               <div className="doc_fact_item wow fadeInUp" data-wow-delay="0.6s">
-                <div className="counter">476</div>
+                <div className="counter">
+                  <CountUp start={0} end={476} />
+                </div>
                 <p>Staff Members</p>
               </div>
             </div>
