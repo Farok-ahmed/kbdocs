@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CheatsheetAccordion from "./_components/accordion-data";
+// import CheatsheetAccordion from "./_components/accordion-data";
 
 const CheatsheetPage = () => {
   return (
