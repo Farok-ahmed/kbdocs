@@ -1,6 +1,7 @@
 "use client";
 import DefaultLayout from "@/components/layout";
 import Link from "next/link";
+import CountUp from "react-countup";
 
 export default function HelpDeskPage() {
   return (
@@ -176,6 +177,7 @@ export default function HelpDeskPage() {
                 <h3 className="title">
                   <Link href="/forums"> Getting Started</Link>
                 </h3>
+
                 <p className="total-post">453 Posts</p>
               </div>
               {/* /.kbDoc-com-box-content --> */}
@@ -587,7 +589,9 @@ export default function HelpDeskPage() {
               <div className="fanfact-icon">
                 <img src="img/home_support/fun-fact-1.png" alt="funfact" />
               </div>
-              <div className="counter">842</div>
+              <div className="counter">
+                <CountUp start={0} end={842} />
+              </div>
               <h3 className="title">Users</h3>
             </div>
             {/* /.funfact-box --> */}
@@ -599,7 +603,9 @@ export default function HelpDeskPage() {
               <div className="fanfact-icon">
                 <img src="img/home_support/fun-fact-2.png" alt="funfact" />
               </div>
-              <div className="counter">10,23</div>
+              <div className="counter">
+                <CountUp start={0} end={1023} />
+              </div>
               <h3 className="title">Topics</h3>
             </div>
             {/* /.funfact-box text-center --> */}
@@ -611,7 +617,9 @@ export default function HelpDeskPage() {
               <div className="fanfact-icon">
                 <img src="img/home_support/fun-fact-3.png" alt="funfact" />
               </div>
-              <div className="counter">196</div>
+              <div className="counter">
+                <CountUp start={0} end={196} />
+              </div>
               <h3 className="title">Forums</h3>
             </div>
             {/* /.funfact-box text-center --> */}
@@ -623,7 +631,9 @@ export default function HelpDeskPage() {
               <div className="fanfact-icon">
                 <img src="img/home_support/fun-fact-4.png" alt="funfact" />
               </div>
-              <div className="counter">650</div>
+              <div className="counter">
+                <CountUp start={0} end={650} />
+              </div>
               <h3 className="title">Replies</h3>
             </div>
             {/* /.funfact-box text-center --> */}
@@ -635,7 +645,9 @@ export default function HelpDeskPage() {
               <div className="fanfact-icon">
                 <img src="img/home_support/fun-fact-5.png" alt="funfact" />
               </div>
-              <div className="counter">364</div>
+              <div className="counter">
+                <CountUp start={0} end={364} />
+              </div>
               <h3 className="title">Tags</h3>
             </div>
             {/* /.funfact-box text-center --> */}
