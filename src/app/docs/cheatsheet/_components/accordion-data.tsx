@@ -1,4 +1,6 @@
 "use client";
+import { motion } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 interface CheatsheetItem {
@@ -80,6 +82,7 @@ export default function CheatsheetAccordion() {
                   onClick={() => toggleAccordion(section.id)}
                   aria-expanded={openId === section.id}
                   aria-controls={`collapse-${section.id}`}
+                  style={{ boxShadow: "none", backgroundColor: "transparent" }}
                 >
                   {section.title}
                   {/* span class pluse */}
@@ -89,26 +92,31 @@ export default function CheatsheetAccordion() {
                 </button>
               </h2>
             </div>
-
-            {openId === section.id && (
-              <div
-                id={`collapse-${section.id}`}
-                className="collapse show"
-                aria-labelledby={`heading-${section.id}`}
-              >
-                <div className="row">
-                  {section.items.map((item, idx) => (
-                    <div key={idx} className="col-lg-3">
-                      <div className="cheatsheet_item">
-                        <div className="cheatsheet_num">{item.number}</div>
-                        <p>{item.english}</p>
-                        <h4>{item.german}</h4>
+            <AnimatePresence initial={false}>
+              {openId === section.id && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  id={`collapse-${section.id}`}
+                  className="collapse show"
+                  aria-labelledby={`heading-${section.id}`}
+                >
+                  <div className="row">
+                    {section.items.map((item, idx) => (
+                      <div key={idx} className="col-lg-3">
+                        <div className="cheatsheet_item">
+                          <div className="cheatsheet_num">{item.number}</div>
+                          <p>{item.english}</p>
+                          <h4>{item.german}</h4>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
