@@ -1,4 +1,5 @@
 "use client";
+import { AnimatePresence, motion } from "framer-motion";
 import { FC, useState } from "react";
 
 // Define types
@@ -65,52 +66,84 @@ const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
       {/* Right Accordion Content */}
       <div className="col-lg-8 col-md-7">
         <div className="tab-content pl_70">
-          <div
-            className="tab-pane faq_tab_pane fade show active"
-            role="tabpanel"
-          >
-            <div className="accordion doc_faq_info" id="accordionExample">
-              {activeContent.length > 0 ? (
-                activeContent.map((faqItem, index) => {
-                  const isFaqOpen = openFaqIndex === index;
-                  return (
-                    <div className="card wow fadeInUp" key={index}>
-                      <div className="card-header" id={`heading${index}`}>
-                        <h2 className="mb-0">
-                          <button
-                            className={`btn btn-link ${
-                              !isFaqOpen ? "collapsed" : ""
-                            }`}
-                            type="button"
-                            aria-expanded={isFaqOpen}
-                            onClick={() => handleFaqClick(index)}
-                          >
-                            {faqItem.question}
-                            <i className="icon_plus"></i>
-                            <i className="icon_minus-06"></i>
-                          </button>
-                        </h2>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={activeIndex}
+              className="tab-pane faq_tab_pane fade show active"
+              role="tabpanel"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+            >
+              <div className="accordion doc_faq_info" id="accordionExample">
+                {activeContent.length > 0 ? (
+                  activeContent.map((faqItem, index) => {
+                    const isFaqOpen = openFaqIndex === index;
+                    return (
+                      <div className="card wow fadeInUp" key={index}>
+                        <div className="card-header" id={`heading${index}`}>
+                          <h2 className="mb-0">
+                            <button
+                              style={{
+                                boxShadow: "none",
+                              }}
+                              className={`btn btn-link ${
+                                !isFaqOpen ? "collapsed" : ""
+                              }`}
+                              type="button"
+                              aria-expanded={isFaqOpen}
+                              onClick={() => handleFaqClick(index)}
+                            >
+                              {faqItem.question}
+                              <i className="icon_plus"></i>
+                              <i className="icon_minus-06"></i>
+                            </button>
+                          </h2>
+                        </div>
+                        <AnimatePresence initial={false}>
+                          {isFaqOpen && (
+                            <motion.div
+                              key={index}
+                              id={`collapse${index}`}
+                              className={`collapse show`}
+                              aria-labelledby={`heading${index}`}
+                              data-parent="#accordionExample"
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.35, ease: "easeInOut" }}
+                              style={{ overflow: "hidden" }}
+                            >
+                              <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{
+                                  duration: 0.3,
+                                  ease: "easeInOut",
+                                }}
+                              >
+                                <div className="card-body">
+                                  {faqItem.answer}
+                                </div>
+                              </motion.div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
-                      <div
-                        id={`collapse${index}`}
-                        className={`collapse ${isFaqOpen ? "show" : ""}`}
-                        aria-labelledby={`heading${index}`}
-                        data-parent="#accordionExample"
-                      >
-                        <div className="card-body">{faqItem.answer}</div>
-                      </div>
+                    );
+                  })
+                ) : (
+                  <div className="card">
+                    <div className="card-body">
+                      No information available for this topic.
                     </div>
-                  );
-                })
-              ) : (
-                <div className="card">
-                  <div className="card-body">
-                    No information available for this topic.
                   </div>
-                </div>
-              )}
-            </div>
-          </div>
+                )}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>
