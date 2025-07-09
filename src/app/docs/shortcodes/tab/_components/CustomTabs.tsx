@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const CustomTabs = () => {
@@ -67,36 +68,53 @@ const CustomTabs = () => {
 
       {/* Tab Content */}
       <div className="tab-content" id="myTabContent">
-        <div
-          className={`tab-pane fade ${
-            activeTab === "conclusions" ? "active show" : ""
-          }`}
-          id="home"
-          role="tabpanel"
-          aria-labelledby="home-tab"
-        >
-          {tabContent.conclusions}
-        </div>
-        <div
-          className={`tab-pane fade ${
-            activeTab === "forum" ? "active show" : ""
-          }`}
-          id="profile"
-          role="tabpanel"
-          aria-labelledby="profile-tab"
-        >
-          {tabContent.forum}
-        </div>
-        <div
-          className={`tab-pane fade ${
-            activeTab === "reporting" ? "active show" : ""
-          }`}
-          id="reporting"
-          role="tabpanel"
-          aria-labelledby="contact-tab"
-        >
-          {tabContent.reporting}
-        </div>
+        <AnimatePresence mode="wait" initial={false}>
+          {activeTab === "conclusions" && (
+            <motion.div
+              key="conclusions"
+              className="tab-pane fade active show"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {tabContent.conclusions}
+            </motion.div>
+          )}
+          {activeTab === "forum" && (
+            <motion.div
+              key="forum"
+              className="tab-pane fade active show"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {tabContent.forum}
+            </motion.div>
+          )}
+          {activeTab === "reporting" && (
+            <motion.div
+              key="reporting"
+              className="tab-pane fade active show"
+              id="reporting"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {tabContent.reporting}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

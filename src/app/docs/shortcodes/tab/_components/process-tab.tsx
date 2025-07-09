@@ -1,6 +1,7 @@
 "use client"; // if using Next.js App Router
 
 import classNames from "classnames";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 interface Tab {
@@ -242,20 +243,25 @@ export default function DynamicTabs() {
       </ul>
 
       <div className="tab-content" id="myTabContents">
-        {tabsData.map((tab, index) => (
-          <div
-            key={tab.id}
-            className={classNames("tab-pane fade", {
-              show: activeIndex === index,
-              active: activeIndex === index,
-            })}
-            id={tab.id}
-            role="tabpanel"
-            aria-labelledby={`${tab.id}-tab`}
-          >
-            {tab.content}
-          </div>
-        ))}
+        <AnimatePresence mode="wait" initial={false}>
+          {tabsData.map((tab, index) =>
+            activeIndex === index ? (
+              <motion.div
+                key={tab.id}
+                className={classNames("tab-pane fade show active")}
+                id={tab.id}
+                role="tabpanel"
+                aria-labelledby={`${tab.id}-tab`}
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 30 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+              >
+                {tab.content}
+              </motion.div>
+            ) : null
+          )}
+        </AnimatePresence>
 
         <button
           className="btn btn-info btn-lg previous"
