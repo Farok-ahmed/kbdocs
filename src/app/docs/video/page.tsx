@@ -1,6 +1,52 @@
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import VideoPlaylist from "./_components/video-playlist";
 
 const VideoPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const popupRef = useRef<HTMLDivElement | null>(null);
+
+  const handleOpen = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(true);
+  };
+  const handleClose = () => setIsOpen(false);
+
+  // Close on ESC
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
+
+  // Close on click outside
+  useEffect(() => {
+    if (!isOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
+        handleClose();
+      }
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [isOpen]);
+
+  // Prevent background scroll when popup is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <div id="post" className="documentation_info rvfs-4" data-rvfs={4}>
@@ -165,11 +211,88 @@ const VideoPage = () => {
             </p>
             <div className="code-preview" id="inline-popups">
               <img src="/img/img-pointer2.jpg" alt="" />
-              <a className="popup-youtube video_icon" href="#vid2">
+              <a
+                onClick={handleOpen}
+                className="popup-youtube video_icon"
+                href="#vid2"
+              >
                 <i className="arrow_triangle-right" />
               </a>
             </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  className="video-popup-overlay"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  style={{
+                    position: "fixed",
+                    inset: 0,
+                    width: "100vw",
+                    height: "100vh",
+                    background: "#fff",
+                    zIndex: 1000,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <motion.div
+                    ref={popupRef}
+                    className="video-popup-content"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                    style={{
+                      background: "none",
+                      borderRadius: 0,
+                      boxShadow: "none",
+                      padding: 0,
+                      position: "relative",
+                      maxWidth: 700,
+                      width: "90vw",
+                    }}
+                  >
+                    <button
+                      className="close"
+                      onClick={handleClose}
+                      style={{
+                        position: "absolute",
+                        top: 10,
+                        right: 10,
+                        fontSize: 32,
+                        background: "none",
+                        border: "none",
+                        color: "#333",
+                        cursor: "pointer",
+                        zIndex: 2,
+                      }}
+                      aria-label="Close video popup"
+                    >
+                      &times;
+                    </button>
+                    <iframe
+                      src="https://player.vimeo.com/video/76979871"
+                      width="640"
+                      height="360"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                      style={{
+                        borderRadius: 12,
+                        width: "100%",
+                        height: 360,
+                        display: "block",
+                      }}
+                    />
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
+
           <div className="mt-5">
             <h4 className="c_head load-order-2" id="autoplay_video">
               AutoPlay Local Video
