@@ -1,8 +1,18 @@
+"use client";
+import { motion } from "framer-motion";
 const ContactForm = () => {
   return (
     <div className="contact_info">
       <div className="section_title text-left">
-        <h2 className="h_title wow fadeInUp">Let’s start the conversation</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="h_title wow fadeInUp"
+        >
+          Let’s start the conversation
+        </motion.h2>
         <p>Please email us, we’ll happy to assist you.</p>
       </div>
       <form action="#" className="contact_form">
@@ -81,7 +91,7 @@ const ContactForm = () => {
                 name="gridRadios"
                 id="budgetOne"
                 value="option1"
-                checked=""
+                checked={true}
               />
               <label className="form-check-label" htmlFor="budgetOne">
                 $1k
@@ -94,7 +104,7 @@ const ContactForm = () => {
                 name="gridRadios"
                 id="budgetTwo"
                 value="option2"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="budgetTwo">
                 $2k
@@ -107,7 +117,7 @@ const ContactForm = () => {
                 name="gridRadios"
                 id="budgetThree"
                 value="option3"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="budgetThree">
                 $2k to $3k
@@ -120,7 +130,7 @@ const ContactForm = () => {
                 name="gridRadios"
                 id="budgetFour"
                 value="option4"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="budgetFour">
                 $4k to 5k
@@ -133,7 +143,7 @@ const ContactForm = () => {
                 name="gridRadios"
                 id="budgetFive"
                 value="option5"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="budgetFive">
                 More then $6k
@@ -151,7 +161,7 @@ const ContactForm = () => {
                 name="Radios"
                 id="weekOne"
                 value="1"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="weekOne">
                 1 week
@@ -164,7 +174,7 @@ const ContactForm = () => {
                 name="Radios"
                 id="weekTwo"
                 value="2"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="weekTwo">
                 2 week
@@ -177,7 +187,7 @@ const ContactForm = () => {
                 name="Radios"
                 id="weekThree"
                 value="3"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="weekThree">
                 3 week
@@ -190,7 +200,7 @@ const ContactForm = () => {
                 name="Radios"
                 id="weekFour"
                 value="4"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="weekFour">
                 4 week
@@ -203,7 +213,7 @@ const ContactForm = () => {
                 name="Radios"
                 id="weekFive"
                 value="5"
-                checked=""
+                checked={false}
               />
               <label className="form-check-label" htmlFor="weekFive">
                 5 week
