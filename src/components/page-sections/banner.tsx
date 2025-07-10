@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export default function Banner() {
   return (
     <section className="doc_banner_area_two">
@@ -5,13 +6,13 @@ export default function Banner() {
         className="b_plus one"
         data-parallax='{"x": 250, "y": 160, "rotateZ":500}'
       >
-        <img src="img/home_two/plus.png" alt="" />
+        <img src="/img/home_two/plus.png" alt="" />
       </div>
       <div
         className="b_plus two"
         data-parallax='{"x": 250, "y": 260, "rotateZ":500}'
       >
-        <img src="img/home_two/plus_one.png" alt="" />
+        <img src="/img/home_two/plus_one.png" alt="" />
       </div>
       <div
         className="b_round r_one"
@@ -25,30 +26,37 @@ export default function Banner() {
       <div className="b_round r_four"></div>
       <img
         className="p_absolute building_img"
-        src="img/home_two/building.png"
+        src="/img/home_two/building.png"
         alt=""
       />
-      <img
+      <motion.img
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className="p_absolute table_img wow fadeInLeft"
-        src="img/home_two/table.svg"
+        src="/img/home_two/table.svg"
         alt=""
       />
       <img
         className="p_absolute flower wow fadeInUp"
         data-wow-delay="0.6s"
-        src="img/home_two/flower.png"
+        src="/img/home_two/flower.png"
         alt=""
       />
-      <img
+      <motion.img
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3 }}
         className="p_absolute bord wow fadeInRight"
         data-wow-delay="0.4s"
-        src="img/home_two/bord.png"
+        src="/img/home_two/bord.png"
         alt=""
       />
       <img
         className="p_absolute girl wow fadeInRight"
         data-wow-delay="0.8s"
-        src="img/home_two/girl.png"
+        src="/img/home_two/girl.png"
         alt=""
       />
       <div className="container">

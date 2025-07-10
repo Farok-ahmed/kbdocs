@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import FaqLayout from "./faq-layout";
 
 export default function Faq() {
@@ -109,11 +110,26 @@ export default function Faq() {
     <section className="doc_faq_area_two sec_pad">
       <div className="container">
         <div className="section_title text-center">
-          <h2 className="h_title wow fadeInUp">Frequently Asked Questions</h2>
-          <p className="wow fadeInUp" data-wow-delay="0.2s">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="h_title wow fadeInUp"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
             Some dodgy chav bevvy amongst argy-bargy spiffing absolutely
             bladdered nancy boy cup of tea a load of old tosh porkies.
-          </p>
+          </motion.p>
         </div>
         <FaqLayout data={items} />
       </div>
