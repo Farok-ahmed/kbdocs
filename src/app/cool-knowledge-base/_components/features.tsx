@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Features = () => {
@@ -29,11 +30,18 @@ const Features = () => {
       <section className="doc_features_area_one">
         <div className="container">
           <div className="row">
-            {featureData.map((item) => (
+            {featureData.map((item, index) => (
               <div key={item.id} className="col-lg-4 col-sm-6">
-                <div
-                  className="media doc_features_item_one wow fadeInLeft"
-                  data-wow-delay="0.2s"
+                <motion.div
+                  className="media doc_features_item_one"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.6 + index * 0.1,
+                    delay: 0.2,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{ once: true }}
                 >
                   <img src={item.image} alt="" />
                   <div className="media-body">
@@ -45,7 +53,7 @@ const Features = () => {
                       Learn More <i className="arrow_right"></i>
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>

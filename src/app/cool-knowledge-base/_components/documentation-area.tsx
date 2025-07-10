@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -120,29 +121,38 @@ const documentationData = [
 
 const DocumentationArea = () => {
   const [activeTab, setActiveTab] = useState(documentationData[0].id);
-
   const activeTabData = documentationData.find((tab) => tab.id === activeTab);
 
   return (
     <section className="h_doc_documentation_area bg_color sec_pad">
       <div className="container">
         <div className="section_title text-center">
-          <h2 className="h_title wow fadeInUp">
+          <motion.h2
+            className="h_title"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             The Best Online Documentation
-          </h2>
-          <p className="wow fadeInUp" data-wow-delay="0.4s">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          >
             Loaded with awesome features like Documentation, Knowledgebase,
             Forum & more!
-          </p>
+          </motion.p>
         </div>
+
         <ul
           className="nav nav-tabs documentation_tab"
           id="myTabs"
           role="tablist"
         >
-          {documentationData.map((tab) => (
+          {documentationData.map((tab, i) => (
             <li className="nav-item" key={tab.id}>
-              <a
+              <Link
                 className={`nav-link ${activeTab === tab.id ? "active" : ""}`}
                 id={`${tab.id}-tab`}
                 data-toggle="tab"
@@ -156,10 +166,11 @@ const DocumentationArea = () => {
                 }}
               >
                 {tab.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
+
         <div className="tab-content" id="myTabContents">
           {activeTabData && (
             <div
@@ -171,34 +182,57 @@ const DocumentationArea = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="documentation_text">
-                    <div className="round wow fadeInUp">
+                    <motion.div
+                      className="round"
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                    >
                       <img
                         src={activeTabData.featured.icon}
                         alt={activeTabData.featured.title}
                       />
-                    </div>
-                    <h4 className="wow fadeInUp" data-wow-delay="0.2s">
-                      {activeTabData.featured.title}
-                    </h4>
-                    <p className="wow fadeInUp" data-wow-delay="0.3s">
-                      {activeTabData.featured.description}
-                    </p>
-                    <Link
-                      href={activeTabData.featured.link}
-                      className="learn_btn wow fadeInUp"
-                      data-wow-delay="0.4s"
+                    </motion.div>
+                    <motion.h4
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                      Learn More <i className="arrow_right"></i>
-                    </Link>
+                      {activeTabData.featured.title}
+                    </motion.h4>
+                    <motion.p
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                    >
+                      {activeTabData.featured.description}
+                    </motion.p>
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                      <Link
+                        href={activeTabData.featured.link}
+                        className="learn_btn"
+                      >
+                        Learn More <i className="arrow_right"></i>
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
                 <div className="col-lg-8">
                   <div className="row">
                     {activeTabData.items.map((item, index) => (
                       <div className="col-sm-6" key={index}>
-                        <div
-                          className="media documentation_item wow fadeInUp"
-                          data-wow-delay={`${0.2 * (index + 1)}s`}
+                        <motion.div
+                          className="media documentation_item"
+                          initial={{ opacity: 0, y: 30 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.6,
+                            delay: 0.2 * (index + 1),
+                          }}
                         >
                           <div className="icon">
                             <img src={item.icon} alt={item.title} />
@@ -209,7 +243,7 @@ const DocumentationArea = () => {
                             </Link>
                             <p>{item.description}</p>
                           </div>
-                        </div>
+                        </motion.div>
                       </div>
                     ))}
                   </div>

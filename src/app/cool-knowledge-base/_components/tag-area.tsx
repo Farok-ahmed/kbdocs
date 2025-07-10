@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { tagsData } from "./tags";
@@ -13,17 +14,32 @@ const TagsArea = () => {
       <section className="doc_tag_area">
         <div className="container">
           <div className="section_title text-center">
-            <h2 className="h_title wow fadeInUp">Popular Tags</h2>
+            <motion.h2
+              className="h_title"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Popular Tags
+            </motion.h2>
           </div>
 
           {/* Interactive Tab Buttons */}
+
           <ul className="nav nav-tabs doc_tag" id="myTab" role="tablist">
             {tagsData.map((tag, index) => (
-              <li
+              <motion.li
                 key={tag.id}
-                className="nav-item wow fadeInLeft"
-                data-wow-delay={`${index * 0.1}s`}
-                // Use a button for accessibility and event handling
+                className="nav-item"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
                 onClick={() => setActiveTab(tag.id)}
               >
                 <button
@@ -35,7 +51,7 @@ const TagsArea = () => {
                 >
                   {tag.title}
                 </button>
-              </li>
+              </motion.li>
             ))}
           </ul>
 
@@ -55,9 +71,16 @@ const TagsArea = () => {
                 <div className="row">
                   {tag.sections.map((section, index) => (
                     <div key={index} className="col-lg-4 col-sm-6">
-                      <div
-                        className="doc_tag_item wow fadeInUp"
-                        data-wow-delay={`${index * 0.1}s`}
+                      <motion.div
+                        className="doc_tag_item"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.6,
+                          delay: index * 0.1,
+                          ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}
                       >
                         <div className="doc_tag_title">
                           <h4>{section.title}</h4>
@@ -77,7 +100,7 @@ const TagsArea = () => {
                           View All
                           <i className="arrow_right"></i>
                         </Link>
-                      </div>
+                      </motion.div>
                     </div>
                   ))}
                 </div>
