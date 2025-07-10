@@ -1,9 +1,64 @@
 "use client";
 import DefaultLayout from "@/components/layout";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import CountUp from "react-countup";
+import CommunityPosts from "./.components/community-posts";
+import CommunitySection from "./.components/community-section";
+import WorkCount from "./.components/work-count";
+type SupportTopic = {
+  id: number;
+  icon: string;
+  title: string;
+  posts: string;
+  link: string;
+  delay: number;
+};
 
 export default function HelpDeskPage() {
+  const MotionLink = motion(Link);
+  const supportTopics: SupportTopic[] = [
+    {
+      id: 1,
+      icon: "/img/home_support/rc1.png",
+      title: "Getting Started",
+      posts: "453 Posts",
+      link: "/forums",
+      delay: 0.5,
+    },
+    {
+      id: 2,
+      icon: "/img/home_support/rc2.png",
+      title: "Integrations",
+      posts: "624 Posts",
+      link: "",
+      delay: 0.7,
+    },
+    {
+      id: 3,
+      icon: "/img/home_support/rc3.png",
+      title: "Solar System",
+      posts: "120 Posts",
+      link: "/forums",
+      delay: 0.9,
+    },
+    {
+      id: 4,
+      icon: "/img/home_support/rc4.png",
+      title: "Cloud Server",
+      posts: "235 Posts",
+      link: "/forums",
+      delay: 1.1,
+    },
+    {
+      id: 5,
+      icon: "/img/home_support/rc5.png",
+      title: "Integrate Quickly",
+      posts: "542 Posts",
+      link: "/forums",
+      delay: 1.3,
+    },
+  ];
+
   return (
     <DefaultLayout>
       <section className="kbDoc-banner-support">
@@ -43,47 +98,70 @@ export default function HelpDeskPage() {
         {/* /.banner-content --> */}
         <ul className="people-image wow fadeIn" data-wow-delay="0.7s">
           <li>
-            <img
-              className="wow zoomIn"
-              data-wow-delay="0.4s"
-              src="img/home_support/bn1.jpg"
+            <motion.img
+              src="/img/home_support/bn1.jpg"
               alt="people"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              className="rounded-lg"
             />
           </li>
           <li>
-            <img
+            <motion.img
               className="wow zoomIn"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               data-wow-delay="0.4s"
               src="img/home_support/bn2.jpg"
               alt="people"
             />
           </li>
           <li>
-            <img
+            <motion.img
               className="wow zoomIn"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               data-wow-delay="0.4s"
               src="img/home_support/bn3.jpg"
               alt="people"
             />
           </li>
           <li>
-            <img
+            <motion.img
               className="wow zoomIn"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               data-wow-delay="0.4s"
               src="img/home_support/bn4.jpg"
               alt="people"
             />
           </li>
           <li>
-            <img
+            <motion.img
               className="wow zoomIn"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               data-wow-delay="0.4s"
               src="img/home_support/bn5.jpg"
               alt="people"
             />
           </li>
           <li>
-            <img
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
               src="img/home_support/bn6.jpg"
@@ -91,15 +169,23 @@ export default function HelpDeskPage() {
             />
           </li>
           <li>
-            <img
+            <motion.img
               className="wow zoomIn"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               data-wow-delay="0.4s"
               src="img/home_support/bn7.jpg"
               alt="people"
             />
           </li>
           <li>
-            <img
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
               src="img/home_support/bn8.jpg"
@@ -107,7 +193,11 @@ export default function HelpDeskPage() {
             />
           </li>
           <li>
-            <img
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
               src="img/home_support/bn9.jpg"
@@ -115,7 +205,11 @@ export default function HelpDeskPage() {
             />
           </li>
           <li>
-            <img
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+              viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
               src="img/home_support/bn10.jpg"
@@ -123,11 +217,18 @@ export default function HelpDeskPage() {
             />
           </li>
         </ul>
-        <ul className="partical-animation wow fadeIn" data-wow-delay="0.9s">
+        <motion.ul
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="partical-animation wow fadeIn"
+          data-wow-delay="0.9s"
+        >
           <li className="partical">
             <img
               data-parallax='{"x": -180, "y": 80, "rotateY":2000}'
-              src="img/home_support/bnp1.png"
+              src="/img/home_support/bnp1.png"
               alt="partical"
             />
           </li>
@@ -148,9 +249,9 @@ export default function HelpDeskPage() {
               alt="partical"
             />
           </li>
-        </ul>
+        </motion.ul>
         <div className="bottom-shape">
-          <img src="img/home_support/banner-bottom-shape.png" alt="banner" />
+          <img src="/img/home_support/banner-bottom-shape.png" alt="banner" />
         </div>
       </section>
       {/* /.kbDoc-banner-support --> */}
@@ -158,99 +259,44 @@ export default function HelpDeskPage() {
       <section className="related-communities">
         <div className="container">
           <div className="section_title text-center">
-            <h2 className="h_title wow fadeInUp">
+            <motion.h2
+              className="h_title"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               Select your product to find
               <br />
               Related communities
-            </h2>
+            </motion.h2>
           </div>
 
           <div className="communities-boxes">
-            <div
-              className="kbDoc-com-box wow fadeInRight"
-              data-wow-delay="0.5s"
-            >
-              <div className="icon-container">
-                <img src="img/home_support/rc1.png" alt="communinity-box" />
-              </div>
-              <div className="kbDoc-com-box-content">
-                <h3 className="title">
-                  <Link href="/forums"> Getting Started</Link>
-                </h3>
-
-                <p className="total-post">453 Posts</p>
-              </div>
-              {/* /.kbDoc-com-box-content --> */}
-            </div>
-            {/* /.kbDoc-com-box --> */}
-
-            <div
-              className="kbDoc-com-box wow fadeInRight"
-              data-wow-delay="0.7s"
-            >
-              <div className="icon-container">
-                <img src="img/home_support/rc2.png" alt="communinity-box" />
-              </div>
-              <div className="kbDoc-com-box-content">
-                <h3 className="title">
-                  <Link href=""> Integrations</Link>
-                </h3>
-                <p className="total-post">624 Posts</p>
-              </div>
-              {/* /.kbDoc-com-box-content --> */}
-            </div>
-            {/* /.kbDoc-com-box --> */}
-
-            <div
-              className="kbDoc-com-box wow fadeInRight"
-              data-wow-delay="0.9s"
-            >
-              <div className="icon-container">
-                <img src="img/home_support/rc3.png" alt="communinity-box" />
-              </div>
-              <div className="kbDoc-com-box-content">
-                <h3 className="title">
-                  <Link href="/forums"> Solar System</Link>
-                </h3>
-                <p className="total-post">120 Posts</p>
-              </div>
-              {/* /.kbDoc-com-box-content --> */}
-            </div>
-            {/* /.kbDoc-com-box --> */}
-
-            <div
-              className="kbDoc-com-box wow fadeInRight"
-              data-wow-delay="1.1s"
-            >
-              <div className="icon-container">
-                <img src="img/home_support/rc4.png" alt="communinity-box" />
-              </div>
-              <div className="kbDoc-com-box-content">
-                <h3 className="title">
-                  <Link href="/forums"> Cloud Server</Link>
-                </h3>
-                <p className="total-post">235 Posts</p>
-              </div>
-              {/* /.kbDoc-com-box-content --> */}
-            </div>
-            {/* /.kbDoc-com-box --> */}
-
-            <div
-              className="kbDoc-com-box wow fadeInRight"
-              data-wow-delay="1.3s"
-            >
-              <div className="icon-container">
-                <img src="img/home_support/rc5.png" alt="communinity-box" />
-              </div>
-              <div className="kbDoc-com-box-content">
-                <h3 className="title">
-                  <Link href="/forums"> Integrate Quickly</Link>
-                </h3>
-                <p className="total-post">542 Posts</p>
-              </div>
-              {/* /.kbDoc-com-box-content --> */}
-            </div>
-            {/* /.kbDoc-com-box --> */}
+            {supportTopics.map((topic, index) => (
+              <motion.div
+                key={topic.id}
+                className="kbDoc-com-box"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: topic.delay,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+              >
+                <div className="icon-container">
+                  <img src={topic.icon} alt="community-box" />
+                </div>
+                <div className="kbDoc-com-box-content">
+                  <h3 className="title">
+                    <Link href={topic.link || "#"}>{topic.title}</Link>
+                  </h3>
+                  <p className="total-post">{topic.posts}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
           {/* /.communities-boxes --> */}
 
@@ -432,11 +478,25 @@ export default function HelpDeskPage() {
       <section className="status-chart">
         <div className="container">
           <div className="section_title text-center">
-            <h2 className="h_title wow fadeInUp">How useful was KbDoc?</h2>
-            <p className="wow fadeInUp" data-wow-delay="0.3s">
+            <motion.h2
+              className="h_title"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              How useful was KbDoc?
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               Twit gormless barney pardon me vagabond cup of char morish cheeky
               what a load of rubbish, the bee's knees bog.!
-            </p>
+            </motion.p>
           </div>
 
           <div className="kbDoc-chart-wrapper">
@@ -491,7 +551,7 @@ export default function HelpDeskPage() {
                   <span>%</span>
                 </div>
                 <div className="border-image">
-                  {/* <img src="img/home_support/blb.png" alt="chart"> --> */}
+                  {/* <img src="img/home_support/blb.png" alt="chart" /> */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -513,7 +573,7 @@ export default function HelpDeskPage() {
                   <span>%</span>
                 </div>
                 <div className="border-image">
-                  {/* <img src="img/home_support/brb.png" alt="chart"> --> */}
+                  {/* <img src="/img/home_support/brb.png" alt="chart" /> */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -574,82 +634,22 @@ export default function HelpDeskPage() {
           {/* /.smile --> */}
 
           <div className="section_title text-center">
-            <h2 className="h_title wow fadeInUp">
+            <motion.h2
+              className="h_title"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              viewport={{ once: true }}
+            >
               Over 1200+
               <br />
               completed work & Still counting.
-            </h2>
+            </motion.h2>
           </div>
 
           <div className="funfact-boxes">
-            <div
-              className="funfact-box text-center color-one wow fadeInRight"
-              data-wow-delay="0.3s"
-            >
-              <div className="fanfact-icon">
-                <img src="img/home_support/fun-fact-1.png" alt="funfact" />
-              </div>
-              <div className="counter">
-                <CountUp start={0} end={842} />
-              </div>
-              <h3 className="title">Users</h3>
-            </div>
-            {/* /.funfact-box --> */}
+            <WorkCount />
 
-            <div
-              className="funfact-box text-center color-two wow fadeInRight"
-              data-wow-delay="0.5s"
-            >
-              <div className="fanfact-icon">
-                <img src="img/home_support/fun-fact-2.png" alt="funfact" />
-              </div>
-              <div className="counter">
-                <CountUp start={0} end={1023} />
-              </div>
-              <h3 className="title">Topics</h3>
-            </div>
-            {/* /.funfact-box text-center --> */}
-
-            <div
-              className="funfact-box text-center color-three wow fadeInRight"
-              data-wow-delay="0.7s"
-            >
-              <div className="fanfact-icon">
-                <img src="img/home_support/fun-fact-3.png" alt="funfact" />
-              </div>
-              <div className="counter">
-                <CountUp start={0} end={196} />
-              </div>
-              <h3 className="title">Forums</h3>
-            </div>
-            {/* /.funfact-box text-center --> */}
-
-            <div
-              className="funfact-box text-center color-four wow fadeInRight"
-              data-wow-delay="0.9s"
-            >
-              <div className="fanfact-icon">
-                <img src="img/home_support/fun-fact-4.png" alt="funfact" />
-              </div>
-              <div className="counter">
-                <CountUp start={0} end={650} />
-              </div>
-              <h3 className="title">Replies</h3>
-            </div>
-            {/* /.funfact-box text-center --> */}
-
-            <div
-              className="funfact-box text-center color-five wow fadeInRight"
-              data-wow-delay="1.1s"
-            >
-              <div className="fanfact-icon">
-                <img src="img/home_support/fun-fact-5.png" alt="funfact" />
-              </div>
-              <div className="counter">
-                <CountUp start={0} end={364} />
-              </div>
-              <h3 className="title">Tags</h3>
-            </div>
             {/* /.funfact-box text-center --> */}
           </div>
           {/* /.fun-fact-boxes --> */}
@@ -661,230 +661,36 @@ export default function HelpDeskPage() {
       <section className="community-posts-area">
         <div className="container">
           <div className="section_title text-center">
-            <h2 className="h_title wow fadeInUp">KbDoc top community posts</h2>
+            <motion.h2
+              className="h_title"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              viewport={{ once: true }}
+            >
+              KbDoc top community posts
+            </motion.h2>
 
-            <p className="wow fadeInUp" data-wow-delay="0.3s">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
+              viewport={{ once: true }}
+            >
               Me old mucker chimney pot bodge so I said Oxford my lady show off
               show off pick your nose and blow off cack cheesed.!
-            </p>
+            </motion.p>
           </div>
 
-          <div className="community-posts-wrapper">
-            <div className="community-post wow fadeInUp" data-wow-delay="0.5s">
-              <div className="post-content">
-                <div className="author-avatar">
-                  <img src="img/home_support/cp1.png" alt="community post" />
-                </div>
-                <div className="entry-content">
-                  <h3 className="post-title">
-                    <Link href="/forum-single">
-                      Con no longer save outlook emails to KbDoc
-                    </Link>
-                  </h3>
-                  <p>updated by: robynphd 2 days ago</p>
-                </div>
-              </div>
-              <div className="post-meta-wrapper">
-                <ul className="post-meta-info">
-                  <li>
-                    <Link href="">
-                      <i className="fas fa-eye"></i>478
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_chat_alt"></i>20
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_like_alt"></i>5
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* /.community-post --> */}
-
-            <div className="community-post wow fadeInUp" data-wow-delay="0.6s">
-              <div className="post-content">
-                <div className="author-avatar">
-                  <img src="img/home_support/cp2.jpg" alt="community post" />
-                </div>
-                <div className="entry-content">
-                  <h3 className="post-title">
-                    <Link href="/forum-single">Connection timeouts</Link>
-                  </h3>
-                  <p>updated by: Hilary ouse 11 days ago</p>
-                </div>
-              </div>
-              <div className="post-meta-wrapper">
-                <ul className="post-meta-info">
-                  <li>
-                    <Link href="">
-                      <i className="fas fa-eye"></i>478
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_chat_alt"></i>20
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_like_alt"></i>5
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* /.community-post --> */}
-
-            <div className="community-post wow fadeInUp" data-wow-delay="0.7s">
-              <div className="post-content">
-                <div className="author-avatar">
-                  <img src="img/home_support/cp3.jpg" alt="community post" />
-                </div>
-                <div className="entry-content">
-                  <h3 className="post-title">
-                    <Link href="/forum-single">KbDoc full (need help)</Link>
-                  </h3>
-                  <p>updated by: Weir doe 3 days ago</p>
-                </div>
-              </div>
-              <div className="post-meta-wrapper">
-                <ul className="post-meta-info">
-                  <li>
-                    <Link href="">
-                      <i className="fas fa-eye"></i>478
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_chat_alt"></i>20
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_like_alt"></i>5
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* /.community-post --> */}
-
-            <div className="community-post wow fadeInUp" data-wow-delay="0.8s">
-              <div className="post-content">
-                <div className="author-avatar">
-                  <img src="img/home_support/cp4.jpg" alt="community post" />
-                </div>
-                <div className="entry-content">
-                  <h3 className="post-title">
-                    <Link href="/forum-single">
-                      Syncing is stuck on a mac .What could be the culprit herh
-                    </Link>
-                  </h3>
-                  <p>updated by: Jake weary 5 days ago</p>
-                </div>
-              </div>
-              <div className="post-meta-wrapper">
-                <ul className="post-meta-info">
-                  <li>
-                    <Link href="">
-                      <i className="fas fa-eye"></i>478
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_chat_alt"></i>20
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_like_alt"></i>5
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* /.community-post --> */}
-
-            <div className="community-post wow fadeInUp" data-wow-delay="1s">
-              <div className="post-content">
-                <div className="author-avatar">
-                  <img src="img/home_support/cp5.jpg" alt="community post" />
-                </div>
-                <div className="entry-content">
-                  <h3 className="post-title">
-                    <Link href="/forum-single">
-                      KbDoc application keeps crashing at starting mojave
-                      10.14.6
-                    </Link>
-                  </h3>
-                  <p>updated by: Jason response 2 days ago</p>
-                </div>
-              </div>
-              <div className="post-meta-wrapper">
-                <ul className="post-meta-info">
-                  <li>
-                    <Link href="">
-                      <i className="fas fa-eye"></i>478
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_chat_alt"></i>20
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_like_alt"></i>5
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* /.community-post --> */}
-
-            <div className="community-post wow fadeInUp" data-wow-delay="1.1s">
-              <div className="post-content">
-                <div className="author-avatar">
-                  <img src="img/home_support/cp6.jpg" alt="community post" />
-                </div>
-                <div className="entry-content">
-                  <h3 className="post-title">
-                    <Link href="/forum-single">Customizing Certificates</Link>
-                  </h3>
-                  <p>updated by: Miles tone 7 days ago</p>
-                </div>
-              </div>
-              <div className="post-meta-wrapper">
-                <ul className="post-meta-info">
-                  <li>
-                    <Link href="">
-                      <i className="fas fa-eye"></i>478
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_chat_alt"></i>20
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <i className="icon_like_alt"></i>5
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* /.community-post --> */}
-          </div>
+          <CommunityPosts />
           {/* /.community-posts-wrapper --> */}
 
           <div className="button-container text-center">
-            <Link
+            <MotionLink
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
               href=""
               className="doc_border_btn btn-round border-light all_doc_btn wow fadeInUp animated"
             >
@@ -901,7 +707,7 @@ export default function HelpDeskPage() {
                   d="M13.034,0.006 L12.323,0.738 L15.227,4.980 L-0.000,4.981 L-0.000,6.015 L15.227,6.015 L12.323,10.258 L13.034,10.990 L18.000,5.864 L18.000,5.131 L13.034,0.006 Z"
                 />
               </svg>
-            </Link>
+            </MotionLink>
           </div>
           {/* /.button-container --> */}
         </div>
@@ -914,47 +720,76 @@ export default function HelpDeskPage() {
           <div className="row">
             <div className="col-lg-7 md-order-two">
               <div className="journalism-content-wrapper">
-                <div className="quote wow fadeIn">
-                  <img src="img/home_support/quote-top.png" alt="quote" />
-                </div>
-                <h2
-                  className="journalism-title wow fadeInUp"
-                  data-wow-delay="0.3s"
+                <motion.div
+                  className="quote"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  viewport={{ once: true }}
+                >
+                  <img src="/img/home_support/quote-top.png" alt="quote" />
+                </motion.div>
+                <motion.h2
+                  className="journalism-title"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                  viewport={{ once: true }}
                 >
                   KbDoc cares deeply
                   <br />
                   about journalism.
-                </h2>
+                </motion.h2>
 
-                <p className="description wow fadeInUp" data-wow-delay="0.5s">
+                <motion.p
+                  className="description"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                >
                   Cheeky why my good sir nancy boy off his nut at public school
                   excuse my French well bog bugger porkies, eaton he legged it
                   owt to do with me gutted.!
-                </p>
+                </motion.p>
 
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                  viewport={{ once: true }}
                   className="journalism-info wow fadeInUp"
                   data-wow-delay="0.3s"
                 >
                   <h3 className="name">Chaplain Mondover</h3>
                   <span className="designation">CEO, KbDoc</span>
-                </div>
+                </motion.div>
 
-                <div className="quote dmt-4 wow fadeIn" data-wow-delay="1s">
-                  <img src="img/home_support/quote-bottom.png" alt="quote" />
-                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  viewport={{ once: true }}
+                  className="quote dmt-4 wow fadeIn"
+                  data-wow-delay="1s"
+                >
+                  <img src="/img/home_support/quote-bottom.png" alt="quote" />
+                </motion.div>
               </div>
               {/* /.journalism-content-wrapper --> */}
             </div>
             {/* /.col-md-6 --> */}
 
             <div className="col-lg-5">
-              <div
-                className="journalism-feature-image wow fadeInRight"
-                data-wow-delay="0.3s"
+              <motion.div
+                className="journalism-feature-image"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                viewport={{ once: true }}
               >
-                <img src="img/home_support/journalism.png" alt="journalism" />
-              </div>
+                <img src="/img/home_support/journalism.png" alt="journalism" />
+              </motion.div>
               {/* /.journalism-feature-image --> */}
             </div>
             {/* /.col-md-6 --> */}
@@ -964,9 +799,15 @@ export default function HelpDeskPage() {
         {/* /.container --> */}
 
         <div className="light-header">
-          <h2 className="title-light wow fadeInDown" data-wow-delay="0.4s">
+          <motion.h2
+            className="title-light"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             OUR COMMITMENT
-          </h2>
+          </motion.h2>
         </div>
       </section>
       {/* /.about-journalism --> */}
@@ -974,73 +815,32 @@ export default function HelpDeskPage() {
       <section className="communities">
         <div className="container">
           <div className="section_title title-img text-center">
-            <img src="img/home_support/com_sm.png" alt="community" />
+            <img src="/img/home_support/com_sm.png" alt="community" />
 
-            <h2 className="title-lg wow fadeInUp">New to Communities?</h2>
+            <motion.h2
+              className="title-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              New to Communities?
+            </motion.h2>
 
-            <Link
+            <MotionLink
               href=""
-              className="action_btn wow fadeInUp"
-              data-wow-delay="0.3s"
+              className="action_btn"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
               Join the community <i className="arrow_right"></i>
-            </Link>
+            </MotionLink>
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="community-box wow fadeInUp" data-wow-delay="0.4s">
-                <div className="icon-container">
-                  <img src="img/home_support/com_1.png" alt="community" />
-                </div>
-                <div className="community-content">
-                  <h3 className="com-title">
-                    Find answers and ask new questions
-                  </h3>
-                  <Link href="" className="details-link">
-                    How to Search Communities <i className="arrow_right"></i>
-                  </Link>
-                </div>
-              </div>
-              {/* /.communinity-box --> */}
-            </div>
-            {/* /.col-lg-4 col-md-6 --> */}
-
-            <div className="col-lg-4 col-md-6">
-              <div className="community-box wow fadeInUp" data-wow-delay="0.6s">
-                <div className="icon-container">
-                  <img src="img/home_support/com_2.png" alt="community" />
-                </div>
-                <div className="community-content">
-                  <h3 className="com-title">
-                    Manage the people and discussions you follow
-                  </h3>
-                  <Link href="" className="details-link">
-                    How to Search Communities <i className="arrow_right"></i>
-                  </Link>
-                </div>
-              </div>
-              {/* /.communinity-box --> */}
-            </div>
-            {/* /.col-lg-4 col-md-6 --> */}
-
-            <div className="col-lg-4 col-md-6">
-              <div className="community-box wow fadeInUp" data-wow-delay="0.8s">
-                <div className="icon-container">
-                  <img src="img/home_support/com_3.png" alt="community" />
-                </div>
-                <div className="community-content">
-                  <h3 className="com-title">
-                    Award points, level up, and earn new privileges
-                  </h3>
-                  <Link href="" className="details-link">
-                    How to Search Communities <i className="arrow_right"></i>
-                  </Link>
-                </div>
-              </div>
-              {/* /.communinity-box --> */}
-            </div>
-            {/* /.col-md-4 --> */}
+            <CommunitySection />
           </div>
           {/* /.row --> */}
         </div>
