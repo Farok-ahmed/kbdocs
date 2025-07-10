@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
 const TourPage = () => {
   return (
     <>
@@ -16,7 +19,7 @@ const TourPage = () => {
           <div className="tour_item">
             <h4 className="c_head load-order-2" id="head">
               Ask questions, get answer no distractions
-              <a
+              <Link
                 className="anchorjs-link "
                 aria-label="Anchor"
                 data-anchorjs-icon=""
@@ -36,21 +39,26 @@ const TourPage = () => {
                 <div className="just_question">
                   <div className="just_text question_top">
                     <p>Just questions....</p>
-                    <div
-                      className="arrow wow fadeInLeft"
-                      data-wow-delay="0.8s"
-                      style={{
-                        visibility: "visible",
-                        animationDelay: "0.8s",
-                        animationName: "fadeInLeft",
+                    <motion.div
+                      className="arrow"
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: 0.8,
+                        duration: 0.6,
+                        ease: "easeOut",
                       }}
                     >
                       <img src="/img/arrow_top.png" alt="" />
-                    </div>
+                    </motion.div>
                   </div>
                   <div className="just_text answer_bottom">
                     <p>Just questions....</p>
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{ duration: 1, ease: "easeInOut" }}
                       className="arrow wow fadeInLeft"
                       data-wow-delay="0.9s"
                       style={{
@@ -60,22 +68,19 @@ const TourPage = () => {
                       }}
                     >
                       <img src="/img/arrow_bottom.png" alt="" />
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
               <div className="col-sm-7">
-                <div
-                  className="tour_preview_img wow fadeInRight"
-                  data-wow-delay="0.3s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "0.3s",
-                    animationName: "fadeInRight",
-                  }}
+                <motion.div
+                  className="tour_preview_img"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
                 >
                   <img className="img-fluid" src="/img/tour_img1.png" alt="" />
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -86,20 +91,21 @@ const TourPage = () => {
             </h4>
             <div className="row flex-row-reverse align-items-center tour_intro_item">
               <div className="col-sm-7">
-                <div
-                  className="tour_preview_img wow fadeInRight"
-                  data-wow-delay="0.3s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "0.3s",
-                    animationName: "fadeInRight",
-                  }}
+                <motion.div
+                  className="tour_preview_img"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
                 >
                   <img className="img-fluid" src="/img/tour_img2.png" alt="" />
-                </div>
+                </motion.div>
               </div>
               <div className="col-sm-5 tour_info_content">
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                   className="arrow wow fadeInLeft"
                   data-wow-delay="0.6s"
                   style={{
@@ -109,7 +115,7 @@ const TourPage = () => {
                   }}
                 >
                   <img src="/img/arrow_bottom.png" alt="" />
-                </div>
+                </motion.div>
                 <p>
                   Focus on questions about an actual problem you have faced.
                   Include details about what you have tried and exactly what you
@@ -119,7 +125,11 @@ const TourPage = () => {
             </div>
             <div className="row align-items-center tour_intro_item">
               <div className="col-sm-7">
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                   className="tour_preview_img wow fadeInLeft"
                   data-wow-delay="0.7s"
                   style={{
@@ -129,10 +139,14 @@ const TourPage = () => {
                   }}
                 >
                   <img className="img-fluid" src="/img/tour_img3.png" alt="" />
-                </div>
+                </motion.div>
               </div>
               <div className="col-sm-5 tour_info_content">
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                   className="arrow wow fadeInRight"
                   data-wow-delay="0.9s"
                   style={{
@@ -142,7 +156,7 @@ const TourPage = () => {
                   }}
                 >
                   <img src="/img/arrow_3.png" alt="" />
-                </div>
+                </motion.div>
                 <p>
                   Focus on questions about an actual problem you have faced.
                   Include details about what you have tried and exactly what you
@@ -158,7 +172,7 @@ const TourPage = () => {
               id="tags-make-it-easy-to-find-interesting-questions"
             >
               Tags make it easy to find interesting questions
-              <a
+              <Link
                 className="anchorjs-link "
                 aria-label="Anchor"
                 data-anchorjs-icon=""
@@ -176,7 +190,11 @@ const TourPage = () => {
                   have up to 5 tags, since a question might be related to
                   several subjects.
                 </p>
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                   className="arrow text-right wow fadeInLeft"
                   data-wow-delay="0.6s"
                   style={{
@@ -186,10 +204,14 @@ const TourPage = () => {
                   }}
                 >
                   <img src="/img/arrow_bottom.png" alt="" />
-                </div>
+                </motion.div>
               </div>
               <div className="col-sm-8">
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                   className="tour_preview_img wow fadeInRight"
                   data-wow-delay="0.4s"
                   style={{
@@ -199,7 +221,7 @@ const TourPage = () => {
                   }}
                 >
                   <img className="img-fluid" src="/img/tour_img4.png" alt="" />
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
