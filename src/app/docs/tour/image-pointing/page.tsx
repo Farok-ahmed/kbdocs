@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { AnimatePresence } from "motion/react";
 import { useState } from "react";
+import ModalLightbox from "./../../shortcodes/lightbox/.components/modal-lightbox";
 
 interface Hotspot {
   id: number;
@@ -157,26 +158,7 @@ const ImagePointingPage = () => {
             </p>
           </div>
           <div className="row">
-            <div className="col-lg-6 col-sm-6">
-              <div className="pointing_img">
-                <a href="#" data-toggle="modal" data-target="#exampleModal">
-                  <img src="/img/img-pointer1.jpg" alt="" />
-                </a>
-                <h6>
-                  How to edit <a href="#">KbDoc</a>
-                </h6>
-              </div>
-            </div>
-            <div className="col-lg-6 col-sm-6">
-              <div className="pointing_img">
-                <a href="#" data-toggle="modal" data-target="#exampleModal2">
-                  <img src="/img/img-pointer2.jpg" alt="" />
-                </a>
-                <h6>
-                  How to edit <a href="#">Docly2</a>
-                </h6>
-              </div>
-            </div>
+            <ModalLightbox />
           </div>
         </div>
         <footer>
