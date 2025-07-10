@@ -1,3 +1,4 @@
+"use client";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 
@@ -28,7 +29,7 @@ const fadeInUp: Variants = {
   }),
 };
 
-export default function () {
+export default function GuideCategories() {
   const guides: Guide[] = [
     {
       id: 1,

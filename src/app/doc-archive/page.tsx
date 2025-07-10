@@ -1,13 +1,14 @@
 import DefaultLayout from "@/components/layout";
 import Breadcrumb from "@/components/page-sections/doc-archive-page/breadcrumb";
-import DocCategories from "@/components/page-sections/doc-archive-page/doc-categories";
 import DocCounter from "@/components/page-sections/doc-archive-page/doc-counter";
+import GuideCategories from "@/components/page-sections/guide-categories";
 
 const DocArchivePage = () => {
   return (
     <DefaultLayout>
       <Breadcrumb />
-      <DocCategories />
+      {/* <DocCategories /> */}
+      <GuideCategories />
       <DocCounter />
     </DefaultLayout>
   );
