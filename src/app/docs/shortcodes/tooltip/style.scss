@@ -1,0 +1,40 @@
+.speech-bubble {
+  /* Positioning and Box Model */
+  position: relative;
+  padding: 5px 10px;
+  max-width: 250px;
+
+  /* Appearance */
+  /* The main blue color of the bubble */
+  color: #ffffff;
+  border-radius: 8px; /* Adjust for more or less rounded corners */
+
+  /* Text Properties */
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+.buble-blue {
+  background-color: #4f5bde;
+}
+.buble-orange {
+  background-color: #ef971a;
+}
+/* This creates the triangular pointer at the bottom */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+
+  /* Positioning the triangle */
+  bottom: -10px; /* Controls how far down the pointer is. Must be negative. */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the triangle */
+
+  /* Creating the triangle shape using borders */
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #4f5bde; /* This color must match the background-color */
+}
