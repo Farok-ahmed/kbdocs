@@ -1,0 +1,11 @@
+.open {
+  display: grid !important;
+  grid-template-rows: 0fr !important;
+  transition: grid-template-rows 0.4s ease-in-out;
+  div {
+    overflow: hidden;
+  }
+}
+.open.menu-active {
+  grid-template-rows: 1fr !important;
+}

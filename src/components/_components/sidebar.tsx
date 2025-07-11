@@ -46,9 +46,13 @@ const mainNavItems = [
       {
         id: "left-sidebar",
         title: "Left Sidebar",
-        href: "/layout-leftsidebar",
+        href: "/docs/layouts/leftsidebar",
       },
-      { id: "full-width", title: "Full-width", href: "/layout-full" },
+      {
+        id: "full-width",
+        title: "Full-width",
+        href: "/docs/layouts/layout-full",
+      },
       {
         id: "sticky-menu",
         title: "Sticky Menu",

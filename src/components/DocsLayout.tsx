@@ -9,7 +9,12 @@ import OSSelector from "./_components/os-selector";
 import Search from "./_components/search";
 import Sidebar from "./_components/sidebar";
 
-export default function DocsLayout({ children }: React.PropsWithChildren) {
+interface Props {
+  children: React.ReactNode;
+  type?: "left" | "right" | "both" | "full-width";
+}
+
+export default function DocsLayout({ children, type = "both" }: Props) {
   const [isDark, setIsDark] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const [isFixed, setIsFixed] = useState(false);
@@ -471,36 +476,48 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
               <div className="col-lg-3 doc_mobile_menu display_none">
                 <Sidebar />
               </div>
-              <div className="col-lg-7 col-md-8">{children}</div>
-              <div className="col-lg-2 col-md-4 doc_right_mobile_menu">
-                <div className="open_icon" id="right">
-                  <i className="arrow_carrot-left"></i>
-                  <i className="arrow_carrot-right"></i>
-                </div>
-                <div className="doc_rightsidebar scroll">
-                  <OSSelector />
-                  <FontSwitcher />
-                  <ModeSwitcher isDark={isDark} toggleMode={toggleMode} />
-                  <h6>On this page:</h6>
-                  <nav className="list-unstyled doc_menu" id="navbar-example3">
-                    <Link href="#documentation" className="nav-link active">
-                      Documentation
-                    </Link>
-                    <Link href="#getting" className="nav-link">
-                      Getting started
-                    </Link>
-                    <Link href="#version" className="nav-link">
-                      Test KbDoc Version
-                    </Link>
-                    <Link href="#developer" className="nav-link">
-                      Not a developer?
-                    </Link>
-                    <Link href="#help" className="nav-link">
-                      We're here to help!
-                    </Link>
-                  </nav>
-                </div>
+              <div
+                className={`${
+                  type == "left" ? "col-lg-9" : "col-lg-7"
+                } col-md-8`}
+              >
+                {children}
               </div>
+
+              {type !== "left" && (
+                <div className="col-lg-2 col-md-4 doc_right_mobile_menu">
+                  <div className="open_icon" id="right">
+                    <i className="arrow_carrot-left"></i>
+                    <i className="arrow_carrot-right"></i>
+                  </div>
+                  <div className="doc_rightsidebar scroll">
+                    <OSSelector />
+                    <FontSwitcher />
+                    <ModeSwitcher isDark={isDark} toggleMode={toggleMode} />
+                    <h6>On this page:</h6>
+                    <nav
+                      className="list-unstyled doc_menu"
+                      id="navbar-example3"
+                    >
+                      <Link href="#documentation" className="nav-link active">
+                        Documentation
+                      </Link>
+                      <Link href="#getting" className="nav-link">
+                        Getting started
+                      </Link>
+                      <Link href="#version" className="nav-link">
+                        Test KbDoc Version
+                      </Link>
+                      <Link href="#developer" className="nav-link">
+                        Not a developer?
+                      </Link>
+                      <Link href="#help" className="nav-link">
+                        We're here to help!
+                      </Link>
+                    </nav>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
