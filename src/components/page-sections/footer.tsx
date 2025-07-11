@@ -3,10 +3,15 @@
 import { pages } from "@/utils/pages";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const patname = usePathname();
+  const isHomePage = patname === "/";
   return (
-    <footer className="footer_area footer_p_top f_bg_color">
+    <footer
+      className={`footer_area f_bg_color ${isHomePage ? "footer_p_top" : ""}`}
+    >
       <img className="p_absolute leaf" src="/img/v.svg" alt="" />
       <motion.img
         // fade in left animation
