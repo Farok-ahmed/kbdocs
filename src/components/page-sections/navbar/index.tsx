@@ -1,11 +1,12 @@
 "use client";
 
+import LogoW from "@/assets/img/logo-w.png";
 import logo from "@/assets/img/logo.png";
 import { pages } from "@/utils/pages";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import DocsDropDown from "./docs-dropdown";
 import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
@@ -18,7 +19,10 @@ export default function Navbar() {
   const isHomePage =
     pathname === pages.home || isHelpDesk || isCoolKnowledgeBase;
 
+  const homePage = pathname === pages.home;
+
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const isScrolled = useMemo(() => lastScrollTop > 5, [lastScrollTop]);
   const [isScrollDown, setIsScrollDown] = useState<boolean>();
 
   useEffect(() => {
@@ -71,7 +75,9 @@ export default function Navbar() {
     <>
       <TopBar isHelpDesk={isHelpDesk} />
       <nav
-        className={`navbar navbar-expand-lg navbar_fixed menu_two ${
+        className={`navbar navbar-expand-lg ${
+          homePage ? "menu_two" : "menu_one"
+        } ${isScrolled ? "navbar_fixed" : ""}  ${
           isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
         }`}
         style={{ top: isScrollDown && lastScrollTop > 100 ? -100 : 0 }}
@@ -79,7 +85,11 @@ export default function Navbar() {
       >
         <div className="container">
           <Link className="navbar-brand" href="/">
-            <Image src={logo} width={112} alt="Brand Logo" />
+            {homePage || isHelpDesk || isScrolled ? (
+              <Image src={logo} width={112} alt="Brand Logo" />
+            ) : (
+              <Image src={LogoW} width={112} alt="Brand Logo" />
+            )}
           </Link>
           <NavToggler isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
 
@@ -90,7 +100,11 @@ export default function Navbar() {
               transition: "max-height 0.4s ease, padding 0.3s ease",
             }}
           >
-            <ul className="navbar-nav menu dk_menu ml-auto">
+            <ul
+              className={`navbar-nav menu  ml-auto ${
+                homePage || isHelpDesk ? "dk_menu" : ""
+              }`}
+            >
               <li
                 className={`nav-item dropdown submenu ${
                   isHomePage ? "active" : ""
@@ -328,7 +342,10 @@ export default function Navbar() {
                 </ul>
               </li>
             </ul>
-            <Link className="nav_btn" href="/login">
+            <Link
+              className={`nav_btn ${isHelpDesk ? "round-btn" : ""}`}
+              href="/login"
+            >
               <i className="icon_profile"></i>Log In
             </Link>
           </div>

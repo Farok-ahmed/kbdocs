@@ -1,6 +1,6 @@
 export const docsDropDownMenu = [
   {
-    slug: "doc",
+    slug: "/doc",
     title: "Doc Topics",
     items: [
       {
@@ -14,7 +14,7 @@ export const docsDropDownMenu = [
     ],
   },
   {
-    slug: "code",
+    slug: "/code",
     title: "Shortcodes",
     items: [
       {
@@ -56,12 +56,12 @@ export const docsDropDownMenu = [
     ],
   },
   {
-    slug: "layout",
+    slug: "/docs/layouts",
     title: "Layouts",
     items: [
       {
         title: "Both Sidebar",
-        link: "/layout",
+        link: "/docs/layouts",
       },
       {
         title: "Left Sidebar",
@@ -82,7 +82,7 @@ export const docsDropDownMenu = [
     ],
   },
   {
-    slug: "tour",
+    slug: "/tour",
     title: "Tour",
     items: [
       {
@@ -96,7 +96,7 @@ export const docsDropDownMenu = [
     ],
   },
   {
-    slug: "content",
+    slug: "/content",
     title: "Content",
     items: [
       {
@@ -122,7 +122,7 @@ export const docsDropDownMenu = [
     ],
   },
   {
-    slug: "pages",
+    slug: "/pages",
     title: "Other Pages",
     items: [
       {

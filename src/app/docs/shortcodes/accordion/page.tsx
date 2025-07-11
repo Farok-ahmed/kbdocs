@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Accordion from "./_components/accordion";
 import ToggleTwo from "./_components/accordion-two";
 
 const AccordionPage = () => {
@@ -14,7 +15,7 @@ const AccordionPage = () => {
         </div>
 
         <ToggleTwo />
-        <article />
+        <Accordion />
 
         <footer>
           <div className="border_bottom" />
