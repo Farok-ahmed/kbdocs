@@ -1,4 +1,4 @@
-import Accordion from "./_components/accordion";
+import Link from "next/link";
 import ToggleTwo from "./_components/accordion-two";
 
 const AccordionPage = () => {
@@ -14,7 +14,7 @@ const AccordionPage = () => {
         </div>
 
         <ToggleTwo />
-        <Accordion />
+        <article />
 
         <footer>
           <div className="border_bottom" />
@@ -23,20 +23,20 @@ const AccordionPage = () => {
               <h6>
                 <i className="icon_mail_alt" />
                 Still stuck?{" "}
-                <a href="#" data-toggle="modal" data-target="#exampleModal3">
+                <Link href="#" data-toggle="modal" data-target="#exampleModal3">
                   How can we help?
-                </a>
+                </Link>
               </h6>
             </div>
             <div className="col-lg-6">
               <p>
                 Was this page helpful?{" "}
-                <a href="#" className="h_btn">
+                <Link href="#" className="h_btn">
                   Yes
-                </a>
-                <a href="#" className="h_btn">
+                </Link>
+                <Link href="#" className="h_btn">
                   No
-                </a>
+                </Link>
               </p>
             </div>
           </div>

@@ -1,17 +1,19 @@
+import Link from "next/link";
+
 const ForumSinglePost = () => {
   return (
     <>
       <div className="row">
         <div className="col-lg-9">
           <div className="forum-post-top">
-            <a className="author-avatar" href="#">
+            <Link className="author-avatar" href="#">
               <img src="img/forum/author-avatar.png" alt="" />
-            </a>
+            </Link>
             <div className="forum-post-author">
-              <a className="author-name" href="#">
+              <Link className="author-name" href="#">
                 {" "}
                 Eh Jewel{" "}
-              </a>
+              </Link>
               <div className="forum-author-meta">
                 <div className="author-badge">
                   <svg
@@ -30,7 +32,7 @@ const ForumSinglePost = () => {
                 </div>
                 <div className="author-badge">
                   <i className="icon_calendar"></i>
-                  <a href="">January 16 at 10:32 PM</a>
+                  <Link href="">January 16 at 10:32 PM</Link>
                 </div>
               </div>
             </div>
@@ -38,9 +40,9 @@ const ForumSinglePost = () => {
         </div>
         <div className="col-lg-3">
           <div className="action-button-container">
-            <a href="#" className="action_btn btn-ans ask-btn">
+            <Link href="#" className="action_btn btn-ans ask-btn">
               Ask Question
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -50,9 +52,9 @@ const ForumSinglePost = () => {
           Q:
         </span>
         <h1>Sticky navbar is shown, but state is inactive</h1>
-        <a href="#" className="badge">
+        <Link href="#" className="badge">
           Features
-        </a>
+        </Link>
       </div>
       <div className="forum-post-content">
         <div className="content">
@@ -87,20 +89,21 @@ const ForumSinglePost = () => {
         <div className="forum-post-btm">
           <div className="taxonomy forum-post-tags">
             <i className="icon_tags_alt"></i>
-            <a href="#">Bug</a>, <a href="#">Feature</a>, <a href="#">Error</a>
+            <Link href="#">Bug</Link>, <Link href="#">Feature</Link>,{" "}
+            <Link href="#">Error</Link>
           </div>
           <div className="taxonomy forum-post-cat">
             <img src="img/forum/logo-favicon.png" alt="" />
-            <a href="#">KbDoc Support</a>
+            <Link href="#">KbDoc Support</Link>
           </div>
         </div>
         <div className="action-button-container action-btns">
-          <a href="#" className="action_btn btn-ans ask-btn reply-btn">
+          <Link href="#" className="action_btn btn-ans ask-btn reply-btn">
             Reply
-          </a>
-          <a href="#" className="action_btn btn-ans ask-btn too-btn">
+          </Link>
+          <Link href="#" className="action_btn btn-ans ask-btn too-btn">
             I have this question too (20)
-          </a>
+          </Link>
         </div>
       </div>
     </>

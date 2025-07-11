@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 import ModalLightbox from "./../../shortcodes/lightbox/.components/modal-lightbox";
 
@@ -80,7 +81,7 @@ const ImagePointingPage = () => {
         </div>
         <h4 className="s_title load-order-2" id="pointing">
           Image Hotspots
-          <a
+          <Link
             className="anchorjs-link "
             aria-label="Anchor"
             data-anchorjs-icon=""
@@ -141,7 +142,7 @@ const ImagePointingPage = () => {
           <div className="shortcode_title">
             <h4 className="load-order-2" id="demo">
               Demo Edit Guide
-              <a
+              <Link
                 className="anchorjs-link "
                 aria-label="Anchor"
                 data-anchorjs-icon=""
@@ -168,20 +169,20 @@ const ImagePointingPage = () => {
               <h6>
                 <i className="icon_mail_alt" />
                 Still stuck?{" "}
-                <a href="#" data-toggle="modal" data-target="#exampleModal3">
+                <Link href="#" data-toggle="modal" data-target="#exampleModal3">
                   How can we help?
-                </a>
+                </Link>
               </h6>
             </div>
             <div className="col-lg-6">
               <p>
                 Was this page helpful?{" "}
-                <a href="#" className="h_btn">
+                <Link href="#" className="h_btn">
                   Yes
-                </a>
-                <a href="#" className="h_btn">
+                </Link>
+                <Link href="#" className="h_btn">
                   No
-                </a>
+                </Link>
               </p>
             </div>
           </div>

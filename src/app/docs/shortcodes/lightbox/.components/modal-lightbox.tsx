@@ -77,7 +77,7 @@ const ModalLightbox = () => {
             <img src="/img/img-pointer1.jpg" alt="" />
           </Link>
           <h6>
-            How to edit <a href="#">KbDoc</a>
+            How to edit <Link href="#">KbDoc</Link>
           </h6>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Banner = () => {
   return (
     <section className="breadcrumb_area breadcrumb_area_four">
@@ -18,10 +20,10 @@ const Banner = () => {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a href="index.html">Home</a>
+                <Link href="index.html">Home</Link>
               </li>
               <li className="breadcrumb-item">
-                <a href="#">Pages</a>
+                <Link href="#">Pages</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 Contact

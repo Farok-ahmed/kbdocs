@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Blogs = () => {
   return (
     <>
@@ -6,15 +8,15 @@ const Blogs = () => {
           <img src="img/blog-classic/classic_01.jpg" alt="" />
           <div className="b_top_post_content">
             <div className="post_tag">
-              <a href="#">Sep 14, 2020</a>
-              <a href="#">9 Min Read</a>
-              <a className="orange" href="#">
+              <Link href="#">Sep 14, 2020</Link>
+              <Link href="#">9 Min Read</Link>
+              <Link className="orange" href="#">
                 KbDoc
-              </a>
+              </Link>
             </div>
-            <a href="#">
+            <Link href="#">
               <h3>10 WordPress Security Issues And How to Fix Them</h3>
-            </a>
+            </Link>
             <p>
               I don't want no agro such a fibber smashing bits and bobs posh
               blag cuppa brilliant brolly Eaton bobby, bite your arm off
@@ -22,18 +24,18 @@ const Blogs = () => {
               buggered, bog-standard burke some dodgy chav.!
             </p>
             <div className="d-flex justify-content-between p_bottom">
-              <a href="#" className="learn_btn">
+              <Link href="#" className="learn_btn">
                 Continue Reading
                 <i className="arrow_right" />
-              </a>
+              </Link>
               <div className="media post_author">
                 <div className="round_img">
                   <img src="img/blog-grid/author_1.jpg" alt="" />
                 </div>
                 <div className="media-body author_text">
-                  <a href="#">
+                  <Link href="#">
                     <h4>Jason Response</h4>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -45,31 +47,31 @@ const Blogs = () => {
             blinding shot my lady lavatory cup of char cor blimey guvnor get
             stuffed mate you mug cobblers off his nut pukka, give us a bell
           </h4>
-          <a href="#" className="author">
+          <Link href="#" className="author">
             Jason Response
-          </a>
+          </Link>
         </blockquote>
         <div className="blog_top_post blog_classic_item">
           <div className="video_post">
             <img src="img/blog-classic/classic_02.jpg" alt="" />
-            <a
+            <Link
               className="popup-youtube video_icon"
               href="https://www.youtube.com/watch?v=sU3FkzUKHXU"
             >
               <i className="arrow_triangle-right" />
-            </a>
+            </Link>
           </div>
           <div className="b_top_post_content">
             <div className="post_tag">
-              <a href="#">Sep 14, 2020</a>
-              <a href="#">9 Min Read</a>
-              <a className="c_blue" href="#">
+              <Link href="#">Sep 14, 2020</Link>
+              <Link href="#">9 Min Read</Link>
+              <Link className="c_blue" href="#">
                 KbDoc
-              </a>
+              </Link>
             </div>
-            <a href="#">
+            <Link href="#">
               <h3>10 WordPress Security Issues And How to Fix Them</h3>
-            </a>
+            </Link>
             <p>
               I don't want no agro such a fibber smashing bits and bobs posh
               blag cuppa brilliant brolly Eaton bobby, bite your arm off
@@ -77,44 +79,44 @@ const Blogs = () => {
               buggered, bog-standard burke some dodgy chav.!
             </p>
             <div className="d-flex justify-content-between p_bottom">
-              <a href="#" className="learn_btn">
+              <Link href="#" className="learn_btn">
                 Continue Reading
                 <i className="arrow_right" />
-              </a>
+              </Link>
               <div className="media post_author">
                 <div className="round_img">
                   <img src="img/blog-grid/author_1.jpg" alt="" />
                 </div>
                 <div className="media-body author_text">
-                  <a href="#">
+                  <Link href="#">
                     <h4>Jason Response</h4>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="blog_link_post">
-          <a href="#">
+          <Link href="#">
             <p>
               loo Oxford get stuffed mate bits and bobs barmy no biggie Richard
               Eaton are you taking the piss gosh, tomfoolery tosser.
             </p>
-          </a>
+          </Link>
         </div>
         <div className="blog_top_post blog_classic_item">
           <img src="img/blog-classic/classic_03.jpg" alt="" />
           <div className="b_top_post_content">
             <div className="post_tag">
-              <a href="#">Dec 09, 2020</a>
-              <a href="#">19 Min Read</a>
-              <a className="orange" href="#">
+              <Link href="#">Dec 09, 2020</Link>
+              <Link href="#">19 Min Read</Link>
+              <Link className="orange" href="#">
                 KbDoc
-              </a>
+              </Link>
             </div>
-            <a href="#">
+            <Link href="#">
               <h3>Create A WordPress Multi Step Form With weForms</h3>
-            </a>
+            </Link>
             <p>
               I don't want no agro such a fibber smashing bits and bobs posh
               blag cuppa brilliant brolly Eaton bobby, bite your arm off
@@ -122,18 +124,18 @@ const Blogs = () => {
               buggered, bog-standard burke some dodgy chav.!
             </p>
             <div className="d-flex justify-content-between p_bottom">
-              <a href="#" className="learn_btn">
+              <Link href="#" className="learn_btn">
                 Continue Reading
                 <i className="arrow_right" />
-              </a>
+              </Link>
               <div className="media post_author">
                 <div className="round_img">
                   <img src="img/blog-grid/author_1.jpg" alt="" />
                 </div>
                 <div className="media-body author_text">
-                  <a href="#">
+                  <Link href="#">
                     <h4>Jason Response</h4>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -143,15 +145,15 @@ const Blogs = () => {
           <img src="img/blog-classic/classic_04.jpg" alt="" />
           <div className="b_top_post_content">
             <div className="post_tag">
-              <a href="#">Dec 09, 2020</a>
-              <a href="#">9 Min Read</a>
-              <a className="green" href="#">
+              <Link href="#">Dec 09, 2020</Link>
+              <Link href="#">9 Min Read</Link>
+              <Link className="green" href="#">
                 KbDoc
-              </a>
+              </Link>
             </div>
-            <a href="#">
+            <Link href="#">
               <h3>Create Conditional Logic Forms &amp; Publish</h3>
-            </a>
+            </Link>
             <p>
               I don't want no agro such a fibber smashing bits and bobs posh
               blag cuppa brilliant brolly Eaton bobby, bite your arm off
@@ -159,18 +161,18 @@ const Blogs = () => {
               buggered, bog-standard burke some dodgy chav.!
             </p>
             <div className="d-flex justify-content-between p_bottom">
-              <a href="#" className="learn_btn">
+              <Link href="#" className="learn_btn">
                 Continue Reading
                 <i className="arrow_right" />
-              </a>
+              </Link>
               <div className="media post_author">
                 <div className="round_img">
                   <img src="img/blog-grid/author_1.jpg" alt="" />
                 </div>
                 <div className="media-body author_text">
-                  <a href="#">
+                  <Link href="#">
                     <h4>Jason Response</h4>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -181,12 +183,12 @@ const Blogs = () => {
             <span aria-current="page" className="page-numbers current">
               1
             </span>
-            <a className="page-numbers" href="#">
+            <Link className="page-numbers" href="#">
               2
-            </a>
-            <a className="next page-numbers" href="#">
+            </Link>
+            <Link className="next page-numbers" href="#">
               <i className="arrow_carrot-right" />
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

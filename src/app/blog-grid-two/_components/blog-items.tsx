@@ -13,10 +13,10 @@ const BlogItems = () => {
                 <img src={post.image} alt="" />
                 <div className="grid_post_content">
                   <div className="post_tag">
-                    <a href="#">{post.readTime}</a>
-                    <a className="cat-woocommerce" href="#">
+                    <Link href="#">{post.readTime}</Link>
+                    <Link className="cat-woocommerce" href="#">
                       {post.category.name}
-                    </a>
+                    </Link>
                   </div>
                   <Link href={`/blog-grid-two/${post.id}`}>
                     <h4 className="b_title">{post.title}</h4>
@@ -41,12 +41,12 @@ const BlogItems = () => {
                 <span aria-current="page" className="page-numbers current">
                   1
                 </span>
-                <a className="page-numbers" href="#">
+                <Link className="page-numbers" href="#">
                   2
-                </a>
-                <a className="next page-numbers" href="#">
+                </Link>
+                <Link className="next page-numbers" href="#">
                   <i className="arrow_carrot-right" />
-                </a>
+                </Link>
               </div>
             </nav>
           </div>

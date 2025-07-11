@@ -30,7 +30,7 @@ const Toggle: React.FC = () => {
       <div className="shortcode_title">
         <h4 className="s_title load-order-2" id="toggle">
           Toggle
-          <a
+          <Link
             className="anchorjs-link "
             aria-label="Anchor"
             data-anchorjs-icon=""

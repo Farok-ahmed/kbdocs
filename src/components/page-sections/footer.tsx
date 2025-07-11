@@ -1,13 +1,19 @@
 "use client";
 
 import { pages } from "@/utils/pages";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="footer_area footer_p_top f_bg_color">
       <img className="p_absolute leaf" src="/img/v.svg" alt="" />
-      <img
+      <motion.img
+        // fade in left animation
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         className="p_absolute f_man wow fadeInLeft"
         data-wow-delay="0.4s"
         src="/img/home_two/f_man.png"
@@ -28,7 +34,11 @@ export default function Footer() {
         src="/img/home_two/email-icon_two.png"
         alt=""
       />
-      <img
+      <motion.img
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         className="p_absolute f_man_two wow fadeInLeft"
         data-wow-delay="0.2s"
         src="/img/home_two/man.png"
@@ -38,7 +48,14 @@ export default function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-sm-6">
-              <div className="f_widget subscribe_widget wow fadeInUp">
+              <motion.div
+                // fade in up animation
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="f_widget subscribe_widget wow fadeInUp"
+              >
                 <Link href="" className="f_logo">
                   <img src="/img/logo.png" alt="" />
                 </Link>
@@ -79,10 +96,15 @@ export default function Footer() {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
             <div className="col-lg-3 col-sm-6">
-              <div
+              <motion.div
+                // fade in up animation
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="f_widget link_widget pl_30 wow fadeInUp"
                 data-wow-delay="0.2s"
               >
@@ -110,10 +132,15 @@ export default function Footer() {
                     <Link href="/contact">Contact Us</Link>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
             <div className="col-lg-2 col-sm-6">
-              <div
+              <motion.div
+                // fade in up animation
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="f_widget link_widget wow fadeInUp"
                 data-wow-delay="0.4s"
               >
@@ -141,10 +168,15 @@ export default function Footer() {
                     <Link href="">Messages</Link>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
             <div className="col-lg-3 col-sm-6">
-              <div
+              <motion.div
+                // fade in up animation
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="f_widget link_widget pl_70 wow fadeInUp"
                 data-wow-delay="0.6s"
               >
@@ -172,7 +204,7 @@ export default function Footer() {
                     <Link href="/docs/cheatsheet">Cheat Sheet</Link>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="border_bottom"></div>

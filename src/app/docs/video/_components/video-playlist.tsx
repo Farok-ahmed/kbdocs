@@ -1,4 +1,5 @@
 // import css
+import Link from "next/link";
 import "./vide.css";
 const VideoPlaylist = () => {
   return (
@@ -6,7 +7,7 @@ const VideoPlaylist = () => {
       <div className="mt-5">
         <h4 className="c_head load-order-2" id="yt-channel-playlist">
           YouTube Channel Videos Playlist
-          <a
+          <Link
             className="anchorjs-link "
             aria-label="Anchor"
             data-anchorjs-icon=""
@@ -44,12 +45,12 @@ const VideoPlaylist = () => {
                     Next
                   </span>
                   <span className="about" title="ycp.js">
-                    <a
+                    <Link
                       href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist"
                       target="_BLANK"
                     >
                       ♥
-                    </a>
+                    </Link>
                   </span>
                 </div>
                 <div className="handap">

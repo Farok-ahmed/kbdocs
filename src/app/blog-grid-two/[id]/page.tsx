@@ -1,5 +1,6 @@
 import NotFound from "@/app/not-found";
 import DefaultLayout from "@/components/layout";
+import Link from "next/link";
 import { getBlogPostById } from "../blogs";
 
 const BlogSinglePage = async ({
@@ -27,15 +28,15 @@ const BlogSinglePage = async ({
                 alt=""
               />
               <div className="text">
-                <a href="#">
+                <Link href="#">
                   <h4>Jason Response</h4>
-                </a>
+                </Link>
                 <div className="post_tag">
-                  <a href="#">April 16, 2020</a>
-                  <a href="#">18 Min Read</a>
-                  <a className="c_blue" href="#">
+                  <Link href="#">April 16, 2020</Link>
+                  <Link href="#">18 Min Read</Link>
+                  <Link className="c_blue" href="#">
                     WordPress
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -48,9 +49,9 @@ const BlogSinglePage = async ({
             <div className="col-lg-8">
               <div className="blog_single_info">
                 <div className="blog_single_item">
-                  <a href="#" className="blog_single_img">
+                  <Link href="#" className="blog_single_img">
                     <img src="/img/blog-single/single_post_img.jpg" alt="" />
-                  </a>
+                  </Link>
                   <p>
                     Tomfoolery crikey bits and bobs brilliant bamboozled down
                     the pub amongst brolly hanky panky, cack bonnet arse over
@@ -58,20 +59,20 @@ const BlogSinglePage = async ({
                     spiffing a load of old tosh porkies hunky-dory ruddy dropped
                     a clanger. Plastered it's all gone to pot I brilliant young
                     delinquent excuse my French what a load of rubbish he legged
-                    it <a href="#">Harry give us a bell</a>, some dodgy chav on
-                    your bike mate say that blatant so I said cup of tea chip
-                    shop, well sloshed Queen's English cheeky bugger a blinding
-                    shot the wireless I horse play. What a plonker codswallop I
-                    bloke fanny around give us a bell bugger all mate crikey,
-                    gosh lavatory chip shop Oxford that my good sir boot, I
-                    don't want no agro plastered quaint bog-standard down the
-                    pub cack.
+                    it <Link href="#">Harry give us a bell</Link>, some dodgy
+                    chav on your bike mate say that blatant so I said cup of tea
+                    chip shop, well sloshed Queen's English cheeky bugger a
+                    blinding shot the wireless I horse play. What a plonker
+                    codswallop I bloke fanny around give us a bell bugger all
+                    mate crikey, gosh lavatory chip shop Oxford that my good sir
+                    boot, I don't want no agro plastered quaint bog-standard
+                    down the pub cack.
                   </p>
                   <p>
                     Bugger all mate chinwag skive off bender cack chap baking
                     cakes brown bread bodge wind up, amongst mush{" "}
-                    <a href="#">David lurgy burke blow</a> off bits and bobs
-                    faff about dropped a clanger, such a fibber so I said
+                    <Link href="#">David lurgy burke blow</Link> off bits and
+                    bobs faff about dropped a clanger, such a fibber so I said
                     spiffing codswallop bite your arm off my lady bleeding
                     tosser. Ruddy bevvy loo brolly dropped a clanger the little
                     rotter off his nut blower argy-bargy he legged it, Jeffrey
@@ -146,24 +147,24 @@ const BlogSinglePage = async ({
                     <h5>Share This Article</h5>
                     <ul className="list-unstyled f_social_icon">
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="social_facebook" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="social_twitter" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="social_vimeo" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link href="#">
                           <i className="social_linkedin" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -198,16 +199,16 @@ const BlogSinglePage = async ({
                         <img src="/img/blog-grid/blog_grid_post2.jpg" alt="" />
                         <div className="grid_post_content">
                           <div className="post_tag">
-                            <a href="#">18 Min Read</a>
-                            <a className="cat-KbDoc" href="#">
+                            <Link href="#">18 Min Read</Link>
+                            <Link className="cat-KbDoc" href="#">
                               KbDoc
-                            </a>
+                            </Link>
                           </div>
-                          <a href="#">
+                          <Link href="#">
                             <h4 className="b_title">
                               70 Best Startups You Need to Watch Out for
                             </h4>
-                          </a>
+                          </Link>
                           <p>
                             Cup of char brilliant horse play bro bread sloshed
                             lavatory only...
@@ -228,16 +229,16 @@ const BlogSinglePage = async ({
                         <img src="/img/blog-grid/blog_grid_post3.jpg" alt="" />
                         <div className="grid_post_content">
                           <div className="post_tag">
-                            <a href="#">10 Min Read</a>
-                            <a className="cat-woocommerce" href="#">
+                            <Link href="#">10 Min Read</Link>
+                            <Link className="cat-woocommerce" href="#">
                               WooCommerce
-                            </a>
+                            </Link>
                           </div>
-                          <a href="#">
+                          <Link href="#">
                             <h4 className="b_title">
                               How to Connect Google With WordPress
                             </h4>
-                          </a>
+                          </Link>
                           <p>
                             Cup of char brilliant horse play bro bread sloshed
                             lavatory only...
@@ -258,16 +259,16 @@ const BlogSinglePage = async ({
                         <img src="/img/blog-grid/blog_grid_post6.jpg" alt="" />
                         <div className="grid_post_content">
                           <div className="post_tag">
-                            <a href="#">9 Min Read</a>
-                            <a className="cat-megento" href="#">
+                            <Link href="#">9 Min Read</Link>
+                            <Link className="cat-megento" href="#">
                               Megento
-                            </a>
+                            </Link>
                           </div>
-                          <a href="#">
+                          <Link href="#">
                             <h4 className="b_title">
                               10 WordPress Security Issues And How to Fix
                             </h4>
-                          </a>
+                          </Link>
                           <p>
                             Cup of char brilliant horse play bro bread sloshed
                             lavatory only...
@@ -299,10 +300,10 @@ const BlogSinglePage = async ({
                             pear shaped bubble and squeak lavatory naff, chip
                             shop bodge burke do one have.!
                           </p>
-                          <a href="#" className="comment_reply">
+                          <Link href="#" className="comment_reply">
                             <i className="arrow_right" />
                             Reply
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <ul className="list-unstyled reply_comment">
@@ -323,10 +324,10 @@ const BlogSinglePage = async ({
                                 vagabond victoria sponge Charles tinkety tonk
                                 old fruit argy.!
                               </p>
-                              <a href="#" className="comment_reply">
+                              <Link href="#" className="comment_reply">
                                 <i className="arrow_right" />
                                 Reply
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </li>
@@ -347,10 +348,10 @@ const BlogSinglePage = async ({
                                 vagabond victoria sponge Charles tinkety tonk
                                 old fruit argy.!
                               </p>
-                              <a href="#" className="comment_reply">
+                              <Link href="#" className="comment_reply">
                                 <i className="arrow_right" />
                                 Reply
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </li>
@@ -373,10 +374,10 @@ const BlogSinglePage = async ({
                             pear shaped bubble and squeak lavatory naff, chip
                             shop bodge burke do one have.!
                           </p>
-                          <a href="#" className="comment_reply">
+                          <Link href="#" className="comment_reply">
                             <i className="arrow_right" />
                             Reply
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </li>
@@ -436,9 +437,9 @@ const BlogSinglePage = async ({
                     <img src="/img/blog-single/about_img.jpg" alt="" />
                   </div>
                   <div className="text">
-                    <a href="#">
+                    <Link href="#">
                       <h3>Rodney Artichoke</h3>
-                    </a>
+                    </Link>
                     <p>
                       James Bond jolly good happy days smashing barney bonnet
                       bits and bobs loo.!
@@ -449,44 +450,44 @@ const BlogSinglePage = async ({
                   <h4 className="c_head">Post Categories</h4>
                   <ul className="list-unstyled categorie_list">
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Creative <span>(12)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Inspiration <span>(8)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Lifestyle <span>(3)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         News <span>(4)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Photography <span>(12)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Skill <span>(15)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Tourist Tours <span>(10)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         Inspire <span>(5)</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -495,38 +496,38 @@ const BlogSinglePage = async ({
                   <div className="media recent_post_item">
                     <img src="/img/blog-single/news_01.jpg" alt="" />
                     <div className="media-body">
-                      <a href="#">
+                      <Link href="#">
                         <h5>Is It Worth Buying A Premium Form Builder.</h5>
-                      </a>
+                      </Link>
                       <div className="entry_post_date">January 14, 2020</div>
                     </div>
                   </div>
                   <div className="media recent_post_item">
                     <img src="/img/blog-single/news_02.jpg" alt="" />
                     <div className="media-body">
-                      <a href="#">
+                      <Link href="#">
                         <h5>10 Classic Summer Vacations</h5>
-                      </a>
+                      </Link>
                       <div className="entry_post_date">April 16, 2020</div>
                     </div>
                   </div>
                   <div className="media recent_post_item">
                     <img src="/img/blog-single/news_03.jpg" alt="" />
                     <div className="media-body">
-                      <a href="#">
+                      <Link href="#">
                         <h5>
                           How To Easily Add weForms Widget Using Elementor
                         </h5>
-                      </a>
+                      </Link>
                       <div className="entry_post_date">March 10, 2020</div>
                     </div>
                   </div>
                   <div className="media recent_post_item">
                     <img src="/img/blog-single/news_04.jpg" alt="" />
                     <div className="media-body">
-                      <a href="#">
+                      <Link href="#">
                         <h5>How to Create GDPR Consent Form In WordPress</h5>
-                      </a>
+                      </Link>
                       <div className="entry_post_date">January 19, 2020</div>
                     </div>
                   </div>
@@ -539,39 +540,39 @@ const BlogSinglePage = async ({
                         <i className="icon_chat_alt" />
                         Douglas Lyphe:
                       </h6>
-                      <a href="#" className="text">
+                      <Link href="#" className="text">
                         French squiffy pukka gosh nancy boy buggered,
                         bog-standard.!
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <h6>
                         <i className="icon_chat_alt" />
                         Hilary Ouse:
                       </h6>
-                      <a href="#" className="text">
+                      <Link href="#" className="text">
                         Charles give us a bell butty blatant baking cakes
                         cheesed off.
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <h6>
                         <i className="icon_chat_alt" />
                         Penny Tool:
                       </h6>
-                      <a href="#" className="text">
+                      <Link href="#" className="text">
                         Starkers happy days bobby pardon me.
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <h6>
                         <i className="icon_chat_alt" />
                         Jackson Pot:
                       </h6>
-                      <a href="#" className="text">
+                      <Link href="#" className="text">
                         Charles give us a bell butty blatant baking cakes
                         cheesed off.
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -579,64 +580,64 @@ const BlogSinglePage = async ({
                   <h4 className="c_head">Tags</h4>
                   <ul className="list-unstyled w_tag_list">
                     <li>
-                      <a href="#">Design</a>
+                      <Link href="#">Design</Link>
                     </li>
                     <li>
-                      <a href="#">Apps</a>
+                      <Link href="#">Apps</Link>
                     </li>
                     <li>
-                      <a href="#">Photography</a>
+                      <Link href="#">Photography</Link>
                     </li>
                     <li>
-                      <a href="#">Business</a>
+                      <Link href="#">Business</Link>
                     </li>
                     <li>
-                      <a href="#">KbDoc</a>
+                      <Link href="#">KbDoc</Link>
                     </li>
                     <li>
-                      <a href="#">WordPress</a>
+                      <Link href="#">WordPress</Link>
                     </li>
                     <li>
-                      <a href="#">Design</a>
+                      <Link href="#">Design</Link>
                     </li>
                     <li>
-                      <a href="#">DocAll</a>
+                      <Link href="#">DocAll</Link>
                     </li>
                     <li>
-                      <a href="#">Magento</a>
+                      <Link href="#">Magento</Link>
                     </li>
                     <li>
-                      <a href="#">Doc Design</a>
+                      <Link href="#">Doc Design</Link>
                     </li>
                     <li>
-                      <a href="#">ui/ux</a>
+                      <Link href="#">ui/ux</Link>
                     </li>
                     <li>
-                      <a href="#">Docs</a>
+                      <Link href="#">Docs</Link>
                     </li>
                   </ul>
                 </div>
                 <div className="widget instragram_widget">
                   <h4 className="c_head">Instragram</h4>
                   <div className="instragram_info">
-                    <a href="#" className="instragram_item">
+                    <Link href="#" className="instragram_item">
                       <img src="/img/blog-single/image_01.jpg" alt="" />
-                    </a>
-                    <a href="#" className="instragram_item">
+                    </Link>
+                    <Link href="#" className="instragram_item">
                       <img src="/img/blog-single/image_02.jpg" alt="" />
-                    </a>
-                    <a href="#" className="instragram_item">
+                    </Link>
+                    <Link href="#" className="instragram_item">
                       <img src="/img/blog-single/image_03.jpg" alt="" />
-                    </a>
-                    <a href="#" className="instragram_item">
+                    </Link>
+                    <Link href="#" className="instragram_item">
                       <img src="/img/blog-single/image_04.jpg" alt="" />
-                    </a>
-                    <a href="#" className="instragram_item">
+                    </Link>
+                    <Link href="#" className="instragram_item">
                       <img src="/img/blog-single/image_05.jpg" alt="" />
-                    </a>
-                    <a href="#" className="instragram_item">
+                    </Link>
+                    <Link href="#" className="instragram_item">
                       <img src="/img/blog-single/image_06.jpg" alt="" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

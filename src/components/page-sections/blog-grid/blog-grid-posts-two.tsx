@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BlogGridPostsTwo = () => {
   return (
     <>
@@ -9,16 +11,16 @@ const BlogGridPostsTwo = () => {
                 <img src="img/blog-grid/blog_grid_post7.jpg" alt="" />
                 <div className="grid_post_content">
                   <div className="post_tag">
-                    <a href="#">18 Min Read</a>
-                    <a className="c_blue" href="#">
+                    <Link href="#">18 Min Read</Link>
+                    <Link className="c_blue" href="#">
                       WordPress
-                    </a>
+                    </Link>
                   </div>
-                  <a href="#">
+                  <Link href="#">
                     <h4 className="b_title">
                       Create A WordPress Multi Step Form With weForms
                     </h4>
-                  </a>
+                  </Link>
                   <p>
                     The pressure to keep our skills sharp is constant. Mastering
                     new skills may...
@@ -43,16 +45,16 @@ const BlogGridPostsTwo = () => {
                 <img src="img/blog-grid/blog_grid_post8.jpg" alt="" />
                 <div className="grid_post_content">
                   <div className="post_tag">
-                    <a href="#">18 Min Read</a>
-                    <a className="orange" href="#">
+                    <Link href="#">18 Min Read</Link>
+                    <Link className="orange" href="#">
                       KbDoc
-                    </a>
+                    </Link>
                   </div>
-                  <a href="#">
+                  <Link href="#">
                     <h4 className="b_title">
                       How to Create GDPR Consent Form In WordPress
                     </h4>
-                  </a>
+                  </Link>
                   <p>
                     The pressure to keep our skills sharp is constant. Mastering
                     new skills may...
@@ -77,16 +79,16 @@ const BlogGridPostsTwo = () => {
                 <img src="img/blog-grid/blog_grid_post9.jpg" alt="" />
                 <div className="grid_post_content">
                   <div className="post_tag">
-                    <a href="#">10 Min Read</a>
-                    <a className="cat-laravel" href="#">
+                    <Link href="#">10 Min Read</Link>
+                    <Link className="cat-laravel" href="#">
                       Laravel
-                    </a>
+                    </Link>
                   </div>
-                  <a href="#">
+                  <Link href="#">
                     <h4 className="b_title">
                       Create Conditional Logic Forms &amp; Publish
                     </h4>
-                  </a>
+                  </Link>
                   <p>
                     The pressure to keep our skills sharp is constant. Mastering
                     new skills may...
@@ -107,10 +109,10 @@ const BlogGridPostsTwo = () => {
               className="col-lg-12 text-center wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <a href="#" className="doc_border_btn all_doc_btn">
+              <Link href="#" className="doc_border_btn all_doc_btn">
                 Load More
                 <i className="arrow_right" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

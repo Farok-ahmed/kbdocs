@@ -77,7 +77,7 @@ const ImageLightboxDocly2 = () => {
             <img src="/img/img-pointer2.jpg" alt="" />
           </Link>
           <h6>
-            How to edit <a href="#">Docly2</a>
+            How to edit <Link href="#">Docly2</Link>
           </h6>
         </div>
       </div>

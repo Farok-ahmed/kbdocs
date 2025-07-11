@@ -2,6 +2,7 @@
 
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 interface Tab {
@@ -221,7 +222,7 @@ export default function DynamicTabs() {
       <ul className="nav nav-tabs v_menu" role="tablist">
         {tabsData.map((tab, index) => (
           <li className="nav-item" key={tab.id}>
-            <a
+            <Link
               className={classNames("nav-link", {
                 active: activeIndex === index,
               })}
@@ -237,7 +238,7 @@ export default function DynamicTabs() {
             >
               <span>{tab.number}</span>
               {tab.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

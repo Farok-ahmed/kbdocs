@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const Accordion = () => {
@@ -34,7 +35,7 @@ const Accordion = () => {
         <div className="shortcode_title">
           <h4 className="s_title load-order-2" id="accordions">
             Accordion
-            <a
+            <Link
               className="anchorjs-link "
               aria-label="Anchor"
               data-anchorjs-icon=""

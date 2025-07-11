@@ -1,5 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { FC, useState } from "react";
 
 // Define types
@@ -43,7 +44,7 @@ const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
           <ul className="nav nav-tabs fact_navigation" role="tablist">
             {data.map((item, index) => (
               <li className="nav-item" key={item.id}>
-                <a
+                <Link
                   className={`nav-link ${
                     activeIndex === index ? "active" : ""
                   }`}
@@ -56,7 +57,7 @@ const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
                   }}
                 >
                   <i className={item.icon}></i> {item.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

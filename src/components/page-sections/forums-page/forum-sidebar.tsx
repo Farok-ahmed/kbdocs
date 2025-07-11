@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ForumSidebar = () => {
   return (
     <>
@@ -32,33 +34,33 @@ const ForumSidebar = () => {
           <ul className="list-unstyled ticket_categories">
             <li>
               <img src="img/home_support/cmm5.png" alt="category" />
-              <a href="#">Docs WordPress Theme</a>{" "}
+              <Link href="#">Docs WordPress Theme</Link>{" "}
               <span className="count">10</span>
             </li>
             <li>
               <img src="img/home_support/cmm4.png" alt="category" />
-              <a href="#">Product Landing Page</a>
+              <Link href="#">Product Landing Page</Link>
               <span className="count count-fill">13</span>
               <span className="count">54</span>
             </li>
             <li>
               <img src="img/home_support/cmm2.png" alt="category" />
-              <a href="#">Knowledge base Template</a>
+              <Link href="#">Knowledge base Template</Link>
               <span className="count">142</span>
             </li>
             <li>
               <img src="img/home_support/cmm8.png" alt="category" />
-              <a href="#">Startup and App WP Theme</a>{" "}
+              <Link href="#">Startup and App WP Theme</Link>{" "}
               <span className="count">13</span>
             </li>
             <li>
               <img src="img/home_support/cmm9.png" alt="category" />
-              <a href="#">Clean Email Template</a>{" "}
+              <Link href="#">Clean Email Template</Link>{" "}
               <span className="count">123</span>
             </li>
             <li>
               <img src="img/home_support/cmm10.png" alt="category" />
-              <a href="#">Apps WordPress Theme</a>{" "}
+              <Link href="#">Apps WordPress Theme</Link>{" "}
               <span className="count">18</span>
             </li>
           </ul>
@@ -68,40 +70,40 @@ const ForumSidebar = () => {
           <h4 className="c_head">Tags</h4>
           <ul className="list-unstyled w_tag_list style-light">
             <li>
-              <a href="#">Swagger</a>
+              <Link href="#">Swagger</Link>
             </li>
             <li>
-              <a href="#">KbDoc</a>
+              <Link href="#">KbDoc</Link>
             </li>
             <li>
-              <a href="#">weCare</a>
+              <Link href="#">weCare</Link>
             </li>
             <li>
-              <a href="#">Business</a>
+              <Link href="#">Business</Link>
             </li>
             <li>
-              <a href="#">Download</a>
+              <Link href="#">Download</Link>
             </li>
             <li>
-              <a href="#">Doc</a>
+              <Link href="#">Doc</Link>
             </li>
             <li>
-              <a href="#">Product board</a>
+              <Link href="#">Product board</Link>
             </li>
             <li>
-              <a href="#">WordPress</a>
+              <Link href="#">WordPress</Link>
             </li>
             <li>
-              <a href="#">Design</a>
+              <Link href="#">Design</Link>
             </li>
             <li>
-              <a href="#">ui/ux</a>
+              <Link href="#">ui/ux</Link>
             </li>
             <li>
-              <a href="#">Doc Design</a>
+              <Link href="#">Doc Design</Link>
             </li>
             <li>
-              <a href="#">DocAll</a>
+              <Link href="#">DocAll</Link>
             </li>
           </ul>
         </div>

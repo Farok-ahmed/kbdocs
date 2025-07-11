@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface TableDataProps {
   id: number;
   firstName: string;
@@ -15,7 +17,7 @@ const StripedTables = () => {
       <div className="basic_table">
         <h4 className="s_title load-order-2" id="strip">
           Striped Table
-          <a
+          <Link
             className="anchorjs-link "
             aria-label="Anchor"
             data-anchorjs-icon=""

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface TableDataProps {
   id: number;
   firstName: string;
@@ -15,7 +17,7 @@ const BasicTables = () => {
       <div className="basic_table">
         <h4 className="s_title load-order-2" id="basic">
           Basic Tables
-          <a
+          <Link
             className="anchorjs-link "
             aria-label="Anchor"
             data-anchorjs-icon=""

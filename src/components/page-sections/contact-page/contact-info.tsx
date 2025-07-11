@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const ContactInfo = () => {
   return (
     <>
@@ -29,9 +30,9 @@ const ContactInfo = () => {
             <div className="time">
               Expected response time: <span>72 hours</span>
             </div>
-            <a href="#" className="doc_border_btn doc_border_btn_two">
+            <Link href="#" className="doc_border_btn doc_border_btn_two">
               Email Us
-            </a>
+            </Link>
           </div>
         </div>
         <div className="row get_info_item align-items-center justify-content-between">
@@ -48,9 +49,9 @@ const ContactInfo = () => {
             <div className="time">
               Expected response time: <span>72 hours</span>
             </div>
-            <a href="#" className="doc_border_btn doc_border_btn_two">
+            <Link href="#" className="doc_border_btn doc_border_btn_two">
               Send Us a Tweet
-            </a>
+            </Link>
           </div>
         </div>
         <div className="row get_info_item align-items-center justify-content-between">
@@ -67,9 +68,9 @@ const ContactInfo = () => {
             <div className="time">
               Expected response time: <span>72 hours</span>
             </div>
-            <a href="#" className="doc_border_btn doc_border_btn_two">
+            <Link href="#" className="doc_border_btn doc_border_btn_two">
               Ask The Community
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import VideoPlaylist from "./_components/video-playlist";
 
@@ -64,7 +65,7 @@ const VideoPage = () => {
           </div>
           <h4 className="c_head load-order-2" id="about">
             About
-            <a
+            <Link
               className="anchorjs-link "
               aria-label="Anchor"
               data-anchorjs-icon=""
@@ -85,7 +86,7 @@ const VideoPage = () => {
           <div className="mt-5 code_item">
             <h4 className="c_head load-order-2" id="example">
               Example
-              <a
+              <Link
                 className="anchorjs-link "
                 aria-label="Anchor"
                 data-anchorjs-icon=""
@@ -193,7 +194,7 @@ const VideoPage = () => {
           <div className="mt-5 code_item">
             <h4 className="c_head load-order-2" id="vimeo_video">
               Vimeo Video
-              <a
+              <Link
                 className="anchorjs-link "
                 aria-label="Anchor"
                 data-anchorjs-icon=""
@@ -211,13 +212,13 @@ const VideoPage = () => {
             </p>
             <div className="code-preview" id="inline-popups">
               <img src="/img/img-pointer2.jpg" alt="" />
-              <a
+              <Link
                 onClick={handleOpen}
                 className="popup-youtube video_icon"
                 href="#vid2"
               >
                 <i className="arrow_triangle-right" />
-              </a>
+              </Link>
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -296,7 +297,7 @@ const VideoPage = () => {
           <div className="mt-5">
             <h4 className="c_head load-order-2" id="autoplay_video">
               AutoPlay Local Video
-              <a
+              <Link
                 className="anchorjs-link "
                 aria-label="Anchor"
                 data-anchorjs-icon=""
@@ -332,20 +333,24 @@ const VideoPage = () => {
                 <h6>
                   <i className="icon_mail_alt" />
                   Still stuck?{" "}
-                  <a href="#" data-toggle="modal" data-target="#exampleModal3">
+                  <Link
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#exampleModal3"
+                  >
                     How can we help?
-                  </a>
+                  </Link>
                 </h6>
               </div>
               <div className="col-lg-6">
                 <p>
                   Was this page helpful?{" "}
-                  <a href="#" className="h_btn">
+                  <Link href="#" className="h_btn">
                     Yes
-                  </a>
-                  <a href="#" className="h_btn">
+                  </Link>
+                  <Link href="#" className="h_btn">
                     No
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

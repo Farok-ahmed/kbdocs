@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 export default function FunFact() {
@@ -29,15 +30,27 @@ export default function FunFact() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp">
+          <motion.div
+            // fade in up animation
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
+          >
             <div className="doc_fact_item">
               <div className="counter">
                 <CountUp start={0} end={5486} />
               </div>
               <p>Happy Customer</p>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            // fade in up animation
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
             data-wow-delay="0.2s"
           >
@@ -47,8 +60,12 @@ export default function FunFact() {
               </div>
               <p>Cups of Coffee</p>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
             data-wow-delay="0.4s"
           >
@@ -58,8 +75,12 @@ export default function FunFact() {
               </div>
               <p>Finished Projects</p>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
             data-wow-delay="0.6s"
           >
@@ -69,7 +90,7 @@ export default function FunFact() {
               </div>
               <p>Staff Members</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
