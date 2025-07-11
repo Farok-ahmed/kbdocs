@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/page-sections/navbar";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import FontSwitcher from "./_components/font-switcher";
 import ModeSwitcher from "./_components/mode-switcher";
 import OSSelector from "./_components/os-selector";
@@ -11,6 +11,24 @@ import Sidebar from "./_components/sidebar";
 
 export default function DocsLayout({ children }: React.PropsWithChildren) {
   const [isDark, setIsDark] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const content = contentRef.current;
+      if (!content) return;
+
+      if (content.getBoundingClientRect().top <= 0) setIsFixed(true);
+      else setIsFixed(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMode = () => {
     setIsDark((prev) => !prev);
@@ -442,9 +460,10 @@ export default function DocsLayout({ children }: React.PropsWithChildren) {
           </div>
         </section>
         <section
-          className="doc_documentation_area"
+          ref={contentRef}
+          className={`doc_documentation_area ${isFixed ? "body_fixed" : ""}`}
           id="sticky_doc"
-          style={{ minHeight: "auto", paddingBottom: 0 }}
+          style={{ minHeight: "auto" }}
         >
           <div className="overlay_bg"></div>
           <div className="container custom_container">
