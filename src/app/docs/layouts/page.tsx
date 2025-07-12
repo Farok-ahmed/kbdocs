@@ -100,7 +100,10 @@ const LayoutsPage = () => {
             <div className="border_bottom" />
           </article>
           <article className="get_started" id="getting">
-            <h4 className="c_head load-order-2" id="introduction">
+            <h4
+              className="c_head load-order-2 smooth-scroll-heading"
+              id="introduction"
+            >
               Introduction
               <Link
                 className="anchorjs-link "
@@ -124,7 +127,7 @@ const LayoutsPage = () => {
             </p>
             <Link href="#"></Link>
             <h4
-              className="c_head load-order-2"
+              className="c_head load-order-2 "
               id="add-payments-to-your-platform"
             >
               <Link href="#">Add payments to your platform</Link>
@@ -145,7 +148,7 @@ const LayoutsPage = () => {
               in my flat my lady naff bubble and squeak tosser pukka barmy bog
               the bee's knees, elizabeth dropped a clanger cheesed.
             </p>
-            <h4 className="c_head">Extend Stripe's offerings</h4>
+            <h4 className="c_head ">Extend Stripe's offerings</h4>
             <p>
               Naff wellies such a fibber up the duff some dodgy chav sloshed
               blow off golly gosh{" "}
@@ -164,7 +167,7 @@ const LayoutsPage = () => {
           <TestKbdocVersion />
           <div className="border_bottom" />
           <article className="developer" id="developer">
-            <h4 className="c_head">Features</h4>
+            <h4 className="c_head ">Features</h4>
             <ul className="list-unstyled tag_list">
               <li>
                 <i className="icon_document_alt" />
@@ -194,7 +197,10 @@ const LayoutsPage = () => {
           </article>
           <div className="border_bottom" />
           <article className="code_structure">
-            <h4 className="c_head load-order-2" id="code-structure">
+            <h4
+              className="c_head load-order-2 smooth-scroll-heading"
+              id="code-structure"
+            >
               Code Structure
               <Link
                 className="anchorjs-link "
@@ -380,17 +386,17 @@ const LayoutsPage = () => {
             </div>
           </article>
           <article className="help_text" id="help">
-            <h4 className="c_head">We're here to help!</h4>
+            <h4 className="c_head ">We're here to help!</h4>
             <div className="help_info">
               <div className="help_item">
                 <Link href="#">
-                  <h4>Support</h4>
+                  <h4 className="">Support</h4>
                 </Link>
                 <p>Car boot absolutely bladder the full monty ruddy.</p>
               </div>
               <div className="help_item">
                 <Link href="#">
-                  <h4>
+                  <h4 className="">
                     Samples <i className="arrow_carrot-right" />
                   </h4>
                 </Link>
@@ -398,7 +404,7 @@ const LayoutsPage = () => {
               </div>
               <div className="help_item">
                 <Link href="#">
-                  <h4>API Discussion Board</h4>
+                  <h4 className="">API Discussion Board</h4>
                 </Link>
                 <p>Car boot absolutely bladder the full monty ruddy.</p>
               </div>
@@ -407,7 +413,7 @@ const LayoutsPage = () => {
             <div className="row question_box">
               <div className="col-lg-6">
                 <div className="question_text">
-                  <h4>Questions?</h4>
+                  <h4 className="">Questions?</h4>
                   <p>
                     Cheeky that bubble and squeak fanny around bleeder
                     hunky-dory daft <Link href="#">bonnet brolly victoria</Link>{" "}
@@ -418,7 +424,7 @@ const LayoutsPage = () => {
               </div>
               <div className="col-lg-6">
                 <div className="question_text question_text_two">
-                  <h4>Sign up for the Developer Digest</h4>
+                  <h4 className="">Sign up for the Developer Digest</h4>
                   <p>
                     Share your email so KbDoc can send you updates about the API
                     and developer platform.

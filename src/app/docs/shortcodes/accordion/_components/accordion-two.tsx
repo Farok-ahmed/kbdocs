@@ -26,7 +26,7 @@ const ToggleTwo = () => {
   return (
     <div className="toggle_shortcode">
       <div className="shortcode_title">
-        <h4 className="s_title load-order-2" id="toggle">
+        <h4 className="s_title load-order-2 smooth-scroll-heading" id="toggle">
           Toggle
           <Link
             className="anchorjs-link "

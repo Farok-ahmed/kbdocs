@@ -1,9 +1,9 @@
 import DocsLayout from "@/components/DocsLayout";
-const LeftSidebarPage = () => {
+const LayoutFull = () => {
   return (
-    <DocsLayout type="left">
-      <div className="documentation_info">
-        <article className="documentation_body" id="documentation">
+    <DocsLayout type="full-width">
+      <div id="post" className="documentation_info rvfs-4" data-rvfs={4}>
+        <article className="documentation_body">
           <div className="shortcode_title">
             <h1>Getting Started</h1>
             <p>
@@ -15,7 +15,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/folder.png" alt="" />
+                  <img src="img/home_one/icon/folder.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -28,7 +28,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/envelope.png" alt="" />
+                  <img src="img/home_one/icon/envelope.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -41,7 +41,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/coding.png" alt="" />
+                  <img src="img/home_one/icon/coding.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -54,7 +54,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/smartphone.png" alt="" />
+                  <img src="img/home_one/icon/smartphone.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -67,7 +67,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/management.png" alt="" />
+                  <img src="img/home_one/icon/management.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -80,7 +80,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/briefcase.png" alt="" />
+                  <img src="img/home_one/icon/briefcase.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -93,7 +93,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/newspaper.png" alt="" />
+                  <img src="img/home_one/icon/newspaper.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -106,7 +106,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/side-nav/issuin.png" alt="" />
+                  <img src="img/side-nav/issuin.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -119,7 +119,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/color-palette.png" alt="" />
+                  <img src="img/home_one/icon/color-palette.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -132,7 +132,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/side-nav/terminals.png" alt="" />
+                  <img src="img/side-nav/terminals.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -145,7 +145,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/android.png" alt="" />
+                  <img src="img/home_one/icon/android.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -158,7 +158,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/lock.png" alt="" />
+                  <img src="img/home_one/icon/lock.png" alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -195,8 +195,7 @@ const LeftSidebarPage = () => {
           </p>
           <a href="#"></a>
           <h4
-            className="c_head load-order-2 
-            smooth-scroll-heading"
+            className="c_head load-order-2"
             id="add-payments-to-your-platform"
           >
             <a href="#">Add payments to your platform</a>
@@ -214,7 +213,9 @@ const LeftSidebarPage = () => {
             flat my lady naff bubble and squeak tosser pukka barmy bog the bee's
             knees, elizabeth dropped a clanger cheesed.
           </p>
-          <h4 className="c_head ">Extend Stripe's offerings</h4>
+          <h4 className="c_head smooth-scroll-heading">
+            Extend Stripe's offerings
+          </h4>
           <p>
             Naff wellies such a fibber up the duff some dodgy chav sloshed blow
             off golly gosh <a href="#">jolly good hotpot gutted mate</a>, me old
@@ -235,278 +236,276 @@ const LeftSidebarPage = () => {
             Try the KbDoc API in seconds. Create your first customer, charge,
             and more by following the steps below.
           </p>
-          <ul className="nav nav-tabs v_menu" id="myTab" role="tablist">
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                id="card-tab"
-                data-toggle="tab"
-                href="#card"
-                role="tab"
-                aria-controls="card"
-                aria-selected="false"
+          <div className="process_tab_shortcode">
+            <ul className="nav nav-tabs v_menu" id="myTabs" role="tablist">
+              <li className="nav-item">
+                <a
+                  className="nav-link active"
+                  id="card-tab"
+                  data-toggle="tab"
+                  href="#card"
+                  role="tab"
+                  aria-controls="card"
+                  aria-selected="true"
+                >
+                  <span>1</span>Card
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  id="customer-tab"
+                  data-toggle="tab"
+                  href="#customer"
+                  role="tab"
+                  aria-controls="customer"
+                  aria-selected="false"
+                >
+                  <span>2</span>Customer
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  id="charge-tab"
+                  data-toggle="tab"
+                  href="#charge"
+                  role="tab"
+                  aria-controls="charge"
+                  aria-selected="false"
+                >
+                  <span>3</span>Charge
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  id="sub-tab"
+                  data-toggle="tab"
+                  href="#sub"
+                  role="tab"
+                  aria-controls="sub"
+                  aria-selected="false"
+                >
+                  <span>4</span>Subscription
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  id="success-tab"
+                  data-toggle="tab"
+                  href="#success"
+                  role="tab"
+                  aria-controls="success"
+                  aria-selected="false"
+                >
+                  <span>5</span>Success!
+                </a>
+              </li>
+            </ul>
+            <div className="tab-content" id="myTabContents">
+              <div
+                className="tab-pane fade show active"
+                id="card"
+                role="tabpanel"
+                aria-labelledby="card-tab"
               >
-                <span>1</span>Card
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                id="customer-tab"
-                data-toggle="tab"
-                href="#customer"
-                role="tab"
-                aria-controls="customer"
-                aria-selected="false"
+                <p>
+                  Twit brilliant he legged it he nicked it amongst hotpot
+                  chinwag spend a penny lemon squeezy he lost his bottle
+                  porkies, Why it's your round happy days.
+                </p>
+                <div className="version">
+                  <div className="v_head">KbDoc run hello-world</div>
+                  <div className="v_middle">
+                    <p>
+                      Unable to find image{" "}
+                      <span className="red">'hello-world:latest'</span> locally
+                    </p>
+                    <p>latest: Pulling from library/hello-world</p>
+                    <p>
+                      ca4f61b1923c: Pull <span className="green">complete</span>
+                    </p>
+                    <p>
+                      Digest:
+                      sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                    </p>
+                    <p>Status: Downloaded newer image for hello-world:latest</p>
+                  </div>
+                  <div className="v_footer">
+                    <p>
+                      Hello from KbDoc!
+                      <br /> This message shows that your installation appears
+                      to be working correctly. <br />
+                      ...
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  <span>Usage:</span> Click "Submit" to create a token.
+                </p>
+              </div>
+              <div
+                className="tab-pane fade"
+                id="customer"
+                role="tabpanel"
+                aria-labelledby="customer-tab"
               >
-                <span>2</span>Customer
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                id="charge-tab"
-                data-toggle="tab"
-                href="#charge"
-                role="tab"
-                aria-controls="charge"
-                aria-selected="false"
+                <p>
+                  Tristique omnis? Hymenaeos montes facilisi magnam facilisi
+                  ante voluptates odio nulla exercitationem tincidunt maecenas,
+                  dolores mauris praesent placeat
+                </p>
+                <div className="version">
+                  <p>
+                    Vivamus vero netus tristique venenatis excepteur nisl
+                    diamlorem nobis dolorem consequatur repellendus voluptatibus
+                    sit voluptas similique taciti pariatur, veniam, consequatur.
+                  </p>
+                  <p>
+                    Maecenas tempore facilis temporibus quas! Eius illo optio,
+                    rhoncus expedita doloremque gravida, aptent, pariatur porro
+                  </p>
+                  <p>
+                    Tristique omnis? Hymenaeos montes facilisi magnam facilisi
+                    ante voluptates odio nulla exercitationem tincidunt
+                    maecenas, dolores mauris praesent placeat
+                  </p>
+                </div>
+                <p>
+                  <span>Usage:</span> Click "Submit" to create a token.
+                </p>
+              </div>
+              <div
+                className="tab-pane fade"
+                id="charge"
+                role="tabpanel"
+                aria-labelledby="charge-tab"
               >
-                <span>3</span>Charge
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                id="sub-tab"
-                data-toggle="tab"
-                href="#sub"
-                role="tab"
-                aria-controls="sub"
-                aria-selected="false"
+                <p>
+                  Twit brilliant he legged it he nicked it amongst hotpot
+                  chinwag spend a penny lemon squeezy he lost his bottle
+                  porkies, Why it's your round happy days.
+                </p>
+                <div className="version">
+                  <div className="v_head">KbDoc run hello-world</div>
+                  <div className="v_middle">
+                    <p>
+                      Unable to find image{" "}
+                      <span className="red">'hello-world:latest'</span> locally
+                    </p>
+                    <p>latest: Pulling from library/hello-world</p>
+                    <p>
+                      ca4f61b1923c: Pull <span className="green">complete</span>
+                    </p>
+                    <p>
+                      Digest:
+                      sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                    </p>
+                    <p>Status: Downloaded newer image for hello-world:latest</p>
+                  </div>
+                  <div className="v_footer">
+                    <p>
+                      Hello from KbDoc!
+                      <br /> This message shows that your installation appears
+                      to be working correctly. <br />
+                      ...
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  <span>Usage:</span> Click "Submit" to create a token.
+                </p>
+              </div>
+              <div
+                className="tab-pane fade"
+                id="sub"
+                role="tabpanel"
+                aria-labelledby="sub-tab"
               >
-                <span>4</span>Subscription
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                id="success-tab"
-                data-toggle="tab"
-                href="#success"
-                role="tab"
-                aria-controls="success"
-                aria-selected="true"
+                <p>
+                  Twit brilliant he legged it he nicked it amongst hotpot
+                  chinwag spend a penny lemon squeezy he lost his bottle
+                  porkies, Why it's your round happy days.
+                </p>
+                <div className="version">
+                  <div className="v_head">KbDoc run hello-world</div>
+                  <div className="v_middle">
+                    <p>
+                      Unable to find image{" "}
+                      <span className="red">'hello-world:latest'</span> locally
+                    </p>
+                    <p>latest: Pulling from library/hello-world</p>
+                    <p>
+                      ca4f61b1923c: Pull <span className="green">complete</span>
+                    </p>
+                    <p>
+                      Digest:
+                      sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                    </p>
+                    <p>Status: Downloaded newer image for hello-world:latest</p>
+                  </div>
+                  <div className="v_footer">
+                    <p>
+                      Hello from KbDoc!
+                      <br /> This message shows that your installation appears
+                      to be working correctly. <br />
+                      ...
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  <span>Usage:</span> Click "Submit" to create a token.
+                </p>
+              </div>
+              <div
+                className="tab-pane fade"
+                id="success"
+                role="tabpanel"
+                aria-labelledby="success-tab"
               >
-                <span>5</span>Success!
-              </a>
-            </li>
-          </ul>
-          <div className="tab-content" id="myTabContent">
-            <div
-              className="tab-pane fade"
-              id="card"
-              role="tabpanel"
-              aria-labelledby="card-tab"
-            >
-              <p>
-                Twit brilliant he legged it he nicked it amongst hotpot chinwag
-                spend a penny lemon squeezy he lost his bottle porkies, Why it's
-                your round happy days.
-              </p>
-              <div className="version">
-                <div className="v_head">KbDoc run hello-world</div>
-                <div className="v_middle">
-                  <p>
-                    Unable to find image{" "}
-                    <span className="red">'hello-world:latest'</span> locally
-                  </p>
-                  <p>latest: Pulling from library/hello-world</p>
-                  <p>
-                    ca4f61b1923c: Pull <span className="green">complete</span>
-                  </p>
-                  <p>
-                    Digest:
-                    sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
-                  </p>
-                  <p>Status: Downloaded newer image for hello-world:latest</p>
+                <p>
+                  Twit brilliant he legged it he nicked it amongst hotpot
+                  chinwag spend a penny lemon squeezy he lost his bottle
+                  porkies, Why it's your round happy days.
+                </p>
+                <div className="version">
+                  <div className="v_head">KbDoc run hello-world</div>
+                  <div className="v_middle">
+                    <p>
+                      Unable to find image{" "}
+                      <span className="red">'hello-world:latest'</span> locally
+                    </p>
+                    <p>latest: Pulling from library/hello-world</p>
+                    <p>
+                      ca4f61b1923c: Pull <span className="green">complete</span>
+                    </p>
+                    <p>
+                      Digest:
+                      sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+                    </p>
+                    <p>Status: Downloaded newer image for hello-world:latest</p>
+                  </div>
+                  <div className="v_footer">
+                    <p>
+                      Hello from KbDoc!
+                      <br /> This message shows that your installation appears
+                      to be working correctly. <br />
+                      ...
+                    </p>
+                  </div>
                 </div>
-                <div className="v_footer">
-                  <p>
-                    Hello from KbDoc!
-                    <br /> This message shows that your installation appears to
-                    be working correctly. <br />
-                    ...
-                  </p>
-                </div>
+                <p>
+                  <span>Usage:</span> Click "Submit" to create a token.
+                </p>
               </div>
-              <p>
-                <span>Usage:</span> Click "Submit" to create a token.
-              </p>
-            </div>
-            <div
-              className="tab-pane fade"
-              id="customer"
-              role="tabpanel"
-              aria-labelledby="customer-tab"
-            >
-              <p>
-                Twit brilliant he legged it he nicked it amongst hotpot chinwag
-                spend a penny lemon squeezy he lost his bottle porkies, Why it's
-                your round happy days.
-              </p>
-              <div className="version">
-                <div className="v_head">KbDoc run hello-world</div>
-                <div className="v_middle">
-                  <p>
-                    Unable to find image{" "}
-                    <span className="red">'hello-world:latest'</span> locally
-                  </p>
-                  <p>latest: Pulling from library/hello-world</p>
-                  <p>
-                    ca4f61b1923c: Pull <span className="green">complete</span>
-                  </p>
-                  <p>
-                    Digest:
-                    sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
-                  </p>
-                  <p>Status: Downloaded newer image for hello-world:latest</p>
-                </div>
-                <div className="v_footer">
-                  <p>
-                    Hello from KbDoc!
-                    <br /> This message shows that your installation appears to
-                    be working correctly. <br />
-                    ...
-                  </p>
-                </div>
-              </div>
-              <p>
-                <span>Usage:</span> Click "Submit" to create a token.
-              </p>
-            </div>
-            <div
-              className="tab-pane fade"
-              id="charge"
-              role="tabpanel"
-              aria-labelledby="charge-tab"
-            >
-              <p>
-                Twit brilliant he legged it he nicked it amongst hotpot chinwag
-                spend a penny lemon squeezy he lost his bottle porkies, Why it's
-                your round happy days.
-              </p>
-              <div className="version">
-                <div className="v_head">KbDoc run hello-world</div>
-                <div className="v_middle">
-                  <p>
-                    Unable to find image{" "}
-                    <span className="red">'hello-world:latest'</span> locally
-                  </p>
-                  <p>latest: Pulling from library/hello-world</p>
-                  <p>
-                    ca4f61b1923c: Pull <span className="green">complete</span>
-                  </p>
-                  <p>
-                    Digest:
-                    sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
-                  </p>
-                  <p>Status: Downloaded newer image for hello-world:latest</p>
-                </div>
-                <div className="v_footer">
-                  <p>
-                    Hello from KbDoc!
-                    <br /> This message shows that your installation appears to
-                    be working correctly. <br />
-                    ...
-                  </p>
-                </div>
-              </div>
-              <p>
-                <span>Usage:</span> Click "Submit" to create a token.
-              </p>
-            </div>
-            <div
-              className="tab-pane fade"
-              id="sub"
-              role="tabpanel"
-              aria-labelledby="sub-tab"
-            >
-              <p>
-                Twit brilliant he legged it he nicked it amongst hotpot chinwag
-                spend a penny lemon squeezy he lost his bottle porkies, Why it's
-                your round happy days.
-              </p>
-              <div className="version">
-                <div className="v_head">KbDoc run hello-world</div>
-                <div className="v_middle">
-                  <p>
-                    Unable to find image{" "}
-                    <span className="red">'hello-world:latest'</span> locally
-                  </p>
-                  <p>latest: Pulling from library/hello-world</p>
-                  <p>
-                    ca4f61b1923c: Pull <span className="green">complete</span>
-                  </p>
-                  <p>
-                    Digest:
-                    sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
-                  </p>
-                  <p>Status: Downloaded newer image for hello-world:latest</p>
-                </div>
-                <div className="v_footer">
-                  <p>
-                    Hello from KbDoc!
-                    <br /> This message shows that your installation appears to
-                    be working correctly. <br />
-                    ...
-                  </p>
-                </div>
-              </div>
-              <p>
-                <span>Usage:</span> Click "Submit" to create a token.
-              </p>
-            </div>
-            <div
-              className="tab-pane fade active show"
-              id="success"
-              role="tabpanel"
-              aria-labelledby="success-tab"
-            >
-              <p>
-                Twit brilliant he legged it he nicked it amongst hotpot chinwag
-                spend a penny lemon squeezy he lost his bottle porkies, Why it's
-                your round happy days.
-              </p>
-              <div className="version">
-                <div className="v_head">KbDoc run hello-world</div>
-                <div className="v_middle">
-                  <p>
-                    Unable to find image{" "}
-                    <span className="red">'hello-world:latest'</span> locally
-                  </p>
-                  <p>latest: Pulling from library/hello-world</p>
-                  <p>
-                    ca4f61b1923c: Pull <span className="green">complete</span>
-                  </p>
-                  <p>
-                    Digest:
-                    sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
-                  </p>
-                  <p>Status: Downloaded newer image for hello-world:latest</p>
-                </div>
-                <div className="v_footer">
-                  <p>
-                    Hello from KbDoc!
-                    <br /> This message shows that your installation appears to
-                    be working correctly. <br />
-                    ...
-                  </p>
-                </div>
-              </div>
-              <p>
-                <span>Usage:</span> Click "Submit" to create a token.
-              </p>
+              <button className="btn btn-info btn-lg previous">
+                <i className="arrow_carrot-left" />
+              </button>
+              <button className="btn btn-info btn-lg next">
+                <i className="arrow_carrot-right" />
+              </button>
             </div>
           </div>
         </article>
@@ -557,12 +556,60 @@ const LeftSidebarPage = () => {
           </h4>
           <p>HTML, css and javascript files included.</p>
           <div className="row">
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <div className="code-toolbar">
                 <pre className="snippet language-html">
                   <code className=" language-html" data-lang="css">
                     doc<span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>assets/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>animation/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>bootstrap/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>elagent-icon/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>magnify-pop/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>mcustomscrollbar/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>niceselectpicker/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>├──
+                    <span className="token space"> </span>prism/
+                    <span className="token lf">{"\n"}</span>│
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>
+                    <span className="token space"> </span>└──
+                    <span className="token space"> </span>slick/
+                    <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>blog-list.html
+                    <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>about.html
+                    <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>accordion.html
+                    <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>alerts.html
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>blog-grid.html
                     <span className="token lf">{"\n"}</span>├──
@@ -576,6 +623,8 @@ const LeftSidebarPage = () => {
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>code.html
                     <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>both-sidebar.html
+                    <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>doclist.html
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>images-pointing.html
@@ -588,7 +637,17 @@ const LeftSidebarPage = () => {
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>layout-sidebar.html
                     <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>layout-minimal.html
+                    <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>layout-sidebar.html
+                    <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>notice.html
+                    <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>tables.html
+                    <span className="token lf">{"\n"}</span>├──
+                    <span className="token space"> </span>typography.html
+                    <span className="token lf">{"\n"}</span>└──
+                    <span className="token space"> </span>video.html
                   </code>
                 </pre>
                 <div className="toolbar">
@@ -601,7 +660,7 @@ const LeftSidebarPage = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <div className="code-toolbar">
                 <pre className="snippet language-html">
                   <code className=" language-html" data-lang="css">
@@ -645,7 +704,7 @@ const LeftSidebarPage = () => {
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>fonts/
                     <span className="token lf">{"\n"}</span>├──
-                    <span className="token space"> </span>/img/
+                    <span className="token space"> </span>img/
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>js/
                     <span className="token lf">{"\n"}</span>├──
@@ -692,7 +751,7 @@ const LeftSidebarPage = () => {
           </div>
           <div className="border_bottom" />
           <div className="row question_box">
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <div className="question_text">
                 <h4 className="">Questions?</h4>
                 <p>
@@ -703,7 +762,7 @@ const LeftSidebarPage = () => {
                 </p>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <div className="question_text question_text_two">
                 <h4 className="">Sign up for the Developer Digest</h4>
                 <p>
@@ -743,7 +802,7 @@ const LeftSidebarPage = () => {
           </div>
           <div className="border_bottom" />
           <div className="row feedback_link">
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <h6>
                 <i className="icon_mail_alt" />
                 Still stuck?{" "}
@@ -752,7 +811,7 @@ const LeftSidebarPage = () => {
                 </a>
               </h6>
             </div>
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <p>
                 Was this page helpful?{" "}
                 <a href="#" className="h_btn">
@@ -770,4 +829,4 @@ const LeftSidebarPage = () => {
   );
 };
 
-export default LeftSidebarPage;
+export default LayoutFull;

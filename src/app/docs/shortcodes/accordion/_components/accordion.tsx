@@ -33,7 +33,10 @@ const Accordion = () => {
     <>
       <div className="accordion_shortcode">
         <div className="shortcode_title">
-          <h4 className="s_title load-order-2" id="accordions">
+          <h4
+            className="s_title load-order-2 smooth-scroll-heading"
+            id="accordions"
+          >
             Accordion
             <Link
               className="anchorjs-link "

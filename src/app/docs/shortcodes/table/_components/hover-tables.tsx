@@ -15,7 +15,7 @@ const HoverTables = () => {
   return (
     <>
       <div className="basic_table">
-        <h4 className="s_title load-order-2" id="hover">
+        <h4 className="s_title load-order-2 smooth-scroll-heading" id="hover">
           Hover Tables
           <Link
             className="anchorjs-link "

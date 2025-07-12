@@ -209,7 +209,7 @@ const TestKbdocVersion = () => {
   return (
     <>
       <article className="test_version" id="version">
-        <h4 className="c_head">Test KbDoc Version</h4>
+        <h4 className="c_head smooth-scroll-heading">Test KbDoc Version</h4>
         <p>
           Try the KbDoc API in seconds. Create your first customer, charge, and
           more by following the steps below.

@@ -14,10 +14,40 @@ interface Props {
   type?: "left" | "right" | "both" | "full-width";
 }
 
+interface Heading {
+  id: string;
+  text: string;
+}
+
 export default function DocsLayout({ children, type = "both" }: Props) {
   const [isDark, setIsDark] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const [isFixed, setIsFixed] = useState(false);
+  const [headings, setHeadings] = useState<Heading[]>([]);
+
+  useEffect(() => {
+    if (!contentRef.current) return;
+    const headingElements = contentRef.current.querySelectorAll("h4");
+
+    const headingsArray = Array.from(headingElements)
+      .filter(
+        (heading) =>
+          heading.id && heading.classList.contains("smooth-scroll-heading")
+      )
+      .map((heading) => ({
+        id: heading.id,
+        text: heading.textContent || "",
+      }));
+
+    setHeadings(headingsArray);
+  }, [children]);
+
+  const handleScrollToHeading = (id: string) => {
+    const headingElement = document.getElementById(id);
+    if (headingElement) {
+      headingElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -471,7 +501,13 @@ export default function DocsLayout({ children, type = "both" }: Props) {
           style={{ minHeight: "auto" }}
         >
           <div className="overlay_bg"></div>
-          <div className="container custom_container">
+          <div
+            className={`${
+              type === "full-width"
+                ? "container-fluid pl-60 pr-60"
+                : "container custom_container"
+            }`}
+          >
             <div className="row">
               <div className="col-lg-3 doc_mobile_menu display_none">
                 <Sidebar />
@@ -499,7 +535,17 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                       className="list-unstyled doc_menu"
                       id="navbar-example3"
                     >
-                      <Link href="#documentation" className="nav-link active">
+                      {headings.map((heading, index) => (
+                        <Link
+                          key={index}
+                          href={`#${heading.id}`}
+                          className="nav-link"
+                          onClick={() => handleScrollToHeading(heading.id)}
+                        >
+                          {heading.text}
+                        </Link>
+                      ))}
+                      {/* <Link href="#documentation" className="nav-link active">
                         Documentation
                       </Link>
                       <Link href="#getting" className="nav-link">
@@ -513,7 +559,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                       </Link>
                       <Link href="#help" className="nav-link">
                         We're here to help!
-                      </Link>
+                      </Link> */}
                     </nav>
                   </div>
                 </div>

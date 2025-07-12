@@ -19,7 +19,7 @@ const TabPage = () => {
           <CustomTabs />
 
           <div className="shortcode_title">
-            <h4 className="s_title" id="tab2">
+            <h4 className="s_title smooth-scroll-heading" id="tab2">
               Process Tab
             </h4>
             <p>

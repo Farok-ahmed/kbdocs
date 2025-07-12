@@ -1,145 +1,145 @@
 export const docsDropDownMenu = [
   {
-    slug: "/doc",
+    href: "/doc",
     title: "Doc Topics",
     items: [
       {
         title: "Doc Archive",
-        link: "/doc-archive",
+        href: "/doc-archive",
       },
       {
         title: "Doc Topic",
-        link: "/docs",
+        href: "/docs",
       },
     ],
   },
   {
-    slug: "/code",
+    href: "/code",
     title: "Shortcodes",
     items: [
       {
         title: "Tabs",
-        link: "/docs/shortcodes/tab",
+        href: "/docs/shortcodes/tab",
       },
       {
         title: "Accordion",
-        link: "/docs/shortcodes/accordion",
+        href: "/docs/shortcodes/accordion",
       },
       {
         title: "Notice",
-        link: "/docs/shortcodes/notice",
+        href: "/docs/shortcodes/notice",
       },
       {
         title: "Tables",
-        link: "/docs/shortcodes/tables",
+        href: "/docs/shortcodes/tables",
       },
       {
         title: "Image Lightbox",
-        link: "/docs/shortcodes/image-lightbox",
+        href: "/docs/shortcodes/image-lightbox",
       },
       {
         title: "Tooltip",
-        link: "/docs/shortcodes/tooltip",
+        href: "/docs/shortcodes/tooltip",
       },
       {
         title: "Lightbox",
-        link: "/docs/shortcodes/lightbox",
+        href: "/docs/shortcodes/lightbox",
       },
       {
         title: "Can I Use",
-        link: "/docs/shortcodes/can-use",
+        href: "/docs/shortcodes/can-use",
       },
       {
         title: "Footnote",
-        link: "/footnote",
+        href: "/footnote",
       },
     ],
   },
   {
-    slug: "/docs/layouts",
+    href: "/docs/layouts",
     title: "Layouts",
     items: [
       {
         title: "Both Sidebar",
-        link: "/docs/layouts",
+        href: "/docs/layouts",
       },
       {
         title: "Left Sidebar",
-        link: "/left-sidebar",
+        href: "/docs/layouts/leftsidebar",
       },
       {
         title: "Full-width",
-        link: "/full-width",
+        href: "/docs/layouts/layout-full",
       },
       {
         title: "Sticky Menu",
-        link: "/sticky-menu",
+        href: "/docs/layouts/sticky-menu",
       },
       {
         title: "Simple Footer",
-        link: "/simple-footer",
+        href: "/simple-footer",
       },
     ],
   },
   {
-    slug: "/tour",
+    href: "/tour",
     title: "Tour",
     items: [
       {
         title: "Image Hotspot",
-        link: "/docs/tour/image-pointing",
+        href: "/docs/tour/image-pointing",
       },
       {
         title: "Application Interface",
-        link: "/docs/tour",
+        href: "/docs/tour",
       },
     ],
   },
   {
-    slug: "/content",
+    href: "/content",
     title: "Content",
     items: [
       {
         title: "Typography",
-        link: "/typography",
+        href: "/typography",
       },
       {
         title: "Code",
-        link: "/docs/code",
+        href: "/docs/code",
       },
       {
         title: "Image",
-        link: "/docs/image",
+        href: "/docs/image",
       },
       {
         title: "Video",
-        link: "/docs/video",
+        href: "/docs/video",
       },
       {
         title: "Keyboard Shortcuts",
-        link: "/docs/keyboard-shortcuts",
+        href: "/docs/keyboard-shortcuts",
       },
     ],
   },
   {
-    slug: "/pages",
+    href: "/pages",
     title: "Other Pages",
     items: [
       {
         title: "Doc Topics",
-        link: "/docs",
+        href: "/docs",
       },
       {
         title: "One Page",
-        link: "/one-page",
+        href: "/one-page",
       },
       {
         title: "Cheat Sheet",
-        link: "/docs/cheatsheet",
+        href: "/docs/cheatsheet",
       },
       {
         title: "Changelog",
-        link: "/docs/changelog",
+        href: "/docs/changelog",
       },
     ],
   },

@@ -15,7 +15,7 @@ const StripedTables = () => {
   return (
     <>
       <div className="basic_table">
-        <h4 className="s_title load-order-2" id="strip">
+        <h4 className="s_title load-order-2 smooth-scroll-heading" id="strip">
           Striped Table
           <Link
             className="anchorjs-link "

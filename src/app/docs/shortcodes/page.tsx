@@ -125,7 +125,7 @@ const ShortcodePage = () => {
                 </strong>
               </li>
             </ul>
-            <h4 className="c_head" id="article">
+            <h4 className="c_head smooth-scroll-heading" id="article">
               Articles
             </h4>
             <ul className="list-unstyled article_list tag_list">

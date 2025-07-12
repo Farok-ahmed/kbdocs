@@ -19,7 +19,7 @@ const KeyboardShortcuts = () => {
             </p>
           </div>
           <div className="shortcode_title">
-            <h4 className="s_title" id="list-shortcuts">
+            <h4 className="s_title smooth-scroll-heading" id="list-shortcuts">
               Keyboard shortcuts in List Style
             </h4>
             <p>
@@ -93,7 +93,7 @@ const KeyboardShortcuts = () => {
             </li>
           </ul>
           <div className="shortcode_title">
-            <h4 className="s_title" id="table-shortcuts">
+            <h4 className="s_title smooth-scroll-heading" id="table-shortcuts">
               Keyboard shortcuts in Table
             </h4>
             <p>

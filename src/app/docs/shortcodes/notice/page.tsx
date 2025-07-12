@@ -13,7 +13,7 @@ const NoticePage = () => {
               products and explore their features:
             </p>
           </div>
-          <h4 className="s_title" id="alert">
+          <h4 className="s_title smooth-scroll-heading" id="alert">
             Messages Alerts
           </h4>
           <div className="alert media message_alert fade show" role="alert">
@@ -123,7 +123,7 @@ const NoticePage = () => {
               </button>
             </div>
           </div>
-          <h4 className="s_title" id="notice">
+          <h4 className="s_title smooth-scroll-heading" id="notice">
             Notices
           </h4>
           <blockquote className="media notice notice-success">
@@ -168,7 +168,7 @@ const NoticePage = () => {
               </p>
             </div>
           </blockquote>
-          <h4 className="s_title" id="explanation">
+          <h4 className="s_title smooth-scroll-heading" id="explanation">
             Explanations
           </h4>
           <p className="explanation expn-left">

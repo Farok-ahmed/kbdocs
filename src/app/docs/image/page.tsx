@@ -19,7 +19,7 @@ const ImagePage = () => {
                 lists, and more.
               </p>
             </div>
-            <h4 className="c_head load-order-2" id="image-with-caption">
+            <h4 className="c_head load-order-2 smooth-scroll-heading" id="image-with-caption">
               Image with Caption
               <Link
                 className="anchorjs-link "
@@ -137,7 +137,7 @@ const ImagePage = () => {
             </div>
             <ImageMagnify />
             <div className="code_item">
-              <h4 className="c_head load-order-2" id="shap">
+              <h4 className="c_head load-order-2 smooth-scroll-heading" id="shap">
                 Images Shapes
                 <Link
                   className="anchorjs-link "
@@ -288,7 +288,7 @@ const ImagePage = () => {
               </div>
             </div>
             <div className="code_item">
-              <h4 className="c_head load-order-2" id="align">
+              <h4 className="c_head load-order-2 smooth-scroll-heading" id="align">
                 Aligning images
                 <Link
                   className="anchorjs-link "

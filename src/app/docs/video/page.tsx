@@ -65,7 +65,7 @@ const VideoPage = () => {
                 intrinsic ratio that scales on any device.
               </p>
             </div>
-            <h4 className="c_head load-order-2" id="about">
+            <h4 className="c_head load-order-2 smooth-scroll-heading" id="about">
               About
               <Link
                 className="anchorjs-link "
@@ -89,7 +89,7 @@ const VideoPage = () => {
               when you want to match the styling for other attributes.
             </p>
             <div className="mt-5 code_item">
-              <h4 className="c_head load-order-2" id="example">
+              <h4 className="c_head load-order-2 smooth-scroll-heading" id="example">
                 Example
                 <Link
                   className="anchorjs-link "
@@ -199,7 +199,7 @@ const VideoPage = () => {
               </div>
             </div>
             <div className="mt-5 code_item">
-              <h4 className="c_head load-order-2" id="vimeo_video">
+              <h4 className="c_head load-order-2 smooth-scroll-heading" id="vimeo_video">
                 Vimeo Video
                 <Link
                   className="anchorjs-link "
@@ -306,7 +306,7 @@ const VideoPage = () => {
             </div>
 
             <div className="mt-5">
-              <h4 className="c_head load-order-2" id="autoplay_video">
+              <h4 className="c_head load-order-2 smooth-scroll-heading" id="autoplay_video">
                 AutoPlay Local Video
                 <Link
                   className="anchorjs-link "

@@ -81,7 +81,7 @@ const ImagePointingPage = () => {
               products and explore their features:
             </p>
           </div>
-          <h4 className="s_title load-order-2" id="pointing">
+          <h4 className="s_title load-order-2 smooth-scroll-heading" id="pointing">
             Image Hotspots
             <Link
               className="anchorjs-link "
@@ -142,7 +142,7 @@ const ImagePointingPage = () => {
           </div>
           <div className="image_pointer">
             <div className="shortcode_title">
-              <h4 className="load-order-2" id="demo">
+              <h4 className="load-order-2 smooth-scroll-heading" id="demo">
                 Demo Edit Guide
                 <Link
                   className="anchorjs-link "

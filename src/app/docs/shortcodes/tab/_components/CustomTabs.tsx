@@ -17,7 +17,7 @@ const CustomTabs = () => {
 
   return (
     <div className="tab_shortcode">
-      <h4 className="s_title" id="tab">
+      <h4 className="s_title smooth-scroll-heading" id="tab">
         Tabs
       </h4>
 

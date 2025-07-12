@@ -22,7 +22,7 @@ const LightBox = () => {
           <ImageLightbox />
           <div className="image_pointer mt-5">
             <div className="shortcode_title">
-              <h4 className="load-order-2" id="modal-lightbox">
+              <h4 className="load-order-2 smooth-scroll-heading" id="modal-lightbox">
                 Modal Lightbox
                 <Link
                   className="anchorjs-link "

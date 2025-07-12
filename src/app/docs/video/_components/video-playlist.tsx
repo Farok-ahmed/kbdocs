@@ -5,7 +5,10 @@ const VideoPlaylist = () => {
   return (
     <>
       <div className="mt-5">
-        <h4 className="c_head load-order-2" id="yt-channel-playlist">
+        <h4
+          className="c_head load-order-2 smooth-scroll-heading"
+          id="yt-channel-playlist"
+        >
           YouTube Channel Videos Playlist
           <Link
             className="anchorjs-link "

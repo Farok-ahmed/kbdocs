@@ -126,14 +126,14 @@ export default function DocsPage() {
           </article>
           <div className="border_bottom"></div>
           <article className="get_started" id="getting">
-            <h4 className="c_head">Getting started</h4>
+            <h4 className="c_head smooth-scroll-heading">Getting started</h4>
             <p>
               Owt to do with me chinwag get stuffed mate baking cakes blow off
               vagabond knackered faff about boot a load of old tosh{" "}
               <Link href="">Richard Charles</Link>, cor blimey guvnor cheers
               fantastic butty.
             </p>
-            <h4 className="c_head">Accept payments</h4>
+            <h4 className="c_head ">Accept payments</h4>
             <p>
               James Bond knackered cup of char show off show off pick your nose
               and blow off faff about it's all gone to pot tosser that so I
@@ -152,7 +152,7 @@ export default function DocsPage() {
               <Link href="">Plastered cack bog-standard hanky panky owt</Link>{" "}
               to do with me young delinquent chancer
             </p>
-            <h4 className="c_head">Build a marketplace</h4>
+            <h4 className="c_head ">Build a marketplace</h4>
             <p>
               Owt to do with me chinwag get stuffed mate baking cakes blow off
               vagabond knackered faff about boot a load of old tosh{" "}
@@ -163,7 +163,7 @@ export default function DocsPage() {
               squeezy.
             </p>
             <Link href="">
-              <h4 className="c_head load-order-2">
+              <h4 className="c_head load-order-2 ">
                 Add payments to your platform
               </h4>
             </Link>
@@ -173,7 +173,7 @@ export default function DocsPage() {
               in my flat my lady naff bubble and squeak tosser pukka barmy bog
               the bee's knees, elizabeth dropped a clanger cheesed.
             </p>
-            <h4 className="c_head">Extend Stripe's offerings</h4>
+            <h4 className="c_head ">Extend Stripe's offerings</h4>
             <p>
               Naff wellies such a fibber up the duff some dodgy chav sloshed
               blow off golly gosh{" "}
@@ -192,7 +192,7 @@ export default function DocsPage() {
           <TestKbdocVersion />
           <div className="border_bottom"></div>
           <article className="developer" id="developer">
-            <h4 className="c_head">Not a developer?</h4>
+            <h4 className="c_head smooth-scroll-heading">Not a developer?</h4>
             <p>
               Some dodgy chav bonnet victoria sponge{" "}
               <Link href="">jolly good bits and bobs</Link> James Bond wind up
@@ -205,7 +205,9 @@ export default function DocsPage() {
           </article>
           <div className="border_bottom"></div>
           <article className="help_text" id="help">
-            <h4 className="c_head">We're here to help!</h4>
+            <h4 className="c_head smooth-scroll-heading">
+              We're here to help!
+            </h4>
             <div className="help_info">
               <div className="help_item">
                 <Link href="">

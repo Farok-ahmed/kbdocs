@@ -19,7 +19,7 @@ const TourPage = () => {
             </div>
             <div className="border_bottom" />
             <div className="tour_item">
-              <h4 className="c_head load-order-2" id="head">
+              <h4 className="c_head load-order-2 smooth-scroll-heading" id="head">
                 Ask questions, get answer no distractions
                 <Link
                   className="anchorjs-link "
@@ -92,7 +92,7 @@ const TourPage = () => {
             </div>
             <div className="border_bottom" />
             <div className="tour_item">
-              <h4 className="c_head">
+              <h4 className="c_head smooth-scroll-heading">
                 Get answers to practical, detailed questions
               </h4>
               <div className="row flex-row-reverse align-items-center tour_intro_item">
@@ -182,7 +182,7 @@ const TourPage = () => {
             <div className="border_bottom" />
             <div className="tour_item last_tour_item">
               <h4
-                className="c_head load-order-2"
+                className="c_head load-order-2 smooth-scroll-heading"
                 id="tags-make-it-easy-to-find-interesting-questions"
               >
                 Tags make it easy to find interesting questions

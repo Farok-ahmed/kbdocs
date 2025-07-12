@@ -84,7 +84,7 @@ const TooltipPage = () => {
     <>
       <DocsLayout>
         <div id="post" className="shortcode_info rvfs-4" data-rvfs={4}>
-          <h4 className="s_title" id="tooltip-t">
+          <h4 className="s_title smooth-scroll-heading" id="tooltip-t">
             Tooltip
           </h4>
           <div className="tooltip_content">

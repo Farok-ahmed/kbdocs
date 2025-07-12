@@ -15,7 +15,7 @@ const BasicTables = () => {
   return (
     <>
       <div className="basic_table">
-        <h4 className="s_title load-order-2" id="basic">
+        <h4 className="s_title load-order-2 smooth-scroll-heading" id="basic">
           Basic Tables
           <Link
             className="anchorjs-link "
