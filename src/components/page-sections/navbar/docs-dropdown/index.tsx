@@ -2,11 +2,15 @@ import Link from "next/link";
 import { useState } from "react";
 import { docsDropDownMenu } from "./menu";
 
-export default function DocsDropDown() {
+interface DocsDropDownProps {
+  isOpen: boolean;
+}
+
+export default function DocsDropDown({ isOpen }: DocsDropDownProps) {
   const [selected, setSelected] = useState(docsDropDownMenu[0].href);
 
   return (
-    <ul className="dropdown-menu">
+    <ul className={`dropdown-menu ${isOpen ? "show" : ""} `}>
       <li>
         <div className="row">
           <div className="col-lg-5 tabHeader">
@@ -18,8 +22,6 @@ export default function DocsDropDown() {
             >
               {docsDropDownMenu.map((item, i) => {
                 const isActive = selected === item.href;
-                // const href = `#v-pills-${item.href}`;
-                const href = ``;
 
                 return (
                   <li
@@ -31,7 +33,7 @@ export default function DocsDropDown() {
                       className={`nav-href`}
                       id={`v-pills-${item.href}-tab`}
                       data-toggle="pill"
-                      href={href}
+                      href="#"
                       role="tab"
                       aria-controls={`v-pills-${item.href}`}
                       aria-selected={isActive}
