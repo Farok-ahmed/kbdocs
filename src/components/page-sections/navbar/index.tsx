@@ -3,8 +3,6 @@
 import LogoW from "@/assets/img/logo-w.png";
 import logo from "@/assets/img/logo.png";
 import { pages } from "@/utils/pages";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,7 +12,7 @@ import { navMenu } from "./nav-menu";
 import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
 
-export default function Navbar() {
+export default function Navbar({ navbarHide = "" }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState<string | null>(null);
   const pathname = usePathname();
@@ -64,8 +62,8 @@ export default function Navbar() {
     <>
       <TopBar isHelpDesk={isHelpDesk} />
       <nav
-        className={`navbar navbar-expand-lg ${
-          homePage ? "menu_two" : "menu_one"
+        className={`navbar navbar-expand-lg ${navbarHide}  ${
+          homePage || isHelpDesk ? "menu_two" : "menu_one"
         } ${isScrolled ? "navbar_fixed" : ""}  ${
           isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
         }`}
@@ -82,157 +80,95 @@ export default function Navbar() {
           </Link>
           <NavToggler isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
 
-          <AnimatePresence initial={false}>
-            {isExpanded && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className={`navbar-collapse collapse show `}
-                id="navbarSupportedContent"
-                style={{
-                  transition: "max-height 0.4s ease, padding 0.3s ease",
-                }}
-              >
-                <ul
-                  className={`navbar-nav menu  ml-auto ${
-                    homePage || isHelpDesk ? "dk_menu" : ""
-                  }`}
-                >
-                  {
-                    /* Home, Docs, Pages, Forum, Products, Blog */
+          <div
+            className={`navbar-collapse collapse  ${isExpanded ? "show" : ""}`}
+            id="navbarSupportedContent"
+            style={{
+              transition: "max-height 0.4s ease, padding 0.3s ease",
+            }}
+          >
+            <ul
+              className={`navbar-nav menu  ml-auto ${
+                homePage || isHelpDesk ? "dk_menu" : ""
+              }`}
+            >
+              {
+                /* Home, Docs, Pages, Forum, Products, Blog */
 
-                    navMenu.map((item) => {
-                      const isActive = pathname === item.href;
-                      const isDocsDropdown = item.type === "docsDropdown";
-                      const isProductsDropdown = item.isDropDown2;
-                      return (
-                        <li
-                          className={`nav-item dropdown submenu ${
-                            isDocsDropdown ? "mega_menu" : ""
-                          } ${isActive ? "active" : ""}`}
+                navMenu.map((item) => {
+                  const isActive = pathname === item.href;
+                  const isDocsDropdown = item.type === "docsDropdown";
+                  const isProductsDropdown = item.isDropDown2;
+                  return (
+                    <li
+                      className={`nav-item dropdown submenu ${
+                        isDocsDropdown ? "mega_menu" : ""
+                      } ${isActive ? "active" : ""}`}
+                      key={item.href}
+                      onClick={() => handleSubmenuClick(item.href)}
+                    >
+                      <Link
+                        href={item.href}
+                        className="nav-link dropdown-toggle"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        {item.title}
+                      </Link>
+                      <i
+                        className="arrow_carrot-down_alt2 mobile_dropdown_icon"
+                        aria-hidden="true"
+                        data-toggle="dropdown"
+                      />
+
+                      {isDocsDropdown ? (
+                        <DocsDropDown isOpen={isSubmenuOpen === item.href} />
+                      ) : item.items && item.items.length > 0 ? (
+                        <ul
+                          className={`dropdown-menu ${
+                            isSubmenuOpen === item.href ? "show" : ""
+                          } ${isProductsDropdown ? "dropdown_menu_two" : ""}`}
                           key={item.href}
-                          onClick={() => handleSubmenuClick(item.href)}
                         >
-                          <Link
-                            href={item.href}
-                            className="nav-link dropdown-toggle"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            {item.title}
-                          </Link>
-                          <i
-                            className="arrow_carrot-down_alt2 mobile_dropdown_icon"
-                            aria-hidden="true"
-                            data-toggle="dropdown"
-                          />
+                          {item.items.map((subItem, index) => (
+                            <li
+                              className={`nav-item ${
+                                pathname === subItem.href ? "active" : ""
+                              }`}
+                              key={index}
+                            >
+                              <Link href={subItem.href} className="nav-link">
+                                {subItem.subTitle ? (
+                                  <>
+                                    <img src={subItem?.icon} alt="" />
+                                    <div className="text">
+                                      <h5>KbDoc</h5>
+                                      <p>Launch Simple Websites</p>
+                                    </div>
+                                  </>
+                                ) : (
+                                  subItem.title
+                                )}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                })
+              }
+            </ul>
 
-                          {isDocsDropdown ? (
-                            <DocsDropDown
-                              isOpen={isSubmenuOpen === item.href}
-                            />
-                          ) : item.items && item.items.length > 0 ? (
-                            // <ul
-                            //   className={`dropdown-menu ${
-                            //     isSubmenuOpen === item.href ? "show" : ""
-                            //   } ${
-                            //     isProductsDropdown ? "dropdown_menu_two" : ""
-                            //   }`}
-                            //   key={item.href}
-                            // >
-                            //   {item.items.map((subItem, index) => (
-                            //     <li
-                            //       className={`nav-item ${
-                            //         pathname === subItem.href ? "active" : ""
-                            //       }`}
-                            //       key={index}
-                            //     >
-                            //       <Link
-                            //         href={subItem.href}
-                            //         className="nav-link"
-                            //       >
-                            //         {subItem.subTitle ? (
-                            //           <>
-                            //             <img src={subItem?.icon} alt="" />
-                            //             <div className="text">
-                            //               <h5>KbDoc</h5>
-                            //               <p>Launch Simple Websites</p>
-                            //             </div>
-                            //           </>
-                            //         ) : (
-                            //           subItem.title
-                            //         )}
-                            //       </Link>
-                            //     </li>
-                            //   ))}
-                            // </ul>
-                            <AnimatePresence initial={false}>
-                              {isSubmenuOpen === item.href && (
-                                <motion.ul
-                                  key={`submenu-${item.href}`}
-                                  initial={{ opacity: 0, y: -10 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  exit={{ opacity: 0, y: -10 }}
-                                  transition={{ duration: 0.3 }}
-                                  className={`dropdown-menu show ${
-                                    isProductsDropdown
-                                      ? "dropdown_menu_two"
-                                      : ""
-                                  }`}
-                                >
-                                  {item.items.map((subItem, index) => (
-                                    <li
-                                      className={`nav-item ${
-                                        pathname === subItem.href
-                                          ? "active"
-                                          : ""
-                                      }`}
-                                      key={index}
-                                    >
-                                      <Link
-                                        href={subItem.href}
-                                        className="nav-link"
-                                      >
-                                        {subItem.subTitle ? (
-                                          <>
-                                            <img
-                                              src={subItem.icon}
-                                              alt={subItem.title || "icon"}
-                                            />
-                                            <div className="text">
-                                              <h5>{subItem.title}</h5>
-                                              <p>{subItem.subTitle}</p>
-                                            </div>
-                                          </>
-                                        ) : (
-                                          subItem.title
-                                        )}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </motion.ul>
-                              )}
-                            </AnimatePresence>
-                          ) : null}
-                        </li>
-                      );
-                    })
-                  }
-                </ul>
-
-                <Link
-                  className={`nav_btn ${isHelpDesk ? "round-btn" : ""}`}
-                  href="/login"
-                >
-                  <i className="icon_profile"></i>Log In
-                </Link>
-              </motion.div>
-            )}
-          </AnimatePresence>
+            <Link
+              className={`nav_btn ${isHelpDesk ? "round-btn" : ""}`}
+              href="/login"
+            >
+              <i className="icon_profile"></i>Log In
+            </Link>
+          </div>
         </div>
       </nav>
     </>

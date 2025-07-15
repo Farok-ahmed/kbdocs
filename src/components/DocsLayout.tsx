@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "@/components/page-sections/navbar";
+import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import FontSwitcher from "./_components/font-switcher";
@@ -8,7 +9,8 @@ import ModeSwitcher from "./_components/mode-switcher";
 import OSSelector from "./_components/os-selector";
 import Search from "./_components/search";
 import Sidebar from "./_components/sidebar";
-
+import { navMenu } from "./page-sections/navbar/nav-menu";
+import style from "./responsive.module.css";
 interface Props {
   children: React.ReactNode;
   type?: "left" | "right" | "both" | "full-width";
@@ -22,8 +24,114 @@ interface Heading {
 export default function DocsLayout({ children, type = "both" }: Props) {
   const [isDark, setIsDark] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+
   const [isFixed, setIsFixed] = useState(false);
   const [headings, setHeadings] = useState<Heading[]>([]);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const [menuState, setMenuState] = useState<"hidden" | "bottom" | "top">(
+    "hidden"
+  );
+
+  const [openItemId, setOpenItemId] = useState<string | null>(null);
+  const [openSubItemId, setOpenSubItemId] = useState<string | null>(null);
+
+  const handleOpen = (href: string) => {
+    setOpenItemId(openItemId === href ? null : href);
+    // Close sub-items when opening a new main item
+    if (openItemId !== href) {
+      setOpenSubItemId(null);
+    }
+  };
+
+  const handleSubOpen = (href: string) => {
+    setOpenSubItemId(openSubItemId === href ? null : href);
+  };
+
+  // Animation variants for mobile menu
+  const menuVariants = {
+    hidden: {
+      x: "-100%",
+      opacity: 0,
+    },
+    visible: {
+      x: "0%",
+      opacity: 1,
+    },
+  };
+
+  // Animation variants for menu content
+  const contentVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  // Stagger animation for menu items
+  const menuItemVariants = {
+    hidden: {
+      opacity: 0,
+      x: -20,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+  const containerVariants = {
+    hidden: {},
+    visible: {},
+  };
+
+  // STEP-WISE TOGGLE - Consider simplifying to just open/close
+  const handleMenuToggle = () => {
+    if (menuState === "hidden") {
+      setMenuState("bottom");
+    } else if (menuState === "bottom") {
+      setMenuState("top");
+    } else {
+      setMenuState("hidden");
+      // Reset menu states when closing
+      setOpenItemId(null);
+      setOpenSubItemId(null);
+    }
+  };
+
+  // Outside click → hide everything
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Check if click is on hamburger button or its children
+      const hamburgerButton = document.querySelector(".mobile_menu_btn");
+      const isClickOnHamburger = hamburgerButton?.contains(target);
+
+      // If clicked outside mobile menu AND not on hamburger button, close menu
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(target) &&
+        !isClickOnHamburger &&
+        menuState !== "hidden"
+      ) {
+        setMenuState("hidden");
+        // Reset menu states when closing
+        setOpenItemId(null);
+        setOpenSubItemId(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuState]);
+
+  // Effect to extract headings from the content
 
   useEffect(() => {
     if (!contentRef.current) return;
@@ -75,22 +183,34 @@ export default function DocsLayout({ children, type = "both" }: Props) {
       data-target="#navbar-example3"
       data-offset="86"
       data-scroll-animation="true"
-      className={`doc ${isDark ? "body_dark" : ""}`}
+      className={`doc ${menuState === "hidden" ? "" : "menu-is-opened"} ${
+        isDark ? "body_dark" : ""
+      }`}
     >
       <div className="body_wrapper">
-        <Navbar />
+        <Navbar navbarHide={style.navbar} />
         <div className="mobile_main_menu" id="sticky">
           <div className="container">
             <div className="mobile_menu_left">
-              <button type="button" className="navbar-toggler mobile_menu_btn">
-                <span className="menu_toggle ">
+              <motion.button
+                onClick={handleMenuToggle}
+                type="button"
+                className="navbar-toggler mobile_menu_btn"
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <motion.span
+                  className="menu_toggle"
+                  animate={{ rotate: menuState !== "hidden" ? 90 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <span className="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                   </span>
-                </span>
-              </button>
+                </motion.span>
+              </motion.button>
               <Link className="sticky_logo" href="/">
                 <img
                   src="/img/logo-w.png"
@@ -112,327 +232,183 @@ export default function DocsLayout({ children, type = "both" }: Props) {
           </div>
         </div>
         <div className="click_capture"></div>
-        <div className="side_menu">
-          <div className="mobile_menu_header">
-            <div className="close_nav">
-              <i className="arrow_left"></i>
-              <i className="icon_close"></i>
-            </div>
-            <div className="mobile_logo">
-              <Link href="">
-                <img src="/img/logo.png" alt="logo" />
-              </Link>
-            </div>
-          </div>
-          <div className="mobile_nav_wrapper">
-            <nav className="mobile_nav_top">
-              <ul className="navbar-nav menu ml-auto">
-                <li className="nav-item dropdown submenu">
-                  <Link href="" className="nav-link">
-                    Home
-                  </Link>
-                  <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                  <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <Link href="/" className="nav-link">
-                        Light Knowledgebase
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="index-helpdesk.html" className="nav-link">
-                        Help Desk
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="index-cool.html" className="nav-link">
-                        Cool Knowledgebase
-                      </Link>{" "}
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown submenu">
-                  <Link href="" className="nav-link">
-                    Docs
-                  </Link>
-                  <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                  <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <Link href="/doc-archive" className="nav-link">
-                        Doc Archive
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/docs" className="nav-link">
-                        DocTopics
-                      </Link>
-                    </li>
-                    <li className="nav-item dropdown submenu">
-                      <Link href="" className="nav-link">
-                        Shortcodes
-                      </Link>
-                      <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="accordion.html" className="nav-link">
-                            Accordion
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="/tab" className="nav-link">
-                            Tabs
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="notice.html" className="nav-link">
-                            Notices
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="table.html" className="nav-link">
-                            Tables
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="tooltip.html" className="nav-link">
-                            Tooltip
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="image-pointing.html" className="nav-link">
-                            Image Hotspots
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="lightbox.html" className="nav-link">
-                            Lightbox
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="can-use.html" className="nav-link">
-                            Can I Use
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="changelog.html" className="nav-link">
-                            Changelog
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link
-                            href="cheatsheet.html"
-                            className="nav-link active"
+        <AnimatePresence mode="wait">
+          {menuState !== "hidden" && (
+            <>
+              {/* Backdrop overlay */}
+              <motion.div
+                className="mobile-menu-backdrop"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{}}
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  zIndex: 998,
+                }}
+                onClick={() => setMenuState("hidden")}
+              />
+
+              <motion.div
+                ref={mobileMenuRef}
+                className="side_menu menu-opened"
+                variants={menuVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                key="mobile-menu"
+                style={{ zIndex: 999 }}
+              >
+                <motion.div
+                  className="mobile_menu_header"
+                  variants={contentVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <div onClick={handleMenuToggle} className="close_nav">
+                    <i className="arrow_left"></i>
+                    <i className="icon_close"></i>
+                  </div>
+                  <div className="mobile_logo">
+                    <Link href="">
+                      <img src="/img/logo.png" alt="logo" />
+                    </Link>
+                  </div>
+                </motion.div>
+                <motion.div
+                  className="mobile_nav_wrapper"
+                  variants={contentVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  transition={{ duration: 0.3, delay: 0.2 }}
+                >
+                  {menuState === "top" && (
+                    <motion.nav
+                      className="mobile_nav_top"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
+                    >
+                      <motion.ul
+                        className="navbar-nav menu ml-auto"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                      >
+                        {navMenu.map((item) => (
+                          <motion.li
+                            key={item.href}
+                            variants={menuItemVariants}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleOpen(item.href);
+                            }}
+                            className={`nav-item dropdown submenu ${
+                              openItemId === item.href ? "active" : ""
+                            }`}
                           >
-                            Cheatsheet
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="footnote.html" className="nav-link">
-                            Footnote
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="nav-item dropdown submenu">
-                      <Link href="" className="nav-link">
-                        Layouts
-                      </Link>
-                      <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="layouts.html" className="nav-link">
-                            Both Sidebar
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link
-                            href="layout-leftsidebar.html"
-                            className="nav-link"
-                          >
-                            Left Sidebar
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="layout-full.html" className="nav-link">
-                            Full-wdith
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="sticky-menu.html" className="nav-link">
-                            Sticky menu
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="simple-footer.html" className="nav-link">
-                            Simple Footer
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="nav-item dropdown submenu">
-                      <Link href="" className="nav-link">
-                        Others Pages
-                      </Link>
-                      <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="code.html" className="nav-link">
-                            Code
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="image.html" className="nav-link">
-                            Image
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link href="video.html" className="nav-link">
-                            Video
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown submenu">
-                  <Link href="" className="nav-link">
-                    Pages
-                  </Link>
-                  <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                  <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <Link href="Onepage.html" className="nav-link">
-                        Onepage
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="contact.html" className="nav-link">
-                        Contact
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="signin.html" className="nav-link">
-                        Sign In
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="signup.html" className="nav-link">
-                        Sign Up
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="typography.html" className="nav-link">
-                        Typography
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="error.html" className="nav-link">
-                        404 Error
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown submenu">
-                  <Link href="" className="nav-link">
-                    Forum
-                  </Link>
-                  <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                  <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <Link href="/forums" className="nav-link">
-                        Forums Root
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="forum-topics.html" className="nav-link">
-                        Forum Topics
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/forum-single" className="nav-link">
-                        Forum Single
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown submenu">
-                  <Link className="nav-link" href="">
-                    Products
-                  </Link>
-                  <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                  <ul className="dropdown-menu dropdown_menu_two">
-                    <li className="nav-item">
-                      <Link href="/doc-archive" className="nav-link">
-                        <img src="/img/tick.png" alt="" />
-                        <div className="text">
-                          <h5>KbDoc</h5>
-                          <p>Launch Simple Websites</p>
-                        </div>
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/docs" className="nav-link">
-                        <img src="/img/sheet.png" alt="" />
-                        <div className="text">
-                          <h5>docall</h5>
-                          <p>Digital Assets Subscription</p>
-                        </div>
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/" className="nav-link">
-                        <img src="/img/shopping-bag.png" alt="" />
-                        <div className="text">
-                          <h5>Docenvato</h5>
-                          <p>Tutorials & Courses</p>
-                        </div>
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/" className="nav-link">
-                        <img src="/img/gear.png" alt="" />
-                        <div className="text">
-                          <h5>Tools</h5>
-                          <p>Hire a Freelancer</p>
-                        </div>
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item dropdown submenu">
-                  <Link className="nav-link" href="">
-                    Blog
-                  </Link>
-                  <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                  <ul className="dropdown-menu">
-                    <li className="nav-item">
-                      <Link href="/blog-grid" className="nav-link">
-                        Blog Grid
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/blog-grid-two" className="nav-link">
-                        Blog Grid Two
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/blog-list" className="nav-link">
-                        Blog List
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link href="/blog-single" className="nav-link">
-                        Blog Details
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-            <div className="mobile_nav_bottom">
-              <Sidebar.Mobile />
-            </div>
-          </div>
-        </div>
+                            <Link href={item.href} className="nav-link">
+                              {item.title}
+                            </Link>
+                            {item?.items && item.items.length > 0 && (
+                              <>
+                                <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
+                                <ul
+                                  className="dropdown-menu"
+                                  style={{
+                                    display:
+                                      openItemId === item.href
+                                        ? "block"
+                                        : "none",
+                                  }}
+                                >
+                                  {item.items.map((subItem, index) => (
+                                    <li
+                                      className="nav-item"
+                                      key={`${item.href}-${index}`}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (
+                                          subItem?.items &&
+                                          subItem.items.length > 0
+                                        ) {
+                                          handleSubOpen(subItem.href);
+                                        }
+                                      }}
+                                    >
+                                      <Link
+                                        href={subItem.href}
+                                        className="nav-link"
+                                      >
+                                        {subItem.title}
+                                      </Link>
+                                      {subItem?.items &&
+                                        subItem.items.length > 0 && (
+                                          <>
+                                            <i className="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
+                                            <ul
+                                              className="dropdown-menu"
+                                              style={{
+                                                display:
+                                                  openSubItemId === subItem.href
+                                                    ? "block"
+                                                    : "none",
+                                              }}
+                                            >
+                                              {subItem.items.map(
+                                                (subSubItem, subIndex) => (
+                                                  <li
+                                                    className="nav-item"
+                                                    key={`${subItem.href}-${subIndex}`}
+                                                  >
+                                                    <Link
+                                                      href={subSubItem.href}
+                                                      className="nav-link"
+                                                    >
+                                                      {subSubItem.title}
+                                                    </Link>
+                                                  </li>
+                                                )
+                                              )}
+                                            </ul>
+                                          </>
+                                        )}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </>
+                            )}
+                          </motion.li>
+                        ))}
+                      </motion.ul>
+                    </motion.nav>
+                  )}
+                  {menuState === "bottom" && (
+                    <motion.div
+                      className="mobile_nav_bottom"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
+                    >
+                      <Sidebar.Mobile />
+                    </motion.div>
+                  )}
+                </motion.div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
         <section className="breadcrumb_area">
           <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
           <img

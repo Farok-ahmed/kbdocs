@@ -1,4 +1,5 @@
 "use client";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import "./style.scss";
@@ -105,7 +106,7 @@ const mainNavItems = [
   },
   {
     id: "changelog",
-    title: "Change Log",
+    title: "Change Log ",
     href: "/docs/changelog",
     icon: "/img/side-nav/document2.png",
     active: false,
@@ -245,18 +246,24 @@ export default function Sidebar() {
  * Mobile version of the Sidebar component
  */
 Sidebar.Mobile = () => {
+  const [openItemId, setOpenItemId] = useState<string | null>(null);
+
+  const handleOpen = (itemId: string) => {
+    setOpenItemId(openItemId === itemId ? null : itemId);
+  };
+
   return (
     <aside className="doc_left_sidebarlist">
       <h2>KbDoc Documentation</h2>
 
-      {/* Scrollable Content */}
       <div className="scroll">
         {/* Main Navigation */}
         <ul className="list-unstyled nav-sidebar">
           {mainNavItems.map((item) => (
             <li
+              onClick={() => handleOpen(item.id)}
               key={item.id}
-              className={`nav-item ${item.active ? "active" : ""}`}
+              className={`nav-item ${openItemId === item.id ? "active" : ""}`}
             >
               <Link href={item.href} className="nav-link">
                 <img src={item.icon} alt="" />
@@ -268,18 +275,31 @@ Sidebar.Mobile = () => {
                   <span className="icon">
                     <i className="arrow_carrot-down"></i>
                   </span>
-                  <ul className="list-unstyled dropdown_nav">
-                    {item.children.map((child) => (
-                      <li key={child.id}>
-                        <Link
-                          href={child.href}
-                          className={child.active ? "active" : ""}
-                        >
-                          {child.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+
+                  <AnimatePresence initial={false}>
+                    {openItemId === item.id && (
+                      <motion.ul
+                        key={item.id}
+                        className="list-unstyled dropdown_nav"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        style={{ overflow: "hidden", display: "block" }}
+                      >
+                        {item.children.map((child) => (
+                          <li key={child.id}>
+                            <Link
+                              href={child.href}
+                              className={child.active ? "active" : ""}
+                            >
+                              {child.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
                 </>
               )}
             </li>
