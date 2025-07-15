@@ -3,3 +3,15 @@
     display: none;
   }
 }
+
+.main-parent.font-size-sm {
+  font-size: 80%;
+}
+
+.main-parent.font-size-md {
+  font-size: 100%;
+}
+
+.main-parent.font-size-xl {
+  font-size: 120%;
+}

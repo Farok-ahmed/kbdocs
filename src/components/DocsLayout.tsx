@@ -16,6 +16,9 @@ interface Props {
   type?: "left" | "right" | "both" | "full-width";
 }
 
+const sizes = ["font-size-sm", "font-size-md", "font-size-xl"];
+const defaultIndex = 1;
+
 interface Heading {
   id: string;
   text: string;
@@ -24,13 +27,28 @@ interface Heading {
 export default function DocsLayout({ children, type = "both" }: Props) {
   const [isDark, setIsDark] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
-
   const [isFixed, setIsFixed] = useState(false);
   const [headings, setHeadings] = useState<Heading[]>([]);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const [menuState, setMenuState] = useState<"hidden" | "bottom" | "top">(
     "hidden"
   );
+
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(defaultIndex);
+  // i would like to when user click increase or decrease font size, it will change the font size of the whole page
+  const handleFontSizeReset = () => {
+    setSelectedSizeIndex(defaultIndex);
+  };
+  const handleFontSizeIncrease = () => {
+    setSelectedSizeIndex((prevIndex) =>
+      prevIndex < sizes.length - 1 ? prevIndex + 1 : prevIndex
+    );
+  };
+  const handleFontSizeDecrease = () => {
+    setSelectedSizeIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : prevIndex
+    );
+  };
 
   const [openItemId, setOpenItemId] = useState<string | null>(null);
   const [openSubItemId, setOpenSubItemId] = useState<string | null>(null);
@@ -489,9 +507,9 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                 <Sidebar />
               </div>
               <div
-                className={`${
-                  type == "left" ? "col-lg-9" : "col-lg-7"
-                } col-md-8`}
+                className={`${style["main-parent"]} ${
+                  style[sizes[selectedSizeIndex]]
+                } ${type == "left" ? "col-lg-9" : "col-lg-7"} col-md-8`}
               >
                 {children}
               </div>
@@ -504,7 +522,11 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                   </div>
                   <div className="doc_rightsidebar scroll">
                     <OSSelector />
-                    <FontSwitcher />
+                    <FontSwitcher
+                      onIncrease={handleFontSizeIncrease}
+                      onDecrease={handleFontSizeDecrease}
+                      onReset={handleFontSizeReset}
+                    />
                     <ModeSwitcher isDark={isDark} toggleMode={toggleMode} />
                     <h6>On this page:</h6>
                     <nav
@@ -521,21 +543,6 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                           {heading.text}
                         </Link>
                       ))}
-                      {/* <Link href="#documentation" className="nav-link active">
-                        Documentation
-                      </Link>
-                      <Link href="#getting" className="nav-link">
-                        Getting started
-                      </Link>
-                      <Link href="#version" className="nav-link">
-                        Test KbDoc Version
-                      </Link>
-                      <Link href="#developer" className="nav-link">
-                        Not a developer?
-                      </Link>
-                      <Link href="#help" className="nav-link">
-                        We're here to help!
-                      </Link> */}
                     </nav>
                   </div>
                 </div>
