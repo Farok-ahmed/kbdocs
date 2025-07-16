@@ -1,3 +1,4 @@
+import { tagsData, TicketCategories } from "@/app/forums/forum-data";
 import Link from "next/link";
 
 const ForumSidebar = () => {
@@ -32,79 +33,30 @@ const ForumSidebar = () => {
           <h4 className="c_head">Ticket Categories</h4>
 
           <ul className="list-unstyled ticket_categories">
-            <li>
-              <img src="img/home_support/cmm5.png" alt="category" />
-              <Link href="#">Docs WordPress Theme</Link>{" "}
-              <span className="count">10</span>
-            </li>
-            <li>
-              <img src="img/home_support/cmm4.png" alt="category" />
-              <Link href="#">Product Landing Page</Link>
-              <span className="count count-fill">13</span>
-              <span className="count">54</span>
-            </li>
-            <li>
-              <img src="img/home_support/cmm2.png" alt="category" />
-              <Link href="#">Knowledge base Template</Link>
-              <span className="count">142</span>
-            </li>
-            <li>
-              <img src="img/home_support/cmm8.png" alt="category" />
-              <Link href="#">Startup and App WP Theme</Link>{" "}
-              <span className="count">13</span>
-            </li>
-            <li>
-              <img src="img/home_support/cmm9.png" alt="category" />
-              <Link href="#">Clean Email Template</Link>{" "}
-              <span className="count">123</span>
-            </li>
-            <li>
-              <img src="img/home_support/cmm10.png" alt="category" />
-              <Link href="#">Apps WordPress Theme</Link>{" "}
-              <span className="count">18</span>
-            </li>
+            {TicketCategories.map((category) => (
+              <li key={category.id}>
+                <img src={category.icon} alt="category" />
+                <Link href="#">{category.name}</Link>
+                {category.activeCount && (
+                  <span className="count count-fill">
+                    {category.activeCount}
+                  </span>
+                )}
+
+                <span className="count">{category.count}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className="widget tag_widget">
           <h4 className="c_head">Tags</h4>
           <ul className="list-unstyled w_tag_list style-light">
-            <li>
-              <Link href="#">Swagger</Link>
-            </li>
-            <li>
-              <Link href="#">KbDoc</Link>
-            </li>
-            <li>
-              <Link href="#">weCare</Link>
-            </li>
-            <li>
-              <Link href="#">Business</Link>
-            </li>
-            <li>
-              <Link href="#">Download</Link>
-            </li>
-            <li>
-              <Link href="#">Doc</Link>
-            </li>
-            <li>
-              <Link href="#">Product board</Link>
-            </li>
-            <li>
-              <Link href="#">WordPress</Link>
-            </li>
-            <li>
-              <Link href="#">Design</Link>
-            </li>
-            <li>
-              <Link href="#">ui/ux</Link>
-            </li>
-            <li>
-              <Link href="#">Doc Design</Link>
-            </li>
-            <li>
-              <Link href="#">DocAll</Link>
-            </li>
+            {tagsData.map((tag) => (
+              <li key={tag.id}>
+                <Link href="#">{tag.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { TagsProps, TicketCategoriesProps } from "@/types/forum-type";
+
 const forumData = [
   {
     id: "forum-1",
@@ -1095,7 +1097,61 @@ const topicsList = [
     ],
   },
 ];
+const TicketCategories: TicketCategoriesProps[] = [
+  {
+    id: 1,
+    name: "Docs WordPress Theme",
+    icon: "/img/home_support/cmm5.png",
+    count: 12,
+  },
+  {
+    id: 2,
+    name: "Product Landing Page",
+    icon: "/img/home_support/cmm4.png",
+    count: 54,
+    activeCount: 13,
+  },
+  {
+    id: 3,
+    name: "Knowledge base Template",
+    icon: "/img/home_support/cmm2.png",
+    count: 142,
+  },
+  {
+    id: 4,
+    name: "Startup and App WP Theme",
+    icon: "/img/home_support/cmm8.png",
+    count: 13,
+  },
+  {
+    id: 5,
+    name: "Clean Email Template",
+    icon: "/img/home_support/cmm9.png",
+    count: 123,
+  },
+  {
+    id: 6,
+    name: "Apps WordPress Theme",
+    icon: "/img/home_support/cmm10.png",
+    count: 18,
+  },
+];
 
+const tagsData: TagsProps[] = [
+  { id: 1, name: "Swagger" },
+  { id: 2, name: "KbDoc" },
+  { id: 3, name: "weCare" },
+  { id: 4, name: "Business" },
+  { id: 5, name: "Download" },
+  { id: 6, name: "Doc" },
+  { id: 7, name: "WordPress" },
+  { id: 8, name: "Design" },
+  { id: 9, name: "Ui/Ux" },
+  { id: 10, name: "Doc Design" },
+  { id: 11, name: "DocAll" },
+  { id: 12, name: "Productboard" },
+  { id: 13, name: "Magento" },
+];
 const topicsListWithFilteredForums = (forumId: string) => {
   return topicsList.filter((topic) => topic.forumId === forumId);
 };
@@ -1104,4 +1160,11 @@ const getTopicById = (id: number) => {
   return topicsList.find((topic) => topic.id === id);
 };
 
-export { forumData, getTopicById, topicsList, topicsListWithFilteredForums };
+export {
+  forumData,
+  getTopicById,
+  tagsData,
+  TicketCategories,
+  topicsList,
+  topicsListWithFilteredForums,
+};

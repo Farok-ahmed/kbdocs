@@ -1,5 +1,5 @@
+import SearchBreadcrumb from "@/components/search-breadcrumb";
 import Link from "next/link";
-import Search from "./search";
 interface BreadcrumbTopicProps {
   name: string;
   link: string;
@@ -17,41 +17,7 @@ const BreadcrumbTopic = () => {
   ];
   return (
     <>
-      <section className="breadcrumb_area">
-        <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-        <img
-          className="p_absolute bl_right"
-          src="/img/home_one/b_leaf.svg"
-          alt=""
-        />
-        <img
-          className="p_absolute star"
-          src="/img/home_one/banner_bg.png"
-          alt=""
-        />
-        <img
-          className="p_absolute wave_shap_one"
-          src="/img/blog-classic/shap_01.png"
-          alt=""
-        />
-        <img
-          className="p_absolute wave_shap_two"
-          src="/img/blog-classic/shap_02.png"
-          alt=""
-        />
-        <img
-          className="p_absolute one wow fadeInRight"
-          src="/img/home_one/b_man_two.png"
-          alt=""
-        />
-        <img
-          className="p_absolute two wow fadeInUp"
-          data-wow-delay="0.2s"
-          src="/img/home_one/flower.png"
-          alt=""
-        />
-        <Search />
-      </section>
+      <SearchBreadcrumb />
       <section className="page_breadcrumb">
         <div className="container custom_container">
           <div className="row">
@@ -68,15 +34,6 @@ const BreadcrumbTopic = () => {
                       <Link href={item.link}>{item.name}</Link>
                     </li>
                   ))}
-                  {/* <li className="breadcrumb-item">
-                    <Link href="">Home</Link>
-                  </li>
-                  <li className="breadcrumb-item">
-                    <Link href="">Docs</Link>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    KbDoc WordPress Theme
-                  </li> */}
                 </ol>
               </nav>
             </div>

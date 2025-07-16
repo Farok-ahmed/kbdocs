@@ -6,7 +6,10 @@ const ForumPosts = () => {
     <>
       <div className="community-posts-wrapper bb-radius">
         {forumData.map((forum) => (
-          <div className="community-post style-two forum-item bug">
+          <div
+            key={forum.id}
+            className="community-post style-two forum-item bug"
+          >
             <div className="col-md-6 post-content">
               <div className="author-avatar forum-icon">
                 <img src={forum.icon} alt="community post" />

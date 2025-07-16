@@ -1,7 +1,43 @@
 "use client";
 import Select from "@/components/select";
+import { useEffect, useRef, useState } from "react";
+import "./inputStyle.css";
 
 const SearchBreadcrumb = () => {
+  const [isSearchActive, setIsSearchActive] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Function to handle focusing the input
+  const handleFocus = () => {
+    setIsSearchActive(true);
+  };
+
+  // Function to handle blurring the input (clicking away)
+  const handleBlur = () => {
+    if (searchInputRef.current && searchInputRef.current.value === "") {
+      setIsSearchActive(false);
+    }
+  };
+
+  // This effect adds a global keydown listener to close the search on 'Escape'
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsSearchActive(false);
+        if (searchInputRef.current) {
+          searchInputRef.current.blur(); // Remove focus from input
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <>
       <section className="breadcrumb_area">
@@ -39,11 +75,17 @@ const SearchBreadcrumb = () => {
         />
         <div className="container custom_container">
           <form
-            onSubmit={(e) => e.preventDefault()}
+            style={{ zIndex: "50" }}
+            onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
+              e.preventDefault()
+            }
             className="banner_search_form banner_search_form_two"
           >
             <div className="input-group">
               <input
+                ref={searchInputRef}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
                 type="search"
                 className="form-control"
                 placeholder='Search ("/" to focus)'
@@ -77,6 +119,18 @@ const SearchBreadcrumb = () => {
             </div>
           </form>
         </div>
+        {/* Conditionally rendered background overlay */}
+        <div
+          className={`background-overlay ${
+            isSearchActive ? "overlay-active" : "overlay-inactive"
+          }`}
+          onClick={() => {
+            setIsSearchActive(false);
+            if (searchInputRef.current) {
+              searchInputRef.current.blur();
+            }
+          }}
+        ></div>
       </section>
     </>
   );
