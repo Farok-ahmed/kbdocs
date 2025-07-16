@@ -20,6 +20,7 @@ export default function Navbar({ navbarHide = "" }) {
   const isCoolKnowledgeBase = pathname === pages.coolKnowledgeBase;
   const isHomePage =
     pathname === pages.home || isHelpDesk || isCoolKnowledgeBase;
+  const typographyPage = pathname === pages.typography;
 
   const homePage = pathname === pages.home;
 
@@ -72,7 +73,7 @@ export default function Navbar({ navbarHide = "" }) {
       >
         <div className="container">
           <Link className="navbar-brand" href="/">
-            {homePage || isHelpDesk || isScrolled ? (
+            {homePage || isHelpDesk || isScrolled || typographyPage ? (
               <Image src={logo} width={112} alt="Brand Logo" />
             ) : (
               <Image src={LogoW} width={112} alt="Brand Logo" />
@@ -89,7 +90,7 @@ export default function Navbar({ navbarHide = "" }) {
           >
             <ul
               className={`navbar-nav menu  ml-auto ${
-                homePage || isHelpDesk ? "dk_menu" : ""
+                homePage || isHelpDesk || typographyPage ? "dk_menu" : ""
               }`}
             >
               {
