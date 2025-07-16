@@ -1,7 +1,19 @@
+import { DOTS, usePagination } from "@/app/hooks/usePagination";
 import Link from "next/link";
 
-const ForumSinglePost = ({ post }) => {
-  console.log("ForumSinglePost", post);
+interface PaginationProps {
+  currentPage: number;
+  totalCount: number;
+  pageSize: number;
+  onPageChange: (page: number) => void;
+}
+
+interface ForumSinglePostProps {
+  post: any;
+  pagination?: PaginationProps;
+}
+
+const ForumSinglePost = ({ post, pagination }: ForumSinglePostProps) => {
   return (
     <>
       <div className="row">
@@ -76,7 +88,7 @@ const ForumSinglePost = ({ post }) => {
           <div className="taxonomy forum-post-tags">
             <i className="icon_tags_alt"></i>
             {post.post?.tags && post.post.tags.length > 0 ? (
-              post.post.tags.map((tag, index) => (
+              post.post.tags.map((tag: any, index: number) => (
                 <span key={index}>
                   <Link href="#">{tag}</Link>
                   {index < post.post.tags.length - 1 && ", "}
@@ -171,7 +183,7 @@ const ForumSinglePost = ({ post }) => {
           <p>Page 1 of 4</p>
         </div>
         {post?.comments && post.comments.length > 0 ? (
-          post.comments.map((comment, index) => (
+          post.comments.map((comment: any, index: number) => (
             <div className="forum-comment" key={index}>
               <div className="forum-post-top">
                 <Link className="author-avatar" href="#">
@@ -235,41 +247,121 @@ const ForumSinglePost = ({ post }) => {
           <p>No comments available.</p>
         )}
       </div>
-      <div className="pagination-wrapper">
-        <div className="view-post-of">
-          <p>Viewing 4 Comments - 1 through 10 (of 96 total)</p>
+
+      {/* Dynamic Comments Pagination */}
+      {pagination && pagination.totalCount > pagination.pageSize && (
+        <div className="pagination-wrapper">
+          <div className="view-post-of">
+            <p>
+              Viewing {Math.min(pagination.pageSize, pagination.totalCount)}{" "}
+              Comments -{" "}
+              {(pagination.currentPage - 1) * pagination.pageSize + 1} through{" "}
+              {Math.min(
+                pagination.currentPage * pagination.pageSize,
+                pagination.totalCount
+              )}{" "}
+              (of {pagination.totalCount} total)
+            </p>
+          </div>
+          <CommentsPagination {...pagination} />
         </div>
-        <ul className="post-pagination">
-          <li className="prev-post pegi-disable">
-            <Link href="#">
-              <i className="arrow_carrot-left" />
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="active">
-              1
-            </Link>
-          </li>
-          <li>
-            <Link href="#">2</Link>
-          </li>
-          <li>
-            <Link href="#">3</Link>
-          </li>
-          <li>
-            <Link href="#">4</Link>
-          </li>
-          <li>
-            <Link href="#">15</Link>
-          </li>
-          <li className="next-post">
-            <Link href="#">
-              <i className="arrow_carrot-right" />
-            </Link>
-          </li>
-        </ul>
-      </div>
+      )}
     </>
+  );
+};
+
+// Comments Pagination Component
+const CommentsPagination = ({
+  currentPage,
+  totalCount,
+  pageSize,
+  onPageChange,
+}: PaginationProps) => {
+  const totalPageCount = Math.ceil(totalCount / pageSize);
+
+  const paginationRange = usePagination({
+    currentPage,
+    totalCount,
+    pageSize,
+    siblingCount: 1,
+  });
+
+  if (!paginationRange || paginationRange.length < 2) {
+    return null;
+  }
+
+  const onNext = () => {
+    if (currentPage < totalPageCount) {
+      onPageChange(currentPage + 1);
+    }
+  };
+
+  const onPrevious = () => {
+    if (currentPage > 1) {
+      onPageChange(currentPage - 1);
+    }
+  };
+
+  const lastPage = paginationRange[paginationRange.length - 1];
+
+  return (
+    <ul className="post-pagination">
+      {/* Previous button */}
+      <li className={`prev-post ${currentPage === 1 ? "pegi-disable" : ""}`}>
+        <Link
+          href="#"
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
+            if (currentPage > 1) onPrevious();
+          }}
+        >
+          <i className="arrow_carrot-left" />
+        </Link>
+      </li>
+
+      {/* Pagination numbers */}
+      {paginationRange.map((pageNumber: number | string, index: number) => {
+        if (pageNumber === DOTS) {
+          return (
+            <li key={`dots-${index}`} className="pagination-item dots">
+              &#8230;
+            </li>
+          );
+        }
+
+        return (
+          <li key={pageNumber}>
+            <Link
+              href="#"
+              className={pageNumber === currentPage ? "active" : ""}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
+                onPageChange(Number(pageNumber));
+              }}
+            >
+              {pageNumber}
+            </Link>
+          </li>
+        );
+      })}
+
+      {/* Next button */}
+      <li
+        className={`next-post ${
+          currentPage === lastPage ? "pegi-disable" : ""
+        }`}
+      >
+        <Link
+          href="#"
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
+            if (currentPage < totalPageCount) onNext();
+          }}
+        >
+          <i className="arrow_carrot-right" />
+        </Link>
+      </li>
+    </ul>
   );
 };
 

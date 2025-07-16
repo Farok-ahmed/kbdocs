@@ -1,22 +1,5 @@
 import Link from "next/link";
-// export interface Topic {
-//   id: number;
-//   forumId: string;
-//   authorAvatar: string;
-//   title: string;
-//   category: string;
-//   categoryIcon: string;
-//   lastUpdated: string;
-//   comments: number;
-//   stars: number;
-//   tags: string[];
-//   badges: { text: string; color: string }[];
-//   isFeatured: boolean;
-// }
 
-// interface TopicsPostsProps {
-//   getTopics: Topic[];
-// }
 const TopicsPosts = ({ getTopics }) => {
   return (
     <>

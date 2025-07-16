@@ -1,4 +1,6 @@
+"use client";
 import DefaultLayout from "@/components/layout";
+import { use, useMemo, useState } from "react";
 import { topicsListWithFilteredForums } from "../forum-data";
 import BreadcrumbTopic from "./.components/breadcrumb-topic";
 import CallToActionTopic from "./.components/call-to-action-topic";
@@ -9,9 +11,18 @@ import TopicsPagination from "./.components/topics-pagination";
 import TopicsPosts from "./.components/topics-posts";
 import TopicsSidebar from "./.components/topics-sidebar";
 
-const TopicsPage = ({ params }: { params: { topics: string } }) => {
-  const { topics } = params;
+const ITEMS_PER_PAGE = 1;
+const TopicsPage = ({ params }: { params: Promise<{ topics: string }> }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const { topics } = use(params);
   const getTopics = topicsListWithFilteredForums(topics);
+
+  // Calculate the items for the current page
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const lastPageIndex = firstPageIndex + ITEMS_PER_PAGE;
+    return getTopics.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, getTopics]);
 
   return (
     <DefaultLayout>
@@ -23,8 +34,13 @@ const TopicsPage = ({ params }: { params: { topics: string } }) => {
               <CommunitiesForumTopics />
               <TopicsAnswerAction />
               <TopicsHeader />
-              <TopicsPosts getTopics={getTopics} />
-              <TopicsPagination />
+              <TopicsPosts getTopics={currentTableData} />
+              <TopicsPagination
+                currentPage={currentPage}
+                totalCount={getTopics.length}
+                pageSize={ITEMS_PER_PAGE}
+                onPageChange={(page: number) => setCurrentPage(page)}
+              />
             </div>
             <TopicsSidebar />
           </div>
