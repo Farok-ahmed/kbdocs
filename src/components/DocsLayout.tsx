@@ -3,6 +3,7 @@
 import Navbar from "@/components/page-sections/navbar";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import FontSwitcher from "./_components/font-switcher";
 import ModeSwitcher from "./_components/mode-switcher";
@@ -33,6 +34,8 @@ export default function DocsLayout({ children, type = "both" }: Props) {
   const [menuState, setMenuState] = useState<"hidden" | "bottom" | "top">(
     "hidden"
   );
+
+  const pathName = usePathname();
 
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(defaultIndex);
   // i would like to when user click increase or decrease font size, it will change the font size of the whole page
@@ -194,6 +197,13 @@ export default function DocsLayout({ children, type = "both" }: Props) {
   const toggleMode = () => {
     setIsDark((prev) => !prev);
   };
+
+  const defaultDate = new Date();
+  const formattedDate = defaultDate.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 
   return (
     <div
@@ -468,21 +478,43 @@ export default function DocsLayout({ children, type = "both" }: Props) {
               <div className="col-sm-7">
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <Link href="">Home</Link>
-                    </li>
-                    <li className="breadcrumb-item">
-                      <Link href="">Docs</Link>
-                    </li>
-                    <li className="breadcrumb-item active" aria-current="page">
-                      KbDoc WordPress Theme
-                    </li>
+                    {(() => {
+                      // Split the path and build breadcrumbs dynamically
+                      const segments = pathName
+                        .replace(/^\/|\/$/g, "")
+                        .split("/");
+                      const breadcrumbs = [
+                        { href: "/", label: "Home" },
+                        ...segments.map((seg, idx) => ({
+                          href: "/" + segments.slice(0, idx + 1).join("/"),
+                          label: seg.charAt(0).toUpperCase() + seg.slice(1),
+                        })),
+                      ];
+
+                      return breadcrumbs.map((crumb, idx) => (
+                        <li
+                          key={crumb.href}
+                          className={`breadcrumb-item${
+                            idx === breadcrumbs.length - 1 ? " active" : ""
+                          }`}
+                          aria-current={
+                            idx === breadcrumbs.length - 1 ? "page" : undefined
+                          }
+                        >
+                          {idx === breadcrumbs.length - 1 ? (
+                            crumb.label
+                          ) : (
+                            <Link href={crumb.href}>{crumb.label}</Link>
+                          )}
+                        </li>
+                      ));
+                    })()}
                   </ol>
                 </nav>
               </div>
               <div className="col-sm-5">
                 <Link href="" className="date">
-                  <i className="icon_clock_alt"></i>Updated on March 03, 2020
+                  <i className="icon_clock_alt"></i>Updated on {formattedDate}
                 </Link>
               </div>
             </div>
