@@ -1,18 +1,27 @@
 import Select from "@/components/select";
-import { FaWindows, FaApple, FaLinux } from "react-icons/fa";
+import { OSType, useOS } from "@/contexts/os-context";
 
-const osOptions = [
-    { value: "windows", label: "Windows", icon: <FaWindows /> },
-    { value: "ios", label: "iOS", icon: <FaApple /> },
-    { value: "linux", label: "Linux", icon: <FaLinux /> },
-];
+export default function OSSelector() {
+  const { selectedOS, setSelectedOS, options } = useOS();
 
-export default function SelectDemo() {
-    return (
-        <Select
-            options={osOptions}
-            defaultValue="linux"
-            className="mb-4"
-        />
-    );
+  // Handle OS selection change with proper typing
+  const handleOSChange = (value: string) => {
+    setSelectedOS(value as OSType);
+  };
+
+  // Convert OSOption[] to SelectOption[] format
+  const selectOptions = options.map((option) => ({
+    value: option.value,
+    label: option.label,
+    icon: option.icon,
+  }));
+
+  return (
+    <Select
+      options={selectOptions}
+      onChange={handleOSChange}
+      defaultValue={selectedOS}
+      className="mb-4"
+    />
+  );
 }

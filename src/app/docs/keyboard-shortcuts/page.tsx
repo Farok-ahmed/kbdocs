@@ -1,7 +1,30 @@
+"use client";
 import DocsLayout from "@/components/DocsLayout";
+import { useOS } from "@/contexts/os-context";
 import Link from "next/link";
 
 const KeyboardShortcuts = () => {
+  const { selectedOS } = useOS();
+
+  // Helper function to render OS-specific shortcuts
+  const renderShortcut = (shortcuts: {
+    windows: string[];
+    ios: string[];
+    linux: string[];
+  }) => {
+    const keys = shortcuts[selectedOS] || shortcuts.windows;
+    return keys.map((key, index) => <kbd key={index}>{key}</kbd>);
+  };
+
+  // Helper function to get OS-specific display
+  const getOSDisplay = (content: {
+    windows: React.ReactNode;
+    ios: React.ReactNode;
+    linux: React.ReactNode;
+  }) => {
+    return content[selectedOS] || content.windows;
+  };
+
   return (
     <>
       <DocsLayout>
@@ -12,10 +35,29 @@ const KeyboardShortcuts = () => {
               Switch the OS dropdown on the right sidebar to see the specific
               keyboard shortcuts according to your OS. Keyboard shortcuts help
               you navigate Slack with minimal effort. You can see a quick list
-              of shortcuts by pressing <kbd>⌘</kbd>
-              <kbd>/</kbd> (Mac) and <kbd>Ctrl</kbd>
-              <kbd>/</kbd> (Windows/Linux), or take a look at the detailed lists
-              below.
+              of shortcuts by pressing{" "}
+              {getOSDisplay({
+                windows: (
+                  <>
+                    <kbd>Ctrl</kbd>
+                    <kbd>/</kbd>
+                  </>
+                ),
+                ios: <kbd>/</kbd>,
+                linux: (
+                  <>
+                    <kbd>Ctrl</kbd>
+                    <kbd>/</kbd>
+                  </>
+                ),
+              })}{" "}
+              (
+              {selectedOS === "ios"
+                ? "Mac"
+                : selectedOS === "linux"
+                ? "Linux"
+                : "Windows"}
+              ), or take a look at the detailed lists below.
             </p>
           </div>
           <div className="shortcode_title">
@@ -31,65 +73,55 @@ const KeyboardShortcuts = () => {
           <ul className="list-style">
             <li>
               Align right – click <strong>Align</strong> <strong>right</strong>{" "}
-              or use the shortcut
-              <span className="windows">
-                <kbd>Ctrl</kbd>
-                <kbd>Shift</kbd>
-                <kbd>K</kbd>
-              </span>
-              <span className="ios" style={{ display: "none" }}>
-                <kbd>⌘</kbd>
-                <kbd>Shift</kbd>
-                <kbd>K</kbd>
-              </span>
+              or use the shortcut{" "}
+              {renderShortcut({
+                windows: ["Ctrl", "Shift", "K"],
+                ios: ["⌘", "Shift", "K"],
+                linux: ["Ctrl", "Shift", "K"],
+              })}
             </li>
             <li>
               Align left – click <strong>Align left </strong>or
               <strong> </strong>
-              use
-              <span className="windows">
-                <kbd>Alt</kbd> <kbd>A</kbd>
-              </span>
-              <span className="ios" style={{ display: "none" }}>
-                <kbd>⌘</kbd> <kbd>A</kbd>
-              </span>
+              use{" "}
+              {renderShortcut({
+                windows: ["Alt", "A"],
+                ios: ["⌘", "A"],
+                linux: ["Alt", "A"],
+              })}
             </li>
             <li>
               Align top – click&nbsp;<strong>Align top</strong>&nbsp;or
               use&nbsp;
-              <span className="windows">
-                <kbd>Alt</kbd> <kbd>W</kbd>
-              </span>
-              <span className="ios" style={{ display: "none" }}>
-                <kbd>⌘</kbd> <kbd>W</kbd>
-              </span>
+              {renderShortcut({
+                windows: ["Alt", "W"],
+                ios: ["⌘", "W"],
+                linux: ["Alt", "W"],
+              })}
             </li>
             <li>
-              Align bottom – click <strong>Align bottom</strong> or use
-              <span className="windows">
-                <kbd>Alt</kbd> <kbd>S</kbd>
-              </span>
-              <span className="ios" style={{ display: "none" }}>
-                <kbd>⌘</kbd> <kbd>S</kbd>
-              </span>
+              Align bottom – click <strong>Align bottom</strong> or use{" "}
+              {renderShortcut({
+                windows: ["Alt", "S"],
+                ios: ["⌘", "S"],
+                linux: ["Alt", "S"],
+              })}
             </li>
             <li>
-              Align center – click <strong>Align center </strong>or use
-              <span className="windows">
-                <kbd>Alt</kbd> <kbd>X</kbd>
-              </span>
-              <span className="ios" style={{ display: "none" }}>
-                <kbd>⌘</kbd> <kbd>X</kbd>
-              </span>
+              Align center – click <strong>Align center </strong>or use{" "}
+              {renderShortcut({
+                windows: ["Alt", "X"],
+                ios: ["⌘", "X"],
+                linux: ["Alt", "X"],
+              })}
             </li>
             <li>
-              Align middle – click <strong>Align middle</strong> or use
-              <span className="windows">
-                <kbd>Alt</kbd> <kbd>Y</kbd>
-              </span>
-              <span className="ios" style={{ display: "none" }}>
-                <kbd>⌘</kbd> <kbd>Y</kbd>
-              </span>
+              Align middle – click <strong>Align middle</strong> or use{" "}
+              {renderShortcut({
+                windows: ["Alt", "Y"],
+                ios: ["⌘", "Y"],
+                linux: ["Alt", "Y"],
+              })}
             </li>
           </ul>
           <div className="shortcode_title">
@@ -120,14 +152,11 @@ const KeyboardShortcuts = () => {
                   <p>Jump to a conversation</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>K</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>K</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "K"],
+                    ios: ["⌘", "K"],
+                    linux: ["Ctrl", "K"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -135,8 +164,11 @@ const KeyboardShortcuts = () => {
                   <p>Move focus to the previous section</p>
                 </td>
                 <td>
-                  <kbd>Shift</kbd>
-                  <kbd>F6</kbd>
+                  {renderShortcut({
+                    windows: ["Shift", "F6"],
+                    ios: ["Shift", "F6"],
+                    linux: ["Shift", "F6"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -144,16 +176,11 @@ const KeyboardShortcuts = () => {
                   <p>Browse direct messages</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>K</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>K</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "Shift", "K"],
+                    ios: ["⌘", "Shift", "K"],
+                    linux: ["Ctrl", "Shift", "K"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -161,16 +188,11 @@ const KeyboardShortcuts = () => {
                   <p>Browse channels</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>L</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>L</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "Shift", "L"],
+                    ios: ["⌘", "Shift", "L"],
+                    linux: ["Ctrl", "Shift", "L"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -178,14 +200,11 @@ const KeyboardShortcuts = () => {
                   <p>Compose a new message</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>N</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>N</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "N"],
+                    ios: ["⌘", "N"],
+                    linux: ["Ctrl", "N"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -193,16 +212,11 @@ const KeyboardShortcuts = () => {
                   <p>Open the Threads view**</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>T</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>T</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "Shift", "T"],
+                    ios: ["⌘", "Shift", "T"],
+                    linux: ["Ctrl", "Shift", "T"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -210,9 +224,11 @@ const KeyboardShortcuts = () => {
                   <p>Previous unread channel or&nbsp;DM</p>
                 </td>
                 <td>
-                  <kbd>Option</kbd>
-                  <kbd>Shift</kbd>
-                  <kbd>↑</kbd>
+                  {renderShortcut({
+                    windows: ["Alt", "Shift", "↑"],
+                    ios: ["Option", "Shift", "↑"],
+                    linux: ["Alt", "Shift", "↑"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -220,9 +236,11 @@ const KeyboardShortcuts = () => {
                   <p>Next&nbsp;unread channel or DM</p>
                 </td>
                 <td>
-                  <kbd>Option</kbd>
-                  <kbd>Shift</kbd>
-                  <kbd>↓</kbd>
+                  {renderShortcut({
+                    windows: ["Alt", "Shift", "↓"],
+                    ios: ["Option", "Shift", "↓"],
+                    linux: ["Alt", "Shift", "↓"],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -230,14 +248,11 @@ const KeyboardShortcuts = () => {
                   <p>Previous channel or DM visited</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>[</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>[</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "["],
+                    ios: ["⌘", "["],
+                    linux: ["Ctrl", "["],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -245,14 +260,11 @@ const KeyboardShortcuts = () => {
                   <p>Collapse or open the right sidebar</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>.</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>.</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "."],
+                    ios: ["⌘", "."],
+                    linux: ["Ctrl", "."],
+                  })}
                 </td>
               </tr>
               <tr>
@@ -260,16 +272,11 @@ const KeyboardShortcuts = () => {
                   <p>Collapse or open the left sidebar</p>
                 </td>
                 <td>
-                  <span className="windows">
-                    <kbd>ctrl</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>D</kbd>
-                  </span>
-                  <span className="ios" style={{ display: "none" }}>
-                    <kbd>⌘</kbd>
-                    <kbd>Shift</kbd>
-                    <kbd>D</kbd>
-                  </span>
+                  {renderShortcut({
+                    windows: ["Ctrl", "Shift", "D"],
+                    ios: ["⌘", "Shift", "D"],
+                    linux: ["Ctrl", "Shift", "D"],
+                  })}
                 </td>
               </tr>
             </tbody>
