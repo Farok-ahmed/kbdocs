@@ -2,6 +2,7 @@
 import DefaultLayout from "@/components/layout";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ChartWithStats from "./.components/ChartWithStats";
 import CommunityPosts from "./.components/community-posts";
 import CommunitySection from "./.components/community-section";
 import WorkCount from "./.components/work-count";
@@ -474,139 +475,8 @@ export default function HelpDeskPage() {
         {/* /.container --> */}
       </section>
       {/* /.related-communities --> */}
+      <ChartWithStats />
 
-      <section className="status-chart">
-        <div className="container">
-          <div className="section_title text-center">
-            <motion.h2
-              className="h_title"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              How useful was KbDoc?
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              Twit gormless barney pardon me vagabond cup of char morish cheeky
-              what a load of rubbish, the bee's knees bog.!
-            </motion.p>
-          </div>
-
-          <div className="kbDoc-chart-wrapper">
-            <ul className="chart-info">
-              <li className="info-left-top color-one">
-                <div className="counterup">
-                  <span className="counter">75</span>
-                  <span>%</span>
-                </div>
-                <div className="border-image">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="370"
-                    height="61"
-                    viewBox="0 0 370 61"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      fill="rgb(66, 218, 191)"
-                      d="M319.500,1.423 L370.005,60.139 L369.200,60.721 L318.689,2.000 L-0.000,2.000 L-0.000,1.000 L318.497,1.000 L318.891,0.715 L319.136,1.000 L319.500,1.000 L319.500,1.423 Z"
-                    />
-                  </svg>
-                </div>
-                <p>90 Out of 205 issues resolved in last tow months</p>
-              </li>
-              <li className="info-right-top color-two">
-                <div className="counterup">
-                  <span className="counter">22</span>
-                  <span>%</span>
-                </div>
-                <div className="border-image">
-                  {/* <img src="img/home_support/brt.png" alt="chart"> --> */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="330px"
-                    height="60px"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      fill="rgb(249, 50, 122)"
-                      d="M330.000,1.281 L51.455,1.281 L0.802,60.002 L-0.005,59.421 L50.656,0.689 L50.656,0.281 L51.008,0.281 L51.253,-0.003 L51.648,0.281 L330.000,0.281 L330.000,1.281 Z"
-                    />
-                  </svg>
-                </div>
-                <p>35 out of 205 issues unanswered</p>
-              </li>
-              <li className="info-left-bottom color-three">
-                <div className="counterup">
-                  <span className="counter">44</span>
-                  <span>%</span>
-                </div>
-                <div className="border-image">
-                  {/* <img src="img/home_support/blb.png" alt="chart" /> */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="350px"
-                    height="60px"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      fill="rgb(53, 186, 233)"
-                      d="M350.005,0.578 L299.344,59.310 L299.344,59.718 L298.992,59.718 L298.747,60.002 L298.353,59.718 L-0.000,59.718 L-0.000,58.719 L298.544,58.719 L349.198,-0.003 L350.005,0.578 Z"
-                    />
-                  </svg>
-                </div>
-                <p>20 Out of 205 issues haven't got a reply</p>
-              </li>
-              <li className="info-right-bottom color-four">
-                <div className="counterup">
-                  <span className="counter">35</span>
-                  <span>%</span>
-                </div>
-                <div className="border-image">
-                  {/* <img src="/img/home_support/brb.png" alt="chart" /> */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="390px"
-                    height="60px"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      fill="rgb(252, 193, 3)"
-                      d="M390.000,59.719 L51.647,59.719 L51.253,60.002 L51.008,59.719 L50.656,59.719 L50.656,59.310 L-0.005,0.579 L0.802,-0.004 L51.456,58.719 L390.000,58.719 L390.000,59.719 Z"
-                    />
-                  </svg>
-                </div>
-                <p>We are working on 42 out of 205 issues</p>
-              </li>
-            </ul>
-
-            <div className="canvas">
-              <canvas id="kbDoc-chart"></canvas>
-            </div>
-            {/* /.canvas --> */}
-
-            <div className="full-amount">
-              <h3 className="total-count">
-                <span className="counter">100</span>
-                <span>%</span>
-              </h3>
-            </div>
-          </div>
-          {/* /.kbDoc-chart-wrapper --> */}
-        </div>
-        {/* /.container --> */}
-      </section>
       {/* /.status-chart --> */}
 
       <section className="funfact-area">
