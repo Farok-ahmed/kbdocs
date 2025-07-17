@@ -1,5 +1,6 @@
 "use client";
 import SearchBreadcrumb from "@/components/search-breadcrumb";
+import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
 
 export interface BreadcrumbProps {
@@ -18,6 +19,8 @@ const Breadcrumb = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
+  const defaultDate = new Date();
+
   return (
     <>
       <SearchBreadcrumb />
@@ -50,7 +53,8 @@ const Breadcrumb = () => {
             </div>
             <div className="col-sm-5">
               <Link href="#" className="date">
-                <i className="icon_clock_alt"></i>Updated on March 03, 2020
+                <i className="icon_clock_alt"></i>Updated on{" "}
+                {formattedDate(defaultDate)}
               </Link>
             </div>
           </div>
