@@ -1,13 +1,14 @@
+"use client";
 const BlogGridAction = () => {
   return (
     <>
       <section className="doc_action_area_three">
         <img
           className="p_absolute shadows"
-          src="img/blog-grid/shadow_action.png"
+          src="/img/blog-grid/shadow_action.png"
           alt=""
         />
-        <img className="p_absolute b_man" src="img/blog-grid/man.png" alt="" />
+        <img className="p_absolute b_man" src="/img/blog-grid/man.png" alt="" />
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
@@ -20,6 +21,7 @@ const BlogGridAction = () => {
             </div>
             <div className="col-lg-7">
               <form
+                onSubmit={(e) => e.preventDefault()}
                 action="#"
                 className="footer_subscribe_form action_subscribe_form"
               >
