@@ -68,7 +68,10 @@ export default function Navbar({ navbarHide = "" }) {
         } ${isScrolled ? "navbar_fixed" : ""}  ${
           isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
         }`}
-        style={{ top: isScrollDown && lastScrollTop > 100 ? -100 : 0 }}
+        style={{
+          top: isScrollDown && lastScrollTop > 100 ? -100 : 0,
+          zIndex: 100,
+        }}
         id="sticky"
       >
         <div className="container">
