@@ -18,7 +18,7 @@ const BlogItems = () => {
                       {post.category.name}
                     </Link>
                   </div>
-                  <Link href={`/blog-grid-two/${post.id}`}>
+                  <Link href={`/blog-single`}>
                     <h4 className="b_title">{post.title}</h4>
                   </Link>
                   <p>{post.excerpt}</p>

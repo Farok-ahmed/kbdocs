@@ -21,7 +21,7 @@ export default function Navbar({ navbarHide = "" }) {
   const isHomePage =
     pathname === pages.home || isHelpDesk || isCoolKnowledgeBase;
   const typographyPage = pathname === pages.typography;
-
+  const isBlogSingle = pathname === pages.blogSingle;
   const homePage = pathname === pages.home;
 
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -64,7 +64,7 @@ export default function Navbar({ navbarHide = "" }) {
       <TopBar isHelpDesk={isHelpDesk} />
       <nav
         className={`navbar navbar-expand-lg ${navbarHide}  ${
-          homePage || isHelpDesk ? "menu_two" : "menu_one"
+          homePage || isHelpDesk || isBlogSingle ? "menu_two" : "menu_one"
         } ${isScrolled ? "navbar_fixed" : ""}  ${
           isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
         }`}
@@ -73,7 +73,11 @@ export default function Navbar({ navbarHide = "" }) {
       >
         <div className="container">
           <Link className="navbar-brand" href="/">
-            {homePage || isHelpDesk || isScrolled || typographyPage ? (
+            {homePage ||
+            isHelpDesk ||
+            isScrolled ||
+            typographyPage ||
+            isBlogSingle ? (
               <Image src={logo} width={112} alt="Brand Logo" />
             ) : (
               <Image src={LogoW} width={112} alt="Brand Logo" />
@@ -90,7 +94,9 @@ export default function Navbar({ navbarHide = "" }) {
           >
             <ul
               className={`navbar-nav menu  ml-auto ${
-                homePage || isHelpDesk || typographyPage ? "dk_menu" : ""
+                homePage || isHelpDesk || typographyPage || isBlogSingle
+                  ? "dk_menu"
+                  : ""
               }`}
             >
               {

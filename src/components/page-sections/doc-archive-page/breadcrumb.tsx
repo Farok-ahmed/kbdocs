@@ -19,6 +19,8 @@ const Breadcrumb = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
+  // Default date for display
+  // You can replace this with a dynamic date if needed
   const defaultDate = new Date();
 
   return (

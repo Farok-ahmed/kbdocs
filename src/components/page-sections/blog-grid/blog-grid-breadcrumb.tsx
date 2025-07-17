@@ -1,6 +1,9 @@
+"use client";
+import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
 
 const BlogGridBreadcrumb = () => {
+  const defaultDate = new Date(); // Default date in YYYY-MM-DD format
   return (
     <>
       <section className="breadcrumb_area">
@@ -37,7 +40,13 @@ const BlogGridBreadcrumb = () => {
           alt=""
         />
         <div className="container">
-          <form action="#" className="banner_search_form">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+            action="#"
+            className="banner_search_form"
+          >
             <input
               type="search"
               className="form-control"
@@ -56,10 +65,10 @@ const BlogGridBreadcrumb = () => {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item">
-                    <Link href="#">Home</Link>
+                    <Link href="/">Home</Link>
                   </li>
                   <li className="breadcrumb-item">
-                    <Link href="#">Blog</Link>
+                    <Link href="/blog-grid">Blog</Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
                     Blog Grid
@@ -70,7 +79,7 @@ const BlogGridBreadcrumb = () => {
             <div className="col-sm-5">
               <Link href="#" className="date">
                 <i className="icon_clock_alt" />
-                Updated on March 03, 2020
+                Updated on {formattedDate(defaultDate)}
               </Link>
             </div>
           </div>

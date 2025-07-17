@@ -4,4 +4,5 @@ export const pages = {
   helpDesk: "/help-desk",
   coolKnowledgeBase: "/cool-knowledge-base",
   typography: "/typography",
+  blogSingle: "/blog-single",
 };
