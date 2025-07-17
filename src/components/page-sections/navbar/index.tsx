@@ -167,7 +167,16 @@ export default function Navbar({ navbarHide = "" }) {
               className={`nav_btn ${isHelpDesk ? "round-btn" : ""}`}
               href="/login"
             >
-              <i className="icon_profile"></i>Log In
+              {homePage ? (
+                <>
+                  <i className="icon_profile"></i>Log In
+                </>
+              ) : (
+                <>
+                  {isHelpDesk && <i className="icon_headphones"></i>}
+                  Free Trial
+                </>
+              )}
             </Link>
           </div>
         </div>

@@ -12,7 +12,7 @@ const Breadcrumb = () => {
   const breadcrumb: BreadcrumbProps[] = [
     { name: "Home", link: "/" },
     { name: "Docs", link: "/docs" },
-    { name: "KbDoc WordPress Theme", link: "/docs/kbdoc-wordpress-theme" },
+    { name: "KbDoc WordPress Theme", link: "" },
   ];
   // Handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
