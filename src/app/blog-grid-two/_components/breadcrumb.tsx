@@ -1,3 +1,4 @@
+import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
 interface BreadcrumbTopicProps {
   name: string;
@@ -9,7 +10,7 @@ const Breadcrumb = () => {
     { name: "Home", link: "/", id: 1 },
     { name: "Blog", link: "/blog-grid", id: 2 },
     {
-      name: "Blog with sidebar",
+      name: "Blog Grid Two",
       link: "",
       id: 3,
     },
@@ -90,7 +91,8 @@ const Breadcrumb = () => {
             </div>
             <div className="col-sm-5">
               <Link href="" className="date">
-                <i className="icon_clock_alt"></i>Updated on March 03, 2020
+                <i className="icon_clock_alt"></i>Updated on{" "}
+                {formattedDate(new Date())}
               </Link>
             </div>
           </div>

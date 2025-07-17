@@ -1,13 +1,24 @@
+"use client";
+import { useBlogPagination } from "@/hooks/useBlogPagination";
 import Link from "next/link";
 import { getAllBlogPosts } from "../blogs";
-
+const POSTS_PER_PAGE: number = 8;
 const BlogItems = () => {
   const blogGridPosts = getAllBlogPosts();
+  const {
+    currentPage,
+    totalPages,
+    currentItems: paginatedPosts,
+    handlePageClick,
+  } = useBlogPagination({
+    items: blogGridPosts,
+    itemsPerPage: POSTS_PER_PAGE,
+  });
   return (
     <>
       <div className="col-lg-8">
         <div className="row">
-          {blogGridPosts.map((post) => (
+          {paginatedPosts.map((post) => (
             <div key={post.id} className="col-lg-6 col-sm-6">
               <div className="blog_grid_post wow fadeInUp">
                 <img src={post.image} alt="" />
@@ -36,17 +47,65 @@ const BlogItems = () => {
             </div>
           ))}
           <div className="col-lg-12">
-            <nav className="navigation pagination" role="navigation">
+            <nav className="navigation pagination">
               <div className="nav-links">
-                <span aria-current="page" className="page-numbers current">
-                  1
-                </span>
-                <Link className="page-numbers" href="#">
-                  2
-                </Link>
-                <Link className="next page-numbers" href="#">
-                  <i className="arrow_carrot-right" />
-                </Link>
+                {/* ⏪ Previous Page Button */}
+                {currentPage > 1 && (
+                  <Link
+                    className="prev page-numbers"
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handlePageClick(currentPage - 1);
+                    }}
+                  >
+                    <i className="arrow_carrot-left" />
+                  </Link>
+                )}
+
+                {/* Page Number Links */}
+                {Array.from({ length: totalPages }, (_, index) => {
+                  const page = index + 1;
+                  if (page === currentPage) {
+                    return (
+                      <span
+                        key={page}
+                        aria-current="page"
+                        className="page-numbers current"
+                      >
+                        {page}
+                      </span>
+                    );
+                  } else {
+                    return (
+                      <Link
+                        key={page}
+                        className="page-numbers"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handlePageClick(page);
+                        }}
+                      >
+                        {page}
+                      </Link>
+                    );
+                  }
+                })}
+
+                {/* ⏩ Next Page Button */}
+                {currentPage < totalPages && (
+                  <Link
+                    className="next page-numbers"
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handlePageClick(currentPage + 1);
+                    }}
+                  >
+                    <i className="arrow_carrot-right" />
+                  </Link>
+                )}
               </div>
             </nav>
           </div>
