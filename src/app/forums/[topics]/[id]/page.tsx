@@ -7,7 +7,7 @@ import ForumSingleCallToAction from "./.components/forum-single-call-to-action";
 import ForumSinglePost from "./.components/forum-single-post";
 import ForumSingleSidebar from "./.components/forum-single-sidebar";
 
-const COMMENTS_PER_PAGE = 1;
+const COMMENTS_PER_PAGE = 3;
 
 const ForumSinglePage = ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = use(params);

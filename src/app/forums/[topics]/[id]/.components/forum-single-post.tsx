@@ -1,4 +1,5 @@
 import { DOTS, usePagination } from "@/app/hooks/usePagination";
+import Select from "@/components/select";
 import Link from "next/link";
 
 interface PaginationProps {
@@ -173,12 +174,14 @@ const ForumSinglePost = ({ post, pagination }: ForumSinglePostProps) => {
         <h3 className="title">All Replies</h3>
         <div className="filter-bar d-flex">
           <div className="sort">
-            <select className="custom-select" id="sortBy">
-              <option>Sort By</option>
-              <option value={1}>ASC</option>
-              <option value={2}>Desc</option>
-              <option value={3}>Vote</option>
-            </select>
+            <Select
+              options={[
+                { value: "sort-by", label: "Sort By" },
+                { value: "asc", label: "ASC" },
+                { value: "desc", label: "Desc" },
+                { value: "vote", label: "Vote" },
+              ]}
+            />
           </div>
           <p>Page 1 of 4</p>
         </div>
