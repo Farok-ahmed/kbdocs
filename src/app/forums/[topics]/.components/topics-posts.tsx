@@ -15,9 +15,7 @@ const TopicsPosts = ({ getTopics }) => {
               </div>
               <div className="entry-content">
                 <h3 className="post-title">
-                  <Link href={`/forums/${topic.forumId}/${topic.id}`}>
-                    {topic.title}
-                  </Link>
+                  <Link href="/forum-single">{topic.title}</Link>
                 </h3>
                 <ul className="meta">
                   <li>

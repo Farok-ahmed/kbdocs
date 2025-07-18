@@ -11,7 +11,7 @@ import TopicsPagination from "./.components/topics-pagination";
 import TopicsPosts from "./.components/topics-posts";
 import TopicsSidebar from "./.components/topics-sidebar";
 
-const ITEMS_PER_PAGE = 1;
+const ITEMS_PER_PAGE = 6;
 const TopicsPage = ({ params }: { params: Promise<{ topics: string }> }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const { topics } = use(params);

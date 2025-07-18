@@ -8,7 +8,7 @@ const CallToActionTopic = () => {
         <div className="container">
           <div className="action-content-wrapper">
             <div className="action-title-wrap title-img">
-              <img src="img/home_support/chat-smile.png" alt="" />
+              <img src="/img/home_support/chat-smile.png" alt="" />
               <h2 className="action-title">New to Communities?</h2>
             </div>
             <Link href="#" className="action_btn">

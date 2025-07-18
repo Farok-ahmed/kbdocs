@@ -7,7 +7,7 @@ const ForumSinglePost = () => {
         <div className="col-lg-9">
           <div className="forum-post-top">
             <Link className="author-avatar" href="#">
-              <img src="img/forum/author-avatar.png" alt="" />
+              <img src="/img/forum/author-avatar.png" alt="" />
             </Link>
             <div className="forum-post-author">
               <Link className="author-name" href="#">
@@ -93,7 +93,7 @@ const ForumSinglePost = () => {
             <Link href="#">Error</Link>
           </div>
           <div className="taxonomy forum-post-cat">
-            <img src="img/forum/logo-favicon.png" alt="" />
+            <img src="/img/forum/logo-favicon.png" alt="" />
             <Link href="#">KbDoc Support</Link>
           </div>
         </div>

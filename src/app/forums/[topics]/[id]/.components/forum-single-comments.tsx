@@ -10,7 +10,7 @@ const ForumSingleComments = () => {
             <div className="col-lg-9">
               <div className="forum-post-top">
                 <Link className="author-avatar" href="#">
-                  <img src="img/forum/author-avatar.png" alt="" />
+                  <img src="/img/forum/author-avatar.png" alt="" />
                 </Link>
                 <div className="forum-post-author">
                   <Link className="author-name" href="#">
@@ -88,7 +88,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="img/forum/author-avatar.png" alt="author avatar" />
+                <img src="/img/forum/author-avatar.png" alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -137,7 +137,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="img/forum/author-avatar-2.jpg" alt="author avatar" />
+                <img src="/img/forum/author-avatar-2.jpg" alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -185,7 +185,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="img/forum/author-avatar-3.jpg" alt="author avatar" />
+                <img src="/img/forum/author-avatar-3.jpg" alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -233,7 +233,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="img/forum/author-avatar.png" alt="author avatar" />
+                <img src="/img/forum/author-avatar.png" alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">

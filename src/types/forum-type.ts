@@ -10,3 +10,10 @@ export type TagsProps = {
   id: number;
   name: string;
 };
+
+export interface TopicCategory {
+  id: string;
+  name: string;
+  icon: string;
+  color?: string;
+}

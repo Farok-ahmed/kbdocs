@@ -63,7 +63,7 @@ const forumData = [
 const topicsList = [
   {
     id: 1,
-    forumId: "forum-1",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Announcements + KbDoc Support
     authorAvatar: "/img/home_support/cp2.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -149,7 +149,7 @@ const topicsList = [
   },
   {
     id: 2,
-    forumId: "forum-1",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Announcements + Technology
     authorAvatar: "/img/home_support/cp1.png",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -235,7 +235,7 @@ const topicsList = [
   },
   {
     id: 3,
-    forumId: "forum-2",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Technology + KbDoc Support
     authorAvatar: "/img/home_support/cp3.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -321,7 +321,7 @@ const topicsList = [
   },
   {
     id: 4,
-    forumId: "forum-3",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: TV & Movies + KbDoc Support
     authorAvatar: "/img/home_support/cp4.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -410,7 +410,7 @@ const topicsList = [
   },
   {
     id: 5,
-    forumId: "forum-4",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: KbDoc Support + Marketplaces
     authorAvatar: "/img/home_support/cp5.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -418,6 +418,7 @@ const topicsList = [
     title: "Performance issue uikit v3 and C3js",
     category: "WordPress Theme",
     categoryIcon: "/img/home_support/cmm5.png",
+
     lastUpdated: "5 days ago",
     TotalComments: 20,
     stars: 5,
@@ -496,7 +497,7 @@ const topicsList = [
   },
   {
     id: 6,
-    forumId: "forum-2",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Technology + Marketplaces
     authorAvatar: "/img/home_support/cp6.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -582,11 +583,12 @@ const topicsList = [
   },
   {
     id: 7,
-    forumId: "forum-2",
+    forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Technology + KbDoc Support + Marketplaces
     authorAvatar: "/img/home_support/cp10.png",
     title: "Apps/Integrations/APIs",
     category: "WordPress Theme",
     categoryIcon: "/img/home_support/cmm7.png",
+
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -665,7 +667,7 @@ const topicsList = [
   },
   {
     id: 8,
-    forumId: "forum-4",
+    forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
     authorAvatar: "/img/home_support/cp7.png",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -754,7 +756,7 @@ const topicsList = [
   },
   {
     id: 9,
-    forumId: "forum-5",
+    forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
     authorAvatar: "/img/home_support/cp8.png",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -840,7 +842,7 @@ const topicsList = [
   },
   {
     id: 10,
-    forumId: "forum-5",
+    forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
     authorAvatar: "/img/home_support/cp9.png",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -926,7 +928,7 @@ const topicsList = [
   },
   {
     id: 11,
-    forumId: "forum-5",
+    forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
     authorAvatar: "/img/home_support/cp2.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -1012,7 +1014,7 @@ const topicsList = [
   },
   {
     id: 12,
-    forumId: "forum-3",
+    forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
     authorAvatar: "/img/home_support/cp6.jpg",
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
@@ -1152,8 +1154,9 @@ const tagsData: TagsProps[] = [
   { id: 12, name: "Productboard" },
   { id: 13, name: "Magento" },
 ];
+// Updated utility function to work with multiple forum IDs
 const topicsListWithFilteredForums = (forumId: string) => {
-  return topicsList.filter((topic) => topic.forumId === forumId);
+  return topicsList.filter((topic) => topic.forumIds?.includes(forumId));
 };
 
 const getTopicById = (id: number) => {
