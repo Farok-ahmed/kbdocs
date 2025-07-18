@@ -1,10 +1,14 @@
+"use client";
+
 import DocsLayout from "@/components/DocsLayout";
 import TestKbdocVersion from "@/components/test-kbdoc-version";
-const LayoutFull = () => {
+import Link from "next/link";
+
+const SimpleFooterPage = () => {
   return (
-    <DocsLayout type="full-width">
+    <DocsLayout>
       <div id="post" className="documentation_info rvfs-4" data-rvfs={4}>
-        <article className="documentation_body">
+        <article className="documentation_body" id="documentation">
           <div className="shortcode_title">
             <h1>Getting Started</h1>
             <p>
@@ -13,158 +17,80 @@ const LayoutFull = () => {
             </p>
           </div>
           <div className="row">
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/folder.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Working with Docs</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/envelope.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Formatting Content</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/coding.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Development</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/smartphone.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Mobile App</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/management.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Account Management</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/briefcase.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Shortcodes</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/newspaper.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Productivity</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/side-nav/issuin.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Issuing</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="media documentation_item">
-                <div className="icon">
-                  <img src="/img/home_one/icon/color-palette.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <a href="#">
-                    <h5>Introduction</h5>
-                  </a>
-                  <p>He lost his bottle bubble and squeak knackered.!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
+            <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
                   <img src="/img/side-nav/terminals.png" alt="" />
                 </div>
                 <div className="media-body">
-                  <a href="#">
+                  <Link href="#">
                     <h5>Terminal</h5>
-                  </a>
+                  </Link>
                   <p>He lost his bottle bubble and squeak knackered.!</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-sm-6">
+            <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
                   <img src="/img/home_one/icon/android.png" alt="" />
                 </div>
                 <div className="media-body">
-                  <a href="#">
+                  <Link href="#">
                     <h5>Getting Started</h5>
-                  </a>
+                  </Link>
                   <p>He lost his bottle bubble and squeak knackered.!</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-sm-6">
+            <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/lock.png" alt="" />
+                  <img src="/img/home_one/icon/smartphone.png" alt="" />
                 </div>
                 <div className="media-body">
-                  <a href="#">
-                    <h5>This Document</h5>
-                  </a>
+                  <Link href="#">
+                    <h5>Mobile App</h5>
+                  </Link>
+                  <p>He lost his bottle bubble and squeak knackered.!</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-sm-6">
+              <div className="media documentation_item">
+                <div className="icon">
+                  <img src="/img/home_one/icon/management.png" alt="" />
+                </div>
+                <div className="media-body">
+                  <Link href="#">
+                    <h5>Account Management</h5>
+                  </Link>
+                  <p>He lost his bottle bubble and squeak knackered.!</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-sm-6">
+              <div className="media documentation_item">
+                <div className="icon">
+                  <img src="/img/home_one/icon/newspaper.png" alt="" />
+                </div>
+                <div className="media-body">
+                  <Link href="#">
+                    <h5>Productivity</h5>
+                  </Link>
+                  <p>He lost his bottle bubble and squeak knackered.!</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-sm-6">
+              <div className="media documentation_item">
+                <div className="icon">
+                  <img src="/img/side-nav/issuin.png" alt="" />
+                </div>
+                <div className="media-body">
+                  <Link href="#">
+                    <h5>Issuing</h5>
+                  </Link>
                   <p>He lost his bottle bubble and squeak knackered.!</p>
                 </div>
               </div>
@@ -178,34 +104,41 @@ const LayoutFull = () => {
             id="introduction"
           >
             Introduction
-            <a
+            <Link
               className="anchorjs-link "
               aria-label="Anchor"
               data-anchorjs-icon=""
               href="#introduction"
-              style={{ font: "1em / 1 anchorjs-icons", paddingLeft: "0.375em" }}
+              style={{
+                font: "1em / 1 anchorjs-icons",
+                paddingLeft: "0.375em",
+              }}
             />
           </h4>
           <p>
             Owt to do with me chinwag get stuffed mate baking cakes blow off
             vagabond knackered faff about boot a load of old tosh{" "}
-            <a href="#">Richard Charles</a>, cor blimey guvnor cheers fantastic
-            butty <a href="#">A bit of how's your father down</a> the pub
-            plastered bugger <a href="#">all mate such a fibber</a> lemon
+            <Link href="#">Richard Charles</Link>, cor blimey guvnor cheers
+            fantastic butty{" "}
+            <Link href="#">A bit of how's your father down</Link> the pub
+            plastered bugger <Link href="#">all mate such a fibber</Link> lemon
             squeezy.
           </p>
-          <a href="#"></a>
+          <Link href="#"></Link>
           <h4
-            className="c_head load-order-2"
+            className="c_head load-order-2 "
             id="add-payments-to-your-platform"
           >
-            <a href="#">Add payments to your platform</a>
-            <a
+            <Link href="#">Add payments to your platform</Link>
+            <Link
               className="anchorjs-link "
               aria-label="Anchor"
               data-anchorjs-icon=""
               href="#add-payments-to-your-platform"
-              style={{ font: "1em / 1 anchorjs-icons", paddingLeft: "0.375em" }}
+              style={{
+                font: "1em / 1 anchorjs-icons",
+                paddingLeft: "0.375em",
+              }}
             />
           </h4>
           <p>
@@ -214,13 +147,11 @@ const LayoutFull = () => {
             flat my lady naff bubble and squeak tosser pukka barmy bog the bee's
             knees, elizabeth dropped a clanger cheesed.
           </p>
-          <h4 className="c_head smooth-scroll-heading">
-            Extend Stripe's offerings
-          </h4>
+          <h4 className="c_head ">Extend Stripe's offerings</h4>
           <p>
             Naff wellies such a fibber up the duff some dodgy chav sloshed blow
-            off golly gosh <a href="#">jolly good hotpot gutted mate</a>, me old
-            mucker cras mush.
+            off golly gosh <Link href="#">jolly good hotpot gutted mate</Link>,
+            me old mucker cras mush.
           </p>
           <div className="link">
             <p>
@@ -234,7 +165,7 @@ const LayoutFull = () => {
         <TestKbdocVersion />
         <div className="border_bottom" />
         <article className="developer" id="developer">
-          <h4 className="c_head smooth-scroll-heading">Features</h4>
+          <h4 className="c_head ">Features</h4>
           <ul className="list-unstyled tag_list">
             <li>
               <i className="icon_document_alt" />
@@ -269,12 +200,15 @@ const LayoutFull = () => {
             id="code-structure"
           >
             Code Structure
-            <a
+            <Link
               className="anchorjs-link "
               aria-label="Anchor"
               data-anchorjs-icon=""
               href="#code-structure"
-              style={{ font: "1em / 1 anchorjs-icons", paddingLeft: "0.375em" }}
+              style={{
+                font: "1em / 1 anchorjs-icons",
+                paddingLeft: "0.375em",
+              }}
             />
           </h4>
           <p>HTML, css and javascript files included.</p>
@@ -414,7 +348,8 @@ const LayoutFull = () => {
                     <span className="token space"> </span>
                     <span className="token space"> </span>
                     <span className="token space"> </span>├──
-                    <span className="token space"> </span>magnific-popup.min.css
+                    <span className="token space"> </span>
+                    magnific-popup.min.css
                     <span className="token lf">{"\n"}</span>│
                     <span className="token space"> </span>
                     <span className="token space"> </span>
@@ -427,7 +362,7 @@ const LayoutFull = () => {
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>fonts/
                     <span className="token lf">{"\n"}</span>├──
-                    <span className="token space"> </span>/img/
+                    <span className="token space"> </span>img/
                     <span className="token lf">{"\n"}</span>├──
                     <span className="token space"> </span>js/
                     <span className="token lf">{"\n"}</span>├──
@@ -452,23 +387,23 @@ const LayoutFull = () => {
           <h4 className="c_head ">We're here to help!</h4>
           <div className="help_info">
             <div className="help_item">
-              <a href="#">
+              <Link href="#">
                 <h4 className="">Support</h4>
-              </a>
+              </Link>
               <p>Car boot absolutely bladder the full monty ruddy.</p>
             </div>
             <div className="help_item">
-              <a href="#">
+              <Link href="#">
                 <h4 className="">
                   Samples <i className="arrow_carrot-right" />
                 </h4>
-              </a>
+              </Link>
               <p>Car boot absolutely bladder the full monty ruddy.</p>
             </div>
             <div className="help_item">
-              <a href="#">
+              <Link href="#">
                 <h4 className="">API Discussion Board</h4>
-              </a>
+              </Link>
               <p>Car boot absolutely bladder the full monty ruddy.</p>
             </div>
           </div>
@@ -479,9 +414,9 @@ const LayoutFull = () => {
                 <h4 className="">Questions?</h4>
                 <p>
                   Cheeky that bubble and squeak fanny around bleeder hunky-dory
-                  daft <a href="#">bonnet brolly victoria</a> sponge show off
-                  show off pick your nose and blow off{" "}
-                  <a href="#">my good sir, cobblers</a> dropped.
+                  daft <Link href="#">bonnet brolly victoria</Link> sponge show
+                  off show off pick your nose and blow off{" "}
+                  <Link href="#">my good sir, cobblers</Link> dropped.
                 </p>
               </div>
             </div>
@@ -495,6 +430,7 @@ const LayoutFull = () => {
                 <form
                   className="mailchimp signup_form"
                   method="post"
+                  onSubmit={(e) => e.preventDefault()}
                   noValidate={true}
                 >
                   <div className="input-group">
@@ -518,7 +454,7 @@ const LayoutFull = () => {
                 </form>
                 <p>
                   You can unsubscribe at any time. Read our privacy policy{" "}
-                  <a href="#">here</a>
+                  <Link href="#">here</Link>
                 </p>
               </div>
             </div>
@@ -529,20 +465,20 @@ const LayoutFull = () => {
               <h6>
                 <i className="icon_mail_alt" />
                 Still stuck?{" "}
-                <a href="#" data-toggle="modal" data-target="#exampleModal2">
+                <Link href="#" data-toggle="modal" data-target="#exampleModal2">
                   How can we help?
-                </a>
+                </Link>
               </h6>
             </div>
             <div className="col-lg-6">
               <p>
                 Was this page helpful?{" "}
-                <a href="#" className="h_btn">
+                <Link href="#" className="h_btn">
                   Yes
-                </a>
-                <a href="#" className="h_btn">
+                </Link>
+                <Link href="#" className="h_btn">
                   No
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -552,4 +488,4 @@ const LayoutFull = () => {
   );
 };
 
-export default LayoutFull;
+export default SimpleFooterPage;

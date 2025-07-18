@@ -36,6 +36,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
   );
 
   const pathName = usePathname();
+  const stickyMenuPage = pathName === "/docs/layouts/sticky-menu";
 
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(defaultIndex);
   // i would like to when user click increase or decrease font size, it will change the font size of the whole page
@@ -214,9 +215,12 @@ export default function DocsLayout({ children, type = "both" }: Props) {
       className={`doc ${menuState === "hidden" ? "" : "menu-is-opened"} ${
         isDark ? "body_dark" : ""
       }`}
+      style={{
+        paddingTop: stickyMenuPage ? "70px" : "",
+      }}
     >
       <div className="body_wrapper">
-        <Navbar navbarHide={style.navbar} />
+        <Navbar navbarHide={style.navbar} isDark={isDark} />
         <div className="mobile_main_menu" id="sticky">
           <div className="container">
             <div className="mobile_menu_left">
@@ -437,89 +441,96 @@ export default function DocsLayout({ children, type = "both" }: Props) {
             </>
           )}
         </AnimatePresence>
-        <section className="breadcrumb_area">
-          <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-          <img
-            className="p_absolute bl_right"
-            src="/img/home_one/b_leaf.svg"
-            alt=""
-          />
-          <img
-            className="p_absolute star"
-            src="/img/home_one/banner_bg.png"
-            alt=""
-          />
-          <img
-            className="p_absolute wave_shap_one"
-            src="/img/blog-classic/shap_01.png"
-            alt=""
-          />
-          <img
-            className="p_absolute wave_shap_two"
-            src="/img/blog-classic/shap_02.png"
-            alt=""
-          />
-          <img
-            className="p_absolute one wow fadeInRight"
-            src="/img/home_one/b_man_two.png"
-            alt=""
-          />
-          <img
-            className="p_absolute two wow fadeInUp"
-            data-wow-delay="0.2s"
-            src="/img/home_one/flower.png"
-            alt=""
-          />
-          <Search />
-        </section>
-        <section className="page_breadcrumb">
-          <div className="container custom_container">
-            <div className="row">
-              <div className="col-sm-7">
-                <nav aria-label="breadcrumb">
-                  <ol className="breadcrumb">
-                    {(() => {
-                      // Split the path and build breadcrumbs dynamically
-                      const segments = pathName
-                        .replace(/^\/|\/$/g, "")
-                        .split("/");
-                      const breadcrumbs = [
-                        { href: "/", label: "Home" },
-                        ...segments.map((seg, idx) => ({
-                          href: "/" + segments.slice(0, idx + 1).join("/"),
-                          label: seg.charAt(0).toUpperCase() + seg.slice(1),
-                        })),
-                      ];
+        {!stickyMenuPage && (
+          <>
+            <section className="breadcrumb_area">
+              <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
+              <img
+                className="p_absolute bl_right"
+                src="/img/home_one/b_leaf.svg"
+                alt=""
+              />
+              <img
+                className="p_absolute star"
+                src="/img/home_one/banner_bg.png"
+                alt=""
+              />
+              <img
+                className="p_absolute wave_shap_one"
+                src="/img/blog-classic/shap_01.png"
+                alt=""
+              />
+              <img
+                className="p_absolute wave_shap_two"
+                src="/img/blog-classic/shap_02.png"
+                alt=""
+              />
+              <img
+                className="p_absolute one wow fadeInRight"
+                src="/img/home_one/b_man_two.png"
+                alt=""
+              />
+              <img
+                className="p_absolute two wow fadeInUp"
+                data-wow-delay="0.2s"
+                src="/img/home_one/flower.png"
+                alt=""
+              />
+              <Search />
+            </section>
+            <section className="page_breadcrumb">
+              <div className="container custom_container">
+                <div className="row">
+                  <div className="col-sm-7">
+                    <nav aria-label="breadcrumb">
+                      <ol className="breadcrumb">
+                        {(() => {
+                          // Split the path and build breadcrumbs dynamically
+                          const segments = pathName
+                            .replace(/^\/|\/$/g, "")
+                            .split("/");
+                          const breadcrumbs = [
+                            { href: "/", label: "Home" },
+                            ...segments.map((seg, idx) => ({
+                              href: "/" + segments.slice(0, idx + 1).join("/"),
+                              label: seg.charAt(0).toUpperCase() + seg.slice(1),
+                            })),
+                          ];
 
-                      return breadcrumbs.map((crumb, idx) => (
-                        <li
-                          key={crumb.href}
-                          className={`breadcrumb-item${
-                            idx === breadcrumbs.length - 1 ? " active" : ""
-                          }`}
-                          aria-current={
-                            idx === breadcrumbs.length - 1 ? "page" : undefined
-                          }
-                        >
-                          {idx === breadcrumbs.length - 1 ? (
-                            crumb.label
-                          ) : (
-                            <Link href={crumb.href}>{crumb.label}</Link>
-                          )}
-                        </li>
-                      ));
-                    })()}
-                  </ol>
-                </nav>
+                          return breadcrumbs.map((crumb, idx) => (
+                            <li
+                              key={crumb.href}
+                              className={`breadcrumb-item${
+                                idx === breadcrumbs.length - 1 ? " active" : ""
+                              }`}
+                              aria-current={
+                                idx === breadcrumbs.length - 1
+                                  ? "page"
+                                  : undefined
+                              }
+                            >
+                              {idx === breadcrumbs.length - 1 ? (
+                                crumb.label
+                              ) : (
+                                <Link href={crumb.href}>{crumb.label}</Link>
+                              )}
+                            </li>
+                          ));
+                        })()}
+                      </ol>
+                    </nav>
+                  </div>
+                  <div className="col-sm-5">
+                    <Link href="" className="date">
+                      <i className="icon_clock_alt"></i>Updated on{" "}
+                      {formattedDate}
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="col-sm-5">
-                <Link href="" className="date">
-                  <i className="icon_clock_alt"></i>Updated on {formattedDate}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+            </section>
+          </>
+        )}
         <section
           ref={contentRef}
           className={`doc_documentation_area ${isFixed ? "body_fixed" : ""}`}

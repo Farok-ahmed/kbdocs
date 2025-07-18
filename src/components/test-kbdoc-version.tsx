@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "motion/react";
 import Link from "next/link";
@@ -248,9 +249,9 @@ const TestKbdocVersion = () => {
                   id={tab.id}
                   role="tabpanel"
                   aria-labelledby={`${tab.id}-tab`}
-                  initial={{ opacity: 0, y: -30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
                   {tab.content}

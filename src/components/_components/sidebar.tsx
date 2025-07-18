@@ -57,12 +57,12 @@ const mainNavItems = [
       {
         id: "sticky-menu",
         title: "Sticky Menu",
-        href: "/sticky-menu",
+        href: "/docs/layouts/sticky-menu",
       },
       {
         id: "simple-footer",
         title: "Simple Footer",
-        href: "/simple-footer",
+        href: "/docs/layouts/simple-footer",
       },
     ],
   },

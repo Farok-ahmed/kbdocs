@@ -12,7 +12,7 @@ import { navMenu } from "./nav-menu";
 import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
 
-export default function Navbar({ navbarHide = "" }) {
+export default function Navbar({ navbarHide = "", isDark }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState<string | null>(null);
   const pathname = usePathname();
@@ -24,6 +24,7 @@ export default function Navbar({ navbarHide = "" }) {
   const isBlogSingle = pathname === pages.blogSingle;
   const homePage = pathname === pages.home;
 
+  const isStickyMenu = pathname === "/docs/layouts/sticky-menu";
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const isScrolled = useMemo(() => lastScrollTop > 5, [lastScrollTop]);
   const [isScrollDown, setIsScrollDown] = useState<boolean>();
@@ -65,27 +66,36 @@ export default function Navbar({ navbarHide = "" }) {
       <nav
         className={`navbar navbar-expand-lg ${navbarHide}  ${
           homePage || isHelpDesk || isBlogSingle ? "menu_two" : "menu_one"
-        } ${isScrolled ? "navbar_fixed" : ""}  ${
+        } ${isScrolled || isStickyMenu ? "navbar_fixed" : ""}  ${
           isHelpDesk && lastScrollTop <= 40 ? "mt-40" : ""
-        }`}
+        }
+        ${isStickyMenu && isDark ? "bg_dark " : ""}
+        `}
         style={{
-          top: isScrollDown && lastScrollTop > 100 ? -100 : 0,
+          top: isStickyMenu
+            ? 0
+            : isScrollDown && lastScrollTop > 100
+            ? -100
+            : 0,
           zIndex: 100,
+          backgroundColor: isStickyMenu && isDark ? "#1E1F26" : "",
         }}
         id="sticky"
       >
         <div className="container">
-          <Link className="navbar-brand" href="/">
-            {homePage ||
-            isHelpDesk ||
-            isScrolled ||
-            typographyPage ||
-            isBlogSingle ? (
-              <Image src={logo} width={112} alt="Brand Logo" />
-            ) : (
-              <Image src={LogoW} width={112} alt="Brand Logo" />
-            )}
-          </Link>
+          {!isStickyMenu && (
+            <Link className="navbar-brand" href="/">
+              {homePage ||
+              isHelpDesk ||
+              isScrolled ||
+              typographyPage ||
+              isBlogSingle ? (
+                <Image src={logo} width={112} alt="Brand Logo" />
+              ) : (
+                <Image src={LogoW} width={112} alt="Brand Logo" />
+              )}
+            </Link>
+          )}
           <NavToggler isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
 
           <div
@@ -100,7 +110,9 @@ export default function Navbar({ navbarHide = "" }) {
                 homePage || isHelpDesk || typographyPage || isBlogSingle
                   ? "dk_menu"
                   : ""
-              }`}
+              }
+              ${isStickyMenu && isDark ? "dk_menu" : ""}
+              `}
             >
               {
                 /* Home, Docs, Pages, Forum, Products, Blog */
@@ -171,22 +183,43 @@ export default function Navbar({ navbarHide = "" }) {
                 })
               }
             </ul>
-
-            <Link
-              className={`nav_btn ${isHelpDesk ? "round-btn" : ""}`}
-              href="/login"
-            >
-              {homePage ? (
-                <>
-                  <i className="icon_profile"></i>Log In
-                </>
-              ) : (
-                <>
-                  {isHelpDesk && <i className="icon_headphones"></i>}
-                  Free Trial
-                </>
-              )}
-            </Link>
+            {isStickyMenu ? (
+              <ul className="list-unstyled menu_social">
+                <li className="search">
+                  <form
+                    onSubmit={(e) => e.preventDefault()}
+                    action="#"
+                    method="get"
+                    className="search_form"
+                  >
+                    <input
+                      type="search"
+                      className="form-control"
+                      placeholder="Search for"
+                    />
+                    <button type="submit">
+                      <i className="icon_search" />
+                    </button>
+                  </form>
+                </li>
+              </ul>
+            ) : (
+              <Link
+                className={`nav_btn ${isHelpDesk ? "round-btn" : ""}`}
+                href="/login"
+              >
+                {homePage ? (
+                  <>
+                    <i className="icon_profile"></i>Log In
+                  </>
+                ) : (
+                  <>
+                    {isHelpDesk && <i className="icon_headphones"></i>}
+                    Free Trial
+                  </>
+                )}
+              </Link>
+            )}
           </div>
         </div>
       </nav>

@@ -1,6 +1,7 @@
 import DocsLayout from "@/components/DocsLayout";
 import TestKbdocVersion from "@/components/test-kbdoc-version";
-const LayoutFull = () => {
+
+const StickyPage1 = () => {
   return (
     <DocsLayout type="full-width">
       <div id="post" className="documentation_info rvfs-4" data-rvfs={4}>
@@ -552,4 +553,4 @@ const LayoutFull = () => {
   );
 };
 
-export default LayoutFull;
+export default StickyPage1;
