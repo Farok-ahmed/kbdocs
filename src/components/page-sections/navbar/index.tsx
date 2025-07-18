@@ -23,7 +23,7 @@ export default function Navbar({ navbarHide = "", isDark }) {
   const typographyPage = pathname === pages.typography;
   const isBlogSingle = pathname === pages.blogSingle;
   const homePage = pathname === pages.home;
-
+  const onePage = pathname === "/one-page";
   const isStickyMenu = pathname === "/docs/layouts/sticky-menu";
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const isScrolled = useMemo(() => lastScrollTop > 5, [lastScrollTop]);

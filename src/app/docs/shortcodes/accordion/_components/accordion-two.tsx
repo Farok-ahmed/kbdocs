@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import "./style.scss";
-const ToggleTwo = () => {
+const ToggleTwo = ({ title = true }) => {
   const [isOpen, setIsOpen] = useState<number | null>(1);
   const accordionData = [
     {
@@ -36,11 +36,14 @@ const ToggleTwo = () => {
             style={{ font: "1em / 1 anchorjs-icons", paddingLeft: "0.375em" }}
           />
         </h4>
-        <p>
-          Switch from one effect, feature, or state to another by using a
-          toggle.
-        </p>
+        {title && (
+          <p>
+            Switch from one effect, feature, or state to another by using a
+            toggle.
+          </p>
+        )}
       </div>
+
       <div className="accordion">
         {accordionData.map((item) => (
           <div key={item.id} className="card doc_accordion">
