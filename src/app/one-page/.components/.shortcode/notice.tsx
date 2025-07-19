@@ -1,4 +1,6 @@
-const Notice = () => {
+import React from "react";
+
+const Notice: React.FC = () => {
   return (
     <>
       <article className="shortcode_info rvfs-4" id="post" data-rvfs={4}>

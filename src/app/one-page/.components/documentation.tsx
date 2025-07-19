@@ -1,5 +1,7 @@
 import Link from "next/link";
-const Documentation = () => {
+import React from "react";
+
+const Documentation: React.FC = () => {
   return (
     <>
       <article className="documentation_body doc-section pt-0" id="doc">

@@ -5,12 +5,15 @@ import BasicTables from "@/app/docs/shortcodes/table/_components/basic-tables";
 import HoverTables from "@/app/docs/shortcodes/table/_components/hover-tables";
 import SimpleTables from "@/app/docs/shortcodes/table/_components/simple-tables";
 import StripedTables from "@/app/docs/shortcodes/table/_components/striped-tables";
+import React from "react";
 import CustomTabs from "./../../../docs/shortcodes/tab/_components/CustomTabs";
 import DynamicTabs from "./../../../docs/shortcodes/tab/_components/process-tab";
+import CanUse from "./can-use";
+import Footnote from "./footnote";
 import GettingStarted from "./getting-started";
 import Notice from "./notice";
 
-const ShortcodePage = () => {
+const ShortcodePage: React.FC = () => {
   return (
     <article
       className="documentation_body shortcode_text doc-section"
@@ -62,6 +65,12 @@ const ShortcodePage = () => {
           </p>
         </div>
         <ImageLightbox />
+      </div>
+      <div className="shortcode_info" id="footnotes">
+        <Footnote />
+      </div>
+      <div className="shortcode_info" id="can-use">
+        <CanUse />
       </div>
     </article>
   );

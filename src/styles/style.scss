@@ -36,3 +36,6 @@
 @import "font";
 // order 4
 @import "responsive";
+html {
+  scroll-behavior: smooth;
+}

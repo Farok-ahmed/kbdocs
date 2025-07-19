@@ -1,13 +1,15 @@
 import Link from "next/link";
+import React from "react";
 
-interface ArticaleProps {
+interface ArticleProps {
   id: number;
   href: string;
   icon?: string;
   title: string;
 }
-const GettingStarted = () => {
-  const articles: ArticaleProps[] = [
+
+const GettingStarted: React.FC = () => {
+  const articles: ArticleProps[] = [
     {
       id: 1,
       href: "/docs/shortcodes/tab",

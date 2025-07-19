@@ -33,7 +33,19 @@ const OnePage = () => {
     } else {
       document.body.classList.remove("body_dark");
     }
+    return () => {
+      document.body.classList.remove("body_dark");
+    };
   }, [isDark]);
+
+  // Add a class to the body for one-page documentation styling
+
+  useEffect(() => {
+    document.body.classList.add("onepage-doc");
+    return () => {
+      document.body.classList.remove("onepage-doc");
+    };
+  }, []);
 
   return (
     <>
