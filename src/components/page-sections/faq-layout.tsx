@@ -22,11 +22,11 @@ interface FaqLayoutProps {
 
 const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const handleNavClick = (index: number) => {
     setActiveIndex(index);
-    setOpenFaqIndex(0);
+    setOpenFaqIndex(null); // Reset open FAQ on tab change
   };
 
   const handleFaqClick = (index: number) => {
@@ -67,28 +67,33 @@ const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
       {/* Right Accordion Content */}
       <div className="col-lg-8 col-md-7">
         <div className="tab-content pl_70">
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div
-              key={activeIndex}
-              className="tab-pane faq_tab_pane fade show active"
-              role="tabpanel"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-            >
-              <div className="accordion doc_faq_info" id="accordionExample">
-                {activeContent.length > 0 ? (
-                  activeContent.map((faqItem, index) => {
+          <div
+            className="tab-pane faq_tab_pane fade show active"
+            role="tabpanel"
+          >
+            <div className="accordion doc_faq_info" id="accordionExample">
+              {activeContent.length > 0 ? (
+                <AnimatePresence initial={false}>
+                  {activeContent.map((faqItem, index) => {
                     const isFaqOpen = openFaqIndex === index;
                     return (
-                      <div className="card wow fadeInUp" key={index}>
+                      <motion.div
+                        layout
+                        className="card wow fadeInUp"
+                        key={`faq-${activeIndex}-${index}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{
+                          duration: 0.3,
+                          delay: index * 0.05,
+                          ease: "easeOut",
+                        }}
+                      >
                         <div className="card-header" id={`heading${index}`}>
                           <h2 className="mb-0">
                             <button
-                              style={{
-                                boxShadow: "none",
-                              }}
+                              style={{ boxShadow: "none" }}
                               className={`btn btn-link ${
                                 !isFaqOpen ? "collapsed" : ""
                               }`}
@@ -105,46 +110,37 @@ const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
                         <AnimatePresence initial={false}>
                           {isFaqOpen && (
                             <motion.div
-                              key={index}
+                              key={`accordion-${activeIndex}-${index}`}
                               id={`collapse${index}`}
-                              className={`collapse show`}
+                              className="collapse show"
                               aria-labelledby={`heading${index}`}
                               data-parent="#accordionExample"
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.35, ease: "easeInOut" }}
+                              transition={{
+                                duration: 0.4,
+                                ease: [0.4, 0.0, 0.2, 1],
+                              }}
                               style={{ overflow: "hidden" }}
                             >
-                              <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{
-                                  duration: 0.3,
-                                  ease: "easeInOut",
-                                }}
-                              >
-                                <div className="card-body">
-                                  {faqItem.answer}
-                                </div>
-                              </motion.div>
+                              <div className="card-body">{faqItem.answer}</div>
                             </motion.div>
                           )}
                         </AnimatePresence>
-                      </div>
+                      </motion.div>
                     );
-                  })
-                ) : (
-                  <div className="card">
-                    <div className="card-body">
-                      No information available for this topic.
-                    </div>
+                  })}
+                </AnimatePresence>
+              ) : (
+                <div className="card">
+                  <div className="card-body">
+                    No information available for this topic.
                   </div>
-                )}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

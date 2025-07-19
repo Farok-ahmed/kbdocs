@@ -77,7 +77,7 @@ export const docsDropDownMenu = [
       },
       {
         title: "Simple Footer",
-        href: "/simple-footer",
+        href: "/docs/layouts/simple-footer",
       },
     ],
   },

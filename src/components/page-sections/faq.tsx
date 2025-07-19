@@ -55,6 +55,31 @@ export default function Faq() {
           answer:
             "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
         },
+        {
+          question: "What are the documents required for claiming?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Any useful books on numerical computing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How do I repair an item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How can I deploy Documentation Landing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Is there a warranty on my item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
       ],
     },
     {
@@ -62,6 +87,31 @@ export default function Faq() {
       title: "Pricing & Support",
       icon: "icon_key_alt",
       content: [
+        {
+          question: "Is there a warranty on my item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "What are the documents required for claiming?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Any useful books on numerical computing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How do I repair an item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How can I deploy Documentation Landing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
         {
           question: "Is there a warranty on my item?",
           answer:
@@ -84,25 +134,128 @@ export default function Faq() {
           answer:
             "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
         },
+        {
+          question: "What are the documents required for claiming?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Any useful books on numerical computing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How do I repair an item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How can I deploy Documentation Landing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Is there a warranty on my item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
       ],
     },
     {
       id: 5,
       title: "Returns",
       icon: "icon_bag_alt",
-      content: [],
+      content: [
+        {
+          question: "What are the documents required for claiming?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Any useful books on numerical computing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How do I repair an item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How can I deploy Documentation Landing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Is there a warranty on my item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+      ],
     },
     {
       id: 6,
       title: "Care & Repair",
       icon: "icon_menu-square_alt2",
-      content: [],
+      content: [
+        {
+          question: "What are the documents required for claiming?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Any useful books on numerical computing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How do I repair an item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How can I deploy Documentation Landing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Is there a warranty on my item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+      ],
     },
     {
       id: 7,
       title: "Warranty",
       icon: "icon_lock-open_alt",
-      content: [],
+      content: [
+        {
+          question: "What are the documents required for claiming?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Any useful books on numerical computing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How do I repair an item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "How can I deploy Documentation Landing?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+        {
+          question: "Is there a warranty on my item?",
+          answer:
+            "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+        },
+      ],
     },
   ];
 
