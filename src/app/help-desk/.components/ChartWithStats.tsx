@@ -8,6 +8,7 @@ import {
   TooltipItem,
 } from "chart.js";
 import { PolarArea } from "react-chartjs-2";
+import CountUp from "react-countup";
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
@@ -83,7 +84,10 @@ export default function KbDocChartWrapper() {
           <ul className="chart-info">
             <li className="info-left-top color-one">
               <div className="counterup">
-                <span className="counter">75</span>
+                <span className="counter">
+                  {" "}
+                  <CountUp end={75} />
+                </span>
                 <span>%</span>
               </div>
               <div className="border-image">
@@ -104,7 +108,9 @@ export default function KbDocChartWrapper() {
             </li>
             <li className="info-right-top color-two">
               <div className="counterup">
-                <span className="counter">22</span>
+                <span className="counter">
+                  <CountUp end={22} />
+                </span>
                 <span>%</span>
               </div>
               <div className="border-image">
@@ -124,7 +130,10 @@ export default function KbDocChartWrapper() {
             </li>
             <li className="info-left-bottom color-three">
               <div className="counterup">
-                <span className="counter">44</span>
+                <span className="counter">
+                  {" "}
+                  <CountUp end={44} />
+                </span>
                 <span>%</span>
               </div>
               <div className="border-image">
@@ -144,7 +153,9 @@ export default function KbDocChartWrapper() {
             </li>
             <li className="info-right-bottom color-four">
               <div className="counterup">
-                <span className="counter">35</span>
+                <span className="counter">
+                  <CountUp end={35} />
+                </span>
                 <span>%</span>
               </div>
               <div className="border-image">
@@ -166,7 +177,9 @@ export default function KbDocChartWrapper() {
 
           <div className="full-amount">
             <h3 className="total-count">
-              <span className="counter">100</span>
+              <span className="counter">
+                <CountUp end={100} />
+              </span>
               <span>%</span>
             </h3>
           </div>
