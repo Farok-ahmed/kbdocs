@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Newsletter = () => {
   return (
     <>
@@ -5,9 +7,9 @@ const Newsletter = () => {
         <div className="container">
           <div className="action_content_three text-center">
             <h2>KbDoc will definitely make Your life easier</h2>
-            <a href="#" className="doc_border_btn doc_border_btn_two">
+            <Link href="#" className="doc_border_btn doc_border_btn_two">
               Buy KbDoc Now
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,67 +1,69 @@
-export default function FunFact() {
-    return (
-        <section className="doc_fun_fact_area">
-            <div className="animated-waves">
-                <svg
-                    width="100%"
-                    height="100%"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="animated-wave"
-                >
-                    <title>Wave</title>
-                    <defs></defs>
-                    <path id="animated-wave-three" d="" />
-                </svg>
-                <svg
-                    width="100%"
-                    height="100%"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="animated-wave"
-                >
-                    <title>Wave</title>
-                    <defs></defs>
-                    <path id="animated-wave-four" d="" />
-                </svg>
-            </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp">
-                        <div className="doc_fact_item">
-                            <div className="counter">5486</div>
-                            <p>Happy Customer</p>
-                        </div>
-                    </div>
-                    <div
-                        className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
-                        data-wow-delay="0.2s"
-                    >
-                        <div className="doc_fact_item">
-                            <div className="counter">642</div>
-                            <p>Cups of Coffee</p>
-                        </div>
-                    </div>
-                    <div
-                        className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
-                        data-wow-delay="0.4s"
-                    >
-                        <div className="doc_fact_item">
-                            <div className="counter">100</div>
-                            <p>Finished Projects</p>
-                        </div>
-                    </div>
-                    <div
-                        className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
-                        data-wow-delay="0.6s"
-                    >
-                        <div className="doc_fact_item">
-                            <div className="counter">476</div>
-                            <p>Staff Members</p>
-                        </div>
-                    </div>
+import CountUp from "react-countup"; // Optional for animated numbers
+import Wavify from "react-wavify";
+
+const FunFactSection = () => {
+  return (
+    <section className="doc_fun_fact_area">
+      {/* Replace static SVGs with react-wavify */}
+      <div
+        className="animated-waves"
+        style={{ position: "absolute", width: "100%", bottom: 0, zIndex: 0 }}
+      >
+        <Wavify
+          className="animated-wave"
+          fill="rgba(188, 214, 234, 0.14)"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 60,
+            speed: 0.2,
+            points: 4,
+          }}
+        />
+        <Wavify
+          className="animated-wave"
+          fill="rgba(125, 214, 234, 0.14)"
+          paused={false}
+          options={{
+            height: 50,
+            amplitude: 60,
+            speed: 0.4,
+            points: 3,
+          }}
+          style={{ position: "absolute", bottom: 0 }}
+        />
+      </div>
+
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+        <div className="row">
+          {[
+            { number: 5486, label: "Happy Customer" },
+            { number: 642, label: "Cups of Coffee" },
+            { number: 100, label: "Finished Projects" },
+            { number: 476, label: "Staff Members" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="col-lg-3 col-md-3 col-sm-6 wow fadeInUp"
+              data-wow-delay={`${i * 0.2}s`}
+              style={{
+                visibility: "visible",
+                animationDelay: `${i * 0.2}s`,
+                animationName: "fadeInUp",
+              }}
+            >
+              <div className="doc_fact_item">
+                <div className="counter">
+                  <CountUp end={item.number} duration={2} />
                 </div>
+                <p>{item.label}</p>
+              </div>
             </div>
-        </section>
-    );
-}
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FunFactSection;

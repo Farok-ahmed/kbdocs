@@ -5,15 +5,10 @@ import CallToActionForums from "@/components/page-sections/forums-page/call-to-a
 import ForumPosts from "@/components/page-sections/forums-page/forum-posts";
 import ForumSidebar from "@/components/page-sections/forums-page/forum-sidebar";
 import ForumsHeaders from "@/components/page-sections/forums-page/forums-headers";
-import { BreadcrumbProps, CategoryProps } from "@/types/breadcrumb-types";
+import { BreadcrumbProps } from "@/types/breadcrumb-types";
+import "./style.scss"; // Importing the style for the forums page
 
 const ForumsPage = () => {
-  // Example categories, you can replace this with your actual data
-  const categories: CategoryProps[] = [
-    { id: 1, name: "Doc Archive" },
-    { id: 2, name: "Doc list" },
-    { id: 3, name: "KbDoc" },
-  ];
   // Breadcurmb component
   const breadcrumb: BreadcrumbProps[] = [
     { name: "Home", link: "/" },
@@ -22,7 +17,7 @@ const ForumsPage = () => {
   return (
     <>
       <DefaultLayout>
-        <Breadcrumb breadcrumb={breadcrumb} categories={categories} />
+        <Breadcrumb breadcrumb={breadcrumb} />
         <section className="doc_blog_grid_area sec_pad forum-page-content">
           <div className="container">
             <div className="row">

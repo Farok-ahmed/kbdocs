@@ -7,7 +7,7 @@ const BlogGridTopPost = () => {
         <div className="container">
           <div className="row blog_top_post flex-row-reverse">
             <div className="col-lg-7 p_top_img">
-              <img className="p_img" src="img/blog-grid/top_post.jpg" alt="" />
+              <img className="p_img" src="/img/blog-grid/top_post.jpg" alt="" />
             </div>
             <div className="col-lg-5 p-0">
               <div className="b_top_post_content">
@@ -25,7 +25,7 @@ const BlogGridTopPost = () => {
                   good sir jolly good such a fibber up the kyver golly gosh
                   David, naff chap.!
                 </p>
-                <Link href="#" className="learn_btn">
+                <Link href="/blog-single" className="learn_btn">
                   Continue Reading
                   <i className="arrow_right" />
                 </Link>

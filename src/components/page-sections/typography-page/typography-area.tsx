@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const TypographyArea = () => {
   return (
     <>
@@ -136,44 +138,44 @@ const TypographyArea = () => {
           <h5 className="h5 regular">Unordered Lists (Nested)</h5>
           <ul className="list-unstyled unorderlist">
             <li>
-              <a href="#">Option panel</a>
+              <Link href="#">Option panel</Link>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">Incredible Support</a>
+                  <Link href="#">Incredible Support</Link>
                   <ul className="list-unstyled">
                     <li>
-                      <a href="#">Life time Update</a>
+                      <Link href="#">Life time Update</Link>
                     </li>
                     <li>
-                      <a href="#">Unlimited Colors</a>
+                      <Link href="#">Unlimited Colors</Link>
                     </li>
                     <li>
-                      <a href="#">Translation Ready</a>
+                      <Link href="#">Translation Ready</Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#">List item two</a>
+                  <Link href="#">List item two</Link>
                 </li>
                 <li>
-                  <a href="#">List item three</a>
+                  <Link href="#">List item three</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#">Option panel</a>
+              <Link href="#">Option panel</Link>
             </li>
             <li>
-              <a href="#">Easy to Customize</a>
+              <Link href="#">Easy to Customize</Link>
             </li>
             <li>
-              <a href="#">User Friendly</a>
+              <Link href="#">User Friendly</Link>
             </li>
             <li>
-              <a href="#">Incredible Support</a>
+              <Link href="#">Incredible Support</Link>
             </li>
             <li>
-              <a href="#">Customize</a>
+              <Link href="#">Customize</Link>
             </li>
           </ul>
           <div className="steps-panel">
@@ -196,44 +198,44 @@ const TypographyArea = () => {
           <h5 className="h5 regular">Ordered Lists (Nested)</h5>
           <ol>
             <li>
-              <a href="#">Option panel</a>
+              <Link href="#">Option panel</Link>
               <ol>
                 <li>
-                  <a href="#">Incredible Support</a>
+                  <Link href="#">Incredible Support</Link>
                   <ol>
                     <li>
-                      <a href="#">Life time Update</a>
+                      <Link href="#">Life time Update</Link>
                     </li>
                     <li>
-                      <a href="#">Unlimited Colors</a>
+                      <Link href="#">Unlimited Colors</Link>
                     </li>
                     <li>
-                      <a href="#">Translation Ready</a>
+                      <Link href="#">Translation Ready</Link>
                     </li>
                   </ol>
                 </li>
                 <li>
-                  <a href="#">List item two</a>
+                  <Link href="#">List item two</Link>
                 </li>
                 <li>
-                  <a href="#">List item three</a>
+                  <Link href="#">List item three</Link>
                 </li>
               </ol>
             </li>
             <li>
-              <a href="#">Option panel</a>
+              <Link href="#">Option panel</Link>
             </li>
             <li>
-              <a href="#">Easy to Customize</a>
+              <Link href="#">Easy to Customize</Link>
             </li>
             <li>
-              <a href="#">User Friendly</a>
+              <Link href="#">User Friendly</Link>
             </li>
             <li>
-              <a href="#">Incredible Support</a>
+              <Link href="#">Incredible Support</Link>
             </li>
             <li>
-              <a href="#">Customize</a>
+              <Link href="#">Customize</Link>
             </li>
           </ol>
           <div className="steps-panel">

@@ -1,3 +1,5 @@
+import Select from "@/components/select";
+import Link from "next/link";
 const ForumSingleComments = () => {
   return (
     <>
@@ -7,14 +9,14 @@ const ForumSingleComments = () => {
           <div className="row">
             <div className="col-lg-9">
               <div className="forum-post-top">
-                <a className="author-avatar" href="#">
-                  <img src="img/forum/author-avatar.png" alt="" />
-                </a>
+                <Link className="author-avatar" href="#">
+                  <img src="/img/forum/author-avatar.png" alt="" />
+                </Link>
                 <div className="forum-post-author">
-                  <a className="author-name" href="#">
+                  <Link className="author-name" href="#">
                     {" "}
                     Eh Jewel{" "}
-                  </a>
+                  </Link>
                   <div className="forum-author-meta">
                     <div className="author-badge">
                       <svg
@@ -33,7 +35,7 @@ const ForumSingleComments = () => {
                     </div>
                     <div className="author-badge">
                       <i className="icon_calendar" />
-                      <a href="">January 16 at 10:32 PM</a>
+                      <Link href="">January 16 at 10:32 PM</Link>
                     </div>
                   </div>
                 </div>
@@ -74,24 +76,26 @@ const ForumSingleComments = () => {
           <h3 className="title">All Replies</h3>
           <div className="filter-bar d-flex">
             <div className="sort">
-              <select className="custom-select" id="sortBy">
-                <option>Sort By</option>
-                <option value={1}>ASC</option>
-                <option value={2}>Desc</option>
-                <option value={3}>Vote</option>
-              </select>
+              <Select
+                options={[
+                  { value: "sort-by", label: "Sort By" },
+                  { value: "asc", label: "ASC" },
+                  { value: "desc", label: "Desc" },
+                  { value: "vote", label: "Vote" },
+                ]}
+              />
             </div>
             <p>Page 1 of 4</p>
           </div>
           <div className="forum-comment">
             <div className="forum-post-top">
-              <a className="author-avatar" href="#">
-                <img src="img/forum/author-avatar.png" alt="author avatar" />
-              </a>
+              <Link className="author-avatar" href="#">
+                <img src="/img/forum/author-avatar.png" alt="author avatar" />
+              </Link>
               <div className="forum-post-author">
-                <a className="author-name" href="#">
+                <Link className="author-name" href="#">
                   Eh Jewel
-                </a>
+                </Link>
                 <div className="forum-author-meta">
                   <div className="author-badge">
                     <svg
@@ -110,7 +114,7 @@ const ForumSingleComments = () => {
                   </div>
                   <div className="author-badge">
                     <i className="icon_calendar" />
-                    <a href="">January 16 at 10:32 PM</a>
+                    <Link href="">January 16 at 10:32 PM</Link>
                   </div>
                 </div>
               </div>
@@ -123,24 +127,24 @@ const ForumSingleComments = () => {
                 delinquent wellies, cockup absolutely bladdered barmy bleeding.!
               </p>
               <div className="action-button-container action-btns">
-                <a href="#" className="action_btn btn-ans ask-btn reply-btn">
+                <Link href="#" className="action_btn btn-ans ask-btn reply-btn">
                   Reply
-                </a>
-                <a href="#" className="action_btn btn-ans ask-btn too-btn">
+                </Link>
+                <Link href="#" className="action_btn btn-ans ask-btn too-btn">
                   Helpful
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="forum-comment">
             <div className="forum-post-top">
-              <a className="author-avatar" href="#">
-                <img src="img/forum/author-avatar-2.jpg" alt="author avatar" />
-              </a>
+              <Link className="author-avatar" href="#">
+                <img src="/img/forum/author-avatar-2.jpg" alt="author avatar" />
+              </Link>
               <div className="forum-post-author">
-                <a className="author-name" href="#">
+                <Link className="author-name" href="#">
                   Parsley Montana
-                </a>
+                </Link>
                 <div className="forum-author-meta">
                   <div className="author-badge">
                     <svg
@@ -159,7 +163,7 @@ const ForumSingleComments = () => {
                   </div>
                   <div className="author-badge">
                     <i className="icon_calendar" />
-                    <a href="">February 16 at 5:32 PM</a>
+                    <Link href="">February 16 at 5:32 PM</Link>
                   </div>
                 </div>
               </div>
@@ -171,24 +175,24 @@ const ForumSingleComments = () => {
                 excuse my French, mush barney.
               </p>
               <div className="action-button-container action-btns">
-                <a href="#" className="action_btn btn-ans ask-btn reply-btn">
+                <Link href="#" className="action_btn btn-ans ask-btn reply-btn">
                   Reply
-                </a>
-                <a href="#" className="action_btn btn-ans ask-btn too-btn">
+                </Link>
+                <Link href="#" className="action_btn btn-ans ask-btn too-btn">
                   Helpful
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="forum-comment">
             <div className="forum-post-top">
-              <a className="author-avatar" href="#">
-                <img src="img/forum/author-avatar-3.jpg" alt="author avatar" />
-              </a>
+              <Link className="author-avatar" href="#">
+                <img src="/img/forum/author-avatar-3.jpg" alt="author avatar" />
+              </Link>
               <div className="forum-post-author">
-                <a className="author-name" href="#">
+                <Link className="author-name" href="#">
                   Giles Posture
-                </a>
+                </Link>
                 <div className="forum-author-meta">
                   <div className="author-badge">
                     <svg
@@ -207,7 +211,7 @@ const ForumSingleComments = () => {
                   </div>
                   <div className="author-badge">
                     <i className="icon_calendar" />
-                    <a href="">January 16 at 10:32 PM</a>
+                    <Link href="">January 16 at 10:32 PM</Link>
                   </div>
                 </div>
               </div>
@@ -219,24 +223,24 @@ const ForumSingleComments = () => {
                 play happy days give us a bell nice one cup.!
               </p>
               <div className="action-button-container action-btns">
-                <a href="#" className="action_btn btn-ans ask-btn reply-btn">
+                <Link href="#" className="action_btn btn-ans ask-btn reply-btn">
                   Reply
-                </a>
-                <a href="#" className="action_btn btn-ans ask-btn too-btn">
+                </Link>
+                <Link href="#" className="action_btn btn-ans ask-btn too-btn">
                   Helpful
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="forum-comment">
             <div className="forum-post-top">
-              <a className="author-avatar" href="#">
-                <img src="img/forum/author-avatar.png" alt="author avatar" />
-              </a>
+              <Link className="author-avatar" href="#">
+                <img src="/img/forum/author-avatar.png" alt="author avatar" />
+              </Link>
               <div className="forum-post-author">
-                <a className="author-name" href="#">
+                <Link className="author-name" href="#">
                   Norman Gordon
-                </a>
+                </Link>
                 <div className="forum-author-meta">
                   <div className="author-badge">
                     <svg
@@ -255,7 +259,7 @@ const ForumSingleComments = () => {
                   </div>
                   <div className="author-badge">
                     <i className="icon_calendar" />
-                    <a href="">January 16 at 10:32 PM</a>
+                    <Link href="">January 16 at 10:32 PM</Link>
                   </div>
                 </div>
               </div>
@@ -268,12 +272,12 @@ const ForumSingleComments = () => {
                 delinquent wellies, cockup absolutely bladdered barmy bleeding.!
               </p>
               <div className="action-button-container action-btns">
-                <a href="#" className="action_btn btn-ans ask-btn reply-btn">
+                <Link href="#" className="action_btn btn-ans ask-btn reply-btn">
                   Reply
-                </a>
-                <a href="#" className="action_btn btn-ans ask-btn too-btn">
+                </Link>
+                <Link href="#" className="action_btn btn-ans ask-btn too-btn">
                   Helpful
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -283,31 +287,31 @@ const ForumSingleComments = () => {
             </div>
             <ul className="post-pagination">
               <li className="prev-post pegi-disable">
-                <a href="#">
+                <Link href="#">
                   <i className="arrow_carrot-left" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="active">
+                <Link href="#" className="active">
                   1
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">2</a>
+                <Link href="#">2</Link>
               </li>
               <li>
-                <a href="#">3</a>
+                <Link href="#">3</Link>
               </li>
               <li>
-                <a href="#">4</a>
+                <Link href="#">4</Link>
               </li>
               <li>
-                <a href="#">15</a>
+                <Link href="#">15</Link>
               </li>
               <li className="next-post">
-                <a href="#">
+                <Link href="#">
                   <i className="arrow_carrot-right" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

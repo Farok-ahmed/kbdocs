@@ -1,5 +1,7 @@
 "use client";
 
+import { OSProvider } from "@/contexts/os-context";
+
 export default function ClientWrapper({ children }: React.PropsWithChildren) {
-    return <>{children}</>;
+  return <OSProvider>{children}</OSProvider>;
 }

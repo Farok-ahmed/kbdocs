@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ForumSingleSidebar = () => {
   return (
     <>
@@ -29,19 +31,19 @@ const ForumSingleSidebar = () => {
             <ul className="list-unstyled usefull-links">
               <li>
                 <i className="icon_lightbulb_alt" />
-                <a href="#">FAQs</a>
+                <Link href="#">FAQs</Link>
               </li>
               <li>
                 <i className="icon_clock_alt" />
-                <a href="#">Popular</a>
+                <Link href="#">Popular</Link>
               </li>
               <li>
                 <i className="icon_piechart" />
-                <a href="#">Recent</a>
+                <Link href="#">Recent</Link>
               </li>
               <li>
                 <i className="icon_info_alt" />
-                <a href="#">Unanswered</a>
+                <Link href="#">Unanswered</Link>
               </li>
             </ul>
           </div>
@@ -49,34 +51,34 @@ const ForumSingleSidebar = () => {
             <h4 className="c_head">Ticket Categories</h4>
             <ul className="list-unstyled ticket_categories">
               <li>
-                <img src="img/home_support/cmm5.png" alt="category" />
-                <a href="#">Docs WordPress Theme</a>{" "}
+                <img src="/img/home_support/cmm5.png" alt="category" />
+                <Link href="#">Docs WordPress Theme</Link>{" "}
                 <span className="count">10</span>
               </li>
               <li>
-                <img src="img/home_support/cmm4.png" alt="category" />
-                <a href="#">Product Landing Page</a>
+                <img src="/img/home_support/cmm4.png" alt="category" />
+                <Link href="#">Product Landing Page</Link>
                 <span className="count count-fill">13</span>
                 <span className="count">54</span>
               </li>
               <li>
-                <img src="img/home_support/cmm2.png" alt="category" />
-                <a href="#">Knowledge base Template</a>
+                <img src="/img/home_support/cmm2.png" alt="category" />
+                <Link href="#">Knowledge base Template</Link>
                 <span className="count">142</span>
               </li>
               <li>
-                <img src="img/home_support/cmm8.png" alt="category" />
-                <a href="#">Startup and App WP Theme</a>{" "}
+                <img src="/img/home_support/cmm8.png" alt="category" />
+                <Link href="#">Startup and App WP Theme</Link>{" "}
                 <span className="count">13</span>
               </li>
               <li>
-                <img src="img/home_support/cmm9.png" alt="category" />
-                <a href="#">Clean Email Template</a>{" "}
+                <img src="/img/home_support/cmm9.png" alt="category" />
+                <Link href="#">Clean Email Template</Link>{" "}
                 <span className="count">123</span>
               </li>
               <li>
-                <img src="img/home_support/cmm10.png" alt="category" />
-                <a href="#">Apps WordPress Theme</a>{" "}
+                <img src="/img/home_support/cmm10.png" alt="category" />
+                <Link href="#">Apps WordPress Theme</Link>{" "}
                 <span className="count">18</span>
               </li>
             </ul>
@@ -85,43 +87,43 @@ const ForumSingleSidebar = () => {
             <h4 className="c_head">Tags</h4>
             <ul className="list-unstyled w_tag_list style-light">
               <li>
-                <a href="#">Swagger</a>
+                <Link href="#">Swagger</Link>
               </li>
               <li>
-                <a href="#">KbDoc</a>
+                <Link href="#">KbDoc</Link>
               </li>
               <li>
-                <a href="#">weCare</a>
+                <Link href="#">weCare</Link>
               </li>
               <li>
-                <a href="#">Business</a>
+                <Link href="#">Business</Link>
               </li>
               <li>
-                <a href="#">Download</a>
+                <Link href="#">Download</Link>
               </li>
               <li>
-                <a href="#">Doc</a>
+                <Link href="#">Doc</Link>
               </li>
               <li>
-                <a href="#">WordPress</a>
+                <Link href="#">WordPress</Link>
               </li>
               <li>
-                <a href="#">Design</a>
+                <Link href="#">Design</Link>
               </li>
               <li>
-                <a href="#">ui/ux</a>
+                <Link href="#">ui/ux</Link>
               </li>
               <li>
-                <a href="#">Doc Design</a>
+                <Link href="#">Doc Design</Link>
               </li>
               <li>
-                <a href="#">DocAll</a>
+                <Link href="#">DocAll</Link>
               </li>
               <li>
-                <a href="#">Productboard</a>
+                <Link href="#">Productboard</Link>
               </li>
               <li>
-                <a href="#">Magento</a>
+                <Link href="#">Magento</Link>
               </li>
             </ul>
           </div>

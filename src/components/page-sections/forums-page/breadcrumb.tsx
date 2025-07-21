@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const breadcrumb = () => {
   return (
     <>
@@ -67,10 +69,10 @@ const breadcrumb = () => {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item">
-                    <a href="#">Home</a>
+                    <Link href="#">Home</Link>
                   </li>
                   <li className="breadcrumb-item">
-                    <a href="#">Blog</a>
+                    <Link href="#">Blog</Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
                     Blog with sidebar
@@ -79,9 +81,9 @@ const breadcrumb = () => {
               </nav>
             </div>
             <div className="col-sm-5">
-              <a href="#" className="date">
+              <Link href="#" className="date">
                 <i className="icon_clock_alt"></i>Updated on March 03, 2020
-              </a>
+              </Link>
             </div>
           </div>
         </div>

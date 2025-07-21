@@ -1,6 +1,20 @@
+import Search from "@/app/forum-topics/_components/search";
 import Link from "next/link";
-
+interface BreadcrumbTopicProps {
+  name: string;
+  link: string;
+  id: number;
+}
 const BreadcrumbTopic = () => {
+  const breadcrumbData: BreadcrumbTopicProps[] = [
+    { name: "Home", link: "/", id: 1 },
+    { name: "Docs", link: "/docs", id: 2 },
+    {
+      name: "KbDoc WordPress Theme",
+      link: "/docs/kbdoc-wordpress-theme",
+      id: 3,
+    },
+  ];
   return (
     <>
       <section className="breadcrumb_area">
@@ -36,52 +50,38 @@ const BreadcrumbTopic = () => {
           src="img/home_one/flower.png"
           alt=""
         />
-        <div className="container custom_container">
-          <form
-            action="#"
-            className="banner_search_form banner_search_form_two"
-          >
-            <div className="input-group">
-              <input
-                type="search"
-                className="form-control"
-                placeholder='Search ("/" to focus)'
-              />
-              <div className="input-group-append">
-                <select className="custom-select" id="inlineFormCustomSelect">
-                  <option>All Category</option>
-                  <option value="1">Doc Archive</option>
-                  <option value="2">Doc List</option>
-                  <option value="3">KbDoc</option>
-                </select>
-              </div>
-              <button type="submit">
-                <i className="icon_search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
+        <Search />
       </section>
       <section className="page_breadcrumb">
-        <div className="container">
+        <div className="container custom_container">
           <div className="row">
             <div className="col-sm-7">
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link href="#">Home</Link>
+                  {breadcrumbData.map((item) => (
+                    <li
+                      key={item.id}
+                      className={`breadcrumb-item ${
+                        item.id === breadcrumbData.length ? "active" : ""
+                      }`}
+                    >
+                      <Link href={item.link}>{item.name}</Link>
+                    </li>
+                  ))}
+                  {/* <li className="breadcrumb-item">
+                    <Link href="">Home</Link>
                   </li>
                   <li className="breadcrumb-item">
-                    <Link href="#">Blog</Link>
+                    <Link href="">Docs</Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
-                    Blog with sidebar
-                  </li>
+                    KbDoc WordPress Theme
+                  </li> */}
                 </ol>
               </nav>
             </div>
             <div className="col-sm-5">
-              <Link href="#" className="date">
+              <Link href="" className="date">
                 <i className="icon_clock_alt"></i>Updated on March 03, 2020
               </Link>
             </div>

@@ -1,0 +1,21 @@
+/* Background Overlay Styles */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* backdrop-filter: blur(4px); */
+  z-index: 40; /* Lower than the search bar */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-active {
+  opacity: 1;
+}
+
+.overlay-inactive {
+  opacity: 0;
+  pointer-events: none; /* Makes the overlay unclickable when inactive */
+}
