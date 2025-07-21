@@ -85,8 +85,7 @@ export default function KbDocChartWrapper() {
             <li className="info-left-top color-one">
               <div className="counterup">
                 <span className="counter">
-                  {" "}
-                  <CountUp end={75} />
+                  <CountUp end={75} enableScrollSpy />
                 </span>
                 <span>%</span>
               </div>
@@ -109,7 +108,7 @@ export default function KbDocChartWrapper() {
             <li className="info-right-top color-two">
               <div className="counterup">
                 <span className="counter">
-                  <CountUp end={22} />
+                  <CountUp end={22} enableScrollSpy />
                 </span>
                 <span>%</span>
               </div>
@@ -132,7 +131,7 @@ export default function KbDocChartWrapper() {
               <div className="counterup">
                 <span className="counter">
                   {" "}
-                  <CountUp end={44} />
+                  <CountUp end={44} enableScrollSpy />
                 </span>
                 <span>%</span>
               </div>
@@ -154,7 +153,7 @@ export default function KbDocChartWrapper() {
             <li className="info-right-bottom color-four">
               <div className="counterup">
                 <span className="counter">
-                  <CountUp end={35} />
+                  <CountUp end={35} enableScrollSpy />
                 </span>
                 <span>%</span>
               </div>
@@ -178,7 +177,7 @@ export default function KbDocChartWrapper() {
           <div className="full-amount">
             <h3 className="total-count">
               <span className="counter">
-                <CountUp end={100} />
+                <CountUp end={100} enableScrollSpy />
               </span>
               <span>%</span>
             </h3>

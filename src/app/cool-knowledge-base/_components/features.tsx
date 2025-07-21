@@ -41,7 +41,7 @@ const Features = () => {
                     delay: 0.2,
                     ease: "easeInOut",
                   }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2 }}
                 >
                   <img src={item.image} alt="" />
                   <div className="media-body">

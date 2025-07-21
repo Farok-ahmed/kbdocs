@@ -54,7 +54,7 @@ const FunFactSection = () => {
             >
               <div className="doc_fact_item">
                 <div className="counter">
-                  <CountUp end={item.number} duration={2} />
+                  <CountUp end={item.number} duration={2} enableScrollSpy />
                 </div>
                 <p>{item.label}</p>
               </div>

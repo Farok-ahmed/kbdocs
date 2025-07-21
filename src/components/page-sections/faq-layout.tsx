@@ -1,5 +1,6 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { FC, useState } from "react";
 
@@ -73,65 +74,51 @@ const FaqLayout: FC<FaqLayoutProps> = ({ data }) => {
           >
             <div className="accordion doc_faq_info" id="accordionExample">
               {activeContent.length > 0 ? (
-                <AnimatePresence initial={false}>
-                  {activeContent.map((faqItem, index) => {
-                    const isFaqOpen = openFaqIndex === index;
-                    return (
-                      <motion.div
-                        layout
-                        className="card wow fadeInUp"
-                        key={`faq-${activeIndex}-${index}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{
-                          duration: 0.3,
-                          delay: index * 0.05,
-                          ease: "easeOut",
-                        }}
-                      >
-                        <div className="card-header" id={`heading${index}`}>
-                          <h2 className="mb-0">
-                            <button
-                              style={{ boxShadow: "none" }}
-                              className={`btn btn-link ${
-                                !isFaqOpen ? "collapsed" : ""
-                              }`}
-                              type="button"
-                              aria-expanded={isFaqOpen}
-                              onClick={() => handleFaqClick(index)}
-                            >
-                              {faqItem.question}
-                              <i className="icon_plus"></i>
-                              <i className="icon_minus-06"></i>
-                            </button>
-                          </h2>
-                        </div>
-                        <AnimatePresence initial={false}>
-                          {isFaqOpen && (
-                            <motion.div
-                              key={`accordion-${activeIndex}-${index}`}
-                              id={`collapse${index}`}
-                              className="collapse show"
-                              aria-labelledby={`heading${index}`}
-                              data-parent="#accordionExample"
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{
-                                duration: 0.4,
-                                ease: [0.4, 0.0, 0.2, 1],
-                              }}
-                              style={{ overflow: "hidden" }}
-                            >
-                              <div className="card-body">{faqItem.answer}</div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </motion.div>
-                    );
-                  })}
-                </AnimatePresence>
+                activeContent.map((faqItem, index) => {
+                  const isFaqOpen = openFaqIndex === index;
+                  return (
+                    <div className="card" key={`faq-${activeIndex}-${index}`}>
+                      <div className="card-header" id={`heading${index}`}>
+                        <h2 className="mb-0">
+                          <button
+                            style={{ boxShadow: "none" }}
+                            className={`btn btn-link ${
+                              !isFaqOpen ? "collapsed" : ""
+                            }`}
+                            type="button"
+                            aria-expanded={isFaqOpen}
+                            onClick={() => handleFaqClick(index)}
+                          >
+                            {faqItem.question}
+                            <i className="icon_plus"></i>
+                            <i className="icon_minus-06"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <AnimatePresence initial={false}>
+                        {isFaqOpen && (
+                          <motion.div
+                            key={`accordion-${activeIndex}-${index}`}
+                            id={`collapse${index}`}
+                            className="collapse show"
+                            aria-labelledby={`heading${index}`}
+                            data-parent="#accordionExample"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{
+                              duration: 0.4,
+                              ease: [0.4, 0.0, 0.2, 1],
+                            }}
+                            style={{ overflow: "hidden" }}
+                          >
+                            <div className="card-body">{faqItem.answer}</div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })
               ) : (
                 <div className="card">
                   <div className="card-body">
