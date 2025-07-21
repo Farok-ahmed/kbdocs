@@ -25,6 +25,7 @@ const TooltipeDynamic = ({ children, content }) => {
             style={{
               position: "absolute",
               filter: "drop-shadow(0px 5px 10px rgba(0,0,0,0.2))",
+              top:"32px",
             }}
           >
             <div>{content}</div>

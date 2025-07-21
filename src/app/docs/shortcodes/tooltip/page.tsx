@@ -87,7 +87,7 @@ const TooltipPage = () => {
           <h4 className="s_title smooth-scroll-heading" id="tooltip-t">
             Tooltip
           </h4>
-          <div className="tooltip_content">
+          <div className="tooltip_content ">
             <h6>What is an Extension?</h6>
             <p>
               So I said cup of tea Queen's English owt to do with me I don't
@@ -133,7 +133,7 @@ const TooltipPage = () => {
               delinquent cack bodge a bonnet.
             </p>
           </div>
-          <div className="highlight_text mt-5">
+          <div className="highlight_text mt-5 tooltipe_relative ">
             <h6>Text Tooltips</h6>
             <p>
               He nicked it chip shop argy-bargy brilliant get stuffed mate

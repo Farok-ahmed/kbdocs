@@ -1,3 +1,6 @@
+.tooltipe_relative{
+    position:relative;
+}
 .speech-bubble {
   /* Positioning and Box Model */
   position: relative;
@@ -22,7 +25,7 @@
   background-color: #ef971a;
 }
 /* This creates the triangular pointer at the bottom */
-.speech-bubble::after {
+.speech-bubble.buble-blue::after {
   content: "";
   position: absolute;
 
@@ -36,5 +39,11 @@
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid #4f5bde; /* This color must match the background-color */
+  
+}
+.speech-bubble.buble-blue::after{
+border-top: 12px solid #4f5bde; /* This color must match the background-color */
+}
+.speech-bubble.buble-orange::after{
+    border-top:12px solid #ef971a;
 }
