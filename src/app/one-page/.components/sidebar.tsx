@@ -155,11 +155,8 @@ const Sidebar: React.FC<SidebarProps> = () => {
                   {item.submenu && (
                     <>
                       <span className="icon">
-                        {openIndex === index ? (
-                          <i className="icon_minus-06" />
-                        ) : (
-                          <i className="icon_plus" />
-                        )}
+                        <i className="icon_plus" />
+                        <i className="icon_minus-06" />
                       </span>
 
                       <AnimatePresence initial={false}>
