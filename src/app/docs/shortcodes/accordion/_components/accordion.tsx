@@ -60,6 +60,7 @@ const Accordion = () => {
               <div className="card-header" id="headingOne">
                 <h5 className="mb-0">
                   <button
+                    style={{ boxShadow: "none" }}
                     onClick={() => toggle(item.id)}
                     className={`btn btn-link collapsed ${
                       isOpen === item.id ? "" : ""

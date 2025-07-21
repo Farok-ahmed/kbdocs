@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import "./style.scss";
+
 const ToggleTwo = ({ title = true }) => {
-  const [isOpen, setIsOpen] = useState<number | null>(1);
+  const [openItems, setOpenItems] = useState<number[]>([1]); // Initially open first item
+
   const accordionData = [
     {
       id: 1,
@@ -20,7 +22,13 @@ const ToggleTwo = ({ title = true }) => {
   ];
 
   const toggleAccordion = (id: number) => {
-    setIsOpen(isOpen === id ? null : id);
+    if (openItems.includes(id)) {
+      // remove it (close)
+      setOpenItems(openItems.filter((itemId) => itemId !== id));
+    } else {
+      // add it (open)
+      setOpenItems([...openItems, id]);
+    }
   };
 
   return (
@@ -29,7 +37,7 @@ const ToggleTwo = ({ title = true }) => {
         <h4 className="s_title load-order-2 smooth-scroll-heading" id="toggle">
           Toggle
           <Link
-            className="anchorjs-link "
+            className="anchorjs-link"
             aria-label="Anchor"
             data-anchorjs-icon=""
             href="#toggle"
@@ -51,13 +59,16 @@ const ToggleTwo = ({ title = true }) => {
               <h5 className="mb-0">
                 <Link
                   href="#"
-                  onClick={() => toggleAccordion(item.id)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleAccordion(item.id);
+                  }}
                   className={`toggle_btn ${
-                    isOpen === item.id ? "" : "collapsed"
+                    openItems.includes(item.id) ? "" : "collapsed"
                   }`}
                   data-toggle="collapse"
                   data-target="#collapseOne"
-                  aria-expanded="false"
+                  aria-expanded={openItems.includes(item.id)}
                   aria-controls="collapseOne"
                 >
                   {item.title}
@@ -67,7 +78,7 @@ const ToggleTwo = ({ title = true }) => {
 
             <div
               className={`accordion-content ${
-                isOpen === item.id ? "show" : ""
+                openItems.includes(item.id) ? "show" : ""
               }`}
             >
               <div className=" ">{item.content}</div>
