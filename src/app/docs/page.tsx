@@ -250,7 +250,11 @@ export default function DocsPage() {
                     Share your email so KbDoc can send you updates about the API
                     and developer platform.
                   </p>
-                  <form className="mailchimp signup_form" method="post">
+                  <form
+                    onSubmit={(e) => e.preventDefault()}
+                    className="mailchimp signup_form"
+                    method="post"
+                  >
                     <div className="input-group">
                       <input
                         type="text"

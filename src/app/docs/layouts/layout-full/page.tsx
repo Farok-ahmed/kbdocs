@@ -1,3 +1,4 @@
+"use client";
 import DocsLayout from "@/components/DocsLayout";
 import TestKbdocVersion from "@/components/test-kbdoc-version";
 const LayoutFull = () => {
@@ -493,6 +494,7 @@ const LayoutFull = () => {
                   and developer platform.
                 </p>
                 <form
+                  onSubmit={(e) => e.preventDefault()}
                   className="mailchimp signup_form"
                   method="post"
                   noValidate={true}
