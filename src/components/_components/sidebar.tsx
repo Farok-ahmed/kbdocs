@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import "./style.scss";
 const mainNavItems = [
@@ -154,6 +155,8 @@ const bottomNavItems = [
 
 export default function Sidebar() {
   const [openItemId, setOpenItemId] = useState<string | null>(null);
+  const pathname = usePathname();
+
   const handleOpen = (itemId: string) => {
     setOpenItemId(openItemId === itemId ? null : itemId);
   };
@@ -193,21 +196,16 @@ export default function Sidebar() {
                     <div>
                       {item.children.map((child) => (
                         <li key={child.id}>
-                          <Link href={child.href}>{child.title}</Link>
+                          <Link
+                            href={child.href}
+                            className={pathname === child.href ? "active" : ""}
+                          >
+                            {child.title}
+                          </Link>
                         </li>
                       ))}
                     </div>
                   </ul>
-                  {/* {openItemId === item.id && (
-                    
-                  )} */}
-                  {/* <ul className="list-unstyled dropdown_nav">
-                    {item.children.map((child) => (
-                      <li key={child.id}>
-                        <Link href={child.href}>{child.title}</Link>
-                      </li>
-                    ))}
-                  </ul> */}
                 </>
               )}
             </li>
