@@ -3,11 +3,11 @@
 import Navbar from "@/components/page-sections/navbar";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import FontSwitcher from "./_componentssf/font-switcher";
-import ModeSwitcher from "./_componentssf/mode-switcher";
-import OSSelector from "./_componentssf/os-selector";
-import Search from "./_componentssf/search";
-import Sidebar from "./_componentssf/sidebar";
+import FontSwitcher from "./_components/font-switcher";
+import ModeSwitcher from "./_components/mode-switcher";
+import OSSelector from "./_components/os-selector";
+import Search from "./_components/search";
+import Sidebar from "./_components/sidebar";
 
 interface Props {
   children: React.ReactNode;
