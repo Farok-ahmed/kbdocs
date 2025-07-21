@@ -82,7 +82,7 @@ export default function Navbar({ navbarHide = "", isDark }) {
         }}
         id="sticky"
       >
-        <div className="container">
+        <div className="container ">
           {!isStickyMenu && (
             <Link className="navbar-brand" href="/">
               {homePage ||
@@ -166,8 +166,8 @@ export default function Navbar({ navbarHide = "", isDark }) {
                                   <>
                                     <img src={subItem?.icon} alt="" />
                                     <div className="text">
-                                      <h5>KbDoc</h5>
-                                      <p>Launch Simple Websites</p>
+                                      <h5>{subItem.title}</h5>
+                                      <p>{subItem.subTitle}</p>
                                     </div>
                                   </>
                                 ) : (

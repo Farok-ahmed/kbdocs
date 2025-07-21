@@ -30,7 +30,7 @@ export default function DocsDropDown({ isOpen }: DocsDropDownProps) {
                     onMouseEnter={() => setSelected(item.href)}
                   >
                     <Link
-                      className={`nav-href`}
+                      className="nav-link"
                       id={`v-pills-${item.href}-tab`}
                       data-toggle="pill"
                       href="#"
