@@ -94,14 +94,18 @@ const mainNavItems = [
     active: false,
     children: [
       { id: "typography", title: "Typography", href: "/typography" },
-      { id: "code", title: "Code", href: "/docs/code" },
-      { id: "image", title: "Image", href: "/docs/image" },
-      { id: "video", title: "Video", href: "/docs/video" },
-      { id: "Cheatsheet", title: "Cheatsheet", href: "/docs/cheatsheet" },
+      { id: "code", title: "Code", href: "/docs/content/code" },
+      { id: "image", title: "Image", href: "/docs/content/image" },
+      { id: "video", title: "Video", href: "/docs/content/video" },
+      {
+        id: "Cheatsheet",
+        title: "Cheatsheet",
+        href: "/docs/content/cheatsheet",
+      },
       {
         id: "keyboard",
         title: "Keyboard Shortcuts",
-        href: "/docs/keyboard-shortcuts",
+        href: "/docs/content/keyboard-shortcuts",
       },
     ],
   },
