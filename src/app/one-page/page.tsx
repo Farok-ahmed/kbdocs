@@ -51,18 +51,20 @@ const OnePage = () => {
     <>
       <div className="body_wrapper sticky_menu">
         <nav
-          className={`navbar navbar-expand-lg menu_one navbar_fixed`}
+          className={`navbar navbar-expand-lg menu_one`}
           style={{
             top: 0,
             zIndex: 100,
           }}
           id="stickyTwo"
         >
-          <div className="container">
+          <div className="container-fluid pl-60 pr-60">
             <Link className="navbar-brand" href="/">
+              {/* <Image src={logo} width={112} alt="Brand Logo" />
+              <Image src={logoW} width={112} alt="Brand Logo" /> */}
               {isDark ? (
                 <>
-                  <img src={logoW} alt="Brand Logo" />
+                  <Image src={logoW} width={112} alt="Brand Logo" />
                   <Image src={logoW} width={112} alt="Brand Logo" />
                 </>
               ) : (
