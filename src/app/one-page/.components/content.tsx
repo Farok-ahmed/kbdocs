@@ -97,7 +97,7 @@ const Content: React.FC<ContentProps> = ({ onDark, isDark }) => {
                     </a>
                   </li>
                 </ul>
-                <OSSelector />
+                <OSSelector isDark={isDark} />
                 <FontSwitcher
                   onIncrease={handleFontSizeIncrease}
                   onDecrease={handleFontSizeDecrease}
