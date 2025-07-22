@@ -109,34 +109,6 @@ export default function CustomSelect({
       value={selectedOption}
       onChange={handleChange}
       formatOptionLabel={formatOptionLabel}
-      // styles={{
-      //   // Custom styles to match Bootstrap look
-      //   control: (base) => ({
-      //     ...base,
-      //     padding: 8,
-      //     color: isDark ? "#f1f1f1" : "#212529",
-      //     minHeight: "38px",
-      //     height: "100%",
-      //     borderRadius: 0,
-      //     border: "1px solid #ced4da",
-      //     boxShadow: "none",
-      //     "&:hover": {
-      //       border: "1px solid #ced4da",
-      //     },
-      //   }),
-      //   option: (base, state) => ({
-      //     ...base,
-      //     backgroundColor: state.isSelected
-      //       ? "#007bff"
-      //       : state.isFocused
-      //       ? "#f1f1f1"
-      //       : undefined,
-      //     color: state.isSelected ? "#f1f1f1" : isDark ? "#f1f1f1" : "#212529",
-      //     cursor: "pointer",
-      //     padding: "8px 12px",
-      //   }),
-      //   indicatorSeparator: (base) => ({ ...base, width: 0 }),
-      // }}
       styles={{
         control: (base) => ({
           ...base,
