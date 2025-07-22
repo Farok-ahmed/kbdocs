@@ -60,8 +60,6 @@ const OnePage = () => {
         >
           <div className="container-fluid pl-60 pr-60">
             <Link className="navbar-brand" href="/">
-              {/* <Image src={logo} width={112} alt="Brand Logo" />
-              <Image src={logoW} width={112} alt="Brand Logo" /> */}
               {isDark ? (
                 <>
                   <Image src={logoW} width={112} alt="Brand Logo" />
