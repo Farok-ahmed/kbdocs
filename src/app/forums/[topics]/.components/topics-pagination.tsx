@@ -1,4 +1,4 @@
-import { DOTS, usePagination } from "@/app/hooks/usePagination";
+import { DOTS, usePagination } from "@/hooks/usePagination";
 import Link from "next/link";
 
 interface TopicsPaginationProps {

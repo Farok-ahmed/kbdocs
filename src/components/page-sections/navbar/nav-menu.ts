@@ -130,7 +130,7 @@ export const navMenu: MenuItem[] = [
       },
       {
         title: "Content",
-        href: "/content",
+        href: "/typography",
         items: [
           {
             title: "Typography",
@@ -138,19 +138,19 @@ export const navMenu: MenuItem[] = [
           },
           {
             title: "Code",
-            href: "/docs/code",
+            href: "/docs/content/code",
           },
           {
             title: "Image",
-            href: "/docs/image",
+            href: "/docs/content/image",
           },
           {
             title: "Video",
-            href: "/docs/video",
+            href: "/docs/content/video",
           },
           {
             title: "Keyboard Shortcuts",
-            href: "/docs/keyboard-shortcuts",
+            href: "/docs/content/keyboard-shortcuts",
           },
         ],
       },
@@ -168,7 +168,7 @@ export const navMenu: MenuItem[] = [
           },
           {
             title: "Cheat Sheet",
-            href: "/docs/cheatsheet",
+            href: "/docs/content/cheatsheet",
           },
           {
             title: "Changelog",

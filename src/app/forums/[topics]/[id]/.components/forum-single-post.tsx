@@ -1,5 +1,5 @@
-import { DOTS, usePagination } from "@/app/hooks/usePagination";
 import Select from "@/components/select";
+import { DOTS, usePagination } from "@/hooks/usePagination";
 import Link from "next/link";
 
 interface PaginationProps {

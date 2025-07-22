@@ -117,7 +117,7 @@ export default function HelpDeskPage() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="img/home_support/bn2.jpg"
+              src="/img/home_support/bn2.jpg"
               alt="people"
             />
           </li>
@@ -129,7 +129,7 @@ export default function HelpDeskPage() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="img/home_support/bn3.jpg"
+              src="/img/home_support/bn3.jpg"
               alt="people"
             />
           </li>
@@ -141,7 +141,7 @@ export default function HelpDeskPage() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="img/home_support/bn4.jpg"
+              src="/img/home_support/bn4.jpg"
               alt="people"
             />
           </li>
@@ -153,7 +153,7 @@ export default function HelpDeskPage() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="img/home_support/bn5.jpg"
+              src="/img/home_support/bn5.jpg"
               alt="people"
             />
           </li>
@@ -165,7 +165,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="img/home_support/bn6.jpg"
+              src="/img/home_support/bn6.jpg"
               alt="people"
             />
           </li>
@@ -177,7 +177,7 @@ export default function HelpDeskPage() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="img/home_support/bn7.jpg"
+              src="/img/home_support/bn7.jpg"
               alt="people"
             />
           </li>
@@ -189,7 +189,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="img/home_support/bn8.jpg"
+              src="/img/home_support/bn8.jpg"
               alt="people"
             />
           </li>
@@ -201,7 +201,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="img/home_support/bn9.jpg"
+              src="/img/home_support/bn9.jpg"
               alt="people"
             />
           </li>
@@ -213,7 +213,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="img/home_support/bn10.jpg"
+              src="/img/home_support/bn10.jpg"
               alt="people"
             />
           </li>
@@ -245,7 +245,7 @@ export default function HelpDeskPage() {
           <li className="partical"></li>
           <li className="partical">
             <img
-              src="img/home_support/bnp2.png"
+              src="/img/home_support/bnp2.png"
               data-parallax='{"x": -250, "y": -160, "rotateZ":200}'
               alt="partical"
             />
@@ -310,7 +310,10 @@ export default function HelpDeskPage() {
               <div className="communities-boxes">
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
-                    <img src="img/home_support/rc6.png" alt="communinity-box" />
+                    <img
+                      src="/img/home_support/rc6.png"
+                      alt="communinity-box"
+                    />
                   </div>
                   <div className="kbDoc-com-box-content">
                     <h3 className="title">
@@ -324,7 +327,10 @@ export default function HelpDeskPage() {
 
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
-                    <img src="img/home_support/rc7.png" alt="communinity-box" />
+                    <img
+                      src="/img/home_support/rc7.png"
+                      alt="communinity-box"
+                    />
                   </div>
                   <div className="kbDoc-com-box-content">
                     <h3 className="title">
@@ -338,7 +344,10 @@ export default function HelpDeskPage() {
 
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
-                    <img src="img/home_support/rc8.png" alt="communinity-box" />
+                    <img
+                      src="/img/home_support/rc8.png"
+                      alt="communinity-box"
+                    />
                   </div>
                   <div className="kbDoc-com-box-content">
                     <h3 className="title">
@@ -352,7 +361,10 @@ export default function HelpDeskPage() {
 
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
-                    <img src="img/home_support/rc9.png" alt="communinity-box" />
+                    <img
+                      src="/img/home_support/rc9.png"
+                      alt="communinity-box"
+                    />
                   </div>
                   <div className="kbDoc-com-box-content">
                     <h3 className="title">
@@ -367,7 +379,7 @@ export default function HelpDeskPage() {
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
                     <img
-                      src="img/home_support/rc10.png"
+                      src="/img/home_support/rc10.png"
                       alt="communinity-box"
                     />
                   </div>
@@ -384,7 +396,7 @@ export default function HelpDeskPage() {
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
                     <img
-                      src="img/home_support/rc12.png"
+                      src="/img/home_support/rc12.png"
                       alt="communinity-box"
                     />
                   </div>
@@ -401,7 +413,7 @@ export default function HelpDeskPage() {
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
                     <img
-                      src="img/home_support/rc13.png"
+                      src="/img/home_support/rc13.png"
                       alt="communinity-box"
                     />
                   </div>
@@ -418,7 +430,7 @@ export default function HelpDeskPage() {
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
                     <img
-                      src="img/home_support/rc14.png"
+                      src="/img/home_support/rc14.png"
                       alt="communinity-box"
                     />
                   </div>
@@ -435,7 +447,7 @@ export default function HelpDeskPage() {
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
                     <img
-                      src="img/home_support/rc15.png"
+                      src="/img/home_support/rc15.png"
                       alt="communinity-box"
                     />
                   </div>
@@ -451,7 +463,7 @@ export default function HelpDeskPage() {
                 <div className="kbDoc-com-box">
                   <div className="icon-container">
                     <img
-                      src="img/home_support/rc16.png"
+                      src="/img/home_support/rc16.png"
                       alt="communinity-box"
                     />
                   </div>
