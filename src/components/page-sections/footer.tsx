@@ -116,22 +116,22 @@ export default function Footer() {
                 <h3 className="f_title">Company</h3>
                 <ul className="list-unstyled link_list">
                   <li>
-                    <Link href="">About Us</Link>
+                    <Link href="#">About Us</Link>
                   </li>
                   <li>
-                    <Link href="">Testimonials</Link>
+                    <Link href="#">Testimonials</Link>
                   </li>
                   <li>
-                    <Link href="">Affiliates</Link>
+                    <Link href="#">Affiliates</Link>
                   </li>
                   <li>
-                    <Link href="">Partners</Link>
+                    <Link href="#">Partners</Link>
                   </li>
                   <li>
-                    <Link href="">Careers</Link>
+                    <Link href="#">Careers</Link>
                   </li>
                   <li>
-                    <Link href="">KbDoc for Good</Link>
+                    <Link href="#">KbDoc for Good</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact Us</Link>
@@ -158,19 +158,19 @@ export default function Footer() {
                     <Link href="/">Knowledge Base</Link>
                   </li>
                   <li>
-                    <Link href="">Live Chat</Link>
+                    <Link href="/forums">Live Chat</Link>
                   </li>
                   <li>
-                    <Link href="">Integrations</Link>
+                    <Link href="#">Integrations</Link>
                   </li>
                   <li>
-                    <Link href="">Reports</Link>
+                    <Link href="#">Reports</Link>
                   </li>
                   <li>
-                    <Link href="">iOS & Android</Link>
+                    <Link href="#">iOS & Android</Link>
                   </li>
                   <li>
-                    <Link href="">Messages</Link>
+                    <Link href="#">Messages</Link>
                   </li>
                 </ul>
               </motion.div>
@@ -191,7 +191,7 @@ export default function Footer() {
                     <Link href="/docs">Doc Topic</Link>
                   </li>
                   <li>
-                    <Link href="">Free Training</Link>
+                    <Link href="#">Free Training</Link>
                   </li>
                   <li>
                     <Link href="/doc-archive">Doc Archive</Link>
@@ -203,10 +203,10 @@ export default function Footer() {
                     <Link href="/one-page">Onepage Docs</Link>
                   </li>
                   <li>
-                    <Link href="">Conversion Tracking</Link>
+                    <Link href="#">Conversion Tracking</Link>
                   </li>
                   <li>
-                    <Link href="/docs/cheatsheet">Cheat Sheet</Link>
+                    <Link href="/docs/content/cheatsheet">Cheat Sheet</Link>
                   </li>
                 </ul>
               </motion.div>

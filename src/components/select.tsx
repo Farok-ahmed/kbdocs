@@ -17,6 +17,7 @@ type SelectProps = {
   defaultValue?: string;
   onChange?: (value: string) => void;
   setSelectedOS?: (os: string) => void; // Optional prop for setting selected OS
+  isDark?: boolean; // Optional prop for dark mode styling
 };
 
 export default function CustomSelect({
@@ -27,6 +28,7 @@ export default function CustomSelect({
   defaultValue = "",
   onChange,
   setSelectedOS,
+  isDark,
 }: SelectProps) {
   // Client-side only rendering to avoid hydration mismatch
   const [isMounted, setIsMounted] = useState(false);
@@ -63,12 +65,12 @@ export default function CustomSelect({
   // Handle selection change
   const handleChange = (selected: any) => {
     setSelectedOption(selected);
-    
+
     // Call the onChange prop if provided
     if (onChange && selected) {
       onChange(selected.value);
     }
-    
+
     // Call the optional setSelectedOS function if provided (legacy support)
     if (setSelectedOS && selected) {
       setSelectedOS(selected.value);
@@ -107,32 +109,90 @@ export default function CustomSelect({
       value={selectedOption}
       onChange={handleChange}
       formatOptionLabel={formatOptionLabel}
+      // styles={{
+      //   // Custom styles to match Bootstrap look
+      //   control: (base) => ({
+      //     ...base,
+      //     padding: 8,
+      //     color: isDark ? "#f1f1f1" : "#212529",
+      //     minHeight: "38px",
+      //     height: "100%",
+      //     borderRadius: 0,
+      //     border: "1px solid #ced4da",
+      //     boxShadow: "none",
+      //     "&:hover": {
+      //       border: "1px solid #ced4da",
+      //     },
+      //   }),
+      //   option: (base, state) => ({
+      //     ...base,
+      //     backgroundColor: state.isSelected
+      //       ? "#007bff"
+      //       : state.isFocused
+      //       ? "#f1f1f1"
+      //       : undefined,
+      //     color: state.isSelected ? "#f1f1f1" : isDark ? "#f1f1f1" : "#212529",
+      //     cursor: "pointer",
+      //     padding: "8px 12px",
+      //   }),
+      //   indicatorSeparator: (base) => ({ ...base, width: 0 }),
+      // }}
       styles={{
-        // Custom styles to match Bootstrap look
         control: (base) => ({
           ...base,
           padding: 8,
           minHeight: "38px",
           height: "100%",
           borderRadius: 0,
-          border: "1px solid #ced4da",
+          border: `1px solid ${isDark ? "#444" : "#ced4da"}`,
+          backgroundColor: isDark ? "#2c303a" : "white",
+          color: isDark ? "#f1f1f1" : "#212529",
           boxShadow: "none",
           "&:hover": {
             border: "1px solid #ced4da",
           },
+        }),
+        menu: (base) => ({
+          ...base,
+          backgroundColor: isDark ? "#2c303a" : "white",
+          color: isDark ? "#f1f1f1" : "#212529",
+          zIndex: 9999,
         }),
         option: (base, state) => ({
           ...base,
           backgroundColor: state.isSelected
             ? "#007bff"
             : state.isFocused
-            ? "#f8f9fa"
-            : undefined,
-          color: state.isSelected ? "white" : "inherit",
+            ? isDark
+              ? "#2c303a"
+              : "#f8f9fa"
+            : isDark
+            ? "#2c2c2c"
+            : "white",
+          color: state.isSelected ? "white" : isDark ? "#f1f1f1" : "#212529",
           cursor: "pointer",
           padding: "8px 12px",
         }),
+        singleValue: (base) => ({
+          ...base,
+          color: isDark ? "#f1f1f1" : "#212529",
+        }),
         indicatorSeparator: (base) => ({ ...base, width: 0 }),
+        dropdownIndicator: (base) => ({
+          ...base,
+          color: isDark ? "#f1f1f1" : "#212529",
+          "&:hover": {
+            color: isDark ? "#fff" : "#000",
+          },
+        }),
+        input: (base) => ({
+          ...base,
+          color: isDark ? "#f1f1f1" : "#212529",
+        }),
+        placeholder: (base) => ({
+          ...base,
+          color: isDark ? "#aaa" : "#6c757d",
+        }),
       }}
       isSearchable={false}
     />

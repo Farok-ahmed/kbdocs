@@ -19,10 +19,10 @@ export default function TopBar({ isHelpDesk }: Props) {
                 <Link href="/docs">Docs</Link>
               </li>
               <li>
-                <Link href="/community">Community</Link>
+                <Link href="/forums">Community</Link>
               </li>
               <li>
-                <Link href="/about-support">About Support</Link>
+                <Link href="#">About Support</Link>
               </li>
             </ul>
           </div>

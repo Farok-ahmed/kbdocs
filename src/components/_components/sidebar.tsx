@@ -2,7 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.scss";
 const mainNavItems = [
   {
@@ -162,8 +162,21 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   const handleOpen = (itemId: string) => {
-    setOpenItemId(openItemId === itemId ? null : itemId);
+    setOpenItemId(itemId);
   };
+  useEffect(() => {
+    mainNavItems.forEach((item) => {
+      if (item.children.length > 0) {
+        item.children.forEach((child) => {
+          if (pathname === child.href) {
+            setOpenItemId(item.id);
+          }
+        });
+      } else if (pathname === item.href) {
+        setOpenItemId(item.id);
+      }
+    });
+  }, [pathname]);
   return (
     <aside className="doc_left_sidebarlist" style={{ paddingBottom: 70 }}>
       {/* Toggle Controls */}
@@ -250,9 +263,24 @@ export default function Sidebar() {
 Sidebar.Mobile = () => {
   const [openItemId, setOpenItemId] = useState<string | null>(null);
 
+  const pathname = usePathname();
+
   const handleOpen = (itemId: string) => {
-    setOpenItemId(openItemId === itemId ? null : itemId);
+    setOpenItemId(itemId);
   };
+  useEffect(() => {
+    mainNavItems.forEach((item) => {
+      if (item.children.length > 0) {
+        item.children.forEach((child) => {
+          if (pathname === child.href) {
+            setOpenItemId(item.id);
+          }
+        });
+      } else if (pathname === item.href) {
+        setOpenItemId(item.id);
+      }
+    });
+  }, [pathname]);
 
   return (
     <aside className="doc_left_sidebarlist">

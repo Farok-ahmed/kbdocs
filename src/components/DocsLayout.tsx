@@ -194,8 +194,10 @@ export default function DocsLayout({ children, type = "both" }: Props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const cheatsheetPage = pathName === "/docs/content/cheatsheet";
   const toggleMode = () => {
+    // if cheatsheetPage is true, do not toggle mode
+    if (cheatsheetPage) return;
     setIsDark((prev) => !prev);
   };
 
@@ -213,7 +215,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
       data-offset="86"
       data-scroll-animation="true"
       className={`doc ${menuState === "hidden" ? "" : "menu-is-opened"} ${
-        isDark ? "body_dark" : ""
+        isDark && !cheatsheetPage ? "body_dark" : ""
       }`}
       style={{
         paddingTop: stickyMenuPage ? "70px" : "",
@@ -564,7 +566,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                     <i className="arrow_carrot-right"></i>
                   </div>
                   <div className="doc_rightsidebar scroll">
-                    <OSSelector />
+                    <OSSelector isDark={isDark} />
                     <FontSwitcher
                       onIncrease={handleFontSizeIncrease}
                       onDecrease={handleFontSizeDecrease}

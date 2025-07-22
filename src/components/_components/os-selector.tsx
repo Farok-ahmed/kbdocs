@@ -1,7 +1,7 @@
 import Select from "@/components/select";
 import { OSType, useOS } from "@/contexts/os-context";
 
-export default function OSSelector() {
+export default function OSSelector({ isDark }: { isDark?: boolean }) {
   const { selectedOS, setSelectedOS, options } = useOS();
 
   // Handle OS selection change with proper typing
@@ -22,6 +22,7 @@ export default function OSSelector() {
       onChange={handleOSChange}
       defaultValue={selectedOS}
       className="mb-4"
+      isDark={isDark}
     />
   );
 }
