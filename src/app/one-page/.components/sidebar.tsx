@@ -58,58 +58,6 @@ const Sidebar: React.FC<SidebarProps> = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  //   useEffect(() => {
-  //     const allSections = sidebarItems.flatMap((item) =>
-  //       item.submenu ? [item.id, ...item.submenu.map((sub) => sub.id)] : [item.id]
-  //     );
-
-  //     const onScroll = () => {
-  //       let currentActive: string | null = null;
-  //       const newProgressMap: ProgressMap = {};
-
-  //       allSections.forEach((id) => {
-  //         const el = document.getElementById(id);
-  //         if (!el) return;
-
-  //         const { top, height } = el.getBoundingClientRect();
-  //         const started = top <= window.innerHeight && top + height >= 0;
-  //         const finished = top * -1 >= height;
-
-  //         // Scroll progress calculate
-  //         const scrollY = Math.min(Math.max(-top, 0), height);
-  //         const progress = Math.round((scrollY / height) * 100);
-  //         newProgressMap[id] = progress;
-
-  //         if (started && !finished) {
-  //           currentActive = id;
-  //         }
-  //       });
-
-  //       setProgressMap(newProgressMap);
-  //       setActiveSection(currentActive);
-
-  //       if (currentActive) {
-  //         const activeIndex = sidebarItems.findIndex(
-  //           (item) =>
-  //             item.id === currentActive ||
-  //             item.submenu?.some((sub) => sub.id === currentActive)
-  //         );
-  //         if (activeIndex !== -1) {
-  //           setOpenIndex(activeIndex);
-  //         } else {
-  //           setOpenIndex(null);
-  //         }
-  //       } else {
-  //         setOpenIndex(null);
-  //       }
-  //     };
-
-  //     window.addEventListener("scroll", onScroll);
-  //     onScroll();
-
-  //     return () => window.removeEventListener("scroll", onScroll);
-  //   }, []);
-
   const toggleMenu = (index: number): void => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };

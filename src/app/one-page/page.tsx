@@ -62,7 +62,7 @@ const OnePage = () => {
             <Link className="navbar-brand" href="/">
               {isDark ? (
                 <>
-                  <img src={logoW} width={112} alt="Brand Logo" />
+                  <img src={logoW} alt="Brand Logo" />
                   <Image src={logoW} width={112} alt="Brand Logo" />
                 </>
               ) : (

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Select from "react-select";
-
+import "./select.css";
 export type SelectOption = {
   value: string;
   label: string;
@@ -89,7 +89,7 @@ export default function CustomSelect({
   if (!isMounted) {
     return (
       <div
-        className={`bootstrap-select placeholder ${className}`}
+        className={`bootstrap-select placeholder ${className}  bootstrapSelectResponsive`}
         style={{ height: "100%" }}
       >
         <div className="form-control">
@@ -103,7 +103,7 @@ export default function CustomSelect({
     <Select
       id={id}
       name={name}
-      className={`bootstrap-select ${className}`}
+      className={`bootstrap-select ${className} bootstrap-select-responsive`}
       classNamePrefix="select"
       options={selectOptions}
       value={selectedOption}

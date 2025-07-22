@@ -1,6 +1,5 @@
 "use client"; // if using Next.js App Router
 
-import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -223,9 +222,7 @@ export default function DynamicTabs() {
         {tabsData.map((tab, index) => (
           <li className="nav-item" key={tab.id}>
             <Link
-              className={classNames("nav-link", {
-                active: activeIndex === index,
-              })}
+              className={`nav-link ${activeIndex === index ? "active" : ""}`}
               id={`${tab.id}-tab`}
               href={`#${tab.id}`}
               role="tab"
@@ -249,7 +246,7 @@ export default function DynamicTabs() {
             activeIndex === index ? (
               <motion.div
                 key={tab.id}
-                className={classNames("tab-pane fade show active")}
+                className="tab-pane fade show active"
                 id={tab.id}
                 role="tabpanel"
                 aria-labelledby={`${tab.id}-tab`}

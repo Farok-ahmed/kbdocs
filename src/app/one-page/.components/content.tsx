@@ -8,15 +8,21 @@ import ShortcodePage from "./.shortcode/shortcode-page";
 import TourPage from "./.tour/tour-page";
 import ChangelogPage from "./changelog/changelog";
 import Documentation from "./documentation";
+import "./responsive.scss";
 import Sidebar from "./sidebar";
 import { ContentProps, FontSize } from "./types";
-
 const sizes: FontSize[] = ["font-size-sm", "font-size-md", "font-size-xl"];
 const defaultIndex: number = 1;
 
 const Content: React.FC<ContentProps> = ({ onDark, isDark }) => {
   const [selectedSizeIndex, setSelectedSizeIndex] =
     useState<number>(defaultIndex);
+  const [showRightSidebar, setShowRightSidebar] = useState<boolean>(false);
+
+  // toggle right sidebar visibility
+  const toggleRightSidebar = (): void => {
+    setShowRightSidebar((prev) => !prev);
+  };
 
   // Font size control handlers
   const handleFontSizeReset = (): void => {
@@ -69,8 +75,16 @@ const Content: React.FC<ContentProps> = ({ onDark, isDark }) => {
                 <ChangelogPage />
               </div>
             </div>
-            <div className="col-lg-2 col-md-4 doc_right_mobile_menu">
-              <div className="open_icon" id="right">
+            <div
+              className={`col-lg-2 col-md-4 doc_right_mobile_menu hide-mobile-right ${
+                showRightSidebar ? "open" : ""
+              }`}
+            >
+              <div
+                className="open_icon"
+                id="right"
+                onClick={toggleRightSidebar}
+              >
                 <i className="arrow_carrot-left" />
                 <i className="arrow_carrot-right" />
               </div>

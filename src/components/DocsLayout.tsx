@@ -290,7 +290,9 @@ export default function DocsLayout({ children, type = "both" }: Props) {
 
               <motion.div
                 ref={mobileMenuRef}
-                className="side_menu menu-opened"
+                className={`side_menu ${
+                  menuState === "bottom" ? "" : "menu-opened"
+                }`}
                 variants={menuVariants}
                 initial="hidden"
                 animate="visible"
