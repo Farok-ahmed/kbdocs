@@ -35,7 +35,7 @@ export const docsDropDownMenu = [
       },
       {
         title: "Image Lightbox",
-        href: "/docs/shortcodes/image-lightbox",
+        href: "/docs/tour/image-pointing",
       },
       {
         title: "Tooltip",
@@ -51,7 +51,7 @@ export const docsDropDownMenu = [
       },
       {
         title: "Footnote",
-        href: "/footnote",
+        href: "/docs/shortcodes/footnote",
       },
     ],
   },

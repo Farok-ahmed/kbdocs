@@ -1,11 +1,11 @@
-"use client";
-
 import NotFoundComponent from "@/components/not-found";
 
-export default function NotFound() {
+const NotFoundPage = () => {
   return (
     <>
       <NotFoundComponent />
     </>
   );
-}
+};
+
+export default NotFoundPage;

@@ -69,7 +69,7 @@ const WorkCount = () => {
             <img src={fact.icon} alt={`funfact-${fact.title.toLowerCase()}`} />
           </div>
           <div className="counter">
-            <CountUp start={0} end={fact.end} duration={2} enableScrollSpy />
+            <CountUp end={fact.end} enableScrollSpy />
           </div>
           <h3 className="title">{fact.title}</h3>
         </motion.div>
