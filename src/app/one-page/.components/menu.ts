@@ -13,8 +13,8 @@ export const sidebarItems: MenuItem[] = [
     href: "#shortcodes",
     icon: "/img/side-nav/briefcase.png",
     submenu: [
-      { id: "tab", label: "Tab", href: "#tabs" },
-      { id: "accordian", label: "Accordian", href: "#accordian" },
+      { id: "tabs", label: "Tab", href: "#tabs" },
+      { id: "accordion", label: "Accordion", href: "#accordion" },
       { id: "notice", label: "Notices", href: "#notice" },
       { id: "tooltip", label: "Tooltip", href: "#tooltip" },
       { id: "table", label: "Table", href: "#table" },
@@ -28,7 +28,7 @@ export const sidebarItems: MenuItem[] = [
     label: "Tour",
     href: "#tour",
     icon: "/img/side-nav/chat1.png",
-    submenu: [{ id: "hotspots", label: "Image Hotspots", href: "#pointing" }],
+    submenu: [{ id: "pointing", label: "Image Hotspots", href: "#pointing" }],
   },
   {
     id: "typography",
@@ -37,7 +37,7 @@ export const sidebarItems: MenuItem[] = [
     icon: "/img/side-nav/document.png",
     submenu: [
       { id: "code", label: "Code", href: "#code" },
-      { id: "image", label: "Image", href: "#img" },
+      { id: "img", label: "Image", href: "#img" },
       { id: "video", label: "Video", href: "#video" },
     ],
   },

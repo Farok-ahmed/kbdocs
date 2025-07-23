@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footnote = () => {
   return (
     <>
-      <div className="shortcode_title">
+      <div className="shortcode_title" id="footnote">
         <h2>Footnotes</h2>
         <p>
           <span>Welcome to KbDoc !</span> Get familiar with the Stripe products

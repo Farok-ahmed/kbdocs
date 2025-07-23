@@ -66,7 +66,7 @@ const ImagePointing = () => {
   const [hoveredHotspot, setHoveredHotspot] = useState<number | null>(null);
   return (
     <div>
-      <div className="shortcode_info">
+      <div className="shortcode_info" id="pointing">
         <h4
           className="s_title load-order-2 smooth-scroll-heading"
           id="pointing"

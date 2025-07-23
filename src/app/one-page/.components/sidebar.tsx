@@ -10,7 +10,10 @@ const Sidebar: React.FC<SidebarProps> = () => {
   const [progressMap, setProgressMap] = useState<ProgressMap>({});
 
   useEffect(() => {
-    const sections = sidebarItems.map((item) => item.id);
+    // Include both parent and submenu item IDs
+    const sections = sidebarItems.flatMap((item) =>
+      item.submenu ? [item.id, ...item.submenu.map((sub) => sub.id)] : [item.id]
+    );
 
     const onScroll = () => {
       let currentActive: string | null = null;
@@ -18,13 +21,15 @@ const Sidebar: React.FC<SidebarProps> = () => {
 
       sections.forEach((id) => {
         const el = document.getElementById(id);
-        if (!el) return;
+        if (!el) {
+          console.warn("Missing DOM element with id:", id); // 👈 Add this
+          return;
+        }
 
         const { top, height } = el.getBoundingClientRect();
         const started = top <= window.innerHeight && top + height >= 0;
         const finished = top * -1 >= height;
 
-        // progress percentage
         const scrollY = Math.min(Math.max(-top, 0), height);
         const progress = Math.round((scrollY / height) * 100);
         newProgressMap[id] = progress;
@@ -37,11 +42,14 @@ const Sidebar: React.FC<SidebarProps> = () => {
       setProgressMap(newProgressMap);
       setActiveSection(currentActive);
 
-      // Auto open submenu
+      // Auto open submenu if active section is inside submenu
       if (currentActive) {
         const activeIndex = sidebarItems.findIndex(
-          (item) => item.id === currentActive
+          (item) =>
+            item.id === currentActive ||
+            item.submenu?.some((sub) => sub.id === currentActive)
         );
+
         if (activeIndex !== -1 && sidebarItems[activeIndex].submenu) {
           setOpenIndex(activeIndex);
         } else {
@@ -79,66 +87,87 @@ const Sidebar: React.FC<SidebarProps> = () => {
             dir="ltr"
           >
             <ul className="list-unstyled nav-sidebar doc-nav">
-              {sidebarItems.map((item, index) => (
-                <li
-                  key={item.id}
-                  onClick={() => toggleMenu(index)}
-                  className={`nav-item ${
-                    activeSection === item.id ? "active" : ""
-                  }`}
-                >
-                  <span
-                    className="docs-progress-bar"
-                    style={{ width: `${progressMap[item.id] || 0}%` }}
-                  />
-                  <Link href={item.href} className="nav-link">
-                    <img
-                      src={item.icon}
-                      alt={item.label}
-                      className="mCS_img_loaded"
+              {sidebarItems.map((item, index) => {
+                const isSubmenuActive =
+                  item.submenu?.some((sub) => sub.id === activeSection) ||
+                  false;
+
+                return (
+                  <li
+                    key={item.id}
+                    onClick={() => toggleMenu(index)}
+                    className={`nav-item ${
+                      activeSection === item.id || isSubmenuActive
+                        ? "active"
+                        : ""
+                    }`}
+                  >
+                    <span
+                      className="docs-progress-bar"
+                      style={{ width: `${progressMap[item.id] || 0}%` }}
                     />
-                    {item.label}
-                  </Link>
+                    <Link href={item.href} className="nav-link">
+                      <img
+                        src={item.icon}
+                        alt={item.label}
+                        className="mCS_img_loaded"
+                      />
+                      {item.label}
+                    </Link>
 
-                  {item.submenu && (
-                    <>
-                      <span className="icon">
-                        <i className="icon_plus" />
-                        <i className="icon_minus-06" />
-                      </span>
+                    {item.submenu && (
+                      <>
+                        <span className="icon">
+                          <i className="icon_plus" />
+                          <i className="icon_minus-06" />
+                        </span>
 
-                      <AnimatePresence initial={false}>
-                        {openIndex === index && (
-                          <motion.ul
-                            className="list-unstyled dropdown_nav"
-                            initial={{
-                              maxHeight: 0,
-                              opacity: 0,
-                              display: "none",
-                            }}
-                            animate={{
-                              maxHeight: 500,
-                              opacity: 1,
-                              display: "block",
-                            }}
-                            exit={{ maxHeight: 0, opacity: 0, display: "none" }}
-                            style={{ overflow: "hidden" }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                          >
-                            {item.submenu.map((subItem) => (
-                              <li key={subItem.id} className="nav-item">
-                                <Link href={subItem.href} className="nav-link">
-                                  {subItem.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </motion.ul>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  )}
-                </li>
-              ))}
+                        <AnimatePresence initial={false}>
+                          {openIndex === index && (
+                            <motion.ul
+                              className="list-unstyled dropdown_nav"
+                              initial={{
+                                maxHeight: 0,
+                                opacity: 0,
+                                display: "none",
+                              }}
+                              animate={{
+                                maxHeight: 500,
+                                opacity: 1,
+                                display: "block",
+                              }}
+                              exit={{
+                                maxHeight: 0,
+                                opacity: 0,
+                                display: "none",
+                              }}
+                              style={{ overflow: "hidden" }}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}
+                            >
+                              {item.submenu.map((subItem) => (
+                                <li
+                                  key={subItem.id}
+                                  className={`nav-item ${
+                                    activeSection === subItem.id ? "active" : ""
+                                  }`}
+                                >
+                                  <Link
+                                    href={subItem.href}
+                                    className="nav-link"
+                                    onClick={() => setActiveSection(subItem.id)}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

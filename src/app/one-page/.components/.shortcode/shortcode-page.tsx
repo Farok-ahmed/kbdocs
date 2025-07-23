@@ -12,7 +12,7 @@ import CanUse from "./can-use";
 import Footnote from "./footnote";
 import GettingStarted from "./getting-started";
 import Notice from "./notice";
-
+import Tooltip from "./tooltipe";
 const ShortcodePage: React.FC = () => {
   return (
     <article
@@ -33,7 +33,7 @@ const ShortcodePage: React.FC = () => {
       </div>
       <DynamicTabs />
       <div className="border_bottom" />
-      <div className="shortcode_info" id="accordian">
+      <div className="shortcode_info" id="accordion ">
         <div className="shortcode_title">
           <h2>Accordian</h2>
           <p>
@@ -44,10 +44,13 @@ const ShortcodePage: React.FC = () => {
         <ToggleTwo title={false} />
         <Accordion />
       </div>
-      <div className="shortcode_info" id="notices">
+      <div className="shortcode_info" id="notices notice">
         <Notice />
       </div>
-      <div className="shortcode_info">
+      <div className="shortcode_info" id="tooltip">
+        <Tooltip />
+      </div>
+      <div className="shortcode_info" id="table">
         <h1 className="s_title" id="table">
           Table
         </h1>
@@ -66,7 +69,7 @@ const ShortcodePage: React.FC = () => {
         </div>
         <ImageLightbox />
       </div>
-      <div className="shortcode_info" id="footnotes">
+      <div className="shortcode_info" id="footnotes footnote">
         <Footnote />
       </div>
       <div className="shortcode_info" id="can-use">

@@ -32,7 +32,7 @@ const ToggleTwo = ({ title = true }) => {
   };
 
   return (
-    <div className="toggle_shortcode">
+    <div className="toggle_shortcode" id="accordion">
       <div className="shortcode_title">
         <h4 className="s_title load-order-2 smooth-scroll-heading" id="toggle">
           Toggle
