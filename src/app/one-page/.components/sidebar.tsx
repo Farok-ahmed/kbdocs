@@ -22,7 +22,6 @@ const Sidebar: React.FC<SidebarProps> = () => {
       sections.forEach((id) => {
         const el = document.getElementById(id);
         if (!el) {
-          console.warn("Missing DOM element with id:", id); // 👈 Add this
           return;
         }
 

@@ -78,7 +78,7 @@ export default function DocsDropDown({ isOpen }: DocsDropDownProps) {
                       })}
                     </div>
                     <div className="text">
-                      <Link href="/categories">
+                      <Link href="#">
                         <p>More Categories</p>
                       </Link>
                       <Link href="/docs">

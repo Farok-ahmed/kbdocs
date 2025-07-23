@@ -85,11 +85,11 @@ export default function DocsLayout({ children, type = "both" }: Props) {
   const contentVariants = {
     hidden: {
       opacity: 0,
-      y: 20,
+      x: 20,
     },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
     },
   };
 
@@ -260,7 +260,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
             </div>
             <div className="mobile_menu_right">
               <Link className="nav_btn" href="">
-                Free Trail
+                Free Trial
               </Link>
             </div>
           </div>
@@ -330,9 +330,9 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                   {menuState === "top" && (
                     <motion.nav
                       className="mobile_nav_top"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
                       transition={{ duration: 0.3, delay: 0.2 }}
                     >
                       <motion.ul
