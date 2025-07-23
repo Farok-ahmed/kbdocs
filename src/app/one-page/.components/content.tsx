@@ -2,7 +2,7 @@ import FontSwitcher from "@/components/_components/font-switcher";
 import ModeSwitcher from "@/components/_components/mode-switcher";
 import OSSelector from "@/components/_components/os-selector";
 import style from "@/components/responsive.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContentPage from "./.content/content-page";
 import ShortcodePage from "./.shortcode/shortcode-page";
 import TourPage from "./.tour/tour-page";
@@ -18,6 +18,22 @@ const Content: React.FC<ContentProps> = ({ onDark, isDark }) => {
   const [selectedSizeIndex, setSelectedSizeIndex] =
     useState<number>(defaultIndex);
   const [showRightSidebar, setShowRightSidebar] = useState<boolean>(false);
+
+  const [bodyFixed, setBodyFixed] = useState<boolean>(false);
+
+  // when sticky_doc id top 0 then bodyFixed is true
+  const handleScroll = (): void => {
+    const stickyDoc = document.getElementById("sticky_doc");
+    if (stickyDoc) {
+      setBodyFixed(stickyDoc.getBoundingClientRect().top <= 0);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // toggle right sidebar visibility
   const toggleRightSidebar = (): void => {
@@ -44,7 +60,9 @@ const Content: React.FC<ContentProps> = ({ onDark, isDark }) => {
     <>
       <section
         style={{ paddingTop: "0px !important" }}
-        className="doc_documentation_area onepage_doc_area body_fixed"
+        className={`doc_documentation_area onepage_doc_area ${
+          bodyFixed ? "body_fixed" : ""
+        }`}
         id="sticky_doc"
       >
         <div className="overlay_bg" />

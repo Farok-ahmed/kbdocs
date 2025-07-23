@@ -87,9 +87,8 @@ const Sidebar: React.FC<SidebarProps> = () => {
           >
             <ul className="list-unstyled nav-sidebar doc-nav">
               {sidebarItems.map((item, index) => {
-                const isSubmenuActive =
-                  item.submenu?.some((sub) => sub.id === activeSection) ||
-                  false;
+                const progress = progressMap[item.id] || 0;
+                const isSubmenuActive = progress > 0 && progress < 100;
 
                 return (
                   <li
@@ -122,7 +121,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
                         </span>
 
                         <AnimatePresence initial={false}>
-                          {openIndex === index && (
+                          {isSubmenuActive && (
                             <motion.ul
                               className="list-unstyled dropdown_nav"
                               initial={{
