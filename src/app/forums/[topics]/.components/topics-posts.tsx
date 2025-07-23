@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-const TopicsPosts = ({ getTopics }) => {
+const TopicsPosts = ({ getTopics }: any) => {
   return (
     <>
       <div className="community-posts-wrapper bb-radius">
-        {getTopics.map((topic) => (
+        {getTopics.map((topic: any) => (
           <div
             key={topic.id}
             className="community-post style-two kbDoc richard bug"

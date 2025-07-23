@@ -1,7 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-const TooltipeDynamic = ({ children, content }) => {
+const TooltipeDynamic = ({
+  children,
+  content,
+}: {
+  children: React.ReactNode;
+  content: React.ReactNode;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const tooltipVariants = {
@@ -25,7 +31,7 @@ const TooltipeDynamic = ({ children, content }) => {
             style={{
               position: "absolute",
               filter: "drop-shadow(0px 5px 10px rgba(0,0,0,0.2))",
-              top:"32px",
+              top: "32px",
             }}
           >
             <div>{content}</div>

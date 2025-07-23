@@ -12,7 +12,13 @@ import { navMenu } from "./nav-menu";
 import NavToggler from "./nav-toggler";
 import TopBar from "./top-bar";
 
-export default function Navbar({ navbarHide = "", isDark }) {
+export default function Navbar({
+  navbarHide = "",
+  isDark = false,
+}: {
+  navbarHide?: string;
+  isDark?: boolean;
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState<string | null>(null);
   const pathname = usePathname();

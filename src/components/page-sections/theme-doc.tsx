@@ -121,7 +121,7 @@ export default function ThemeDoc() {
               <motion.div
                 id={item.id}
                 className="media theme_doc_item"
-                variants={fadeInUp}
+                variants={fadeInUp as any}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}

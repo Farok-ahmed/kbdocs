@@ -1,10 +1,14 @@
 "use-client";
 import { useState } from "react";
 
-const Accordion = ({ items }) => {
+const Accordion = ({
+  items,
+}: {
+  items: Array<{ id?: string; title: string; content: React.ReactNode }>;
+}) => {
   const [openIndex, setOpenIndex] = useState(0);
 
-  const handleItemClick = (index) => {
+  const handleItemClick = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 

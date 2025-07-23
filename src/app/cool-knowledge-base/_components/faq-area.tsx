@@ -29,14 +29,14 @@ const FaqArea = () => {
             className="h_title"
             initial="hidden"
             animate="visible"
-            variants={fadeInUp}
+            variants={fadeInUp as any}
           >
             Do you have any Question?
           </motion.h2>
           <motion.p
             initial="hidden"
             animate="visible"
-            variants={fadeInUp}
+            variants={fadeInUp as any}
             transition={{ delay: 0.2 }}
           >
             Loaded with awesome features like Documentation, Knowledgebase,
@@ -52,7 +52,7 @@ const FaqArea = () => {
               className="nav-item"
               initial="hidden"
               animate="visible"
-              variants={fadeInLeft(index * 0.1)}
+              variants={fadeInLeft(index * 0.1) as any}
               onClick={() => setActiveTab(tab.id)}
             >
               <button

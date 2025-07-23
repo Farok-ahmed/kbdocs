@@ -144,7 +144,7 @@ export default function GuideCategories() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  variants={fadeInUp}
+                  variants={fadeInUp as any}
                 >
                   <img src={guide.image} alt={guide.title} />
                   <div className="doc_tag_title">

@@ -3,20 +3,23 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const TopicsHeader = () => {
-  const [openMenu, setOpenMenu] = useState(null);
-  const dropdownRef = useRef(null);
+  const [openMenu, setOpenMenu] = useState("");
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleToggle = (menuId) => {
+  const handleToggle = (menuId: string) => {
     // If the clicked menu is already open, close it. Otherwise, open it.
-    setOpenMenu(openMenu === menuId ? null : menuId);
+    setOpenMenu(openMenu === menuId ? "" : menuId);
   };
 
   // Effect to close the dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         // If the click is outside the dropdown, close the open menu
-        setOpenMenu(null);
+        setOpenMenu("");
       }
     };
 
