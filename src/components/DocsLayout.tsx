@@ -10,6 +10,7 @@ import ModeSwitcher from "./_components/mode-switcher";
 import OSSelector from "./_components/os-selector";
 import Search from "./_components/search";
 import Sidebar from "./_components/sidebar";
+import "./inputStyle.css";
 import { navMenu } from "./page-sections/navbar/nav-menu";
 import style from "./responsive.module.css";
 interface Props {
@@ -34,7 +35,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
   const [menuState, setMenuState] = useState<"hidden" | "bottom" | "top">(
     "hidden"
   );
-
+  const [showRightSidebar, setShowRightSidebar] = useState<boolean>(false);
   const pathName = usePathname();
   const stickyMenuPage = pathName === "/docs/layouts/sticky-menu";
 
@@ -67,6 +68,11 @@ export default function DocsLayout({ children, type = "both" }: Props) {
 
   const handleSubOpen = (href: string) => {
     setOpenSubItemId(openSubItemId === href ? null : href);
+  };
+
+  // toggle right sidebar visibility
+  const toggleRightSidebar = (): void => {
+    setShowRightSidebar((prev) => !prev);
   };
 
   // Animation variants for mobile menu
@@ -562,8 +568,16 @@ export default function DocsLayout({ children, type = "both" }: Props) {
               </div>
 
               {type !== "left" && (
-                <div className="col-lg-2 col-md-4 doc_right_mobile_menu">
-                  <div className="open_icon" id="right">
+                <div
+                  className={`col-lg-2 col-md-4 doc_right_mobile_menu hide-mobile-right ${
+                    showRightSidebar ? "open" : ""
+                  }`}
+                >
+                  <div
+                    className="open_icon"
+                    id="right"
+                    onClick={toggleRightSidebar}
+                  >
                     <i className="arrow_carrot-left"></i>
                     <i className="arrow_carrot-right"></i>
                   </div>
