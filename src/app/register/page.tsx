@@ -20,17 +20,17 @@ export default function RegisterPage() {
           <h2>We are design changers do what matters.</h2>
           <img
             className="position-absolute top"
-            src="img/signup/top_ornamate.png"
+            src="/img/signup/top_ornamate.png"
             alt="top"
           />
           <img
             className="position-absolute bottom"
-            src="img/signup/bottom_ornamate.png"
+            src="/img/signup/bottom_ornamate.png"
             alt="bottom"
           />
           <img
             className="position-absolute middle wow fadeInRight"
-            src="img/signup/man_image.png"
+            src="/img/signup/man_image.png"
             alt="bottom"
           />
           <div
@@ -47,7 +47,7 @@ export default function RegisterPage() {
                 Already have an account? <Link href="/login">Sign in</Link>
               </p>
               <Link href="" className="btn-google">
-                <img src="img/signup/gmail.png" alt="" />
+                <img src="/img/signup/gmail.png" alt="" />
                 <span className="btn-text">Sign up with Google</span>
               </Link>
             </div>

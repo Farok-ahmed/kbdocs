@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
   {
     id: "0",
     name: "Rodney Artichoke",
-    photo: "img/home_one/icon/feedback.jpg",
+    photo: "/img/home_one/icon/feedback.jpg",
     job: "UI/UX designer",
     review: `Nulla porttitor accumsan tincidunt. Praesent
           sapien massa, convallis a pellentesque nec,
@@ -27,7 +27,7 @@ const testimonials: Testimonial[] = [
   {
     id: "1",
     name: "Farok",
-    photo: "img/home_one/icon/feedback.jpg",
+    photo: "/img/home_one/icon/feedback.jpg",
     job: "UI/UX designer",
     review: `Nulla porttitor accumsan tincidunt. Praesent
           sapien massa, convallis a pellentesque nec,
@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
   {
     id: "2",
     name: "Rodney ",
-    photo: "img/home_one/icon/feedback.jpg",
+    photo: "/img/home_one/icon/feedback.jpg",
     job: "UI/UX designer",
     review: `Nulla porttitor accumsan tincidunt. Praesent
           sapien massa, convallis a pellentesque nec,
@@ -88,7 +88,7 @@ const Reviews = () => {
   return (
     <section
       className="doc_feedback_area parallaxie sec_pad"
-      data-background="img/bg.jpg"
+      data-background="/img/bg.jpg"
       style={{
         background: 'url("/img/home_one/feedback_bg.jpg") no-repeat scroll',
         position: "relative",

@@ -18,36 +18,36 @@ const BreadcrumbTopic = () => {
   return (
     <>
       <section className="breadcrumb_area">
-        <img className="p_absolute bl_left" src="img/v.svg" alt="" />
+        <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
         <img
           className="p_absolute bl_right"
-          src="img/home_one/b_leaf.svg"
+          src="/img/home_one/b_leaf.svg"
           alt=""
         />
         <img
           className="p_absolute star"
-          src="img/home_one/banner_bg.png"
+          src="/img/home_one/banner_bg.png"
           alt=""
         />
         <img
           className="p_absolute wave_shap_one"
-          src="img/blog-classic/shap_01.png"
+          src="/img/blog-classic/shap_01.png"
           alt=""
         />
         <img
           className="p_absolute wave_shap_two"
-          src="img/blog-classic/shap_02.png"
+          src="/img/blog-classic/shap_02.png"
           alt=""
         />
         <img
           className="p_absolute one wow fadeInRight"
-          src="img/home_one/b_man_two.png"
+          src="/img/home_one/b_man_two.png"
           alt=""
         />
         <img
           className="p_absolute two wow fadeInUp"
           data-wow-delay="0.2s"
-          src="img/home_one/flower.png"
+          src="/img/home_one/flower.png"
           alt=""
         />
         <Search />

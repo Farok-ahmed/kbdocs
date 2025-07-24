@@ -31,7 +31,7 @@ const BlogGridTopPost = () => {
                 </Link>
                 <div className="media post_author">
                   <div className="round_img">
-                    <img src="img/blog-grid/ansley.jpg" alt="" />
+                    <img src="/img/blog-grid/ansley.jpg" alt="" />
                   </div>
                   <div className="media-body author_text">
                     <h4>Jason Response</h4>

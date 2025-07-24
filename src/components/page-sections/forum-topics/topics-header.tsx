@@ -75,7 +75,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="richard"
                       >
-                        <img src="img/home_support/fl1.png" alt="user" />
+                        <img src="/img/home_support/fl1.png" alt="user" />
                         Richard Tea
                       </Link>
                       <Link
@@ -83,11 +83,11 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="druid"
                       >
-                        <img src="img/home_support/fl2.png" alt="user" />
+                        <img src="/img/home_support/fl2.png" alt="user" />
                         Druid Wensleydale
                       </Link>
                       <Link className="dropdown-item" href="#0" data-rel="weir">
-                        <img src="img/home_support/fl3.png" alt="user" />
+                        <img src="/img/home_support/fl3.png" alt="user" />
                         Weir Doee
                       </Link>
                       <Link
@@ -95,7 +95,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="giles"
                       >
-                        <img src="img/home_support/fl4.png" alt="user" />
+                        <img src="/img/home_support/fl4.png" alt="user" />
                         Giles Posture
                       </Link>
                       <Link
@@ -103,11 +103,11 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="theodore"
                       >
-                        <img src="img/home_support/fl5.png" alt="user" />
+                        <img src="/img/home_support/fl5.png" alt="user" />
                         Theodore Handle
                       </Link>
                       <Link className="dropdown-item" href="#0" data-rel="mann">
-                        <img src="img/home_support/fl6.png" alt="user" />
+                        <img src="/img/home_support/fl6.png" alt="user" />
                         Guy Mann
                       </Link>
                       <Link
@@ -115,7 +115,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="dylan"
                       >
-                        <img src="img/home_support/fl7.png" alt="user" />
+                        <img src="/img/home_support/fl7.png" alt="user" />
                         Dylan Meringue
                       </Link>
                       <Link
@@ -123,7 +123,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="fletch"
                       >
-                        <img src="img/home_support/fl8.png" alt="user" />
+                        <img src="/img/home_support/fl8.png" alt="user" />
                         Fletch Skinner
                       </Link>
                     </div>
@@ -231,35 +231,35 @@ const TopicsHeader = () => {
 
                     <div className="all-users">
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl1.png" alt="user" />
+                        <img src="/img/home_support/fl1.png" alt="user" />
                         Richard Tea
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl2.png" alt="user" />
+                        <img src="/img/home_support/fl2.png" alt="user" />
                         Druid Wensleydale
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl3.png" alt="user" />
+                        <img src="/img/home_support/fl3.png" alt="user" />
                         Weir Doee
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl4.png" alt="user" />
+                        <img src="/img/home_support/fl4.png" alt="user" />
                         Giles Posture
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl5.png" alt="user" />
+                        <img src="/img/home_support/fl5.png" alt="user" />
                         Theodore Handle
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl6.png" alt="user" />
+                        <img src="/img/home_support/fl6.png" alt="user" />
                         Guy Mann
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl7.png" alt="user" />
+                        <img src="/img/home_support/fl7.png" alt="user" />
                         Dylan Meringue
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="img/home_support/fl8.png" alt="user" />
+                        <img src="/img/home_support/fl8.png" alt="user" />
                         Fletch Skinner
                       </Link>
                     </div>

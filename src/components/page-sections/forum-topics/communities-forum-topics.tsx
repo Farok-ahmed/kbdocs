@@ -6,7 +6,7 @@ const CommunitiesForumTopics = () => {
       <div className="communities-boxes">
         <div className="kbDoc-com-box">
           <div className="icon-container">
-            <img src="img/home_support/rc1.png" alt="communinity-box" />
+            <img src="/img/home_support/rc1.png" alt="communinity-box" />
           </div>
 
           <div className="kbDoc-com-box-content">
@@ -19,7 +19,7 @@ const CommunitiesForumTopics = () => {
 
         <div className="kbDoc-com-box">
           <div className="icon-container">
-            <img src="img/home_support/rc2.png" alt="communinity-box" />
+            <img src="/img/home_support/rc2.png" alt="communinity-box" />
           </div>
 
           <div className="kbDoc-com-box-content">
@@ -32,7 +32,7 @@ const CommunitiesForumTopics = () => {
 
         <div className="kbDoc-com-box">
           <div className="icon-container">
-            <img src="img/home_support/rc3.png" alt="communinity-box" />
+            <img src="/img/home_support/rc3.png" alt="communinity-box" />
           </div>
 
           <div className="kbDoc-com-box-content">
@@ -45,7 +45,7 @@ const CommunitiesForumTopics = () => {
 
         <div className="kbDoc-com-box">
           <div className="icon-container">
-            <img src="img/home_support/rc4.png" alt="communinity-box" />
+            <img src="/img/home_support/rc4.png" alt="communinity-box" />
           </div>
 
           <div className="kbDoc-com-box-content">

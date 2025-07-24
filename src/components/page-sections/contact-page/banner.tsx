@@ -3,15 +3,15 @@ import Link from "next/link";
 const Banner = () => {
   return (
     <section className="breadcrumb_area breadcrumb_area_four">
-      <img className="p_absolute bl_left" src="img/v.svg" alt="" />
+      <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
       <img
         className="p_absolute bl_right"
-        src="img/home_one/b_leaf.svg"
+        src="/img/home_one/b_leaf.svg"
         alt=""
       />
       <img
         className="p_absolute one wow fadeInRight"
-        src="img/home_one/b_man_two.png"
+        src="/img/home_one/b_man_two.png"
         alt=""
       />
       <div className="container">

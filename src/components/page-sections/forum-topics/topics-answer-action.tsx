@@ -6,7 +6,7 @@ const TopicsAnswerAction = () => {
       <div className="answer-action">
         <div className="action-content">
           <div className="image-wrap">
-            <img src="img/home_support/answer.png" alt="answer action" />
+            <img src="/img/home_support/answer.png" alt="answer action" />
           </div>
 
           <div className="content">
