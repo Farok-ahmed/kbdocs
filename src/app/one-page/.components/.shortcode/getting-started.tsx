@@ -48,13 +48,13 @@ const GettingStarted: React.FC = () => {
     },
     {
       id: 7,
-      href: "/docs/shortcodes/image-pointing",
+      href: "/docs/tour/image-pointing",
       icon: "icon_document_alt",
       title: "Image Hotspots",
     },
     {
       id: 8,
-      href: "/docs/shortcodes/code",
+      href: "/docs/content/code",
       icon: "icon_document_alt",
       title: "Code",
     },
