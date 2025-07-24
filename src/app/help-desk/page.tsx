@@ -2,6 +2,7 @@
 import DefaultLayout from "@/components/layout";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 import ChartWithStats from "./.components/ChartWithStats";
 import CommunityPosts from "./.components/community-posts";
 import CommunitySection from "./.components/community-section";
@@ -15,7 +16,21 @@ type SupportTopic = {
   delay: number;
 };
 
+type Community = {
+  id: number;
+  title: string;
+  image: string;
+  posts: number;
+  link: string;
+  delay: number;
+};
+
 export default function HelpDeskPage() {
+  const [communityShow, setCommunityShow] = useState<boolean>(false);
+
+  const toggleCommunity = () => {
+    setCommunityShow((prev) => !prev);
+  };
   const MotionLink = motion(Link);
   const supportTopics: SupportTopic[] = [
     {
@@ -57,6 +72,89 @@ export default function HelpDeskPage() {
       posts: "542 Posts",
       link: "/forums",
       delay: 1.3,
+    },
+  ];
+
+  const communities: Community[] = [
+    {
+      id: 1,
+      title: "Deployment",
+      image: "/img/home_support/rc6.png",
+      posts: 453,
+      link: "/forums",
+      delay: 100,
+    },
+    {
+      id: 2,
+      title: "Configuration",
+      image: "/img/home_support/rc7.png",
+      posts: 624,
+      link: "/forums",
+      delay: 200,
+    },
+    {
+      id: 3,
+      title: "App Management",
+      image: "/img/home_support/rc8.png",
+      posts: 120,
+      link: "/forums",
+      delay: 300,
+    },
+    {
+      id: 4,
+      title: "Marketplaces",
+      image: "/img/home_support/rc9.png",
+      posts: 235,
+      link: "/forums",
+      delay: 400,
+    },
+    {
+      id: 5,
+      title: "Integrate Quickly",
+      image: "/img/home_support/rc10.png",
+      posts: 542,
+      link: "/forums",
+      delay: 500,
+    },
+    {
+      id: 6,
+      title: "Integrate Quickly",
+      image: "/img/home_support/rc12.png",
+      posts: 542,
+      link: "/forums",
+      delay: 600,
+    },
+    {
+      id: 7,
+      title: "Go Global",
+      image: "/img/home_support/rc13.png",
+      posts: 542,
+      link: "/forums",
+      delay: 700,
+    },
+    {
+      id: 8,
+      title: "Customize",
+      image: "/img/home_support/rc14.png",
+      posts: 542,
+      link: "#",
+      delay: 800,
+    },
+    {
+      id: 9,
+      title: "From Commissions",
+      image: "/img/home_support/rc15.png",
+      posts: 542,
+      link: "/forums",
+      delay: 900,
+    },
+    {
+      id: 10,
+      title: "Service Based",
+      image: "/img/home_support/rc16.png",
+      posts: 542,
+      link: "/forums",
+      delay: 1000,
     },
   ];
 
@@ -302,184 +400,40 @@ export default function HelpDeskPage() {
           {/* /.communities-boxes --> */}
 
           <div className="more-communities">
-            <Link href="#more-category" className="collapse-btn">
+            <Link
+              onClick={(e) => {
+                e.preventDefault();
+                toggleCommunity();
+              }}
+              href="#"
+              className={`collapse-btn ${communityShow ? "active" : ""}`}
+            >
               More Communities <i className="icon_plus"></i>
             </Link>
 
-            <div className="collapse-wrap" id="more-category">
-              <div className="communities-boxes">
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc6.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Deployment</Link>
-                    </h3>
-                    <p className="total-post">453 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
+            {communityShow && (
+              <div
+                className="collapse-wrap"
+                id="more-category"
+                style={{ display: "block" }}
+              >
+                <div className="communities-boxes">
+                  {communities.map((community) => (
+                    <div className="kbDoc-com-box" key={community.id}>
+                      <div className="icon-container">
+                        <img src={community.image} alt="communinity-box" />
+                      </div>
+                      <div className="kbDoc-com-box-content">
+                        <h3 className="title">
+                          <Link href="/forums">{community.title}</Link>
+                        </h3>
+                        <p className="total-post">{community.posts} Posts</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc7.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Configuration</Link>
-                    </h3>
-                    <p className="total-post">624 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc8.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">App Management</Link>
-                    </h3>
-                    <p className="total-post">120 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc9.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Marketplaces</Link>
-                    </h3>
-                    <p className="total-post">235 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc10.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Integrate Quickly</Link>
-                    </h3>
-                    <p className="total-post">542 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc12.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Integrate Quickly</Link>
-                    </h3>
-                    <p className="total-post">542 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc13.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Go Global</Link>
-                    </h3>
-                    <p className="total-post">542 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc14.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="">Customize</Link>
-                    </h3>
-                    <p className="total-post">542 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc15.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">From Commissions</Link>
-                    </h3>
-                    <p className="total-post">542 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
-                <div className="kbDoc-com-box">
-                  <div className="icon-container">
-                    <img
-                      src="/img/home_support/rc16.png"
-                      alt="communinity-box"
-                    />
-                  </div>
-
-                  <div className="kbDoc-com-box-content">
-                    <h3 className="title">
-                      <Link href="/forums">Service Based</Link>
-                    </h3>
-                    <p className="total-post">542 Posts</p>
-                  </div>
-                  {/* /.kbDoc-com-box-content --> */}
-                </div>
-                {/* /.kbDoc-com-box --> */}
               </div>
-              {/* /.communities-boxes --> */}
-            </div>
+            )}
             {/* /.collapse-wrap --> */}
           </div>
           {/* /.more-communities --> */}
