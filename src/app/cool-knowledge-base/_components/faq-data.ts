@@ -112,14 +112,14 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-docs-2",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
-            answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-          },
-          {
             question: "How can I subscribe to the PETSc mailing lists?",
             answer:
               "Gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie!",
+          },
+          {
+            question: "How can I deploy Documentation Landing?",
+            answer:
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
           },
           {
             question: "Can I run PETSc with extended precision?",
@@ -149,23 +149,24 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-forum-1",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
-            answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-            isOpen: true, // This item will be open by default
-          },
-          {
             question: "How can I subscribe to the PETSc mailing lists?",
             answer:
               "Gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie!",
           },
           {
-            question: "Can I run PETSc with extended precision?",
+            question: "How can I deploy Documentation Landing?",
+            answer:
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+            isOpen: true, // This item will be open by default
+          },
+
+          {
+            question: "What kind of license is PETSc released under?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
-            question: "What kind of license is PETSc released under?",
+            question: "Can I run PETSc with extended precision?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
@@ -181,19 +182,9 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-forum-2",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
-            answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-          },
-          {
             question: "How can I subscribe to the PETSc mailing lists?",
             answer:
               "Gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie!",
-          },
-          {
-            question: "Can I run PETSc with extended precision?",
-            answer:
-              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
             question: "What kind of license is PETSc released under?",
@@ -201,9 +192,20 @@ export const faqData: FaqTab[] = [
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
+            question: "Can I run PETSc with extended precision?",
+            answer:
+              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
+          },
+
+          {
             question: "Is there a warranty on my item?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
+          },
+          {
+            question: "How can I deploy Documentation Landing?",
+            answer:
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
           },
         ],
       },
@@ -218,10 +220,9 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-elements-1",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
+            question: "What kind of license is PETSc released under?",
             answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-            isOpen: true, // This item will be open by default
+              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
             question: "How can I subscribe to the PETSc mailing lists?",
@@ -234,10 +235,12 @@ export const faqData: FaqTab[] = [
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
-            question: "What kind of license is PETSc released under?",
+            question: "How can I deploy Documentation Landing?",
             answer:
-              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+            isOpen: true, // This item will be open by default
           },
+
           {
             question: "Is there a warranty on my item?",
             answer:
@@ -250,11 +253,6 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-elements-2",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
-            answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-          },
-          {
             question: "How can I subscribe to the PETSc mailing lists?",
             answer:
               "Gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie!",
@@ -265,12 +263,18 @@ export const faqData: FaqTab[] = [
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
-            question: "What kind of license is PETSc released under?",
+            question: "How can I deploy Documentation Landing?",
+            answer:
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+          },
+
+          {
+            question: "Is there a warranty on my item?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
-            question: "Is there a warranty on my item?",
+            question: "What kind of license is PETSc released under?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
@@ -287,12 +291,6 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-atlas-1",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
-            answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-            isOpen: true, // This item will be open by default
-          },
-          {
             question: "How can I subscribe to the PETSc mailing lists?",
             answer:
               "Gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie!",
@@ -303,14 +301,20 @@ export const faqData: FaqTab[] = [
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
+            question: "Is there a warranty on my item?",
+            answer:
+              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
+          },
+          {
             question: "What kind of license is PETSc released under?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
-            question: "Is there a warranty on my item?",
+            question: "How can I deploy Documentation Landing?",
             answer:
-              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+            isOpen: true, // This item will be open by default
           },
         ],
       },
@@ -319,27 +323,29 @@ export const faqData: FaqTab[] = [
         accordionId: "accordion-atlas-2",
         items: [
           {
-            question: "How can I deploy Documentation Landing?",
-            answer:
-              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
-          },
-          {
             question: "How can I subscribe to the PETSc mailing lists?",
             answer:
               "Gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie!",
           },
           {
+            question: "How can I deploy Documentation Landing?",
+            answer:
+              "Skive off he lost his bottle the little rotter absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack.!",
+          },
+
+          {
             question: "Can I run PETSc with extended precision?",
+            answer:
+              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
+          },
+
+          {
+            question: "Is there a warranty on my item?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },
           {
             question: "What kind of license is PETSc released under?",
-            answer:
-              "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
-          },
-          {
-            question: "Is there a warranty on my item?",
             answer:
               "Absolutely bladdered in my flat William no biggie, gormless me old mucker such a fibber David bum bag so I said cack. Skive off he lost his bottle the little rotter.",
           },

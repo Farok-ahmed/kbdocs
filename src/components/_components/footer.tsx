@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="row align-items-center">
           <div className="col-sm-6">
             <p>
-              © 2020 All Rights Reserved by <Link href="/">KbDoc</Link>
+              © 2025 All Rights Reserved by <Link href="/">KbDoc</Link>
             </p>
           </div>
           <div className="col-sm-6 text-right">

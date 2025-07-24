@@ -412,7 +412,10 @@ export default function HelpDeskPage() {
             </Link>
 
             {communityShow && (
-              <div
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                transition={{ duration: 0.4 }}
                 className="collapse-wrap"
                 id="more-category"
                 style={{ display: "block" }}
@@ -432,7 +435,7 @@ export default function HelpDeskPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             )}
             {/* /.collapse-wrap --> */}
           </div>
