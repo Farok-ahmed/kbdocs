@@ -11,7 +11,7 @@ const BreadcrumbTopic = () => {
     { name: "Docs", link: "/docs", id: 2 },
     {
       name: "KbDoc WordPress Theme",
-      link: "/docs/kbdoc-wordpress-theme",
+      link: "/docs",
       id: 3,
     },
   ];

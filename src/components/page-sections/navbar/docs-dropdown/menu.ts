@@ -31,7 +31,7 @@ export const docsDropDownMenu = [
       },
       {
         title: "Tables",
-        href: "/docs/shortcodes/tables",
+        href: "/docs/shortcodes/table",
       },
       {
         title: "Image Lightbox",

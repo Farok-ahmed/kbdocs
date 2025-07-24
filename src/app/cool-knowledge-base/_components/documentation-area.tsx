@@ -13,7 +13,7 @@ const documentationData = [
       title: "Build Any Page In Seconds",
       description:
         "Omnis voluptate magna inceptos id velit autem, harum phasellus quo. Officia congue, natoque imperdiet iusto malesuada placerat. Augue temporibus",
-      link: "/learn-more",
+      link: "/",
     },
     items: [
       {
@@ -56,7 +56,7 @@ const documentationData = [
       title: "Streamlined Documentation",
       description:
         "Discover the ease of creating and managing your documentation with Sdoc. A powerful and intuitive platform.",
-      link: "/learn-more",
+      link: "/",
     },
     items: [
       {
@@ -84,7 +84,7 @@ const documentationData = [
       title: "Organize with Spider Docs",
       description:
         "Efficiently structure and access your documents. Spider Docs helps you keep everything in order.",
-      link: "/learn-more",
+      link: "/",
     },
     items: [
       {
@@ -107,7 +107,7 @@ const documentationData = [
       title: "Collaborate with WikiDoc",
       description:
         "A collaborative platform for creating and sharing knowledge. Build your wiki with ease.",
-      link: "/learn-more",
+      link: "/",
     },
     items: [
       {

@@ -4,22 +4,22 @@ const Breadcrumb = () => {
       <div className="breadcrumb_area_three">
         <img
           className="p_absolute one"
-          src="img/typography/leaf_left.png"
+          src="/img/typography/leaf_left.png"
           alt=""
         />
         <img
           className="p_absolute two"
-          src="img/typography/man_01.png"
+          src="/img/typography/man_01.png"
           alt=""
         />
         <img
           className="p_absolute three"
-          src="img/typography/man_02.png"
+          src="/img/typography/man_02.png"
           alt=""
         />
         <img
           className="p_absolute four"
-          src="img/typography/leaf_right.png"
+          src="/img/typography/leaf_right.png"
           alt=""
         />
         <div className="container">

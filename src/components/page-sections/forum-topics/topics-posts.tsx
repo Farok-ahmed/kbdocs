@@ -11,9 +11,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
-                  Workspace/Org Administration
-                </Link>
+                <Link href="/forum-single">Workspace/Org Administration</Link>
               </h3>
               <ul className="meta">
                 <li>
@@ -50,9 +48,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
-                  Course do not display properly
-                </Link>{" "}
+                <Link href="forum-single">Course do not display properly</Link>{" "}
               </h3>
               <div className="cat-wrap">
                 <Link className="badge" href="#">
@@ -97,7 +93,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
+                <Link href="forum-single">
                   How to add a different logo image to the NON Sticky header?
                 </Link>
               </h3>
@@ -136,7 +132,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
+                <Link href="forum-single">
                   Sticky navbar is shown, but state is inactive
                 </Link>
               </h3>
@@ -183,7 +179,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
+                <Link href="forum-single">
                   Performance issue uikit v3 and C3js
                 </Link>
               </h3>
@@ -222,9 +218,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
-                  Course do not display properly
-                </Link>
+                <Link href="forum-single">Course do not display properly</Link>
               </h3>
               <div className="cat-wrap">
                 <Link className="badge color-green" href="#">
@@ -266,7 +260,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">Apps/Integrations/APIs</Link>
+                <Link href="forum-single">Apps/Integrations/APIs</Link>
               </h3>
               <ul className="meta">
                 <li>
@@ -306,9 +300,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
-                  Course do not display properly
-                </Link>
+                <Link href="forum-single">Course do not display properly</Link>
               </h3>
               <div className="cat-wrap">
                 <Link className="badge color-orange" href="#">
@@ -354,7 +346,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
+                <Link href="forum-single">
                   UK-form-custom / select / multiple{" "}
                 </Link>
               </h3>
@@ -395,7 +387,7 @@ const TopicsPosts = () => {
 
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
+                <Link href="forum-single">
                   Change “courses” in URL permalink base
                 </Link>
               </h3>
@@ -441,7 +433,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
+                <Link href="forum-single">
                   Disable animations for ui testing
                 </Link>
               </h3>
@@ -480,9 +472,7 @@ const TopicsPosts = () => {
             </div>
             <div className="entry-content">
               <h3 className="post-title">
-                <Link href="forum-single.html">
-                  Lightbox zoom on mobile device
-                </Link>
+                <Link href="forum-single">Lightbox zoom on mobile device</Link>
               </h3>
               <div className="cat-wrap">
                 <Link className="badge color-green" href="#">

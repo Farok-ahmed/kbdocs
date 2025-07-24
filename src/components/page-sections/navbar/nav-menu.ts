@@ -64,7 +64,7 @@ export const navMenu: MenuItem[] = [
           },
           {
             title: "Tables",
-            href: "/docs/shortcodes/tables",
+            href: "/docs/shortcodes/table",
           },
           {
             title: "Image Lightbox",
@@ -200,7 +200,7 @@ export const navMenu: MenuItem[] = [
       },
       {
         title: "404 Page Not Found",
-        href: "/404",
+        href: "/page-not-found",
       },
     ],
   },
