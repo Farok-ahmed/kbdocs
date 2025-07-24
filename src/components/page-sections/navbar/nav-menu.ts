@@ -199,7 +199,7 @@ export const navMenu: MenuItem[] = [
         href: "/typography",
       },
       {
-        title: "404 Page Not Found",
+        title: "404 Error",
         href: "/page-not-found",
       },
     ],
