@@ -1,4 +1,6 @@
+"use client";
 import DocsLayout from "@/components/DocsLayout";
+import { Tooltip } from "react-tooltip";
 
 const FootnotePage = () => {
   return (
@@ -11,54 +13,112 @@ const FootnotePage = () => {
             products and explore their features:
           </p>
         </div>
+
         <p>
-          Apparently we had reached a{" "}
+          Apparently we had reached a
           <span title="Lorem ipsum dolor sit">great height</span> in the
           atmosphere, for the sky was a dead black, and the stars had ceased to
-          twinkle. By the{" "}
+          twinkle. By the
           <span title="Lorem ipsum dolor, sit amet consectetur adipisicing">
             same illusion
-          </span>{" "}
+          </span>
           which lifts the horizon of the sea to the level of the spectator on a
           hillside, the sable cloud beneath was dished out, and the car seemed
           to float in the middle of an immense dark sphere, whose upper half was
           strewn with silver. Looking down into the dark gulf below, I could see
-          a{" "}
+          a
           <span className="tooltip-trigger" title="Lorem ipsum dolor">
             ruddy light
-          </span>{" "}
+          </span>
           streaming through a rift in the clouds.
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod labore
-          suscipit{" "}
+          suscipit
           <a
             href="#note-name-a"
             id="note-link-1"
             className="footnotes-link tooltips tooltipstered"
-            data-tooltip-content="#note-link-a"
-          />{" "}
+            data-tooltip-id="note-link-a"
+          />
+          <Tooltip
+            id="note-link-a"
+            style={{
+              backgroundColor: "#fff",
+              color: "#000",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+              zIndex: 1000,
+              opacity: 1,
+              maxWidth: "300px",
+              padding: "25px",
+            }}
+          >
+            <div className="text footnotes_item">
+              <strong>Footnote Name A</strong>
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+              voluptas dicta dolor.
+            </div>
+          </Tooltip>
           animi consequatur. Accusantium quibusdam dolorum at a, numquam
           deserunt.
         </p>
         <p>
-          Lorem ipsum dolor sit{" "}
+          Lorem ipsum dolor sit
           <a
             href="#note-name-b"
             id="note-link-2"
             className="footnotes-link tooltips tooltipstered"
-            data-tooltip-content="#note-link-b"
-          />{" "}
+            data-tooltip-id="note-link-b"
+          />
+          <Tooltip
+            id="note-link-b"
+            style={{
+              backgroundColor: "#fff",
+              color: "#000",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+              zIndex: 1000,
+              opacity: 1,
+              maxWidth: "300px",
+              padding: "25px",
+            }}
+          >
+            <div className="text footnotes_item">
+              <strong>Footnote Name B[PDF]</strong>
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+              voluptas dicta dolor.
+            </div>
+          </Tooltip>
           amet consectetur, adipisicing elit. Quia quos autem veniam libero!
           Deleniti nemo quas optio voluptas voluptatibus sint ratione. Id vel
           error quia ipsam sit saepe hic at amet excepturi ea. Voluptas sunt
-          ratione consequatur{" "}
+          ratione consequatur
           <a
             href="#note-name-c"
             id="note-link-3"
             className="footnotes-link tooltips tooltipstered"
-            data-tooltip-content="#note-link-c"
-          />{" "}
+            data-tooltip-id="note-link-c"
+          />
+          <Tooltip
+            id="note-link-c"
+            style={{
+              backgroundColor: "#fff",
+              color: "#000",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+              zIndex: 1000,
+              opacity: 1,
+              maxWidth: "300px",
+              padding: "25px",
+            }}
+          >
+            <div className="text footnotes_item">
+              <strong>Footnote Name C</strong>
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+              voluptas dicta dolor.
+            </div>
+          </Tooltip>
           optio porro eaque nam quod ex illum modi id animi fugiat vero
           explicabo illo officiis assumenda nulla rerum, dignissimos sed dicta
           pariatur quis eum. Beatae ea cumque alias ducimus quos maxime sed,
@@ -140,7 +200,7 @@ const FootnotePage = () => {
             <div className="col-lg-6">
               <h6>
                 <i className="icon_mail_alt" />
-                Still stuck?{" "}
+                Still stuck?
                 <a href="#" data-toggle="modal" data-target="#exampleModal2">
                   How can we help?
                 </a>
@@ -148,7 +208,7 @@ const FootnotePage = () => {
             </div>
             <div className="col-lg-6">
               <p>
-                Was this page helpful?{" "}
+                Was this page helpful?
                 <a href="#" className="h_btn">
                   Yes
                 </a>

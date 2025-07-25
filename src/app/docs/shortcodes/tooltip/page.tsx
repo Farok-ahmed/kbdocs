@@ -1,6 +1,7 @@
 "use client";
 import DocsLayout from "@/components/DocsLayout";
 import Link from "next/link";
+import { Tooltip } from "react-tooltip";
 import TooltipeDynamic from "./.components/tooltipe-dynamic";
 import "./style.scss";
 const TooltipPage = () => {
@@ -100,7 +101,7 @@ const TooltipPage = () => {
               daft a load of old tosh buggered he lost his bottle lost the plot
               he nicked it a blinding shot.
             </p>
-            <p>
+            <div>
               <TooltipeDynamic content={toolTipeContent}>
                 <Link
                   href="#"
@@ -125,7 +126,7 @@ const TooltipPage = () => {
               </TooltipeDynamic>
               off a blinding shot matie boy old gosh barney grub dropped a
               clanger.
-            </p>
+            </div>
             <p>
               Tosser are you taking the piss cuppa porkies pardon you butty lost
               the plot William bog lemon squeezy bite your arm off Richard, say
@@ -133,34 +134,49 @@ const TooltipPage = () => {
               delinquent cack bodge a bonnet.
             </p>
           </div>
-          <div className="highlight_text mt-5 tooltipe_relative ">
-            <h6>Text Tooltips</h6>
+
+          <div className="highlight_text">
+            <h5 className="h5 regular">Text Tooltips</h5>
             <p>
               He nicked it chip shop argy-bargy brilliant get stuffed mate
-              absolutely bladdered smashing,
-              <TooltipeDynamic content={toolTipeContentThree}>
-                <span
-                  className="tooltips_one"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title=""
-                  data-original-title="Your text here"
-                >
-                  codswallop tosser
-                </span>
-              </TooltipeDynamic>
+              absolutely bladdered smashing,{" "}
+              <span
+                className="tooltips_one"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Your text here"
+                data-tooltip-id="note-link-a"
+                data-tooltip-content="Your text here"
+              >
+                vagabond codswallop tosser
+              </span>
+              <Tooltip
+                id="note-link-a"
+                style={{
+                  backgroundColor: "#4b5ffa",
+                  color: "#fff",
+                  padding: "0px 5px",
+                }}
+              />
               hunky-dory cheers in my flat bite your arm off, cracking goal up{" "}
-              <TooltipeDynamic content={toolTipeContentFour}>
-                <span
-                  className="tooltips_two"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title=""
-                  data-original-title="Editar"
-                >
-                  the duff cheeky bugger zonked why
-                </span>
-              </TooltipeDynamic>
+              <span
+                className="tooltips_two"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Editar"
+                data-tooltip-id="note-link-b"
+                data-tooltip-content="Editar"
+              >
+                the duff cheeky bugger zonked why
+              </span>
+              <Tooltip
+                id="note-link-b"
+                style={{
+                  backgroundColor: "#ef971a",
+                  color: "#fff",
+                  padding: "0px 5px",
+                }}
+              />
               . Burke cras Richard grub say bits and bobs mush my lady tinkety
               tonk old fruit crikey fantastic vagabond, sloshed blower barney
               bender is bobby you mug daft argy-bargy.
