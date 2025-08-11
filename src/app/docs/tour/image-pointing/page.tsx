@@ -1,7 +1,6 @@
 "use client";
 import DocsLayout from "@/components/DocsLayout";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import ModalLightbox from "./../../shortcodes/lightbox/.components/modal-lightbox";

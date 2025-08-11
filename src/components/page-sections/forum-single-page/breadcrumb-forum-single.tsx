@@ -40,7 +40,7 @@ const BreadcrumbForumSingle = () => {
             </div>
             <div className="col-sm-5">
               <Link href="#" className="date">
-                <i className="icon_clock_alt"></i>Updated on March 03, 2020
+                <i className="icon_clock_alt"></i>Updated on August 11, 2025
               </Link>
             </div>
           </div>

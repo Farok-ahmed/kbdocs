@@ -1,3 +1,4 @@
+"use client"
 import CountUp from "react-countup"; // Optional for animated numbers
 import Wavify from "react-wavify";
 

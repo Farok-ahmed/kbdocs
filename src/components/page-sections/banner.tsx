@@ -1,4 +1,6 @@
+"use client"
 import { motion } from "framer-motion";
+
 export default function Banner() {
   return (
     <section className="doc_banner_area_two">

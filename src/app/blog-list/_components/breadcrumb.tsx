@@ -1,5 +1,6 @@
 import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
+import BlogListSearch from "./blog-list-search";
 interface BreadcrumbTopicProps {
   name: string;
   link: string;
@@ -57,16 +58,7 @@ const Breadcrumb = () => {
           }}
         />
         <div className="container">
-          <form action="#" className="banner_search_form">
-            <input
-              type="search"
-              className="form-control"
-              placeholder='Search ("/" to focus)'
-            />
-            <button type="submit">
-              <i className="icon_search" />
-            </button>
-          </form>
+          <BlogListSearch />
         </div>
       </section>
 

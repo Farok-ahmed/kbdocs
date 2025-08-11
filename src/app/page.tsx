@@ -1,4 +1,4 @@
-"use client";
+
 
 import DefaultLayout from "@/components/layout";
 import Banner from "@/components/page-sections/banner";

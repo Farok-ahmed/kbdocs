@@ -1,7 +1,8 @@
-"use client";
+
 import DocsLayout from "@/components/DocsLayout";
 import TestKbdocVersion from "@/components/test-kbdoc-version";
 import Link from "next/link";
+import Newsletter from "../../_components/newsletter";
 const LayoutFull = () => {
   return (
     <DocsLayout type="full-width">
@@ -495,31 +496,7 @@ const LayoutFull = () => {
                   Share your email so KbDoc can send you updates about the API
                   and developer platform.
                 </p>
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="mailchimp signup_form"
-                  method="post"
-                  noValidate={true}
-                >
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      className="form-control memail"
-                      placeholder="Email"
-                    />
-                    <div className="input-group-append">
-                      <button type="submit">Sign Up</button>
-                    </div>
-                  </div>
-                  <p
-                    className="mchimp-errmessage"
-                    style={{ display: "none" }}
-                  />
-                  <p
-                    className="mchimp-sucmessage"
-                    style={{ display: "none" }}
-                  />
-                </form>
+                <Newsletter/>
                 <p>
                   You can unsubscribe at any time. Read our privacy policy{" "}
                   <Link href="#">here</Link>

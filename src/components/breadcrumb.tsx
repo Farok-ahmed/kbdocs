@@ -1,4 +1,4 @@
-"use client";
+
 import { BreadcrumbProps } from "@/types/breadcrumb-types";
 import Link from "next/link";
 import SearchBreadcrumb from "./search-breadcrumb";
@@ -7,10 +7,7 @@ type Props = {
   breadcrumb: BreadcrumbProps[];
 };
 const Breadcrumb = ({ breadcrumb }: Props) => {
-  // Handle form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
+  
   return (
     <>
       <SearchBreadcrumb />

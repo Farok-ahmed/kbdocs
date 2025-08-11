@@ -99,26 +99,29 @@ const FootnotePage = () => {
             id="note-link-3"
             className="footnotes-link tooltips tooltipstered"
             data-tooltip-id="note-link-c"
-          />
-          <Tooltip
-            id="note-link-c"
-            style={{
-              backgroundColor: "#fff",
-              color: "#000",
-              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-              zIndex: 1000,
-              opacity: 1,
-              maxWidth: "300px",
-              padding: "25px",
-            }}
           >
-            <div className="text footnotes_item">
-              <strong>Footnote Name C</strong>
-              <br />
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
-              voluptas dicta dolor.
-            </div>
-          </Tooltip>
+            <Tooltip
+              id="note-link-c"
+              style={{
+                backgroundColor: "green",
+                color: "#000",
+                boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.5)",
+                maxWidth: "300px",
+                padding: "25px",
+                opacity: 0,
+              }}
+            >
+              <div
+                className="text footnotes_item"
+                style={{ backgroundColor: "red" }}
+              >
+                <strong>Footnote Name C</strong>
+                <br />
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                voluptas dicta dolor.
+              </div>
+            </Tooltip>
+          </a>
           optio porro eaque nam quod ex illum modi id animi fugiat vero
           explicabo illo officiis assumenda nulla rerum, dignissimos sed dicta
           pariatur quis eum. Beatae ea cumque alias ducimus quos maxime sed,

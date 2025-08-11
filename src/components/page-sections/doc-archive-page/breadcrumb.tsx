@@ -1,4 +1,4 @@
-"use client";
+
 import SearchBreadcrumb from "@/components/search-breadcrumb";
 import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
@@ -15,10 +15,7 @@ const Breadcrumb = () => {
     { name: "Docs", link: "/docs" },
     { name: "KbDoc WordPress Theme", link: "" },
   ];
-  // Handle form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
+  
   // Default date for display
   // You can replace this with a dynamic date if needed
   const defaultDate = new Date();

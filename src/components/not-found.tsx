@@ -1,6 +1,7 @@
-"use client";
+
 import { pages } from "@/utils/pages";
 import Link from "next/link";
+import SearchField from "./search-field";
 
 const NotFoundComponent = () => {
   return (
@@ -33,13 +34,7 @@ const NotFoundComponent = () => {
               Sorry for the inconvenience. Go to our homepage or check out our
               latest collections for Fashion, Chair, Decoration...
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="error_search">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-              />
-            </form>
+           <SearchField />
             <Link href={pages.home} className="action_btn box_shadow_none">
               <i className="arrow_left"></i>Back to Home Page
             </Link>

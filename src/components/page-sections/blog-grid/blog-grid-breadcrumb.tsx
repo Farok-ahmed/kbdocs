@@ -1,6 +1,7 @@
-"use client";
+
 import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
+import SearchFieldBlog from "./search-field-blog";
 
 const BlogGridBreadcrumb = () => {
   const defaultDate = new Date(); // Default date in YYYY-MM-DD format
@@ -40,22 +41,7 @@ const BlogGridBreadcrumb = () => {
           alt=""
         />
         <div className="container">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
-            action="#"
-            className="banner_search_form"
-          >
-            <input
-              type="search"
-              className="form-control"
-              placeholder='Search ("/" to focus)'
-            />
-            <button type="submit">
-              <i className="icon_search" />
-            </button>
-          </form>
+          <SearchFieldBlog/>
         </div>
       </section>
       <section className="page_breadcrumb">

@@ -1,6 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { FC, useState } from "react";
 

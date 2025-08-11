@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import { motion } from "framer-motion";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 const ImageLightbox = () => {
   const [isOpen, setIsOpen] = useState(false);

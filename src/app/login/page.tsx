@@ -1,12 +1,10 @@
-"use client";
+
 
 import Link from "next/link";
+import LoginForm from './.components/form';
 
 export default function LoginPage() {
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
+  
 
   return (
     <section className="signup_area">
@@ -46,39 +44,7 @@ export default function LoginPage() {
             <div className="divider">
               <span className="or-text">or</span>
             </div>
-            <form onSubmit={handleLogin} className="row login_form">
-              <div className="col-lg-12 form-group">
-                <div className="small_text">Your email</div>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  placeholder="info@KbDoc.com"
-                />
-              </div>
-              <div className="col-lg-12 form-group">
-                <div className="small_text">Confirm password</div>
-                <div className="confirm_password">
-                  <input
-                    id="confirm-password"
-                    name="confirm-password"
-                    type="password"
-                    className="form-control"
-                    placeholder="5+ characters required"
-                    autoComplete="off"
-                  />
-                  <Link href="" className="forget_btn">
-                    Forgotten password?
-                  </Link>
-                </div>
-              </div>
-
-              <div className="col-lg-12 text-center">
-                <button type="submit" className="btn action_btn thm_btn">
-                  Sign in
-                </button>
-              </div>
-            </form>
+            <LoginForm />
           </div>
         </div>
       </div>
