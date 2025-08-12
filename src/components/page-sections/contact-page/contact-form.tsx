@@ -1,8 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useFormState } from "react-dom";
+import ContactFormAction, { type ContactFormState } from "./contact-form-action";
+import ContactFormSubmit from "./contact-submit";
 
-interface FormData {
+interface UIFormData {
   projectTypes: string[];
   budgetRange: string;
   deadline: string;
@@ -13,7 +16,8 @@ interface FormData {
 }
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState<FormData>({
+  // Local UI state for controlled inputs
+  const [formData, setFormData] = useState<UIFormData>({
     projectTypes: [],
     budgetRange: "option1",
     deadline: "",
@@ -23,8 +27,26 @@ const ContactForm = () => {
     message: "",
   });
 
-  const [errors, setErrors] = useState<Partial<FormData>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // Server action state for errors/success
+  const [state, formAction] = useFormState<ContactFormState, FormData>(
+    ContactFormAction,
+    { success: false }
+  );
+
+  // If submission is successful, reset local UI form
+  useEffect(() => {
+    if (state?.success) {
+      setFormData({
+        projectTypes: [],
+        budgetRange: "option1",
+        deadline: "",
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+  }, [state?.success]);
 
   const projectTypeOptions = [
     { id: "webDesign", label: "Web Design" },
@@ -60,64 +82,8 @@ const ContactForm = () => {
     }));
   };
 
-  const handleInputChange = (field: keyof FormData, value: string) => {
+  const handleInputChange = (field: keyof UIFormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
-    }
-  };
-
-  const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {};
-
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
-    }
-
-    if (formData.projectTypes.length === 0) {
-      newErrors.projectTypes = ["Please select at least one project type"];
-    }
-
-    if (!formData.deadline) {
-      newErrors.deadline = "Please select a deadline";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-    setIsSubmitting(true);
-
-    try {
-      setFormData({
-        projectTypes: [],
-        budgetRange: "option1",
-        deadline: "",
-        fullName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-
-      alert("Message sent successfully!");
-    } catch (error) {
-      alert("Error sending message. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (
@@ -134,11 +100,11 @@ const ContactForm = () => {
         </motion.h2>
         <p>Please email us, we’ll happy to assist you.</p>
       </div>
-      <form onSubmit={handleSubmit} className="contact_form">
+      <form action={formAction}  className="contact_form">
         <div className="form-group">
           <h6>What type of project you need?</h6>
-          {errors.projectTypes && (
-            <div className="text-danger mb-2">{errors.projectTypes[0]}</div>
+          {state?.errors?.projectTypes && (
+            <div className="text-danger mb-2">{state.errors.projectTypes[0]}</div>
           )}
           <div className="box_info">
             {projectTypeOptions.map((option) => (
@@ -147,6 +113,8 @@ const ContactForm = () => {
                   className="form-check-input"
                   type="checkbox"
                   id={option.id}
+                  name="projectTypes"
+                  value={option.id}
                   checked={formData.projectTypes.includes(option.id)}
                   onChange={() => handleProjectTypeChange(option.id)}
                 />
@@ -165,18 +133,13 @@ const ContactForm = () => {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="gridRadios"
+                  name="budgetRange"
                   id={`budget${option.id}`}
                   value={option.value}
                   checked={formData.budgetRange === option.value}
-                  onChange={(e) =>
-                    handleInputChange("budgetRange", e.target.value)
-                  }
+                  onChange={(e) => handleInputChange("budgetRange", e.target.value)}
                 />
-                <label
-                  className="form-check-label"
-                  htmlFor={`budget${option.id}`}
-                >
+                <label className="form-check-label" htmlFor={`budget${option.id}`}>
                   {option.label}
                 </label>
               </div>
@@ -185,8 +148,8 @@ const ContactForm = () => {
         </div>
         <div className="form-group">
           <h6>Deadline</h6>
-          {errors.deadline && (
-            <div className="text-danger mb-2">{errors.deadline}</div>
+          {state?.errors?.deadline && (
+            <div className="text-danger mb-2">{state.errors.deadline}</div>
           )}
           <div className="box_info">
             {deadlineOptions.map((option) => (
@@ -194,18 +157,13 @@ const ContactForm = () => {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="Radios"
+                  name="deadline"
                   id={`week${option.id}`}
                   value={option.value}
                   checked={formData.deadline === option.value}
-                  onChange={(e) =>
-                    handleInputChange("deadline", e.target.value)
-                  }
+                  onChange={(e) => handleInputChange("deadline", e.target.value)}
                 />
-                <label
-                  className="form-check-label"
-                  htmlFor={`week${option.id}`}
-                >
+                <label className="form-check-label" htmlFor={`week${option.id}`}>
                   {option.label}
                 </label>
               </div>
@@ -215,13 +173,13 @@ const ContactForm = () => {
         <div className="row contact_fill">
           <div className="col-lg-4 form-group">
             <h6>Full Name</h6>
-            {errors.fullName && (
-              <div className="text-danger mb-2">{errors.fullName}</div>
+            {state?.errors?.fullName && (
+              <div className="text-danger mb-2">{state.errors.fullName}</div>
             )}
             <input
               type="text"
-              className={`form-control ${errors.fullName ? "is-invalid" : ""}`}
-              name="name"
+              className={`form-control ${state?.errors?.fullName ? "is-invalid" : ""}`}
+              name="fullName"
               id="name"
               placeholder="Enter your name here"
               value={formData.fullName}
@@ -230,12 +188,12 @@ const ContactForm = () => {
           </div>
           <div className="col-lg-4 form-group">
             <h6>Email</h6>
-            {errors.email && (
-              <div className="text-danger mb-2">{errors.email}</div>
+            {state?.errors?.email && (
+              <div className="text-danger mb-2">{state.errors.email}</div>
             )}
             <input
               type="email"
-              className={`form-control ${errors.email ? "is-invalid" : ""}`}
+              className={`form-control ${state?.errors?.email ? "is-invalid" : ""}`}
               name="email"
               id="email"
               placeholder="info@KbDoc.com"
@@ -248,7 +206,7 @@ const ContactForm = () => {
             <input
               type="tel"
               className="form-control"
-              name="tel"
+              name="phone"
               id="phone"
               placeholder="+462"
               value={formData.phone}
@@ -260,19 +218,14 @@ const ContactForm = () => {
             <textarea
               className="form-control message"
               id="message"
+              name="message"
               placeholder="Enter Your Text ..."
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
             ></textarea>
           </div>
           <div className="col-lg-12 form-group">
-            <button
-              type="submit"
-              className="btn action_btn thm_btn"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </button>
+          <ContactFormSubmit/>
           </div>
         </div>
       </form>

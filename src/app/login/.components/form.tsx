@@ -1,14 +1,13 @@
-"use client"
+
 import Link from "next/link";
+import LoginAction from './login-action';
+import LoginButton from './login-button';
 
 const LoginForm = () => {
-    const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
+   
   return (
     <>
-    <form onSubmit={handleLogin} className="row login_form">
+    <form action={LoginAction} className="row login_form">
               <div className="col-lg-12 form-group">
                 <div className="small_text">Your email</div>
                 <input
@@ -36,9 +35,7 @@ const LoginForm = () => {
               </div>
 
               <div className="col-lg-12 text-center">
-                <button type="submit" className="btn action_btn thm_btn">
-                  Sign in
-                </button>
+                <LoginButton />
               </div>
             </form>
     

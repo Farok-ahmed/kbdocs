@@ -1,16 +1,11 @@
-"use client"
-import { useRouter } from "next/navigation";
-import React from 'react';
+
+import RegisterAction from './register-action';
+import RegisterButton from './register-button';
 const RegisterForm = () => {
-    const router = useRouter();
-     const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle registration logic here
-    router.push("/login");
-  };
+   
   return (
     <>
-    <form onSubmit={handleRegister} className="row login_form">
+    <form action={RegisterAction} className="row login_form">
               <div className="col-sm-6 form-group">
                 <div className="small_text">First name</div>
                 <input
@@ -76,9 +71,7 @@ const RegisterForm = () => {
                 </div>
               </div>
               <div className="col-lg-12 text-center">
-                <button type="submit" className="btn action_btn thm_btn">
-                  Create an account
-                </button>
+                <RegisterButton/>
               </div>
             </form>
     </>

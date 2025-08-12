@@ -1,61 +1,68 @@
 "use client";
-const CommentBox = () => {
-  return (
-    <>
-      <div className="blog_comment_box">
-        <h2 className="c_head">Leave a Comment</h2>
-        <p>
-          Your email address will not be published. Required fields are marked *
-        </p>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="get_quote_form row"
-          action="#"
-          method="post"
-        >
-          <div className="col-md-6 form-group">
-            <input
-              required
-              type="text"
-              className="form-control"
-              id="name"
-              placeholder="Name"
-            />
-          </div>
-          <div className="col-md-6 form-group">
-            <input
-              required
-              type="email"
-              className="form-control"
-              id="email"
-              placeholder="Email"
-            />
-          </div>
-          <div className="col-md-12 form-group">
-            <input
-              required
-              type="text"
-              className="form-control"
-              id="web"
-              placeholder="Website"
-            />
-          </div>
-          <div className="col-md-12 form-group">
-            <textarea
-              className="form-control message"
-              placeholder="Comment"
-              defaultValue={""}
-            />
-          </div>
-          <div className="col-md-12">
-            <button className="btn action_btn thm_btn" type="submit">
-              Post Comment
-            </button>
-          </div>
-        </form>
-      </div>
-    </>
-  );
-};
 
-export default CommentBox;
+import { useActionState } from "react";
+import { CommentFormState, postComment } from "./post-comment";
+import SubmitButton from "./submit-button";
+
+export default function CommentBox() {
+  const initialState: CommentFormState = { status: "", message: "" };
+  const [state, formAction] = useActionState(postComment, initialState);
+
+  return (
+    <div className="blog_comment_box">
+      <h2 className="c_head">Leave a Comment</h2>
+      <p>Your email address will not be published. Required fields are marked *</p>
+
+      {state.message && (
+        <div
+          style={{
+            color: state.status === "error" ? "red" : "green",
+            marginBottom: "10px"
+          }}
+        >
+          {state.message}
+        </div>
+      )}
+
+      <form action={formAction} className="get_quote_form row" >
+        <div className="col-md-6 form-group">
+          <input
+            required
+            type="text"
+            name="name"
+            className="form-control"
+            placeholder="Name"
+          />
+        </div>
+        <div className="col-md-6 form-group">
+          <input
+            required
+            type="email"
+            name="email"
+            className="form-control"
+            placeholder="Email"
+          />
+        </div>
+        <div className="col-md-12 form-group">
+          <input
+            type="text"
+            name="website"
+            className="form-control"
+            placeholder="Website"
+          />
+        </div>
+        <div className="col-md-12 form-group">
+          <textarea
+            required
+            name="comment"
+            className="form-control message"
+            placeholder="Comment"
+          />
+        </div>
+        <div className="col-md-12">
+          <SubmitButton />
+        </div>
+      </form>
+    </div>
+  );
+}
