@@ -1,3 +1,10 @@
+import cmm10 from "@/assets/img/home_support/cmm10.png";
+import cmm2 from "@/assets/img/home_support/cmm2.png";
+import cmm4 from "@/assets/img/home_support/cmm4.png";
+import cmm5 from "@/assets/img/home_support/cmm5.png";
+import cmm8 from "@/assets/img/home_support/cmm8.png";
+import cmm9 from "@/assets/img/home_support/cmm9.png";
+import Image from "next/image";
 import Link from "next/link";
 
 const ForumSingleSidebar = () => {
@@ -51,33 +58,33 @@ const ForumSingleSidebar = () => {
             <h4 className="c_head">Ticket Categories</h4>
             <ul className="list-unstyled ticket_categories">
               <li>
-                <img src="/img/home_support/cmm5.png" alt="category" />
+                <Image src={cmm5} alt="category"  />
                 <Link href="#">Docs WordPress Theme</Link>{" "}
                 <span className="count">10</span>
               </li>
               <li>
-                <img src="/img/home_support/cmm4.png" alt="category" />
+                <Image src={cmm4} alt="category"  />
                 <Link href="#">Product Landing Page</Link>
                 <span className="count count-fill">13</span>
                 <span className="count">54</span>
               </li>
               <li>
-                <img src="/img/home_support/cmm2.png" alt="category" />
+                <Image src={cmm2} alt="category"/>
                 <Link href="#">Knowledge base Template</Link>
                 <span className="count">142</span>
               </li>
               <li>
-                <img src="/img/home_support/cmm8.png" alt="category" />
+                <Image src={cmm8} alt="category"  />
                 <Link href="#">Startup and App WP Theme</Link>{" "}
                 <span className="count">13</span>
               </li>
               <li>
-                <img src="/img/home_support/cmm9.png" alt="category" />
+                <Image src={cmm9} alt="category"  />
                 <Link href="#">Clean Email Template</Link>{" "}
                 <span className="count">123</span>
               </li>
               <li>
-                <img src="/img/home_support/cmm10.png" alt="category" />
+                <Image src={cmm10} alt="category" />
                 <Link href="#">Apps WordPress Theme</Link>{" "}
                 <span className="count">18</span>
               </li>

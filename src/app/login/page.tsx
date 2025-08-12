@@ -1,5 +1,10 @@
 
 
+import bottomOrnamate from "@/assets/img/signup/bottom_ornamate.png";
+import door from "@/assets/img/signup/door.png";
+import gmail from "@/assets/img/signup/gmail.png";
+import topOrnamate from "@/assets/img/signup/top_ornamate.png";
+import Image from "next/image";
 import Link from "next/link";
 import LoginForm from './.components/form';
 
@@ -11,19 +16,19 @@ export default function LoginPage() {
       <div className="row ml-0 mr-0">
         <div className="sign_left signin_left">
           <h2>We are design changers do what matters.</h2>
-          <img
+          <Image
             className="position-absolute top"
-            src="/img/signup/top_ornamate.png"
+            src={topOrnamate}
             alt="top"
           />
-          <img
+          <Image
             className="position-absolute bottom"
-            src="/img/signup/bottom_ornamate.png"
+            src={bottomOrnamate}
             alt="bottom"
           />
-          <img
+          <Image
             className="position-absolute middle"
-            src="/img/signup/door.png"
+            src={door}
             alt="bottom"
           />
           <div className="round"></div>
@@ -37,7 +42,7 @@ export default function LoginPage() {
                 <Link href="/register">Sign up here</Link>
               </p>
               <Link href="" className="btn-google">
-                <img src="/img/signup/gmail.png" alt="" />
+                <Image src={gmail} alt="" />
                 <span className="btn-text">Sign in with Gmail</span>
               </Link>
             </div>

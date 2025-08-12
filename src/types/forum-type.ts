@@ -1,7 +1,9 @@
+import { StaticImageData } from "next/image";
+
 export type TicketCategoriesProps = {
   id: number;
   name: string;
-  icon: string;
+  icon: StaticImageData | string;
   count: number;
   activeCount?: number;
 };
@@ -14,6 +16,6 @@ export type TagsProps = {
 export interface TopicCategory {
   id: string;
   name: string;
-  icon: string;
+  icon: StaticImageData | string;
   color?: string;
 }

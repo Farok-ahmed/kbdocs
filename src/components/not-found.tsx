@@ -1,5 +1,10 @@
 
+import error404Bg from "@/assets/img/404_bg.png";
+import error404One from "@/assets/img/404_one.png";
+import error404Three from "@/assets/img/404_three.png";
+import error404Two from "@/assets/img/404_two.png";
 import { pages } from "@/utils/pages";
+import Image from "next/image";
 import Link from "next/link";
 import SearchField from "./search-field";
 
@@ -14,19 +19,19 @@ const NotFoundComponent = () => {
         <div className="container">
           <div className="error_content_two text-center">
             <div className="error_img">
-              <img
+              <Image
                 className="p_absolute error_shap"
-                src="/img/404_bg.png"
+                src={error404Bg}
                 alt=""
               />
               <div className="one wow clipInDown" data-wow-delay="1s">
-                <img className="img_one" src="/img/404_two.png" alt="" />
+                <Image className="img_one" src={error404Two} alt="" />
               </div>
               <div className="two wow clipInDown" data-wow-delay="1.5s">
-                <img className="img_two" src="/img/404_three.png" alt="" />
+                <Image className="img_two" src={error404Three} alt="" />
               </div>
               <div className="three wow clipInDown" data-wow-delay="1.8s">
-                <img className="img_three" src="/img/404_one.png" alt="" />
+                <Image className="img_three" src={error404One} alt="" />
               </div>
             </div>
             <h2>Error. We can’t find the page you’re looking for.</h2>

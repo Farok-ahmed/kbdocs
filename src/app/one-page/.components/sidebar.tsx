@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { sidebarItems } from "./menu";
@@ -105,7 +106,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
                       style={{ width: `${progressMap[item.id] || 0}%` }}
                     />
                     <Link href={item.href} className="nav-link">
-                      <img
+                      <Image
                         src={item.icon}
                         alt={item.label}
                         className="mCS_img_loaded"

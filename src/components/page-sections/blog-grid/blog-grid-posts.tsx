@@ -1,5 +1,6 @@
 "use client";
 import type { BlogGridPost } from "@/types/blog-grid";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { blogCategories, BlogData } from "./blog-data";
@@ -7,10 +8,6 @@ import { blogCategories, BlogData } from "./blog-data";
 const BlogGridPosts = () => {
   // State to keep track of the currently selected category filter
   const [activeCategory, setActiveCategory] = useState("Updates");
-
-  // Filter posts based on the active category.
-  // "Updates" shows all posts.
-  // Otherwise, show posts that include the active category in their 'categories' array.
   const filteredPosts: BlogGridPost[] =
     activeCategory === "Updates"
       ? BlogData
@@ -53,7 +50,11 @@ const BlogGridPosts = () => {
                     animationDelay: `${index * 0.2}s`,
                   }}
                 >
-                  <img src={post.image} alt={`Image for ${post.title}`} />
+                  <Image 
+                    src={post.image} 
+                    alt={`Image for ${post.title}`} 
+                    
+                  />
                   <div className="grid_post_content">
                     <div className="post_tag">
                       <a href="#">{post.readTime}</a>
@@ -65,9 +66,10 @@ const BlogGridPosts = () => {
                     <p>{post.excerpt}</p>
                     <div className="media post_author">
                       <div className="round_img">
-                        <img
+                        <Image
                           src={post.author.avatar}
                           alt={`Author ${post.author.name} `}
+                         
                         />
                       </div>
                       <div className="media-body author_text">

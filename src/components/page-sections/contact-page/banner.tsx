@@ -1,17 +1,21 @@
+import bLeaf from "@/assets/img/home_one/b_leaf.svg";
+import bManTwo from "@/assets/img/home_one/b_man_two.png";
+import vIcon from "@/assets/img/v.svg";
+import Image from "next/image";
 import Link from "next/link";
 
 const Banner = () => {
   return (
     <section className="breadcrumb_area breadcrumb_area_four">
-      <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-      <img
+      <Image className="p_absolute bl_left" src={vIcon} alt="" />
+      <Image
         className="p_absolute bl_right"
-        src="/img/home_one/b_leaf.svg"
+        src={bLeaf}
         alt=""
       />
-      <img
+      <Image
         className="p_absolute one wow fadeInRight"
-        src="/img/home_one/b_man_two.png"
+        src={bManTwo}
         alt=""
       />
       <div className="container">

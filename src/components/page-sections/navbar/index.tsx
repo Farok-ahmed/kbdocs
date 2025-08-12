@@ -170,7 +170,7 @@ export default function Navbar({
                               <Link href={subItem.href} className="nav-link">
                                 {subItem.subTitle ? (
                                   <>
-                                    <img src={subItem?.icon} alt="" />
+                                    {subItem?.icon && <Image src={subItem.icon} alt="" />}
                                     <div className="text">
                                       <h5>{subItem.title}</h5>
                                       <p>{subItem.subTitle}</p>

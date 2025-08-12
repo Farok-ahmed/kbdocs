@@ -136,7 +136,7 @@ const OnePage = () => {
                                 <Link href={subItem.href} className="nav-link">
                                   {subItem.subTitle ? (
                                     <>
-                                      <img src={subItem?.icon} alt="" />
+                                      <Image src={subItem?.icon} alt="" />
                                       <div className="text">
                                         <h5>KbDoc</h5>
                                         <p>Launch Simple Websites</p>

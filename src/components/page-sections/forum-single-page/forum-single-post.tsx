@@ -1,3 +1,6 @@
+import authorAvatar from "@/assets/img/forum/author-avatar.png";
+import logoFavicon from "@/assets/img/forum/logo-favicon.png";
+import Image from "next/image";
 import Link from "next/link";
 
 const ForumSinglePost = () => {
@@ -7,7 +10,7 @@ const ForumSinglePost = () => {
         <div className="col-lg-9">
           <div className="forum-post-top">
             <Link className="author-avatar" href="#">
-              <img src="/img/forum/author-avatar.png" alt="" />
+              <Image src={authorAvatar} alt=""  />
             </Link>
             <div className="forum-post-author">
               <Link className="author-name" href="#">
@@ -93,7 +96,7 @@ const ForumSinglePost = () => {
             <Link href="#">Error</Link>
           </div>
           <div className="taxonomy forum-post-cat">
-            <img src="/img/forum/logo-favicon.png" alt="" />
+            <Image src={logoFavicon} alt="" />
             <Link href="#">KbDoc Support</Link>
           </div>
         </div>

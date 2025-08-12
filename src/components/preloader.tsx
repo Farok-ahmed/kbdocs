@@ -1,5 +1,7 @@
 "use client";
 
+import spinnerLogoImg from "@/assets/img/spinner_logo.png";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function PreLoader() {
@@ -17,7 +19,7 @@ export default function PreLoader() {
         <div className="round_spinner">
           <div className="spinner"></div>
           <div className="text">
-            <img src="/img/spinner_logo.png" alt="" />
+            <Image src={spinnerLogoImg} alt="" />
             <h4>
               <span>kb</span>Doc
             </h4>

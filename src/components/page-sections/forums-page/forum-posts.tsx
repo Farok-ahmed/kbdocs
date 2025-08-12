@@ -1,4 +1,5 @@
 import { forumData } from "@/app/forums/forum-data";
+import Image from "next/image";
 import Link from "next/link";
 
 const ForumPosts = () => {
@@ -12,7 +13,7 @@ const ForumPosts = () => {
           >
             <div className="col-md-6 post-content">
               <div className="author-avatar forum-icon">
-                <img src={forum.icon} alt="community post" />
+                <Image src={forum.icon} alt="community post" />
               </div>
               <div className="entry-content">
                 <h3 className="post-title">
@@ -49,7 +50,7 @@ const ForumPosts = () => {
                           </span>
                         </div>
                         <span className="bbp-author-avatar">
-                          <img
+                          <Image
                             alt="Eh Jewel"
                             src={forum.authorAvatar}
                             className="avatar photo"

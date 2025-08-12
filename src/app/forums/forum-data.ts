@@ -1,31 +1,58 @@
+import logoFavicon from "@/assets/img/forum/logo-favicon.png";
+import cmm1 from "@/assets/img/home_support/cmm1.png";
+import cmm10 from "@/assets/img/home_support/cmm10.png";
+import cmm11 from "@/assets/img/home_support/cmm11.png";
+import cmm2 from "@/assets/img/home_support/cmm2.png";
+import cmm3 from "@/assets/img/home_support/cmm3.png";
+import cmm4 from "@/assets/img/home_support/cmm4.png";
+import cmm5 from "@/assets/img/home_support/cmm5.png";
+import cmm6 from "@/assets/img/home_support/cmm6.png";
+import cmm7 from "@/assets/img/home_support/cmm7.png";
+import cmm8 from "@/assets/img/home_support/cmm8.png";
+import cmm9 from "@/assets/img/home_support/cmm9.png";
+import cp1 from "@/assets/img/home_support/cp1.png";
+import cp10 from "@/assets/img/home_support/cp10.png";
+import cp2 from "@/assets/img/home_support/cp2.jpg";
+import cp3 from "@/assets/img/home_support/cp3.jpg";
+import cp4 from "@/assets/img/home_support/cp4.jpg";
+import cp5 from "@/assets/img/home_support/cp5.jpg";
+import cp6 from "@/assets/img/home_support/cp6.jpg";
+import cp7 from "@/assets/img/home_support/cp7.png";
+import cp8 from "@/assets/img/home_support/cp8.png";
+import cp9 from "@/assets/img/home_support/cp9.png";
+import rc1 from "@/assets/img/home_support/rc1.png";
+import rc13 from "@/assets/img/home_support/rc13.png";
+import rc2 from "@/assets/img/home_support/rc2.png";
+import rc3 from "@/assets/img/home_support/rc3.png";
+import rc8 from "@/assets/img/home_support/rc8.png";
 import { TagsProps, TicketCategoriesProps } from "@/types/forum-type";
 
 const forumData = [
   {
     id: "forum-1",
-    icon: "/img/home_support/rc1.png",
+    icon: rc1,
     title: "Announcements",
     description: "This forum is a special forum for general announcements.",
     topics: 10,
     posts: 105,
     freshness: "2 years, 2 months ago",
     author: "Eh Jewel",
-    authorAvatar: "/img/home_support/cp5.jpg",
+    authorAvatar: cp5,
   },
   {
     id: "forum-2",
-    icon: "/img/home_support/rc2.png",
+    icon: rc2,
     title: "Technology",
     description: "Latest technology news and updates from our community.",
     topics: 20,
     posts: 305,
     freshness: "2 years, 2 months ago",
     author: "Eh Jewel",
-    authorAvatar: "/img/home_support/cp6.jpg",
+    authorAvatar: cp6,
   },
   {
     id: "forum-3",
-    icon: "/img/home_support/rc8.png",
+    icon: rc8,
     title: "TV & Movies",
     description:
       "Use this forum to share your opinion about films and TV Shows.",
@@ -33,11 +60,11 @@ const forumData = [
     posts: 156,
     freshness: "2 years, 2 months ago",
     author: "Kyle Jonson",
-    authorAvatar: "/img/home_support/cp7.png",
+    authorAvatar: cp7,
   },
   {
     id: "forum-4",
-    icon: "/img/home_support/rc3.png",
+    icon: rc3,
     title: "KbDoc Support",
     description:
       "Get support for KbDoc knowledge-base and documentation template.",
@@ -45,18 +72,18 @@ const forumData = [
     posts: 405,
     freshness: "1 years, 2 months ago",
     author: "Giles Posture",
-    authorAvatar: "/img/home_support/cp10.png",
+    authorAvatar: cp10,
   },
   {
     id: "forum-5",
-    icon: "/img/home_support/rc13.png",
+    icon: rc13,
     title: "Marketplaces",
     description: "This forum is a special forum for marketplace support.",
     topics: 50,
     posts: 215,
     freshness: "1 years, 3 months ago",
     author: "Eh Jewel",
-    authorAvatar: "/img/home_support/cp5.jpg",
+    authorAvatar: cp5,
   },
 ];
 
@@ -64,13 +91,13 @@ const topicsList = [
   {
     id: 1,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Announcements + KbDoc Support
-    authorAvatar: "/img/home_support/cp2.jpg",
+    authorAvatar: cp2,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Workspace/Org Administration",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm1.png",
+    categoryIcon: cmm1,
     lastUpdated: "3 days ago",
     TotalComments: 20,
     stars: 5,
@@ -86,13 +113,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -150,13 +177,13 @@ const topicsList = [
   {
     id: 2,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Announcements + Technology
-    authorAvatar: "/img/home_support/cp1.png",
+    authorAvatar: cp1,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Course do not display properly",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm2.png",
+    categoryIcon: cmm2,
     lastUpdated: "5 days ago",
     TotalComments: 20,
     stars: 5,
@@ -172,13 +199,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -236,13 +263,13 @@ const topicsList = [
   {
     id: 3,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Technology + KbDoc Support
-    authorAvatar: "/img/home_support/cp3.jpg",
+    authorAvatar: cp3,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "How to add a different logo image to the NON Sticky header?",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm3.png",
+    categoryIcon: cmm3,
     lastUpdated: "4 days ago",
     TotalComments: 20,
     stars: 5,
@@ -258,13 +285,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -322,13 +349,13 @@ const topicsList = [
   {
     id: 4,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: TV & Movies + KbDoc Support
-    authorAvatar: "/img/home_support/cp4.jpg",
+    authorAvatar: cp4,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Sticky navbar is shown, but state is inactive",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm4.png",
+    categoryIcon: cmm4,
     lastUpdated: "4 days ago",
     TotalComments: 20,
     stars: 5,
@@ -347,13 +374,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -411,13 +438,13 @@ const topicsList = [
   {
     id: 5,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: KbDoc Support + Marketplaces
-    authorAvatar: "/img/home_support/cp5.jpg",
+    authorAvatar: cp5,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Performance issue uikit v3 and C3js",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm5.png",
+    categoryIcon: cmm5,
 
     lastUpdated: "5 days ago",
     TotalComments: 20,
@@ -434,13 +461,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -498,13 +525,13 @@ const topicsList = [
   {
     id: 6,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Technology + Marketplaces
-    authorAvatar: "/img/home_support/cp6.jpg",
+    authorAvatar: cp6,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Course do not display properly",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm6.png",
+    categoryIcon: cmm6,
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -520,13 +547,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -584,10 +611,10 @@ const topicsList = [
   {
     id: 7,
     forumIds: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"], // Multiple forums: Technology + KbDoc Support + Marketplaces
-    authorAvatar: "/img/home_support/cp10.png",
+    authorAvatar: cp10,
     title: "Apps/Integrations/APIs",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm7.png",
+    categoryIcon: cmm7,
 
     lastUpdated: "6 days ago",
     TotalComments: 20,
@@ -604,13 +631,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -668,13 +695,13 @@ const topicsList = [
   {
     id: 8,
     forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
-    authorAvatar: "/img/home_support/cp7.png",
+    authorAvatar: cp7,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Course do not display properly",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm8.png",
+    categoryIcon: cmm8,
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -693,13 +720,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -757,13 +784,13 @@ const topicsList = [
   {
     id: 9,
     forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
-    authorAvatar: "/img/home_support/cp8.png",
+    authorAvatar: cp8,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "UK-form-custom / select / multiple",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm9.png",
+    categoryIcon: cmm9,
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -779,13 +806,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -843,13 +870,13 @@ const topicsList = [
   {
     id: 10,
     forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
-    authorAvatar: "/img/home_support/cp9.png",
+    authorAvatar: cp9,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Change “courses” in URL permalink base",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm10.png",
+    categoryIcon: cmm10,
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -865,13 +892,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -929,13 +956,13 @@ const topicsList = [
   {
     id: 11,
     forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
-    authorAvatar: "/img/home_support/cp2.jpg",
+    authorAvatar: cp2,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Disable animations for ui testing",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm2.png",
+    categoryIcon: cmm2,
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -951,13 +978,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -1015,13 +1042,13 @@ const topicsList = [
   {
     id: 12,
     forumId: ["forum-1", "forum-4", "forum-5", "forum-2", "forum-3"],
-    authorAvatar: "/img/home_support/cp6.jpg",
+    authorAvatar: cp6,
     authorName: "Eh Jewel",
     authorBadge: "Conversation Starter",
     authorPostTime: "January 16 at 10:32 PM",
     title: "Lightbox zoom on mobile device",
     category: "WordPress Theme",
-    categoryIcon: "/img/home_support/cmm11.png",
+    categoryIcon: cmm11,
     lastUpdated: "6 days ago",
     TotalComments: 20,
     stars: 5,
@@ -1037,13 +1064,13 @@ const topicsList = [
     `,
       tags: ["Bug", "Feature", "Error"],
       category: "KbDoc Support",
-      categoryIcon: "/img/forum/logo-favicon.png",
+      categoryIcon: logoFavicon,
       questionTooCount: 20,
     },
     bestAnswer: {
       author: {
         name: "Eh Jewel",
-        avatar: "/img/home_support/cp2.jpg",
+        avatar: cp2,
         badge: "Conversation Starter",
         postTime: "January 16 at 10:32 PM",
       },
@@ -1103,38 +1130,38 @@ const TicketCategories: TicketCategoriesProps[] = [
   {
     id: 1,
     name: "Docs WordPress Theme",
-    icon: "/img/home_support/cmm5.png",
+    icon: cmm5,
     count: 12,
   },
   {
     id: 2,
     name: "Product Landing Page",
-    icon: "/img/home_support/cmm4.png",
+    icon: cmm4,
     count: 54,
     activeCount: 13,
   },
   {
     id: 3,
     name: "Knowledge base Template",
-    icon: "/img/home_support/cmm2.png",
+    icon: cmm2,
     count: 142,
   },
   {
     id: 4,
     name: "Startup and App WP Theme",
-    icon: "/img/home_support/cmm8.png",
+    icon: cmm8,
     count: 13,
   },
   {
     id: 5,
     name: "Clean Email Template",
-    icon: "/img/home_support/cmm9.png",
+    icon: cmm9,
     count: 123,
   },
   {
     id: 6,
     name: "Apps WordPress Theme",
-    icon: "/img/home_support/cmm10.png",
+    icon: cmm10,
     count: 18,
   },
 ];
@@ -1164,10 +1191,11 @@ const getTopicById = (id: number) => {
 };
 
 export {
-  forumData,
-  getTopicById,
-  tagsData,
-  TicketCategories,
-  topicsList,
-  topicsListWithFilteredForums,
+    forumData,
+    getTopicById,
+    tagsData,
+    TicketCategories,
+    topicsList,
+    topicsListWithFilteredForums
 };
+

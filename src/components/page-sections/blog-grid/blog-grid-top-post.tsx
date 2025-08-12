@@ -1,3 +1,6 @@
+import ansley from "@/assets/img/blog-grid/ansley.jpg";
+import topPost from "@/assets/img/blog-grid/top_post.jpg";
+import Image from "next/image";
 import Link from "next/link";
 
 const BlogGridTopPost = () => {
@@ -7,7 +10,7 @@ const BlogGridTopPost = () => {
         <div className="container">
           <div className="row blog_top_post flex-row-reverse">
             <div className="col-lg-7 p_top_img">
-              <img className="p_img" src="/img/blog-grid/top_post.jpg" alt="" />
+              <Image className="p_img" src={topPost} alt="" />
             </div>
             <div className="col-lg-5 p-0">
               <div className="b_top_post_content">
@@ -31,7 +34,7 @@ const BlogGridTopPost = () => {
                 </Link>
                 <div className="media post_author">
                   <div className="round_img">
-                    <img src="/img/blog-grid/ansley.jpg" alt="" />
+                    <Image src={ansley} alt="" />
                   </div>
                   <div className="media-body author_text">
                     <h4>Jason Response</h4>

@@ -1,3 +1,5 @@
+import answer from "@/assets/img/home_support/answer.png";
+import Image from "next/image";
 import Link from "next/link";
 
 const AnswerActionForum = () => {
@@ -6,7 +8,7 @@ const AnswerActionForum = () => {
       <div className="answer-action">
         <div className="action-content">
           <div className="image-wrap">
-            <img src="/img/home_support/answer.png" alt="answer action" />
+            <Image src={answer} alt="answer action" />
           </div>
 
           <div className="content">

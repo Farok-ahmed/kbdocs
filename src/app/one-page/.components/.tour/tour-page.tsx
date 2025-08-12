@@ -1,4 +1,12 @@
+import arrow3 from "@/assets/img/arrow_3.png";
+import arrowBottom from "@/assets/img/arrow_bottom.png";
+import arrowTop from "@/assets/img/arrow_top.png";
+import tourImg1 from "@/assets/img/tour_img1.png";
+import tourImg2 from "@/assets/img/tour_img2.png";
+import tourImg3 from "@/assets/img/tour_img3.png";
+import tourImg4 from "@/assets/img/tour_img4.png";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ImagePointing from "./Image-pointing";
@@ -50,7 +58,7 @@ const TourPage: React.FC = () => {
                       ease: "easeOut",
                     }}
                   >
-                    <img src="/img/arrow_top.png" alt="" />
+                    <Image src={arrowTop} alt="" />
                   </motion.div>
                 </div>
                 <div className="just_text answer_bottom">
@@ -68,7 +76,7 @@ const TourPage: React.FC = () => {
                       animationName: "fadeInLeft",
                     }}
                   >
-                    <img src="/img/arrow_bottom.png" alt="" />
+                    <Image src={arrowBottom} alt="" />
                   </motion.div>
                 </div>
               </div>
@@ -80,7 +88,7 @@ const TourPage: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
               >
-                <img className="img-fluid" src="/img/tour_img1.png" alt="" />
+                <Image className="img-fluid" src={tourImg1} alt="" />
               </motion.div>
             </div>
           </div>
@@ -98,7 +106,7 @@ const TourPage: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
               >
-                <img className="img-fluid" src="/img/tour_img2.png" alt="" />
+                <Image className="img-fluid" src={tourImg2} alt="" />
               </motion.div>
             </div>
             <div className="col-sm-5 tour_info_content">
@@ -115,7 +123,7 @@ const TourPage: React.FC = () => {
                   animationName: "fadeInLeft",
                 }}
               >
-                <img src="/img/arrow_bottom.png" alt="" />
+                <Image src={arrowBottom} alt="" />
               </motion.div>
               <p>
                 Focus on questions about an actual problem you have faced.
@@ -139,7 +147,7 @@ const TourPage: React.FC = () => {
                   animationName: "fadeInLeft",
                 }}
               >
-                <img className="img-fluid" src="/img/tour_img3.png" alt="" />
+                <Image className="img-fluid" src={tourImg3} alt="" />
               </motion.div>
             </div>
             <div className="col-sm-5 tour_info_content">
@@ -156,7 +164,7 @@ const TourPage: React.FC = () => {
                   animationName: "fadeInRight",
                 }}
               >
-                <img src="/img/arrow_3.png" alt="" />
+                <Image src={arrow3} alt="" />
               </motion.div>
               <p>
                 Focus on questions about an actual problem you have faced.
@@ -204,7 +212,7 @@ const TourPage: React.FC = () => {
                   animationName: "fadeInLeft",
                 }}
               >
-                <img src="/img/arrow_bottom.png" alt="" />
+                <Image src={arrowBottom} alt="" />
               </motion.div>
             </div>
             <div className="col-sm-8">
@@ -221,7 +229,7 @@ const TourPage: React.FC = () => {
                   animationName: "fadeInRight",
                 }}
               >
-                <img className="img-fluid" src="/img/tour_img4.png" alt="" />
+                <Image className="img-fluid" src={tourImg4} alt="" />
               </motion.div>
             </div>
           </div>

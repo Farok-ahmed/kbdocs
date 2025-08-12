@@ -1,7 +1,18 @@
 "use client";
 
+import shap01 from "@/assets/img/blog-classic/shap_01.png";
+import shap02 from "@/assets/img/blog-classic/shap_02.png";
+import bLeaf from "@/assets/img/home_one/b_leaf.svg";
+import bManTwo from "@/assets/img/home_one/b_man_two.png";
+import bannerBg from "@/assets/img/home_one/banner_bg.png";
+import flower from "@/assets/img/home_one/flower.png";
+import leafFooter from "@/assets/img/home_one/leaf_footter.png";
+import logoW from "@/assets/img/logo-w.png";
+import logo from "@/assets/img/logo.png";
+import vIcon from "@/assets/img/v.svg";
 import Navbar from "@/components/page-sections/navbar";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -252,14 +263,13 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                 </motion.span>
               </motion.button>
               <Link className="sticky_logo" href="/">
-                <img
-                  src="/img/logo-w.png"
-                  srcSet="/img/logo-w2x.png 2x"
+                <Image
+                  src={logoW}
                   alt="logo"
+                  style={{ display: 'none' }}
                 />
-                <img
-                  src="/img/logo.png"
-                  srcSet="/img/logo-2x.png 2x"
+                <Image
+                  src={logo}
                   alt="logo"
                 />
               </Link>
@@ -321,7 +331,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                   </div>
                   <div className="mobile_logo">
                     <Link href="">
-                      <img src="/img/logo.png" alt="logo" />
+                      <Image src={logo} alt="logo" />
                     </Link>
                   </div>
                 </motion.div>
@@ -454,36 +464,36 @@ export default function DocsLayout({ children, type = "both" }: Props) {
         {!stickyMenuPage && (
           <>
             <section className="breadcrumb_area">
-              <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-              <img
+              <Image className="p_absolute bl_left" src={vIcon} alt="" />
+              <Image
                 className="p_absolute bl_right"
-                src="/img/home_one/b_leaf.svg"
+                src={bLeaf}
                 alt=""
               />
-              <img
+              <Image
                 className="p_absolute star"
-                src="/img/home_one/banner_bg.png"
+                src={bannerBg}
                 alt=""
               />
-              <img
+              <Image
                 className="p_absolute wave_shap_one"
-                src="/img/blog-classic/shap_01.png"
+                src={shap01}
                 alt=""
               />
-              <img
+              <Image
                 className="p_absolute wave_shap_two"
-                src="/img/blog-classic/shap_02.png"
+                src={shap02}
                 alt=""
               />
-              <img
+              <Image
                 className="p_absolute one wow fadeInRight"
-                src="/img/home_one/b_man_two.png"
+                src={bManTwo}
                 alt=""
               />
-              <img
+              <Image
                 className="p_absolute two wow fadeInUp"
                 data-wow-delay="0.2s"
-                src="/img/home_one/flower.png"
+                src={flower}
                 alt=""
               />
               <Search />
@@ -612,9 +622,9 @@ export default function DocsLayout({ children, type = "both" }: Props) {
           </div>
         </section>
         <footer className="simple_footer">
-          <img
+          <Image
             className="leaf_right"
-            src="/img/home_one/leaf_footter.png"
+            src={leafFooter}
             alt=""
           />
           <div className="container">

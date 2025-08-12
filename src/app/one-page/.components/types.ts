@@ -1,4 +1,5 @@
 // Common types for the one-page components
+import { StaticImageData } from "next/image";
 
 export interface MenuSubItem {
   id: string;
@@ -10,7 +11,7 @@ export interface MenuItem {
   id: string;
   label: string;
   href: string;
-  icon: string;
+  icon: string | StaticImageData;
   submenu?: MenuSubItem[];
   active?: boolean;
 }

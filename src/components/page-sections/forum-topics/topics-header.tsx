@@ -1,4 +1,13 @@
 "use client";
+import fl1 from "@/assets/img/home_support/fl1.png";
+import fl2 from "@/assets/img/home_support/fl2.png";
+import fl3 from "@/assets/img/home_support/fl3.png";
+import fl4 from "@/assets/img/home_support/fl4.png";
+import fl5 from "@/assets/img/home_support/fl5.png";
+import fl6 from "@/assets/img/home_support/fl6.png";
+import fl7 from "@/assets/img/home_support/fl7.png";
+import fl8 from "@/assets/img/home_support/fl8.png";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -75,7 +84,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="richard"
                       >
-                        <img src="/img/home_support/fl1.png" alt="user" />
+                        <Image src={fl1} alt="user" />
                         Richard Tea
                       </Link>
                       <Link
@@ -83,11 +92,11 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="druid"
                       >
-                        <img src="/img/home_support/fl2.png" alt="user" />
+                        <Image src={fl2} alt="user" />
                         Druid Wensleydale
                       </Link>
                       <Link className="dropdown-item" href="#0" data-rel="weir">
-                        <img src="/img/home_support/fl3.png" alt="user" />
+                        <Image src={fl3} alt="user" />
                         Weir Doee
                       </Link>
                       <Link
@@ -95,7 +104,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="giles"
                       >
-                        <img src="/img/home_support/fl4.png" alt="user" />
+                        <Image src={fl4} alt="user" />
                         Giles Posture
                       </Link>
                       <Link
@@ -103,11 +112,11 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="theodore"
                       >
-                        <img src="/img/home_support/fl5.png" alt="user" />
+                        <Image src={fl5} alt="user" />
                         Theodore Handle
                       </Link>
                       <Link className="dropdown-item" href="#0" data-rel="mann">
-                        <img src="/img/home_support/fl6.png" alt="user" />
+                        <Image src={fl6} alt="user" />
                         Guy Mann
                       </Link>
                       <Link
@@ -115,7 +124,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="dylan"
                       >
-                        <img src="/img/home_support/fl7.png" alt="user" />
+                        <Image src={fl7} alt="user" />
                         Dylan Meringue
                       </Link>
                       <Link
@@ -123,7 +132,7 @@ const TopicsHeader = () => {
                         href="#0"
                         data-rel="fletch"
                       >
-                        <img src="/img/home_support/fl8.png" alt="user" />
+                        <Image src={fl8} alt="user" />
                         Fletch Skinner
                       </Link>
                     </div>
@@ -231,35 +240,35 @@ const TopicsHeader = () => {
 
                     <div className="all-users">
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl1.png" alt="user" />
+                        <Image src={fl1} alt="user" />
                         Richard Tea
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl2.png" alt="user" />
+                        <Image src={fl2} alt="user" />
                         Druid Wensleydale
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl3.png" alt="user" />
+                        <Image src={fl3} alt="user" />
                         Weir Doee
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl4.png" alt="user" />
+                        <Image src={fl4} alt="user" />
                         Giles Posture
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl5.png" alt="user" />
+                        <Image src={fl5} alt="user" />
                         Theodore Handle
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl6.png" alt="user" />
+                        <Image src={fl6} alt="user" />
                         Guy Mann
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl7.png" alt="user" />
+                        <Image src={fl7} alt="user" />
                         Dylan Meringue
                       </Link>
                       <Link className="dropdown-item" href="#">
-                        <img src="/img/home_support/fl8.png" alt="user" />
+                        <Image src={fl8} alt="user" />
                         Fletch Skinner
                       </Link>
                     </div>

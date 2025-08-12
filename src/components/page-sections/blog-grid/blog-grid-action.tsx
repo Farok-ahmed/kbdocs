@@ -1,14 +1,17 @@
 "use client";
+import man from "@/assets/img/blog-grid/man.png";
+import shadowAction from "@/assets/img/blog-grid/shadow_action.png";
+import Image from "next/image";
 const BlogGridAction = () => {
   return (
     <>
       <section className="doc_action_area_three">
-        <img
+        <Image
           className="p_absolute shadows"
-          src="/img/blog-grid/shadow_action.png"
+          src={shadowAction}
           alt=""
         />
-        <img className="p_absolute b_man" src="/img/blog-grid/man.png" alt="" />
+        <Image className="p_absolute b_man" src={man} alt="" />
         <div className="container">
           <div className="row">
             <div className="col-lg-5">

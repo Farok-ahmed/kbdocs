@@ -1,4 +1,8 @@
+import authorAvatar2 from "@/assets/img/forum/author-avatar-2.jpg";
+import authorAvatar3 from "@/assets/img/forum/author-avatar-3.jpg";
+import authorAvatar from "@/assets/img/forum/author-avatar.png";
 import Select from "@/components/select";
+import Image from "next/image";
 import Link from "next/link";
 const ForumSingleComments = () => {
   return (
@@ -10,7 +14,7 @@ const ForumSingleComments = () => {
             <div className="col-lg-9">
               <div className="forum-post-top">
                 <Link className="author-avatar" href="#">
-                  <img src="/img/forum/author-avatar.png" alt="" />
+                  <Image src={authorAvatar} alt=""  />
                 </Link>
                 <div className="forum-post-author">
                   <Link className="author-name" href="#">
@@ -90,7 +94,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="/img/forum/author-avatar.png" alt="author avatar" />
+                <Image src={authorAvatar} alt="author avatar"  />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -139,7 +143,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="/img/forum/author-avatar-2.jpg" alt="author avatar" />
+                <Image src={authorAvatar2} alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -187,7 +191,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="/img/forum/author-avatar-3.jpg" alt="author avatar" />
+                <Image src={authorAvatar3} alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -235,7 +239,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src="/img/forum/author-avatar.png" alt="author avatar" />
+                <Image src={authorAvatar} alt="author avatar"  />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">

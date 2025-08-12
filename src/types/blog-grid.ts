@@ -1,11 +1,11 @@
 export interface BlogGridAuthor {
   name: string;
-  avatar: string;
+  avatar: any;
 }
 
 export interface BlogGridPost {
   id: number;
-  image: string;
+  image: any;
   readTime: string;
   categories: string[];
   title: string;

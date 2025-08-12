@@ -1,3 +1,10 @@
+import img1 from "@/assets/img/1.jpg";
+import img2 from "@/assets/img/2.jpg";
+import img3 from "@/assets/img/3.jpg";
+import singlePostImgTwo from "@/assets/img/blog-single/single_post_img_two.jpg";
+import flotLeft from "@/assets/img/flot-left.jpg";
+import flotRight from "@/assets/img/flot-right.jpg";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import LocalVideo from "./local-video";
@@ -680,8 +687,8 @@ const ContentPage: React.FC = () => {
             applied to the image so that it scales with the parent element.
           </p>
           <div className="code-preview p-0">
-            <img
-              src="/img/blog-single/single_post_img_two.jpg"
+            <Image
+              src={singlePostImgTwo}
               className="img-fluid"
               alt="Responsive image"
             />
@@ -753,18 +760,18 @@ const ContentPage: React.FC = () => {
             <div className="code-preview">
               <div className="row">
                 <div className="col-md-4 text-center">
-                  <img src="/img/1.jpg" className="rounded" alt="Round image" />
+                  <Image src={img1} className="rounded" alt="Round image" />
                 </div>
                 <div className="col-md-4 text-center">
-                  <img
-                    src="/img/2.jpg"
+                  <Image
+                    src={img2}
                     className="rounded-circle"
                     alt="Circle image"
                   />
                 </div>
                 <div className="col-md-4 text-center">
-                  <img
-                    src="/img/3.jpg"
+                  <Image
+                    src={img3}
                     className="img-thumbnail"
                     alt="Thumbnail"
                   />
@@ -910,13 +917,13 @@ const ContentPage: React.FC = () => {
             </p>
             <div className="code-preview">
               <div className="overflow-hidden">
-                <img
-                  src="/img/flot-left.jpg"
+                <Image
+                  src={flotLeft}
                   className="rounded float-left img-fluid"
                   alt="..."
                 />
-                <img
-                  src="/img/flot-right.jpg"
+                <Image
+                  src={flotRight}
                   className="rounded float-right img-fluid"
                   alt="..."
                 />
@@ -1036,8 +1043,8 @@ const ContentPage: React.FC = () => {
             </div>
             <div className="code-preview">
               <div className="overflow-hidden">
-                <img
-                  src="/img/flot-left.jpg"
+                <Image
+                  src={flotLeft}
                   className="rounded mx-auto d-block"
                   alt="..."
                 />
@@ -1121,7 +1128,7 @@ const ContentPage: React.FC = () => {
             </div>
             <div className="code-preview">
               <div className="text-center">
-                <img src="/img/flot-left.jpg" className="rounded" alt="..." />
+                <Image src={flotLeft} className="rounded" alt="..." />
               </div>
             </div>
             <div className="code-toolbar">

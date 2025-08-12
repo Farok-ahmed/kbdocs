@@ -1,10 +1,15 @@
+import gear from "@/assets/img/gear.png";
+import sheet from "@/assets/img/sheet.png";
+import shoppingBag from "@/assets/img/shopping-bag.png";
+import tick from "@/assets/img/tick.png";
+
 type MenuItem = {
   href: string;
   title: string;
   type?: string;
   items?: MenuItem[];
   subTitle?: string;
-  icon?: string;
+  icon?: any;
   isDropDown2?: boolean;
 };
 
@@ -230,25 +235,25 @@ export const navMenu: MenuItem[] = [
       {
         title: "KbDoc",
         subTitle: "Launch Simple Websites",
-        icon: "/img/tick.png",
+        icon: tick,
         href: "/doc-archive",
       },
       {
         title: "docall",
         subTitle: "Digital Assets Subscription",
-        icon: "/img/sheet.png",
+        icon: sheet,
         href: "/docs",
       },
       {
         title: "Docenvato",
         subTitle: "Tutorials & Courses",
-        icon: "/img/shopping-bag.png",
+        icon: shoppingBag,
         href: "/",
       },
       {
         title: "Tools",
         subTitle: "Hire a Freelancer",
-        icon: "/img/gear.png",
+        icon: gear,
         href: "/",
       },
     ],

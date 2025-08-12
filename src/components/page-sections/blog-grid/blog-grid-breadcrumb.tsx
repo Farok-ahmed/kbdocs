@@ -1,5 +1,13 @@
 
+import shap01 from "@/assets/img/blog-classic/shap_01.png";
+import shap02 from "@/assets/img/blog-classic/shap_02.png";
+import bLeaf from "@/assets/img/home_one/b_leaf.svg";
+import bManTwo from "@/assets/img/home_one/b_man_two.png";
+import bannerBg from "@/assets/img/home_one/banner_bg.png";
+import flower from "@/assets/img/home_one/flower.png";
+import vIcon from "@/assets/img/v.svg";
 import { formattedDate } from "@/utils/date-formate";
+import Image from "next/image";
 import Link from "next/link";
 import SearchFieldBlog from "./search-field-blog";
 
@@ -8,36 +16,36 @@ const BlogGridBreadcrumb = () => {
   return (
     <>
       <section className="breadcrumb_area">
-        <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-        <img
+        <Image className="p_absolute bl_left" src={vIcon} alt="" />
+        <Image
           className="p_absolute bl_right"
-          src="/img/home_one/b_leaf.svg"
+          src={bLeaf}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute star"
-          src="/img/home_one/banner_bg.png"
+          src={bannerBg}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute wave_shap_one"
-          src="/img/blog-classic/shap_01.png"
+          src={shap01}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute wave_shap_two"
-          src="/img/blog-classic/shap_02.png"
+          src={shap02}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute one wow fadeInRight"
-          src="/img/home_one/b_man_two.png"
+          src={bManTwo}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute two wow fadeInUp"
           data-wow-delay="0.2s"
-          src="/img/home_one/flower.png"
+          src={flower}
           alt=""
         />
         <div className="container">

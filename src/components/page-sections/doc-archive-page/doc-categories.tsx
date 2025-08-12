@@ -1,10 +1,18 @@
+import dowBgTwo from "@/assets/img/home_one/dow_bg_two.png";
+import folder from "@/assets/img/home_two/folder.png";
+import info from "@/assets/img/home_two/info.png";
+import memo from "@/assets/img/home_two/memo.png";
+import settings from "@/assets/img/home_two/settings.png";
+import share from "@/assets/img/home_two/share.png";
+import weather from "@/assets/img/home_two/weather.png";
+import Image from "next/image";
 import Link from "next/link";
 
 const DocCategories = () => {
   return (
     <>
       <section className="doc_categories_guide_area sec_pad">
-        <img className="shap" src="/img/home_one/dow_bg_two.png" alt="" />
+        <Image className="shap" src={dowBgTwo} alt="" />
         <div className="container">
           <div className="section_title text-center">
             <h2 className="h_title wow fadeInUp">
@@ -18,7 +26,7 @@ const DocCategories = () => {
           <div className="row">
             <div className="col-lg-4 col-sm-6">
               <div className="categories_guide_item wow fadeInUp">
-                <img src="/img/home_two/folder.png" alt="" />
+                <Image src={folder} alt="" />
                 <div className="doc_tag_title">
                   <h4>Getting Started</h4>
                 </div>
@@ -63,7 +71,7 @@ const DocCategories = () => {
                 className="categories_guide_item wow fadeInUp"
                 data-wow-delay="0.2s"
               >
-                <img src="/img/home_two/info.png" alt="" />
+                <Image src={info} alt="" />
                 <div className="doc_tag_title">
                   <h4>Integrations</h4>
                 </div>
@@ -109,7 +117,7 @@ const DocCategories = () => {
                 className="categories_guide_item wow fadeInUp"
                 data-wow-delay="0.4s"
               >
-                <img src="/img/home_two/weather.png" alt="" />
+                <Image src={weather} alt="" />
                 <div className="doc_tag_title">
                   <h4>Cloud Server</h4>
                 </div>
@@ -154,7 +162,7 @@ const DocCategories = () => {
                 className="categories_guide_item wow fadeInUp"
                 data-wow-delay="0.2s"
               >
-                <img src="/img/home_two/settings.png" alt="" />
+                <Image src={settings} alt="" />
                 <div className="doc_tag_title">
                   <h4>User Settings</h4>
                 </div>
@@ -200,7 +208,7 @@ const DocCategories = () => {
                 className="categories_guide_item wow fadeInUp"
                 data-wow-delay="0.4s"
               >
-                <img src="/img/home_two/memo.png" alt="" />
+                <Image src={memo} alt="" />
                 <div className="doc_tag_title">
                   <h4>Reporting</h4>
                 </div>
@@ -245,7 +253,7 @@ const DocCategories = () => {
                 className="categories_guide_item wow fadeInUp"
                 data-wow-delay="0.6s"
               >
-                <img src="/img/home_two/share.png" alt="" />
+                <Image src={share} alt="" />
                 <div className="doc_tag_title">
                   <h4>Solar System</h4>
                 </div>

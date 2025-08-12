@@ -1,9 +1,11 @@
+import leafFootterImg from "@/assets/img/home_one/leaf_footter.png";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="simple_footer">
-      <img className="leaf_right" src="/img/home_one/leaf_footter.png" alt="" />
+      <Image className="leaf_right" src={leafFootterImg} alt="" />
       <div className="container">
         <div className="row align-items-center">
           <div className="col-sm-6">

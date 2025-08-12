@@ -1,4 +1,6 @@
+import imgPointer2 from "@/assets/img/img-pointer2.jpg";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -71,7 +73,7 @@ const LocalVideo: React.FC = () => {
           your pages.
         </p>
         <div className="code-preview" id="inline-popups">
-          <img src="/img/img-pointer2.jpg" alt="" />
+          <Image src={imgPointer2} alt="" />
           <Link
             onClick={handleOpen}
             className="popup-youtube video_icon"

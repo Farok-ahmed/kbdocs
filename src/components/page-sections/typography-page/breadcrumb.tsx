@@ -1,25 +1,31 @@
+import leafLeftImg from "@/assets/img/typography/leaf_left.png";
+import leafRightImg from "@/assets/img/typography/leaf_right.png";
+import man01Img from "@/assets/img/typography/man_01.png";
+import man02Img from "@/assets/img/typography/man_02.png";
+import Image from "next/image";
+
 const Breadcrumb = () => {
   return (
     <>
       <div className="breadcrumb_area_three">
-        <img
+        <Image
           className="p_absolute one"
-          src="/img/typography/leaf_left.png"
+          src={leafLeftImg}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute two"
-          src="/img/typography/man_01.png"
+          src={man01Img}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute three"
-          src="/img/typography/man_02.png"
+          src={man02Img}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute four"
-          src="/img/typography/leaf_right.png"
+          src={leafRightImg}
           alt=""
         />
         <div className="container">

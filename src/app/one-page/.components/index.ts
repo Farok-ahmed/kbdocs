@@ -20,4 +20,4 @@ export { default as Sidebar } from "./sidebar";
 
 // Menu configuration
 export { sidebarItems } from "./menu";
-export type { MenuItem, MenuSubItem } from "./menu";
+// export type { MenuItem, MenuSubItem } from "./menu";

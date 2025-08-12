@@ -1,5 +1,9 @@
 "use client";
+import community from "@/assets/img/community.png";
+import email from "@/assets/img/email.png";
+import twitter from "@/assets/img/twitter.png";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 const ContactInfo = () => {
   return (
@@ -19,7 +23,7 @@ const ContactInfo = () => {
         <div className="row get_info_item align-items-center justify-content-between">
           <div className="col-lg-4 col-sm-5">
             <div className="media">
-              <img src="/img/email.png" alt="" />
+              <Image src={email} alt="" />
               <div className="media-body">
                 <h5 className="h5 bold">Email</h5>
                 <p>Monday to Friday</p>
@@ -38,7 +42,7 @@ const ContactInfo = () => {
         <div className="row get_info_item align-items-center justify-content-between">
           <div className="col-lg-4 col-sm-5">
             <div className="media">
-              <img src="/img/twitter.png" alt="" />
+              <Image src={twitter} alt="" />
               <div className="media-body">
                 <h5 className="h5 bold">Twitter</h5>
                 <p>Monday to Friday</p>
@@ -57,7 +61,7 @@ const ContactInfo = () => {
         <div className="row get_info_item align-items-center justify-content-between">
           <div className="col-lg-4 col-sm-5">
             <div className="media">
-              <img src="/img/community.png" alt="" />
+              <Image src={community} alt="" />
               <div className="media-body">
                 <h5 className="h5 bold">Community</h5>
                 <p>Monday to Friday</p>

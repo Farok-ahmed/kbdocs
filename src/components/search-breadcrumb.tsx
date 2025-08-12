@@ -1,5 +1,13 @@
 "use client";
+import shap01Img from "@/assets/img/blog-classic/shap_01.png";
+import shap02Img from "@/assets/img/blog-classic/shap_02.png";
+import bLeafImg from "@/assets/img/home_one/b_leaf.svg";
+import bManTwoImg from "@/assets/img/home_one/b_man_two.png";
+import bannerBgImg from "@/assets/img/home_one/banner_bg.png";
+import flowerImg from "@/assets/img/home_one/flower.png";
+import vImg from "@/assets/img/v.svg";
 import Select from "@/components/select";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import "./inputStyle.css";
 
@@ -41,36 +49,36 @@ const SearchBreadcrumb = () => {
   return (
     <>
       <section className="breadcrumb_area">
-        <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-        <img
+        <Image className="p_absolute bl_left" src={vImg} alt="" />
+        <Image
           className="p_absolute bl_right"
-          src="/img/home_one/b_leaf.svg"
+          src={bLeafImg}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute star"
-          src="/img/home_one/banner_bg.png"
+          src={bannerBgImg}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute wave_shap_one"
-          src="/img/blog-classic/shap_01.png"
+          src={shap01Img}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute wave_shap_two"
-          src="/img/blog-classic/shap_02.png"
+          src={shap02Img}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute one wow fadeInRight"
-          src="/img/home_one/b_man_two.png"
+          src={bManTwoImg}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute two wow fadeInUp"
           data-wow-delay="0.2s"
-          src="/img/home_one/flower.png"
+          src={flowerImg}
           alt=""
         />
         <div className="container custom_container">
