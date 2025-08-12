@@ -1,5 +1,13 @@
 "use client";
+import dowBgTwoImg from "@/assets/img/home_one/dow_bg_two.png";
+import folderImg from "@/assets/img/home_two/folder.png";
+import infoImg from "@/assets/img/home_two/info.png";
+import memoImg from "@/assets/img/home_two/memo.png";
+import settingsImg from "@/assets/img/home_two/settings.png";
+import shareImg from "@/assets/img/home_two/share.png";
+import weatherImg from "@/assets/img/home_two/weather.png";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 type GuideLink = {
@@ -11,7 +19,7 @@ type GuideLink = {
 type Guide = {
   id: number;
   title: string;
-  image: string;
+  image: any; // Changed from string to any for imported images
   delay: string; // You use string delays like "0.2s"
   links: GuideLink[];
 };
@@ -34,7 +42,7 @@ export default function GuideCategories() {
     {
       id: 1,
       title: "Getting Started",
-      image: "/img/home_two/folder.png",
+      image: folderImg,
       delay: "0s",
       links: [
         { id: 1, text: "Setup home page layout", href: "" },
@@ -47,7 +55,7 @@ export default function GuideCategories() {
     {
       id: 2,
       title: "Integrations",
-      image: "/img/home_two/info.png",
+      image: infoImg,
       delay: "0.2s",
       links: [
         { id: 1, text: "How To Install Manual Theme", href: "" },
@@ -60,7 +68,7 @@ export default function GuideCategories() {
     {
       id: 3,
       title: "Cloud Server",
-      image: "/img/home_two/weather.png",
+      image: weatherImg,
       delay: "0.4s",
       links: [
         { id: 1, text: "Mailbox and User Settings", href: "" },
@@ -73,7 +81,7 @@ export default function GuideCategories() {
     {
       id: 4,
       title: "User Settings",
-      image: "/img/home_two/settings.png",
+      image: settingsImg,
       delay: "0s",
       links: [
         { id: 1, text: "Do I need to know coding", href: "" },
@@ -86,7 +94,7 @@ export default function GuideCategories() {
     {
       id: 5,
       title: "Reporting",
-      image: "/img/home_two/memo.png",
+      image: memoImg,
       delay: "0.4s",
       links: [
         { id: 1, text: "Setup home page layout", href: "" },
@@ -99,7 +107,7 @@ export default function GuideCategories() {
     {
       id: 6,
       title: "Solar System",
-      image: "/img/home_two/share.png",
+      image: shareImg,
       delay: "0.6s",
       links: [
         { id: 1, text: "How do I contact Customer Care?", href: "" },
@@ -113,10 +121,11 @@ export default function GuideCategories() {
 
   return (
     <section className="doc_categories_guide_area sec_pad">
-      <img
+      <Image
         className="shap wow fadeInUp"
-        src="/img/home_one/dow_bg_two.png"
+        src={dowBgTwoImg}
         alt=""
+        style={{ width: "auto", height: "auto" }}
       />
       <div className="container">
         <motion.div
@@ -146,7 +155,7 @@ export default function GuideCategories() {
                   viewport={{ once: true }}
                   variants={fadeInUp as any}
                 >
-                  <img src={guide.image} alt={guide.title} />
+                  <Image src={guide.image} alt={guide.title} />
                   <div className="doc_tag_title">
                     <h4>{guide.title}</h4>
                   </div>

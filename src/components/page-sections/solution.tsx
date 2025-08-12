@@ -1,5 +1,8 @@
 "use client"
+import briefcaseImg from "@/assets/img/home_two/Briefcase.png";
+import settingIconImg from "@/assets/img/home_two/setting-icon.png";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Solution() {
@@ -37,7 +40,7 @@ export default function Solution() {
               transition={{ duration: 1, ease: "easeInOut" }}
               className="doc_solution_item online_doc wow fadeInUp"
             >
-              <img src="/img/home_two/Briefcase.png" alt="" />
+              <Image src={briefcaseImg} alt="" />
               <h4>Online Documentation</h4>
               <p>
                 Horse play barmy Oxford bonnet are you taking the piss cheeky
@@ -60,7 +63,7 @@ export default function Solution() {
               className="doc_solution_item premium_doc wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <img src="/img/home_two/setting-icon.png" alt="" />
+              <Image src={settingIconImg} alt="" />
               <h4>Premium Support</h4>
               <p>
                 Horse play barmy Oxford bonnet are you taking the piss cheeky

@@ -1,7 +1,15 @@
 "use client";
 
+import cloudImg from "@/assets/img/home_two/cloud.png";
+import emailIconImg from "@/assets/img/home_two/email-icon.png";
+import emailIconTwoImg from "@/assets/img/home_two/email-icon_two.png";
+import fManImg from "@/assets/img/home_two/f_man.png";
+import manImg from "@/assets/img/home_two/man.png";
+import logoImg from "@/assets/img/logo.png";
+import vImg from "@/assets/img/v.svg";
 import { pages } from "@/utils/pages";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,8 +20,8 @@ export default function Footer() {
     <footer
       className={`footer_area f_bg_color ${isHomePage ? "footer_p_top" : ""}`}
     >
-      <img className="p_absolute leaf" src="/img/v.svg" alt="" />
-      <motion.img
+      <Image className="p_absolute leaf" src={vImg} alt="" width={180} height={125} />
+      <motion.div
         // fade in left animation
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -21,34 +29,40 @@ export default function Footer() {
         viewport={{ once: true, amount: 0.2 }}
         className="p_absolute f_man wow fadeInLeft"
         data-wow-delay="0.4s"
-        src="/img/home_two/f_man.png"
-        alt=""
-      />
-      <img
+      >
+        <Image
+          src={fManImg}
+          alt=""
+        />
+      </motion.div>
+      <Image
         className="p_absolute f_cloud"
-        src="/img/home_two/cloud.png"
+        src={cloudImg}
         alt=""
       />
-      <img
+      <Image
         className="p_absolute f_email"
-        src="/img/home_two/email-icon.png"
+        src={emailIconImg}
         alt=""
       />
-      <img
+      <Image
         className="p_absolute f_email_two"
-        src="/img/home_two/email-icon_two.png"
+        src={emailIconTwoImg}
         alt=""
       />
-      <motion.img
+      <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true, amount: 0.2 }}
         className="p_absolute f_man_two wow fadeInLeft"
         data-wow-delay="0.2s"
-        src="/img/home_two/man.png"
-        alt=""
-      />
+      >
+        <Image
+          src={manImg}
+          alt=""
+        />
+      </motion.div>
       <div className="footer_top">
         <div className="container">
           <div className="row">
@@ -62,7 +76,7 @@ export default function Footer() {
                 className="f_widget subscribe_widget wow fadeInUp"
               >
                 <Link href="" className="f_logo">
-                  <img src="/img/logo.png" alt="" />
+                  <Image src={logoImg} alt="" />
                 </Link>
                 <h4 className="c_head">Subscribe to our newsletter</h4>
                 <form

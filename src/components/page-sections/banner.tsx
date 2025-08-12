@@ -1,5 +1,13 @@
 "use client"
+import bordImg from "@/assets/img/home_two/bord.png";
+import buildingImg from "@/assets/img/home_two/building.png";
+import flowerImg from "@/assets/img/home_two/flower.png";
+import girlImg from "@/assets/img/home_two/girl.png";
+import plusImg from "@/assets/img/home_two/plus.png";
+import plusOneImg from "@/assets/img/home_two/plus_one.png";
+import tableImg from "@/assets/img/home_two/table.svg";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Banner() {
   return (
@@ -8,13 +16,13 @@ export default function Banner() {
         className="b_plus one"
         data-parallax='{"x": 250, "y": 160, "rotateZ":500}'
       >
-        <img src="/img/home_two/plus.png" alt="" />
+        <Image src={plusImg} alt=""/>
       </div>
       <div
         className="b_plus two"
         data-parallax='{"x": 250, "y": 260, "rotateZ":500}'
       >
-        <img src="/img/home_two/plus_one.png" alt="" />
+        <Image src={plusOneImg} alt=""  />
       </div>
       <div
         className="b_round r_one"
@@ -26,40 +34,54 @@ export default function Banner() {
       ></div>
       <div className="b_round r_three"></div>
       <div className="b_round r_four"></div>
-      <img
+      <Image
         className="p_absolute building_img"
-        src="/img/home_two/building.png"
+        src={buildingImg}
         alt=""
+       
       />
-      <motion.img
+      
+      <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.8 }}
         transition={{ duration: 1, ease: "easeInOut" }}
         className="p_absolute table_img wow fadeInLeft"
-        src="/img/home_two/table.svg"
-        alt=""
-      />
-      <img
+      >
+        <Image
+        width={250}
+        height={190}
+          src={tableImg}
+          alt=""
+         
+        />
+      </motion.div>
+      <Image
         className="p_absolute flower wow fadeInUp"
         data-wow-delay="0.6s"
-        src="/img/home_two/flower.png"
+        src={flowerImg}
         alt=""
+        
       />
-      <motion.img
+      <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
         className="p_absolute bord wow fadeInRight"
         data-wow-delay="0.4s"
-        src="/img/home_two/bord.png"
-        alt=""
-      />
-      <img
+      >
+        <Image
+          src={bordImg}
+          alt=""
+        
+        />
+      </motion.div>
+      <Image
         className="p_absolute girl wow fadeInRight"
         data-wow-delay="0.8s"
-        src="/img/home_two/girl.png"
+        src={girlImg}
         alt=""
+       
       />
       <div className="container">
         <div className="doc_banner_text_two text-center">

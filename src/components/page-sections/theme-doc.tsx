@@ -1,11 +1,21 @@
 "use client"
+import bellImg from "@/assets/img/home_two/Bell.png";
+import channelImg from "@/assets/img/home_two/Channel.png";
+import cloud1Img from "@/assets/img/home_two/cloud1.png";
+import duplicateImg from "@/assets/img/home_two/Duplicate.png";
+import lockIsOpenImg from "@/assets/img/home_two/Lock_is_open.png";
+import pencilImg from "@/assets/img/home_two/pencil.png";
+import supportImg from "@/assets/img/home_two/Support.png";
+import tuneUpImg from "@/assets/img/home_two/Tune-up.png";
+import usserImg from "@/assets/img/home_two/usser.png";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 type Feature = {
   id: string;
   title: string;
-  image: string;
+  image: any; // Changed from string to any for imported images
   description: string;
   delay: number;
 };
@@ -14,63 +24,63 @@ const features: Feature[] = [
   {
     id: "grow-business",
     title: "Grow Your Business",
-    image: "/img/home_two/cloud1.png",
+    image: cloud1Img,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0,
   },
   {
     id: "knowledge-base",
     title: "Knowledge Base",
-    image: "/img/home_two/Lock_is_open.png",
+    image: lockIsOpenImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0.2,
   },
   {
     id: "online-support",
     title: "Online Support",
-    image: "/img/home_two/Support.png",
+    image: supportImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0.4,
   },
   {
     id: "account-management",
     title: "Account Management",
-    image: "/img/home_two/usser.png",
+    image: usserImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0,
   },
   {
     id: "formatting-content",
     title: "Formatting Content",
-    image: "/img/home_two/pencil.png",
+    image: pencilImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0.2,
   },
   {
     id: "great-products",
     title: "Great Products",
-    image: "/img/home_two/Channel.png",
+    image: channelImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0.4,
   },
   {
     id: "documentation",
     title: "Documentation",
-    image: "/img/home_two/Duplicate.png",
+    image: duplicateImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0,
   },
   {
     id: "dedicated-widgets",
     title: "Dedicated Widgets",
-    image: "/img/home_two/Bell.png",
+    image: bellImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0.2,
   },
   {
     id: "working-with-docs",
     title: "Working with Docs",
-    image: "/img/home_two/Tune-up.png",
+    image: tuneUpImg,
     description: "Oxford bonnet are you taking the piss cheeky mufty.",
     delay: 0.4,
   },
@@ -128,7 +138,7 @@ export default function ThemeDoc() {
                 viewport={{ once: true, amount: 0.3 }}
                 custom={item.delay}
               >
-                <img src={item.image} alt={item.title} />
+                <Image src={item.image} alt={item.title} />
                 <div className="media-body">
                   <Link href="">
                     <h4 className="c_head">{item.title}</h4>
