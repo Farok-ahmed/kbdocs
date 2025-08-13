@@ -19,7 +19,7 @@ const Sidebar = () => {
         <div className="blog_sidebar pl-40">
           <div className="widget about_widget">
             <div className="img">
-              <Image src={aboutImg} alt="" />
+              <Image src={aboutImg} alt=""  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="text">
               <Link href="#">
@@ -201,22 +201,22 @@ const Sidebar = () => {
             <h4 className="c_head">Instragram</h4>
             <div className="instragram_info">
               <Link href="#" className="instragram_item">
-                <Image src={insta01} alt="" />
+                <Image src={insta01} alt=""  style={{width:"auto",height:"auto"}} />
               </Link>
               <Link href="#" className="instragram_item">
-                <Image src={insta02} alt="" />
+                <Image src={insta02} alt=""  style={{width:"auto",height:"auto"}} />
               </Link>
               <Link href="#" className="instragram_item">
-                <Image src={insta03} alt="" />
+                <Image src={insta03} alt=""  style={{width:"auto",height:"auto"}} />
               </Link>
               <Link href="#" className="instragram_item">
-                <Image src={insta04} alt="" />
+                <Image src={insta04} alt=""  style={{width:"auto",height:"auto"}} />
               </Link>
               <Link href="#" className="instragram_item">
-                <Image src={insta05} alt="" />
+                <Image src={insta05} alt=""  style={{width:"auto",height:"auto"}} />
               </Link>
               <Link href="#" className="instragram_item">
-                <Image src={insta06} alt="" />
+                <Image src={insta06} alt=""  style={{width:"auto",height:"auto"}} />
               </Link>
             </div>
           </div>

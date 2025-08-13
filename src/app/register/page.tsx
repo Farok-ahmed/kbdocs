@@ -44,7 +44,7 @@ export default function RegisterPage() {
                 Already have an account? <Link href="/login">Sign in</Link>
               </p>
               <Link href="" className="btn-google">
-                <Image src={gmail} alt="" width={24} height={12} />
+                <Image src={gmail} alt="" width={24} style={{height:"auto"}} />
                 <span className="btn-text">Sign up with Google</span>
               </Link>
             </div>

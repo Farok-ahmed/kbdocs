@@ -201,7 +201,7 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <Image src={related2} alt="Related post" />
+                        <Image src={related2} alt="Related post" style={{width:"auto",height:"auto"}} />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">18 Min Read</Link>
@@ -231,7 +231,7 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <Image src={related3} alt="Related post" />
+                        <Image src={related3} alt="Related post" style={{width:"auto",height:"auto"}} />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">10 Min Read</Link>
@@ -261,7 +261,7 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <Image src={related6} alt="Related post" />
+                        <Image src={related6} alt="Related post" style={{width:"auto",height:"auto"}} />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">9 Min Read</Link>
@@ -385,7 +385,7 @@ const BlogSinglePage = () => {
               <div className="blog_sidebar pl-40">
                 <div className="widget about_widget">
                   <div className="img">
-                    <Image src={aboutImg} alt="About" />
+                    <Image src={aboutImg} alt="About"  style={{width:"auto",height:"auto"}} />
                   </div>
                   <div className="text">
                     <Link href="#">
@@ -572,22 +572,22 @@ const BlogSinglePage = () => {
                   <h4 className="c_head">Instragram</h4>
                   <div className="instragram_info">
                     <Link href="#" className="instragram_item">
-                      <Image src={insta01} alt="Instagram" />
+                      <Image src={insta01} alt="Instagram"  style={{width:"auto",height:"auto"}} />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta02} alt="Instagram" />
+                      <Image src={insta02} alt="Instagram"  style={{width:"auto",height:"auto"}} />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta03} alt="Instagram" />
+                      <Image src={insta03} alt="Instagram"  style={{width:"auto",height:"auto"}} />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta04} alt="Instagram" />
+                      <Image src={insta04} alt="Instagram"  style={{width:"auto",height:"auto"}} />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta05} alt="Instagram" />
+                      <Image src={insta05} alt="Instagram" style={{width:"auto",height:"auto"}} />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta06} alt="Instagram" />
+                      <Image src={insta06} alt="Instagram" style={{width:"auto",height:"auto"}} />
                     </Link>
                   </div>
                 </div>

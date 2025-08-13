@@ -110,7 +110,7 @@ const CommunityPosts = () => {
           >
             <div className="post-content">
               <div className="author-avatar">
-                <Image src={post.avatar} alt="community post" />
+                <Image src={post.avatar} alt="community post"  style={{width:"auto",height:"auto"}} />
               </div>
               <div className="entry-content">
                 <h3 className="post-title">

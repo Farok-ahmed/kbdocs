@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useFormState } from "react-dom";
+import { useActionState, useEffect, useState } from "react";
 import ContactFormAction, { type ContactFormState } from "./contact-form-action";
 import ContactFormSubmit from "./contact-submit";
 
@@ -28,7 +27,7 @@ const ContactForm = () => {
   });
 
   // Server action state for errors/success
-  const [state, formAction] = useFormState<ContactFormState, FormData>(
+  const [state, formAction] = useActionState<ContactFormState, FormData>(
     ContactFormAction,
     { success: false }
   );

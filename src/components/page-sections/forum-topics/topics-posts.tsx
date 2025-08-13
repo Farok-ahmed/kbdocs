@@ -29,7 +29,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two kbDoc richard bug">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp2} alt="community post" />
+              <Image src={cp2} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -66,7 +66,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two improvement kbDoc open druid">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp1} alt="community post" />
+              <Image src={cp1} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -111,7 +111,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two css feature improvement weir">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp3} alt="community post" />
+              <Image src={cp3} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -150,7 +150,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two feature kbDoc spider richard">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp4} alt="community post" />
+              <Image src={cp4} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -197,7 +197,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two spider open weir">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp5} alt="community post" />
+              <Image src={cp5} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -236,7 +236,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two bug feature doc open druid dylan">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp6} alt="community post" />
+              <Image src={cp6} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -278,7 +278,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two spider doc open giles fletch">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp10} alt="community post" />
+              <Image src={cp10} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -318,7 +318,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two kbDoc bug open dylan">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp7} alt="community post" />
+              <Image src={cp7} alt="community post"  style={{width:"auto",height:"auto"}}/>
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -364,7 +364,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two giles mann">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp8} alt="community post" />
+              <Image src={cp8} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -404,7 +404,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two theodore fletch">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp9} alt="community post" />
+              <Image src={cp9} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
 
             <div className="entry-content">
@@ -451,7 +451,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two mann">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp2} alt="community post" />
+              <Image src={cp2} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -490,7 +490,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two theodore">
           <div className="post-content">
             <div className="author-avatar">
-              <Image src={cp6} alt="community post" />
+              <Image src={cp6} alt="community post"  style={{width:"auto",height:"auto"}} />
             </div>
             <div className="entry-content">
               <h3 className="post-title">

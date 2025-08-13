@@ -77,7 +77,7 @@ const ModalLightbox = () => {
             data-toggle="modal"
             data-target="#exampleModal"
           >
-            <Image src={imgPointer1} alt="" />
+            <Image src={imgPointer1} alt=""  style={{width:"auto",height:"auto"}} />
           </Link>
           <h6>
             How to edit <Link href="#">KbDoc</Link>

@@ -69,7 +69,7 @@ export default function HelpDeskPage() {
   const toggleCommunity = () => {
     setCommunityShow((prev) => !prev);
   };
-  const MotionLink = motion(Link);
+
   const supportTopics: SupportTopic[] = [
     {
       id: 1,
@@ -241,7 +241,7 @@ export default function HelpDeskPage() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
             >
-              <Image src={bn1} alt="people" className="rounded-lg" />
+              <Image src={bn1} alt="people" className="rounded-lg"  style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -253,7 +253,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               data-wow-delay="0.4s"
             >
-              <Image src={bn2} alt="people" />
+              <Image src={bn2} alt="people"  style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -265,7 +265,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               data-wow-delay="0.4s"
             >
-              <Image src={bn3} alt="people" />
+              <Image src={bn3} alt="people"  style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -277,7 +277,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               data-wow-delay="0.4s"
             >
-              <Image src={bn4} alt="people" />
+              <Image src={bn4} alt="people" style={{width:"auto",height:"auto"}}/>
             </motion.div>
           </li>
           <li>
@@ -289,7 +289,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               data-wow-delay="0.4s"
             >
-              <Image src={bn5} alt="people" />
+              <Image src={bn5} alt="people" style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -301,7 +301,7 @@ export default function HelpDeskPage() {
               className="wow zoomIn"
               data-wow-delay="0.4s"
             >
-              <Image src={bn6} alt="people" />
+              <Image src={bn6} alt="people" style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -313,7 +313,7 @@ export default function HelpDeskPage() {
               viewport={{ once: true }}
               data-wow-delay="0.4s"
             >
-              <Image src={bn7} alt="people" />
+              <Image src={bn7} alt="people" style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -325,7 +325,7 @@ export default function HelpDeskPage() {
               className="wow zoomIn"
               data-wow-delay="0.4s"
             >
-              <Image src={bn8} alt="people" />
+              <Image src={bn8} alt="people" style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -337,7 +337,7 @@ export default function HelpDeskPage() {
               className="wow zoomIn"
               data-wow-delay="0.4s"
             >
-              <Image src={bn9} alt="people" />
+              <Image src={bn9} alt="people" style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
           <li>
@@ -349,7 +349,7 @@ export default function HelpDeskPage() {
               className="wow zoomIn"
               data-wow-delay="0.4s"
             >
-              <Image src={bn10} alt="people" />
+              <Image src={bn10} alt="people" style={{width:"auto",height:"auto"}} />
             </motion.div>
           </li>
         </ul>
@@ -387,7 +387,7 @@ export default function HelpDeskPage() {
           </li>
         </motion.ul>
         <div className="bottom-shape">
-          <Image src={bannerBottomShape} alt="banner" />
+          <Image src={bannerBottomShape} alt="banner" style={{width:"auto",height:"auto"}} />
         </div>
       </section>
       {/* /.kbDoc-banner-support --> */}
@@ -562,28 +562,31 @@ export default function HelpDeskPage() {
           {/* /.community-posts-wrapper --> */}
 
           <div className="button-container text-center">
-            <MotionLink
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              href=""
-              className="doc_border_btn btn-round border-light all_doc_btn wow fadeInUp animated"
             >
-              All sestems currently operational
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                width="18px"
-                height="11px"
+              <Link
+                href="#"
+                className="doc_border_btn btn-round border-light all_doc_btn wow fadeInUp animated"
               >
-                <path
-                  fillRule="evenodd"
-                  fill="rgb(16, 179, 214)"
-                  d="M13.034,0.006 L12.323,0.738 L15.227,4.980 L-0.000,4.981 L-0.000,6.015 L15.227,6.015 L12.323,10.258 L13.034,10.990 L18.000,5.864 L18.000,5.131 L13.034,0.006 Z"
-                />
-              </svg>
-            </MotionLink>
+                All sestems currently operational
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  width="18px"
+                  height="11px"
+                >
+                  <path
+                    fillRule="evenodd"
+                    fill="rgb(16, 179, 214)"
+                    d="M13.034,0.006 L12.323,0.738 L15.227,4.980 L-0.000,4.981 L-0.000,6.015 L15.227,6.015 L12.323,10.258 L13.034,10.990 L18.000,5.864 L18.000,5.131 L13.034,0.006 Z"
+                  />
+                </svg>
+              </Link>
+            </motion.div>
           </div>
           {/* /.button-container --> */}
         </div>
@@ -702,17 +705,17 @@ export default function HelpDeskPage() {
             >
               New to Communities?
             </motion.h2>
-
-            <MotionLink
-              href=""
-              className="action_btn"
+            
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              Join the community <i className="arrow_right"></i>
-            </MotionLink>
+              <Link href="#" className="action_btn">
+                Join the community <i className="arrow_right"></i>
+              </Link>
+            </motion.div>
           </div>
 
           <div className="row justify-content-center">

@@ -77,7 +77,7 @@ const ImageLightboxDocly2 = () => {
             data-toggle="modal"
             data-target="#exampleModal2"
           >
-            <Image src={imgPointer2} alt="" />
+            <Image src={imgPointer2} alt=""  style={{width:"auto",height:"auto"}} />
           </Link>
           <h6>
             How to edit <Link href="#">Docly2</Link>
