@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -188,9 +189,11 @@ const DocumentationArea = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <img
+                      <Image
                         src={activeTabData.featured.icon}
                         alt={activeTabData.featured.title}
+                        width={60}
+                        height={60}
                       />
                     </motion.div>
                     <motion.h4
@@ -235,7 +238,7 @@ const DocumentationArea = () => {
                           }}
                         >
                           <div className="icon">
-                            <img src={item.icon} alt={item.title} />
+                            <Image src={item.icon} alt={item.title} width={45} height={45} />
                           </div>
                           <div className="media-body">
                             <Link href="">

@@ -1,4 +1,5 @@
 import { tagsData, TicketCategories } from "@/app/forums/forum-data";
+import Image from "next/image";
 import Link from "next/link";
 
 const ForumSingleSidebar = () => {
@@ -53,7 +54,12 @@ const ForumSingleSidebar = () => {
             <ul className="list-unstyled ticket_categories">
               {TicketCategories.map((category) => (
                 <li key={category.id}>
-                  <img src={category.icon} alt="category" />
+                  <Image
+                    src={category.icon}
+                    alt="category"
+                    width={24}
+                    height={24}
+                  />
                   <Link href="#">{category.name}</Link>
                   {category.activeCount && (
                     <span className="count count-fill">

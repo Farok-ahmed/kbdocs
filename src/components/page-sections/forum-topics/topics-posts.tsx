@@ -1,13 +1,24 @@
 import cmm1 from "@/assets/img/home_support/cmm1.png";
+import cmm10 from "@/assets/img/home_support/cmm10.png";
+import cmm11 from "@/assets/img/home_support/cmm11.png";
 import cmm2 from "@/assets/img/home_support/cmm2.png";
 import cmm3 from "@/assets/img/home_support/cmm3.png";
 import cmm4 from "@/assets/img/home_support/cmm4.png";
 import cmm5 from "@/assets/img/home_support/cmm5.png";
+import cmm6 from "@/assets/img/home_support/cmm6.png";
+import cmm7 from "@/assets/img/home_support/cmm7.png";
+import cmm8 from "@/assets/img/home_support/cmm8.png";
+import cmm9 from "@/assets/img/home_support/cmm9.png";
 import cp1 from "@/assets/img/home_support/cp1.png";
+import cp10 from "@/assets/img/home_support/cp10.png";
 import cp2 from "@/assets/img/home_support/cp2.jpg";
 import cp3 from "@/assets/img/home_support/cp3.jpg";
 import cp4 from "@/assets/img/home_support/cp4.jpg";
 import cp5 from "@/assets/img/home_support/cp5.jpg";
+import cp6 from "@/assets/img/home_support/cp6.jpg";
+import cp7 from "@/assets/img/home_support/cp7.png";
+import cp8 from "@/assets/img/home_support/cp8.png";
+import cp9 from "@/assets/img/home_support/cp9.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -225,7 +236,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two bug feature doc open druid dylan">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp6.jpg" alt="community post" />
+              <Image src={cp6} alt="community post" />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -238,7 +249,7 @@ const TopicsPosts = () => {
               </div>
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm6.png" alt="cmm" />
+                  <Image src={cmm6} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>
@@ -267,7 +278,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two spider doc open giles fletch">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp10.png" alt="community post" />
+              <Image src={cp10} alt="community post" />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -275,7 +286,7 @@ const TopicsPosts = () => {
               </h3>
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm7.png" alt="cmm" />
+                  <Image src={cmm7} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>
@@ -307,7 +318,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two kbDoc bug open dylan">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp7.png" alt="community post" />
+              <Image src={cp7} alt="community post" />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -323,7 +334,7 @@ const TopicsPosts = () => {
               </div>
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm8.png" alt="cmm" />
+                  <Image src={cmm8} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>
@@ -353,7 +364,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two giles mann">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp8.png" alt="community post" />
+              <Image src={cp8} alt="community post" />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -363,7 +374,7 @@ const TopicsPosts = () => {
               </h3>
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm9.png" alt="cmm" />
+                  <Image src={cmm9} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>
@@ -393,7 +404,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two theodore fletch">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp9.png" alt="community post" />
+              <Image src={cp9} alt="community post" />
             </div>
 
             <div className="entry-content">
@@ -410,7 +421,7 @@ const TopicsPosts = () => {
 
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm10.png" alt="cmm" />
+                  <Image src={cmm10} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>
@@ -440,7 +451,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two mann">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp2.jpg" alt="community post" />
+              <Image src={cp2} alt="community post" />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -450,7 +461,7 @@ const TopicsPosts = () => {
               </h3>
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm2.png" alt="cmm" />
+                  <Image src={cmm2} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>
@@ -479,7 +490,7 @@ const TopicsPosts = () => {
         <div className="community-post style-two theodore">
           <div className="post-content">
             <div className="author-avatar">
-              <img src="/img/home_support/cp6.jpg" alt="community post" />
+              <Image src={cp6} alt="community post" />
             </div>
             <div className="entry-content">
               <h3 className="post-title">
@@ -492,7 +503,7 @@ const TopicsPosts = () => {
               </div>
               <ul className="meta">
                 <li>
-                  <img src="/img/home_support/cmm11.png" alt="cmm" />
+                  <Image src={cmm11} alt="cmm" />
                   <Link href="#">WordPress Theme</Link>
                 </li>
                 <li>

@@ -1,7 +1,14 @@
 
 
+import android from "@/assets/img/home_one/icon/android.png";
+import management from "@/assets/img/home_one/icon/management.png";
+import newspaper from "@/assets/img/home_one/icon/newspaper.png";
+import smartphone from "@/assets/img/home_one/icon/smartphone.png";
+import issuin from "@/assets/img/side-nav/issuin.png";
+import terminals from "@/assets/img/side-nav/terminals.png";
 import DocsLayout from "@/components/DocsLayout";
 import TestKbdocVersion from "@/components/test-kbdoc-version";
+import Image from "next/image";
 import Link from "next/link";
 import Newsletter from "../../_components/newsletter";
 
@@ -21,7 +28,7 @@ const SimpleFooterPage = () => {
             <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/side-nav/terminals.png" alt="" />
+                  <Image src={terminals} alt="" />
                 </div>
                 <div className="media-body">
                   <Link href="#">
@@ -34,7 +41,7 @@ const SimpleFooterPage = () => {
             <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/android.png" alt="" />
+                  <Image src={android} alt="" />
                 </div>
                 <div className="media-body">
                   <Link href="#">
@@ -47,7 +54,7 @@ const SimpleFooterPage = () => {
             <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/smartphone.png" alt="" />
+                  <Image src={smartphone} alt="" />
                 </div>
                 <div className="media-body">
                   <Link href="#">
@@ -60,7 +67,7 @@ const SimpleFooterPage = () => {
             <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/management.png" alt="" />
+                  <Image src={management} alt="" />
                 </div>
                 <div className="media-body">
                   <Link href="#">
@@ -73,7 +80,7 @@ const SimpleFooterPage = () => {
             <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/newspaper.png" alt="" />
+                  <Image src={newspaper} alt="" />
                 </div>
                 <div className="media-body">
                   <Link href="#">
@@ -86,7 +93,7 @@ const SimpleFooterPage = () => {
             <div className="col-lg-6 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/side-nav/issuin.png" alt="" />
+                  <Image src={issuin} alt="" />
                 </div>
                 <div className="media-body">
                   <Link href="#">

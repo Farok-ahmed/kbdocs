@@ -1,6 +1,29 @@
+import Image from "next/image";
 import Link from "next/link";
 import DefaultLayout from "./../../components/layout";
 import CommentBox from "./.components/comment-box";
+// Static imports for blog images so width/height are inferred
+import related2 from "@/assets/img/blog-grid/blog_grid_post2.jpg";
+import related3 from "@/assets/img/blog-grid/blog_grid_post3.jpg";
+import related6 from "@/assets/img/blog-grid/blog_grid_post6.jpg";
+import aboutImg from "@/assets/img/blog-single/about_img.jpg";
+import author from "@/assets/img/blog-single/author.jpg";
+import authorSingle from "@/assets/img/blog-single/author_single.jpg";
+import comment01 from "@/assets/img/blog-single/comment_01.jpg";
+import comment02 from "@/assets/img/blog-single/comment_02.jpg";
+import comment03 from "@/assets/img/blog-single/comment_03.jpg";
+import insta01 from "@/assets/img/blog-single/image_01.jpg";
+import insta02 from "@/assets/img/blog-single/image_02.jpg";
+import insta03 from "@/assets/img/blog-single/image_03.jpg";
+import insta04 from "@/assets/img/blog-single/image_04.jpg";
+import insta05 from "@/assets/img/blog-single/image_05.jpg";
+import insta06 from "@/assets/img/blog-single/image_06.jpg";
+import news01 from "@/assets/img/blog-single/news_01.jpg";
+import news02 from "@/assets/img/blog-single/news_02.jpg";
+import news03 from "@/assets/img/blog-single/news_03.jpg";
+import news04 from "@/assets/img/blog-single/news_04.jpg";
+import singlePostImg from "@/assets/img/blog-single/single_post_img.jpg";
+import singlePostImgTwo from "@/assets/img/blog-single/single_post_img_two.jpg";
 const BlogSinglePage = () => {
   return (
     <DefaultLayout>
@@ -11,11 +34,7 @@ const BlogSinglePage = () => {
               How to Connect Google Calendar With WordPress Contact Forms{" "}
             </h2>
             <div className="single_post_author">
-              <img
-                className="author_img"
-                src="/img/blog-single/author_single.jpg"
-                alt=""
-              />
+              <Image className="author_img" src={authorSingle} alt="Author" />
               <div className="text">
                 <Link href="#">
                   <h4>Jason Response</h4>
@@ -39,7 +58,7 @@ const BlogSinglePage = () => {
               <div className="blog_single_info">
                 <div className="blog_single_item">
                   <Link href="#" className="blog_single_img">
-                    <img src="/img/blog-single/single_post_img.jpg" alt="" />
+                    <Image src={singlePostImg} alt="Blog main image" />
                   </Link>
                   <p>
                     Tomfoolery crikey bits and bobs brilliant bamboozled down
@@ -110,10 +129,7 @@ const BlogSinglePage = () => {
                       telling get stuffed mate up the duff haggle lost the plot
                       off his nut wind up loo, I don't want no agro.
                     </p>
-                    <img
-                      src="/img/blog-single/single_post_img_two.jpg"
-                      alt=""
-                    />
+                      <Image src={singlePostImgTwo} alt="Blog secondary image" />
                     <p>
                       I will keep the rest of the values to default so that the
                       config file will have the defaults Sylius settings. If the
@@ -160,7 +176,7 @@ const BlogSinglePage = () => {
                 </div>
                 <div className="blog_post_author media">
                   <div className="author_img">
-                    <img src="/img/blog-single/author.jpg" alt="" />
+                    <Image src={author} alt="Author" />
                   </div>
                   <div className="media-body">
                     <h5>Jason Response</h5>
@@ -185,7 +201,7 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <img src="/img/blog-grid/blog_grid_post2.jpg" alt="" />
+                        <Image src={related2} alt="Related post" />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">18 Min Read</Link>
@@ -215,7 +231,7 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <img src="/img/blog-grid/blog_grid_post3.jpg" alt="" />
+                        <Image src={related3} alt="Related post" />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">10 Min Read</Link>
@@ -245,7 +261,7 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <img src="/img/blog-grid/blog_grid_post6.jpg" alt="" />
+                        <Image src={related6} alt="Related post" />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">9 Min Read</Link>
@@ -272,11 +288,7 @@ const BlogSinglePage = () => {
                   <ul className="comment_box list-unstyled">
                     <li className="post_comment">
                       <div className="media comment_author">
-                        <img
-                          className="img_rounded"
-                          src="/img/blog-single/comment_01.jpg"
-                          alt=""
-                        />
+                        <Image className="img_rounded" src={comment01} alt="Comment author" />
                         <div className="media-body">
                           <div className="comment_info">
                             <h3>Fletch Skinner</h3>
@@ -298,11 +310,7 @@ const BlogSinglePage = () => {
                       <ul className="list-unstyled reply_comment">
                         <li>
                           <div className="media comment_author">
-                            <img
-                              className="img_rounded"
-                              src="/img/blog-single/comment_02.jpg"
-                              alt=""
-                            />
+                            <Image className="img_rounded" src={comment02} alt="Comment author" />
                             <div className="media-body">
                               <div className="comment_info">
                                 <h3>Hans Down</h3>
@@ -322,11 +330,7 @@ const BlogSinglePage = () => {
                         </li>
                         <li>
                           <div className="media comment_author">
-                            <img
-                              className="img_rounded"
-                              src="/img/blog-single/comment_03.jpg"
-                              alt=""
-                            />
+                            <Image className="img_rounded" src={comment03} alt="Comment author" />
                             <div className="media-body">
                               <div className="comment_info">
                                 <h3>Hans Down</h3>
@@ -348,10 +352,12 @@ const BlogSinglePage = () => {
                     </li>
                     <li className="post_comment">
                       <div className="media comment_author">
-                        <img
+                        <Image
                           className="img_rounded"
-                          src="/img/blog-single/comment_01.jpg"
-                          alt=""
+                          src={comment01}
+                          alt="Comment author"
+                          width={60}
+                          height={60}
                         />
                         <div className="media-body">
                           <div className="comment_info">
@@ -379,7 +385,7 @@ const BlogSinglePage = () => {
               <div className="blog_sidebar pl-40">
                 <div className="widget about_widget">
                   <div className="img">
-                    <img src="/img/blog-single/about_img.jpg" alt="" />
+                    <Image src={aboutImg} alt="About" />
                   </div>
                   <div className="text">
                     <Link href="#">
@@ -439,7 +445,7 @@ const BlogSinglePage = () => {
                 <div className="widget recent_news_widget">
                   <h4 className="c_head">Reacent News</h4>
                   <div className="media recent_post_item">
-                    <img src="/img/blog-single/news_01.jpg" alt="" />
+                    <Image src={news01} alt="News" />
                     <div className="media-body">
                       <Link href="#">
                         <h5>Is It Worth Buying A Premium Form Builder.</h5>
@@ -448,7 +454,7 @@ const BlogSinglePage = () => {
                     </div>
                   </div>
                   <div className="media recent_post_item">
-                    <img src="/img/blog-single/news_02.jpg" alt="" />
+                    <Image src={news02} alt="News" />
                     <div className="media-body">
                       <Link href="#">
                         <h5>10 Classic Summer Vacations</h5>
@@ -457,7 +463,7 @@ const BlogSinglePage = () => {
                     </div>
                   </div>
                   <div className="media recent_post_item">
-                    <img src="/img/blog-single/news_03.jpg" alt="" />
+                    <Image src={news03} alt="News" />
                     <div className="media-body">
                       <Link href="#">
                         <h5>
@@ -468,7 +474,7 @@ const BlogSinglePage = () => {
                     </div>
                   </div>
                   <div className="media recent_post_item">
-                    <img src="/img/blog-single/news_04.jpg" alt="" />
+                    <Image src={news04} alt="News" />
                     <div className="media-body">
                       <Link href="#">
                         <h5>How to Create GDPR Consent Form In WordPress</h5>
@@ -566,22 +572,22 @@ const BlogSinglePage = () => {
                   <h4 className="c_head">Instragram</h4>
                   <div className="instragram_info">
                     <Link href="#" className="instragram_item">
-                      <img src="/img/blog-single/image_01.jpg" alt="" />
+                      <Image src={insta01} alt="Instagram" />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <img src="/img/blog-single/image_02.jpg" alt="" />
+                      <Image src={insta02} alt="Instagram" />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <img src="/img/blog-single/image_03.jpg" alt="" />
+                      <Image src={insta03} alt="Instagram" />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <img src="/img/blog-single/image_04.jpg" alt="" />
+                      <Image src={insta04} alt="Instagram" />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <img src="/img/blog-single/image_05.jpg" alt="" />
+                      <Image src={insta05} alt="Instagram" />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <img src="/img/blog-single/image_06.jpg" alt="" />
+                      <Image src={insta06} alt="Instagram" />
                     </Link>
                   </div>
                 </div>

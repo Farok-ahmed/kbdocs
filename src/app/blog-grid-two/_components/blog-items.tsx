@@ -1,5 +1,6 @@
 "use client";
 import { useBlogPagination } from "@/hooks/useBlogPagination";
+import Image from "next/image";
 import Link from "next/link";
 import { getAllBlogPosts } from "../blogs";
 const POSTS_PER_PAGE: number = 8;
@@ -21,7 +22,7 @@ const BlogItems = () => {
           {paginatedPosts.map((post) => (
             <div key={post.id} className="col-lg-6 col-sm-6">
               <div className="blog_grid_post wow fadeInUp">
-                <img src={post.image} alt="" />
+                <Image src={post.image} alt="" width={370} height={240} />
                 <div className="grid_post_content">
                   <div className="post_tag">
                     <Link href="#">{post.readTime}</Link>
@@ -35,7 +36,7 @@ const BlogItems = () => {
                   <p>{post.excerpt}</p>
                   <div className="media post_author">
                     <div className="round_img">
-                      <img src={post?.author?.avatar} alt="" />
+                      <Image src={post?.author?.avatar} alt="" width={40} height={40} />
                     </div>
                     <div className="media-body author_text">
                       <h4>{post?.author?.name}</h4>

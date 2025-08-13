@@ -1,6 +1,19 @@
 
+import android from "@/assets/img/home_one/icon/android.png";
+import briefcase from "@/assets/img/home_one/icon/briefcase.png";
+import coding from "@/assets/img/home_one/icon/coding.png";
+import colorPalette from "@/assets/img/home_one/icon/color-palette.png";
+import envelope from "@/assets/img/home_one/icon/envelope.png";
+import folder from "@/assets/img/home_one/icon/folder.png";
+import lock from "@/assets/img/home_one/icon/lock.png";
+import management from "@/assets/img/home_one/icon/management.png";
+import newspaper from "@/assets/img/home_one/icon/newspaper.png";
+import smartphone from "@/assets/img/home_one/icon/smartphone.png";
+import issuin from "@/assets/img/side-nav/issuin.png";
+import terminals from "@/assets/img/side-nav/terminals.png";
 import DocsLayout from "@/components/DocsLayout";
 import TestKbdocVersion from "@/components/test-kbdoc-version";
+import Image from "next/image";
 import Newsletter from "../../_components/newsletter";
 const LeftSidebarPage = () => {
   return (
@@ -18,7 +31,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/folder.png" alt="" />
+                  <Image src={folder} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -31,7 +44,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/envelope.png" alt="" />
+                  <Image src={envelope} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -44,7 +57,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/coding.png" alt="" />
+                  <Image src={coding} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -57,7 +70,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/smartphone.png" alt="" />
+                  <Image src={smartphone} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -70,7 +83,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/management.png" alt="" />
+                  <Image src={management} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -83,7 +96,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/briefcase.png" alt="" />
+                  <Image src={briefcase} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -96,7 +109,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/newspaper.png" alt="" />
+                  <Image src={newspaper} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -109,7 +122,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/side-nav/issuin.png" alt="" />
+                  <Image src={issuin} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -122,7 +135,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/color-palette.png" alt="" />
+                  <Image src={colorPalette} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -135,7 +148,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/side-nav/terminals.png" alt="" />
+                  <Image src={terminals} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -148,7 +161,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/android.png" alt="" />
+                  <Image src={android} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">
@@ -161,7 +174,7 @@ const LeftSidebarPage = () => {
             <div className="col-lg-4 col-sm-6">
               <div className="media documentation_item">
                 <div className="icon">
-                  <img src="/img/home_one/icon/lock.png" alt="" />
+                  <Image src={lock} alt="" />
                 </div>
                 <div className="media-body">
                   <a href="#">

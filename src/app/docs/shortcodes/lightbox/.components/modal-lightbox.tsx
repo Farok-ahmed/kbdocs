@@ -1,4 +1,7 @@
+import imgLarge from "@/assets/img/img-large.jpg";
+import imgPointer1 from "@/assets/img/img-pointer1.jpg";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ImageLightboxDocly2 from "./image-lightbox-docly2";
@@ -74,7 +77,7 @@ const ModalLightbox = () => {
             data-toggle="modal"
             data-target="#exampleModal"
           >
-            <img src="/img/img-pointer1.jpg" alt="" />
+            <Image src={imgPointer1} alt="" />
           </Link>
           <h6>
             How to edit <Link href="#">KbDoc</Link>
@@ -112,13 +115,12 @@ const ModalLightbox = () => {
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
               style={{ position: "relative", cursor: "default" }}
             >
-              <img
+              <Image
                 className=""
-                src="/img/img-large.jpg"
+                src={imgLarge}
                 alt="large"
                 style={{
                   maxHeight: "100vh",
-
                   maxWidth: "100%",
                   display: "block",
                 }}

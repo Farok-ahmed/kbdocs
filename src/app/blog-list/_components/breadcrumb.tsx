@@ -1,4 +1,12 @@
+import shap1 from "@/assets/img/blog-classic/shap_01.png";
+import shap2 from "@/assets/img/blog-classic/shap_02.png";
+import leaf from "@/assets/img/home_one/b_leaf.svg";
+import manTwo from "@/assets/img/home_one/b_man_two.png";
+import bannerBg from "@/assets/img/home_one/banner_bg.png";
+import flower from "@/assets/img/home_one/flower.png";
+import vSvg from "@/assets/img/v.svg";
 import { formattedDate } from "@/utils/date-formate";
+import Image from "next/image";
 import Link from "next/link";
 import BlogListSearch from "./blog-list-search";
 interface BreadcrumbTopicProps {
@@ -19,37 +27,37 @@ const Breadcrumb = () => {
   return (
     <>
       <section className="breadcrumb_area">
-        <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-        <img
+        <Image className="p_absolute bl_left" src={vSvg} alt="" />
+        <Image
           className="p_absolute bl_right"
-          src="/img/home_one/b_leaf.svg"
+          src={leaf}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute star"
-          src="/img/home_one/banner_bg.png"
+          src={bannerBg}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute wave_shap_one"
-          src="/img/blog-classic/shap_01.png"
+          src={shap1}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute wave_shap_two"
-          src="/img/blog-classic/shap_02.png"
+          src={shap2}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute one wow fadeInRight"
-          src="/img/home_one/b_man_two.png"
+          src={manTwo}
           alt=""
           style={{ visibility: "visible", animationName: "fadeInRight" }}
         />
-        <img
+        <Image
           className="p_absolute two wow fadeInUp"
           data-wow-delay="0.2s"
-          src="/img/home_one/flower.png"
+          src={flower}
           alt=""
           style={{
             visibility: "visible",

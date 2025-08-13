@@ -1,15 +1,53 @@
 "use client";
 import DefaultLayout from "@/components/layout";
 import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ChartWithStats from "./.components/ChartWithStats";
 import CommunityPosts from "./.components/community-posts";
 import CommunitySection from "./.components/community-section";
 import WorkCount from "./.components/work-count";
+// banner people images
+import bn1 from "@/assets/img/home_support/bn1.jpg";
+import bn10 from "@/assets/img/home_support/bn10.jpg";
+import bn2 from "@/assets/img/home_support/bn2.jpg";
+import bn3 from "@/assets/img/home_support/bn3.jpg";
+import bn4 from "@/assets/img/home_support/bn4.jpg";
+import bn5 from "@/assets/img/home_support/bn5.jpg";
+import bn6 from "@/assets/img/home_support/bn6.jpg";
+import bn7 from "@/assets/img/home_support/bn7.jpg";
+import bn8 from "@/assets/img/home_support/bn8.jpg";
+import bn9 from "@/assets/img/home_support/bn9.jpg";
+// particles and shapes
+import bannerBottomShape from "@/assets/img/home_support/banner-bottom-shape.png";
+import bnp1 from "@/assets/img/home_support/bnp1.png";
+import bnp2 from "@/assets/img/home_support/bnp2.png";
+// quotes and feature image
+import journalism from "@/assets/img/home_support/journalism.png";
+import quoteBottom from "@/assets/img/home_support/quote-bottom.png";
+import quoteTop from "@/assets/img/home_support/quote-top.png";
+// community header small image
+import comSm from "@/assets/img/home_support/com_sm.png";
+// topic and community icons
+import rc1 from "@/assets/img/home_support/rc1.png";
+import rc10 from "@/assets/img/home_support/rc10.png";
+import rc12 from "@/assets/img/home_support/rc12.png";
+import rc13 from "@/assets/img/home_support/rc13.png";
+import rc14 from "@/assets/img/home_support/rc14.png";
+import rc15 from "@/assets/img/home_support/rc15.png";
+import rc16 from "@/assets/img/home_support/rc16.png";
+import rc2 from "@/assets/img/home_support/rc2.png";
+import rc3 from "@/assets/img/home_support/rc3.png";
+import rc4 from "@/assets/img/home_support/rc4.png";
+import rc5 from "@/assets/img/home_support/rc5.png";
+import rc6 from "@/assets/img/home_support/rc6.png";
+import rc7 from "@/assets/img/home_support/rc7.png";
+import rc8 from "@/assets/img/home_support/rc8.png";
+import rc9 from "@/assets/img/home_support/rc9.png";
 type SupportTopic = {
   id: number;
-  icon: string;
+  icon: string | StaticImageData;
   title: string;
   posts: string;
   link: string;
@@ -19,7 +57,7 @@ type SupportTopic = {
 type Community = {
   id: number;
   title: string;
-  image: string;
+  image: string | StaticImageData;
   posts: number;
   link: string;
   delay: number;
@@ -35,7 +73,7 @@ export default function HelpDeskPage() {
   const supportTopics: SupportTopic[] = [
     {
       id: 1,
-      icon: "/img/home_support/rc1.png",
+      icon: rc1,
       title: "Getting Started",
       posts: "453 Posts",
       link: "/forums",
@@ -43,7 +81,7 @@ export default function HelpDeskPage() {
     },
     {
       id: 2,
-      icon: "/img/home_support/rc2.png",
+      icon: rc2,
       title: "Integrations",
       posts: "624 Posts",
       link: "",
@@ -51,7 +89,7 @@ export default function HelpDeskPage() {
     },
     {
       id: 3,
-      icon: "/img/home_support/rc3.png",
+      icon: rc3,
       title: "Solar System",
       posts: "120 Posts",
       link: "/forums",
@@ -59,7 +97,7 @@ export default function HelpDeskPage() {
     },
     {
       id: 4,
-      icon: "/img/home_support/rc4.png",
+      icon: rc4,
       title: "Cloud Server",
       posts: "235 Posts",
       link: "/forums",
@@ -67,7 +105,7 @@ export default function HelpDeskPage() {
     },
     {
       id: 5,
-      icon: "/img/home_support/rc5.png",
+      icon: rc5,
       title: "Integrate Quickly",
       posts: "542 Posts",
       link: "/forums",
@@ -79,7 +117,7 @@ export default function HelpDeskPage() {
     {
       id: 1,
       title: "Deployment",
-      image: "/img/home_support/rc6.png",
+      image: rc6,
       posts: 453,
       link: "/forums",
       delay: 100,
@@ -87,7 +125,7 @@ export default function HelpDeskPage() {
     {
       id: 2,
       title: "Configuration",
-      image: "/img/home_support/rc7.png",
+      image: rc7,
       posts: 624,
       link: "/forums",
       delay: 200,
@@ -95,7 +133,7 @@ export default function HelpDeskPage() {
     {
       id: 3,
       title: "App Management",
-      image: "/img/home_support/rc8.png",
+      image: rc8,
       posts: 120,
       link: "/forums",
       delay: 300,
@@ -103,7 +141,7 @@ export default function HelpDeskPage() {
     {
       id: 4,
       title: "Marketplaces",
-      image: "/img/home_support/rc9.png",
+      image: rc9,
       posts: 235,
       link: "/forums",
       delay: 400,
@@ -111,7 +149,7 @@ export default function HelpDeskPage() {
     {
       id: 5,
       title: "Integrate Quickly",
-      image: "/img/home_support/rc10.png",
+      image: rc10,
       posts: 542,
       link: "/forums",
       delay: 500,
@@ -119,7 +157,7 @@ export default function HelpDeskPage() {
     {
       id: 6,
       title: "Integrate Quickly",
-      image: "/img/home_support/rc12.png",
+      image: rc12,
       posts: 542,
       link: "/forums",
       delay: 600,
@@ -127,7 +165,7 @@ export default function HelpDeskPage() {
     {
       id: 7,
       title: "Go Global",
-      image: "/img/home_support/rc13.png",
+      image: rc13,
       posts: 542,
       link: "/forums",
       delay: 700,
@@ -135,7 +173,7 @@ export default function HelpDeskPage() {
     {
       id: 8,
       title: "Customize",
-      image: "/img/home_support/rc14.png",
+      image: rc14,
       posts: 542,
       link: "#",
       delay: 800,
@@ -143,7 +181,7 @@ export default function HelpDeskPage() {
     {
       id: 9,
       title: "From Commissions",
-      image: "/img/home_support/rc15.png",
+      image: rc15,
       posts: 542,
       link: "/forums",
       delay: 900,
@@ -151,7 +189,7 @@ export default function HelpDeskPage() {
     {
       id: 10,
       title: "Service Based",
-      image: "/img/home_support/rc16.png",
+      image: rc16,
       posts: 542,
       link: "/forums",
       delay: 1000,
@@ -197,123 +235,122 @@ export default function HelpDeskPage() {
         {/* /.banner-content --> */}
         <ul className="people-image wow fadeIn" data-wow-delay="0.7s">
           <li>
-            <motion.img
-              src="/img/home_support/bn1.jpg"
-              alt="people"
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
-              className="rounded-lg"
-            />
+            >
+              <Image src={bn1} alt="people" className="rounded-lg" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               className="wow zoomIn"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="/img/home_support/bn2.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn2} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               className="wow zoomIn"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="/img/home_support/bn3.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn3} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               className="wow zoomIn"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="/img/home_support/bn4.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn4} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               className="wow zoomIn"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="/img/home_support/bn5.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn5} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="/img/home_support/bn6.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn6} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               className="wow zoomIn"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               data-wow-delay="0.4s"
-              src="/img/home_support/bn7.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn7} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="/img/home_support/bn8.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn8} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="/img/home_support/bn9.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn9} alt="people" />
+            </motion.div>
           </li>
           <li>
-            <motion.img
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
               viewport={{ once: true }}
               className="wow zoomIn"
               data-wow-delay="0.4s"
-              src="/img/home_support/bn10.jpg"
-              alt="people"
-            />
+            >
+              <Image src={bn10} alt="people" />
+            </motion.div>
           </li>
         </ul>
         <motion.ul
@@ -325,9 +362,9 @@ export default function HelpDeskPage() {
           data-wow-delay="0.9s"
         >
           <li className="partical">
-            <img
+            <Image
               data-parallax='{"x": -180, "y": 80, "rotateY":2000}'
-              src="/img/home_support/bnp1.png"
+              src={bnp1}
               alt="partical"
             />
           </li>
@@ -342,15 +379,15 @@ export default function HelpDeskPage() {
           <li className="partical"></li>
           <li className="partical"></li>
           <li className="partical">
-            <img
-              src="/img/home_support/bnp2.png"
+            <Image
+              src={bnp2}
               data-parallax='{"x": -250, "y": -160, "rotateZ":200}'
               alt="partical"
             />
           </li>
         </motion.ul>
         <div className="bottom-shape">
-          <img src="/img/home_support/banner-bottom-shape.png" alt="banner" />
+          <Image src={bannerBottomShape} alt="banner" />
         </div>
       </section>
       {/* /.kbDoc-banner-support --> */}
@@ -386,7 +423,7 @@ export default function HelpDeskPage() {
                 viewport={{ once: true }}
               >
                 <div className="icon-container">
-                  <img src={topic.icon} alt="community-box" />
+                  <Image src={topic.icon} alt="community-box" />
                 </div>
                 <div className="kbDoc-com-box-content">
                   <h3 className="title">
@@ -424,7 +461,7 @@ export default function HelpDeskPage() {
                   {communities.map((community) => (
                     <div className="kbDoc-com-box" key={community.id}>
                       <div className="icon-container">
-                        <img src={community.image} alt="communinity-box" />
+                        <Image src={community.image} alt="communinity-box" />
                       </div>
                       <div className="kbDoc-com-box-content">
                         <h3 className="title">
@@ -566,7 +603,7 @@ export default function HelpDeskPage() {
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   viewport={{ once: true }}
                 >
-                  <img src="/img/home_support/quote-top.png" alt="quote" />
+                  <Image src={quoteTop} alt="quote" />
                 </motion.div>
                 <motion.h2
                   className="journalism-title"
@@ -612,7 +649,7 @@ export default function HelpDeskPage() {
                   className="quote dmt-4 wow fadeIn"
                   data-wow-delay="1s"
                 >
-                  <img src="/img/home_support/quote-bottom.png" alt="quote" />
+                  <Image src={quoteBottom} alt="quote" />
                 </motion.div>
               </div>
               {/* /.journalism-content-wrapper --> */}
@@ -627,7 +664,7 @@ export default function HelpDeskPage() {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                 viewport={{ once: true }}
               >
-                <img src="/img/home_support/journalism.png" alt="journalism" />
+                <Image src={journalism} alt="journalism" />
               </motion.div>
               {/* /.journalism-feature-image --> */}
             </div>
@@ -654,7 +691,7 @@ export default function HelpDeskPage() {
       <section className="communities">
         <div className="container">
           <div className="section_title title-img text-center">
-            <img src="/img/home_support/com_sm.png" alt="community" />
+            <Image src={comSm} alt="community" />
 
             <motion.h2
               className="title-lg"

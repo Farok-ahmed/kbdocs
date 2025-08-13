@@ -1,13 +1,16 @@
 import { useState } from "react";
 
+import lightboxImage from "@/assets/img/image-lightbox.jpg";
+import lightboxPreview from "@/assets/img/lightbox-preview.jpg";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 const ImageLightbox = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="lightbox_shortcode">
-        <img src="/img/image-lightbox.jpg" alt="lightbox" />
+        <Image src={lightboxImage} alt="lightbox" />
         <Link onClick={() => setIsOpen(true)} href="#" className="img_popup">
           <i className="icon_plus" />
         </Link>
@@ -44,8 +47,8 @@ const ImageLightbox = () => {
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
               style={{ position: "relative", cursor: "default" }}
             >
-              <img
-                src="/img/lightbox-preview.jpg"
+              <Image
+                src={lightboxPreview}
                 alt="lightbox"
                 onClick={() => setIsOpen(false)}
                 style={{

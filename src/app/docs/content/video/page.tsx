@@ -1,6 +1,8 @@
 "use client";
+import imgPointer2 from "@/assets/img/img-pointer2.jpg";
 import DocsLayout from "@/components/DocsLayout";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import VideoPlaylist from "./_components/video-playlist";
@@ -218,7 +220,7 @@ const VideoPage = () => {
                 videos in your pages.
               </p>
               <div className="code-preview" id="inline-popups">
-                <img src="/img/img-pointer2.jpg" alt="" />
+                <Image src={imgPointer2} alt="" style={{width:"100%", height:"auto"}} />
                 <Link
                   onClick={handleOpen}
                   className="popup-youtube video_icon"

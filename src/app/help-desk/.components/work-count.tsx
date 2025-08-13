@@ -1,9 +1,15 @@
+import funFact1 from "@/assets/img/home_support/fun-fact-1.png";
+import funFact2 from "@/assets/img/home_support/fun-fact-2.png";
+import funFact3 from "@/assets/img/home_support/fun-fact-3.png";
+import funFact4 from "@/assets/img/home_support/fun-fact-4.png";
+import funFact5 from "@/assets/img/home_support/fun-fact-5.png";
 import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 import CountUp from "react-countup";
 
 type FunFact = {
   id: number;
-  icon: string;
+  icon: string | StaticImageData;
   end: number;
   title: string;
   colorClass: string; // e.g., "color-one"
@@ -14,7 +20,7 @@ const WorkCount = () => {
   const funFacts: FunFact[] = [
     {
       id: 1,
-      icon: "/img/home_support/fun-fact-1.png",
+  icon: funFact1,
       end: 842,
       title: "Users",
       colorClass: "color-one",
@@ -22,7 +28,7 @@ const WorkCount = () => {
     },
     {
       id: 2,
-      icon: "/img/home_support/fun-fact-2.png",
+  icon: funFact2,
       end: 1023,
       title: "Topics",
       colorClass: "color-two",
@@ -30,7 +36,7 @@ const WorkCount = () => {
     },
     {
       id: 3,
-      icon: "/img/home_support/fun-fact-3.png",
+  icon: funFact3,
       end: 196,
       title: "Forums",
       colorClass: "color-three",
@@ -38,7 +44,7 @@ const WorkCount = () => {
     },
     {
       id: 4,
-      icon: "/img/home_support/fun-fact-4.png",
+  icon: funFact4,
       end: 650,
       title: "Replies",
       colorClass: "color-four",
@@ -46,7 +52,7 @@ const WorkCount = () => {
     },
     {
       id: 5,
-      icon: "/img/home_support/fun-fact-5.png",
+  icon: funFact5,
       end: 364,
       title: "Tags",
       colorClass: "color-five",
@@ -66,7 +72,7 @@ const WorkCount = () => {
           viewport={{ once: true }}
         >
           <div className="fanfact-icon">
-            <img src={fact.icon} alt={`funfact-${fact.title.toLowerCase()}`} />
+            <Image src={fact.icon} alt={`funfact-${fact.title.toLowerCase()}`} />
           </div>
           <div className="counter">
             <CountUp end={fact.end} enableScrollSpy />

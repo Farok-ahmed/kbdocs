@@ -1,3 +1,15 @@
+import aboutImg from "@/assets/img/blog-single/about_img.jpg";
+import insta01 from "@/assets/img/blog-single/image_01.jpg";
+import insta02 from "@/assets/img/blog-single/image_02.jpg";
+import insta03 from "@/assets/img/blog-single/image_03.jpg";
+import insta04 from "@/assets/img/blog-single/image_04.jpg";
+import insta05 from "@/assets/img/blog-single/image_05.jpg";
+import insta06 from "@/assets/img/blog-single/image_06.jpg";
+import news01 from "@/assets/img/blog-single/news_01.jpg";
+import news02 from "@/assets/img/blog-single/news_02.jpg";
+import news03 from "@/assets/img/blog-single/news_03.jpg";
+import news04 from "@/assets/img/blog-single/news_04.jpg";
+import Image from "next/image";
 import Link from "next/link";
 
 const Sidebar = () => {
@@ -7,7 +19,7 @@ const Sidebar = () => {
         <div className="blog_sidebar pl-40">
           <div className="widget about_widget">
             <div className="img">
-              <img src="/img/blog-single/about_img.jpg" alt="" />
+              <Image src={aboutImg} alt="" />
             </div>
             <div className="text">
               <Link href="#">
@@ -67,7 +79,7 @@ const Sidebar = () => {
           <div className="widget recent_news_widget">
             <h4 className="c_head">Reacent News</h4>
             <div className="media recent_post_item">
-              <img src="/img/blog-single/news_01.jpg" alt="" />
+              <Image src={news01} alt="" />
               <div className="media-body">
                 <Link href="#">
                   <h5>Is It Worth Buying A Premium Form Builder.</h5>
@@ -76,7 +88,7 @@ const Sidebar = () => {
               </div>
             </div>
             <div className="media recent_post_item">
-              <img src="/img/blog-single/news_02.jpg" alt="" />
+              <Image src={news02} alt="" />
               <div className="media-body">
                 <Link href="#">
                   <h5>10 Classic Summer Vacations</h5>
@@ -85,7 +97,7 @@ const Sidebar = () => {
               </div>
             </div>
             <div className="media recent_post_item">
-              <img src="/img/blog-single/news_03.jpg" alt="" />
+              <Image src={news03} alt="" />
               <div className="media-body">
                 <Link href="#">
                   <h5>How To Easily Add weForms Widget Using Elementor</h5>
@@ -94,7 +106,7 @@ const Sidebar = () => {
               </div>
             </div>
             <div className="media recent_post_item">
-              <img src="/img/blog-single/news_04.jpg" alt="" />
+              <Image src={news04} alt="" />
               <div className="media-body">
                 <Link href="#">
                   <h5>How to Create GDPR Consent Form In WordPress</h5>
@@ -189,22 +201,22 @@ const Sidebar = () => {
             <h4 className="c_head">Instragram</h4>
             <div className="instragram_info">
               <Link href="#" className="instragram_item">
-                <img src="/img/blog-single/image_01.jpg" alt="" />
+                <Image src={insta01} alt="" />
               </Link>
               <Link href="#" className="instragram_item">
-                <img src="/img/blog-single/image_02.jpg" alt="" />
+                <Image src={insta02} alt="" />
               </Link>
               <Link href="#" className="instragram_item">
-                <img src="/img/blog-single/image_03.jpg" alt="" />
+                <Image src={insta03} alt="" />
               </Link>
               <Link href="#" className="instragram_item">
-                <img src="/img/blog-single/image_04.jpg" alt="" />
+                <Image src={insta04} alt="" />
               </Link>
               <Link href="#" className="instragram_item">
-                <img src="/img/blog-single/image_05.jpg" alt="" />
+                <Image src={insta05} alt="" />
               </Link>
               <Link href="#" className="instragram_item">
-                <img src="/img/blog-single/image_06.jpg" alt="" />
+                <Image src={insta06} alt="" />
               </Link>
             </div>
           </div>

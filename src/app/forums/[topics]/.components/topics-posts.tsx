@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const TopicsPosts = ({ getTopics }: any) => {
@@ -11,7 +12,7 @@ const TopicsPosts = ({ getTopics }: any) => {
           >
             <div className="post-content">
               <div className="author-avatar">
-                <img src={topic.authorAvatar} alt="community post" />
+                <Image src={topic.authorAvatar} alt="community post" />
               </div>
               <div className="entry-content">
                 <h3 className="post-title">
@@ -19,7 +20,7 @@ const TopicsPosts = ({ getTopics }: any) => {
                 </h3>
                 <ul className="meta">
                   <li>
-                    <img src={topic.categoryIcon} alt="cmm" />
+                    <Image src={topic.categoryIcon} alt="category icon" />
                     <Link href="#">{topic.category}</Link>
                   </li>
                   <li>

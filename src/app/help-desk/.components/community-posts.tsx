@@ -1,8 +1,15 @@
+import cp1 from "@/assets/img/home_support/cp1.png";
+import cp2 from "@/assets/img/home_support/cp2.jpg";
+import cp3 from "@/assets/img/home_support/cp3.jpg";
+import cp4 from "@/assets/img/home_support/cp4.jpg";
+import cp5 from "@/assets/img/home_support/cp5.jpg";
+import cp6 from "@/assets/img/home_support/cp6.jpg";
 import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 type CommunityPost = {
   id: number;
-  avatar: string;
+  avatar: string | StaticImageData;
   title: string;
   link: string;
   updatedBy: string;
@@ -17,7 +24,7 @@ const CommunityPosts = () => {
   const posts: CommunityPost[] = [
     {
       id: 1,
-      avatar: "/img/home_support/cp1.png",
+  avatar: cp1,
       title: "Con no longer save outlook emails to KbDoc",
       link: "/forum-single",
       updatedBy: "robynphd",
@@ -29,7 +36,7 @@ const CommunityPosts = () => {
     },
     {
       id: 2,
-      avatar: "/img/home_support/cp2.jpg",
+  avatar: cp2,
       title: "Connection timeouts",
       link: "/forum-single",
       updatedBy: "Hilary ouse",
@@ -41,7 +48,7 @@ const CommunityPosts = () => {
     },
     {
       id: 3,
-      avatar: "/img/home_support/cp3.jpg",
+  avatar: cp3,
       title: "KbDoc full (need help)",
       link: "/forum-single",
       updatedBy: "Weir doe",
@@ -53,7 +60,7 @@ const CommunityPosts = () => {
     },
     {
       id: 4,
-      avatar: "/img/home_support/cp4.jpg",
+  avatar: cp4,
       title: "Syncing is stuck on a mac .What could be the culprit herh",
       link: "/forum-single",
       updatedBy: "Jake weary",
@@ -65,7 +72,7 @@ const CommunityPosts = () => {
     },
     {
       id: 5,
-      avatar: "/img/home_support/cp5.jpg",
+  avatar: cp5,
       title: "KbDoc application keeps crashing at starting mojave 10.14.6",
       link: "/forum-single",
       updatedBy: "Jason response",
@@ -77,7 +84,7 @@ const CommunityPosts = () => {
     },
     {
       id: 6,
-      avatar: "/img/home_support/cp6.jpg",
+  avatar: cp6,
       title: "Customizing Certificates",
       link: "/forum-single",
       updatedBy: "Miles tone",
@@ -103,7 +110,7 @@ const CommunityPosts = () => {
           >
             <div className="post-content">
               <div className="author-avatar">
-                <img src={post.avatar} alt="community post" />
+                <Image src={post.avatar} alt="community post" />
               </div>
               <div className="entry-content">
                 <h3 className="post-title">

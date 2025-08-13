@@ -1,5 +1,6 @@
 "use client";
 import { useBlogPagination } from "@/hooks/useBlogPagination";
+import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent, ReactElement } from "react";
 
@@ -187,7 +188,7 @@ const Blogs = (): ReactElement => {
             return (
               <div key={post.id} className="blog_top_post blog_classic_item">
                 <div className="video_post">
-                  <img src={post.image} alt="" />
+                  <Image src={post.image} alt="" width={770} height={430} />
                   <Link
                     className="popup-youtube video_icon"
                     href={post.videoUrl}
@@ -214,7 +215,7 @@ const Blogs = (): ReactElement => {
                     </Link>
                     <div className="media post_author">
                       <div className="round_img">
-                        <img src={post.author.image} alt="" />
+                        <Image src={post.author.image} alt="" width={40} height={40} />
                       </div>
                       <div className="media-body author_text">
                         <Link href="#">
@@ -230,7 +231,7 @@ const Blogs = (): ReactElement => {
           if (post.type === "image") {
             return (
               <div key={post.id} className="blog_top_post blog_classic_item">
-                <img src={post.image} alt="" />
+                <Image src={post.image} alt="" width={770} height={430} />
                 <div className="b_top_post_content">
                   <div className="post_tag">
                     <Link href="#">{post.date}</Link>
@@ -250,7 +251,7 @@ const Blogs = (): ReactElement => {
                     </Link>
                     <div className="media post_author">
                       <div className="round_img">
-                        <img src={post.author.image} alt="" />
+                        <Image src={post.author.image} alt="" width={40} height={40} />
                       </div>
                       <div className="media-body author_text">
                         <Link href="#">

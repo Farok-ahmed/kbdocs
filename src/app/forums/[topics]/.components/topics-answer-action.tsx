@@ -1,12 +1,18 @@
+import AnswerImg from "@/assets/img/home_support/answer.png"; // Adjust the import path as necessary
+import Image from "next/image";
 import Link from "next/link";
-
 const TopicsAnswerAction = () => {
   return (
     <>
       <div className="answer-action">
         <div className="action-content">
           <div className="image-wrap">
-            <img src="/img/home_support/answer.png" alt="answer action" />
+            <Image
+              src={AnswerImg}
+              alt="answer action"
+              width={64}
+              height={64}
+            />
           </div>
 
           <div className="content">

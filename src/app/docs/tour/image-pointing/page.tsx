@@ -1,6 +1,8 @@
 "use client";
+import home2Large from "@/assets/img/home2-large.jpg";
 import DocsLayout from "@/components/DocsLayout";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ModalLightbox from "./../../shortcodes/lightbox/.components/modal-lightbox";
@@ -91,7 +93,7 @@ const ImagePointingPage = () => {
             />
           </h4>
           <div className="pointing_img_container pointing_img_two">
-            <img className="img-fluid" src="/img/home2-large.jpg" alt="large" />
+            <Image className="img-fluid" src={home2Large} alt="large" />
             {hotspotsData.map((hotspot) => (
               <div
                 key={hotspot.id}

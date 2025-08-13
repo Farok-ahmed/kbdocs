@@ -1,81 +1,92 @@
 "use client"
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import leaf from "@/assets/img/home_one/b_leaf.svg";
+import bMan from "@/assets/img/home_one/b_man.png";
+import bManTwo from "@/assets/img/home_one/b_man_two.png";
+import fileIcon from "@/assets/img/home_one/file.png";
+import flower from "@/assets/img/home_one/flower.png";
+import girl from "@/assets/img/home_one/girl_img.png";
+import star from "@/assets/img/home_one/star.png";
+import wave1 from "@/assets/img/home_one/wave_one.svg";
+import wave2 from "@/assets/img/home_one/wave_two.svg";
+import vSvg from "@/assets/img/v.svg";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const CoolBanner = () => {
   return (
     <section className="doc_banner_area_one">
-        <img className="dark" src="/img/home_one/wave_one.svg" alt="" />
-        <img className="dark_two" src="/img/home_one/wave_two.svg" alt="" />
-        <img
+        <Image className="dark" src={wave1} alt="" />
+        <Image className="dark_two" src={wave2} alt="" />
+        <Image
           className="p_absolute star_one"
-          src="/img/home_one/star.png"
+          src={star}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute star_two"
-          src="/img/home_one/star.png"
+          src={star}
           alt=""
         />
-        <img
+        <Image
           className="p_absolute star_three"
-          src="/img/home_one/star.png"
+          src={star}
           alt=""
         />
-        <motion.img
+        <motion.div
           className="p_absolute one"
-          src="/img/home_one/b_man.png"
-          alt=""
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           viewport={{ once: true }}
-        />
+        >
+          <Image src={bMan} alt="" />
+        </motion.div>
 
-        <motion.img
+        <motion.div
           className="p_absolute two"
-          src="/img/home_one/b_man_two.png"
-          alt=""
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-        />
+        >
+          <Image src={bManTwo} alt="" />
+        </motion.div>
 
-        <motion.img
+        <motion.div
           className="p_absolute three"
-          src="/img/home_one/flower.png"
-          alt=""
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
-        />
+        >
+          <Image src={flower} alt="" />
+        </motion.div>
 
-        <motion.img
+        <motion.div
           className="p_absolute four"
-          src="/img/home_one/girl_img.png"
-          alt=""
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
-        />
+        >
+          <Image src={girl} alt="" />
+        </motion.div>
 
-        <motion.img
+        <motion.div
           className="p_absolute five"
-          src="/img/home_one/file.png"
-          alt=""
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
-        />
+        >
+          <Image src={fileIcon} alt="" />
+        </motion.div>
 
-        <img className="p_absolute bl_left" src="/img/v.svg" alt="" />
-        <img
+        <Image className="p_absolute bl_left" src={vSvg} alt="" />
+        <Image
           className="p_absolute bl_right"
-          src="/img/home_one/b_leaf.svg"
+          src={leaf}
           alt=""
         />
         <div className="container">

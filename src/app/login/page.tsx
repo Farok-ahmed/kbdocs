@@ -42,7 +42,7 @@ export default function LoginPage() {
                 <Link href="/register">Sign up here</Link>
               </p>
               <Link href="" className="btn-google">
-                <Image src={gmail} alt="" />
+                <Image src={gmail} alt="" width={24} height={12} />
                 <span className="btn-text">Sign in with Gmail</span>
               </Link>
             </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import bottomOrnamate from "@/assets/img/signup/bottom_ornamate.png";
 import gmail from "@/assets/img/signup/gmail.png";
 import manImage from "@/assets/img/signup/man_image.png";
@@ -46,7 +44,7 @@ export default function RegisterPage() {
                 Already have an account? <Link href="/login">Sign in</Link>
               </p>
               <Link href="" className="btn-google">
-                <Image src={gmail} alt="" />
+                <Image src={gmail} alt="" width={24} height={12} />
                 <span className="btn-text">Sign up with Google</span>
               </Link>
             </div>

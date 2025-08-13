@@ -1,4 +1,15 @@
+import desktop1 from "@/assets/img/desktop_icon1.png";
+import desktop2 from "@/assets/img/desktop_icon2.png";
+import desktop3 from "@/assets/img/desktop_icon3.png";
+import desktop4 from "@/assets/img/desktop_icon4.png";
+import desktop5 from "@/assets/img/desktop_icon5.png";
+import mobile1 from "@/assets/img/mobile_icon1.png";
+import mobile2 from "@/assets/img/mobile_icon2.png";
+import mobile3 from "@/assets/img/mobile_icon3.png";
+import mobile4 from "@/assets/img/mobile_icon4.png";
+import mobile5 from "@/assets/img/mobile_icon5.png";
 import DocsLayout from "@/components/DocsLayout";
+import Image from "next/image";
 import Link from "next/link";
 
 const CanUsePage = () => {
@@ -77,23 +88,23 @@ const CanUsePage = () => {
               </h6>
               <ul className="list-unstyled caniuse_agents_list">
                 <li className="caniuse_agents_item light_blue">
-                  <img src="/img/desktop_icon1.png" alt="" />
+                  <Image src={desktop1} alt="" />
                   <span className="agents_version">72</span>
                 </li>
                 <li className="caniuse_agents_item light_blue">
-                  <img src="/img/desktop_icon2.png" alt="" />
+                  <Image src={desktop2} alt="" />
                   <span className="agents_version">64*</span>
                 </li>
                 <li className="caniuse_agents_item light_red">
-                  <img src="/img/desktop_icon3.png" alt="" />
+                  <Image src={desktop3} alt="" />
                   <span className="agents_version">No</span>
                 </li>
                 <li className="caniuse_agents_item light_blue">
-                  <img src="/img/desktop_icon4.png" alt="" />
+                  <Image src={desktop4} alt="" />
                   <span className="agents_version">42</span>
                 </li>
                 <li className="caniuse_agents_item light_blue">
-                  <img src="/img/desktop_icon5.png" alt="" />
+                  <Image src={desktop5} alt="" />
                   <span className="agents_version">45</span>
                 </li>
               </ul>
@@ -114,23 +125,23 @@ const CanUsePage = () => {
               </h6>
               <ul className="list-unstyled caniuse_agents_list">
                 <li className="caniuse_agents_item blue">
-                  <img src="/img/mobile_icon1.png" alt="" />
+                  <Image src={mobile1} alt="" />
                   <span className="agents_version">9.0</span>
                 </li>
                 <li className="caniuse_agents_item blue">
-                  <img src="/img/mobile_icon2.png" alt="" />
+                  <Image src={mobile2} alt="" />
                   <span className="agents_version">86</span>
                 </li>
                 <li className="caniuse_agents_item light_red">
-                  <img src="/img/mobile_icon3.png" alt="" />
+                  <Image src={mobile3} alt="" />
                   <span className="agents_version">No</span>
                 </li>
                 <li className="caniuse_agents_item blue">
-                  <img src="/img/mobile_icon4.png" alt="" />
+                  <Image src={mobile4} alt="" />
                   <span className="agents_version">76</span>
                 </li>
                 <li className="caniuse_agents_item blue">
-                  <img src="/img/mobile_icon5.png" alt="" />
+                  <Image src={mobile5} alt="" />
                   <span className="agents_version">76*</span>
                 </li>
               </ul>

@@ -1,12 +1,14 @@
 "use client";
 
+import feedbackPhoto from "@/assets/img/home_one/icon/feedback.jpg";
 import { AnimatePresence, motion } from "framer-motion";
+import Image, { type StaticImageData } from "next/image";
 import { useState } from "react";
 
 interface Testimonial {
   id: string;
   name: string;
-  photo: string;
+  photo: StaticImageData;
   job: string;
   review: string;
 }
@@ -15,7 +17,7 @@ const testimonials: Testimonial[] = [
   {
     id: "0",
     name: "Rodney Artichoke",
-    photo: "/img/home_one/icon/feedback.jpg",
+    photo: feedbackPhoto,
     job: "UI/UX designer",
     review: `Nulla porttitor accumsan tincidunt. Praesent
           sapien massa, convallis a pellentesque nec,
@@ -27,7 +29,7 @@ const testimonials: Testimonial[] = [
   {
     id: "1",
     name: "Farok",
-    photo: "/img/home_one/icon/feedback.jpg",
+    photo: feedbackPhoto,
     job: "UI/UX designer",
     review: `Nulla porttitor accumsan tincidunt. Praesent
           sapien massa, convallis a pellentesque nec,
@@ -39,7 +41,7 @@ const testimonials: Testimonial[] = [
   {
     id: "2",
     name: "Rodney ",
-    photo: "/img/home_one/icon/feedback.jpg",
+    photo: feedbackPhoto,
     job: "UI/UX designer",
     review: `Nulla porttitor accumsan tincidunt. Praesent
           sapien massa, convallis a pellentesque nec,
@@ -114,10 +116,7 @@ const Reviews = () => {
                 className="item"
               >
                 <div className="author_img">
-                  <img
-                    src={activeTestimonial.photo}
-                    alt={activeTestimonial.name}
-                  />
+                  <Image src={activeTestimonial.photo} alt={activeTestimonial.name} />
                 </div>
                 <p>{activeTestimonial.review}</p>
                 <h5>{activeTestimonial.name}</h5>

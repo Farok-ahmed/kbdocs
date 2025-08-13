@@ -1,5 +1,6 @@
 import Select from "@/components/select";
 import { DOTS, usePagination } from "@/hooks/usePagination";
+import Image from "next/image";
 import Link from "next/link";
 
 interface PaginationProps {
@@ -21,7 +22,7 @@ const ForumSinglePost = ({ post, pagination }: ForumSinglePostProps) => {
         <div className="col-lg-9">
           <div className="forum-post-top">
             <Link className="author-avatar" href="#">
-              <img src={post.authorAvatar} alt={post.authorName} />
+              <Image src={post.authorAvatar} alt={post.authorName} />
             </Link>
             <div className="forum-post-author">
               <Link className="author-name" href="#">
@@ -100,7 +101,7 @@ const ForumSinglePost = ({ post, pagination }: ForumSinglePostProps) => {
             )}
           </div>
           <div className="taxonomy forum-post-cat">
-            <img src={post?.post?.categoryIcon} alt="" />
+            <Image src={post?.post?.categoryIcon} alt="category" />
             <Link href="#">{post.post?.category}</Link>
           </div>
         </div>
@@ -118,7 +119,7 @@ const ForumSinglePost = ({ post, pagination }: ForumSinglePostProps) => {
           <div className="col-lg-9">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <img src={post?.bestAnswer?.author?.avatar} alt="" />
+                <Image src={post?.bestAnswer?.author?.avatar} alt={post?.bestAnswer?.author?.name || "author"} />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -190,10 +191,7 @@ const ForumSinglePost = ({ post, pagination }: ForumSinglePostProps) => {
             <div className="forum-comment" key={index}>
               <div className="forum-post-top">
                 <Link className="author-avatar" href="#">
-                  <img
-                    src={comment?.author?.avatar}
-                    alt={comment?.author?.name}
-                  />
+                  <Image src={comment?.author?.avatar} alt={comment?.author?.name || "author"} width={40} height={40} />
                 </Link>
                 <div className="forum-post-author">
                   <Link className="author-name" href="#">

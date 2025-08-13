@@ -1,13 +1,35 @@
 "use client";
+import accountIcon from "@/assets/img/side-nav/account.png";
+import briefcaseIcon from "@/assets/img/side-nav/briefcase.png";
+import chat1Icon from "@/assets/img/side-nav/chat1.png";
+import codingIcon from "@/assets/img/side-nav/coding.png";
+import documentIcon from "@/assets/img/side-nav/document.png";
+import document2Icon from "@/assets/img/side-nav/document2.png";
+import editIcon from "@/assets/img/side-nav/edit.png";
+import homeIcon from "@/assets/img/side-nav/home.png";
+import unitedStatesIcon from "@/assets/img/side-nav/united-states.png";
+import usersIcon from "@/assets/img/side-nav/users.png";
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import "./style.scss";
-const mainNavItems = [
+
+type NavIcon = string | StaticImageData;
+
+const mainNavItems: Array<{
+  id: string;
+  title: string;
+  href: string;
+  icon: NavIcon;
+  active: boolean;
+  children: Array<{ id: string; title: string; href: string; active?: boolean }>;
+}> = [
   {
     id: "home",
     title: "Home",
     href: "/docs",
-    icon: "/img/side-nav/home.png",
+    icon: homeIcon,
     active: true,
     children: [],
   },
@@ -15,7 +37,7 @@ const mainNavItems = [
     id: "shortcodes",
     title: "Shortcodes",
     href: "/docs/shortcodes",
-    icon: "/img/side-nav/briefcase.png",
+    icon: briefcaseIcon,
     active: false,
     children: [
       { id: "tabs", title: "Tabs", href: "/docs/shortcodes/tab", active: true },
@@ -39,7 +61,7 @@ const mainNavItems = [
     id: "layouts",
     title: "Layouts",
     href: "/docs/layouts",
-    icon: "/img/side-nav/coding.png",
+  icon: codingIcon,
     active: false,
     children: [
       { id: "both-sidebar", title: "Both Sidebar", href: "/docs/layouts" },
@@ -65,7 +87,7 @@ const mainNavItems = [
     id: "tour",
     title: "Tour",
     href: "/docs/tour",
-    icon: "/img/side-nav/chat1.png",
+  icon: chat1Icon,
     active: false,
     children: [
       {
@@ -84,7 +106,7 @@ const mainNavItems = [
     id: "content",
     title: "Content",
     href: "/typography",
-    icon: "/img/side-nav/document.png",
+  icon: documentIcon,
     active: false,
     children: [
       { id: "typography", title: "Typography", href: "/typography" },
@@ -103,46 +125,46 @@ const mainNavItems = [
     id: "changelog",
     title: "Change Log",
     href: "/docs/changelog",
-    icon: "/img/side-nav/document2.png",
+  icon: document2Icon,
     active: false,
     children: [],
   },
 ];
 
 // Additional navigation sections
-const codingNavItems = [
+const codingNavItems: Array<{ id: string; title: string; href: string; icon: NavIcon }> = [
   {
     id: "account",
     title: "Account",
     href: "",
-    icon: "/img/side-nav/account.png",
+  icon: accountIcon,
   },
   {
     id: "development",
     title: "Development",
     href: "",
-    icon: "/img/side-nav/coding.png",
+  icon: codingIcon,
   },
 ];
 
-const bottomNavItems = [
+const bottomNavItems: Array<{ id: string; title: string; href: string; icon: NavIcon; hasArrow?: boolean }> = [
   {
     id: "location",
     title: "Unlted States",
     href: "",
-    icon: "/img/side-nav/united-states.png",
+  icon: unitedStatesIcon,
   },
   {
     id: "language",
     title: "English",
     href: "",
-    icon: "/img/side-nav/edit.png",
+  icon: editIcon,
   },
   {
     id: "signin",
     title: "Sign In",
     href: "",
-    icon: "/img/side-nav/users.png",
+  icon: usersIcon,
     hasArrow: true,
   },
 ];
@@ -171,7 +193,7 @@ export default function Sidebar() {
               className={`nav-item  ${openItemId === item.id ? "active" : ""}`}
             >
               <Link href={item.href} className="nav-link">
-                <img src={item.icon} alt="" />
+                {item.icon && <Image src={item.icon} alt="" />}
                 {item.title}
               </Link>
 
@@ -214,7 +236,7 @@ export default function Sidebar() {
           {codingNavItems.map((item) => (
             <li key={item.id} className="nav-item">
               <Link href={item.href} className="nav-link">
-                <img src={item.icon} alt="" />
+                <Image src={item.icon} alt="" />
                 {item.title}
               </Link>
             </li>
@@ -226,7 +248,7 @@ export default function Sidebar() {
           {bottomNavItems.map((item) => (
             <li key={item.id} className="nav-item">
               <Link href={item.href} className="nav-link">
-                <img src={item.icon} alt="" />
+                <Image src={item.icon} alt="" />
                 {item.title} {item.hasArrow && <i className="arrow_right"></i>}
               </Link>
             </li>
@@ -255,7 +277,7 @@ Sidebar.Mobile = () => {
               className={`nav-item ${item.active ? "active" : ""}`}
             >
               <Link href={item.href} className="nav-link">
-                <img src={item.icon} alt="" />
+                <Image src={item.icon} alt="" />
                 {item.title}
               </Link>
 
@@ -287,7 +309,7 @@ Sidebar.Mobile = () => {
           {codingNavItems.map((item) => (
             <li key={item.id} className="nav-item">
               <Link href={item.href} className="nav-link">
-                <img src={item.icon} alt="" />
+                <Image src={item.icon} alt="" />
                 {item.title}
               </Link>
             </li>
@@ -299,7 +321,7 @@ Sidebar.Mobile = () => {
           {bottomNavItems.map((item) => (
             <li key={item.id} className="nav-item">
               <Link href={item.href} className="nav-link">
-                <img src={item.icon} alt="" />
+                <Image src={item.icon} alt="" />
                 {item.title} {item.hasArrow && <i className="arrow_right"></i>}
               </Link>
             </li>

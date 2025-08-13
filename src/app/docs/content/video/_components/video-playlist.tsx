@@ -1,4 +1,5 @@
 // import css
+import Image from "next/image";
 import Link from "next/link";
 import "./vide.css";
 const VideoPlaylist = () => {
@@ -64,9 +65,12 @@ const VideoPlaylist = () => {
                     title="#css #webdesign #chrome #nesting_rules #scss"
                   >
                     <div className="thumb">
-                      <img
+                      <Image
                         src="https://i.ytimg.com/vi/Zg3_wFYdrnA/default.jpg"
-                        alt=" "
+                        alt="YouTube thumbnail"
+                        width={120}
+                        height={90}
+                        unoptimized={false}
                       />
                       <span className="tm0">1:01</span>
                     </div>
@@ -86,9 +90,12 @@ const VideoPlaylist = () => {
                     title="Introducing ChatGPT-4 in Bangla"
                   >
                     <div className="thumb">
-                      <img
+                      <Image
                         src="https://i.ytimg.com/vi/tDxJug49VDQ/default.jpg"
-                        alt=" "
+                        alt="YouTube thumbnail"
+                        width={120}
+                        height={90}
+                        unoptimized={false}
                       />
                       <span className="tm1">2:01</span>
                     </div>
@@ -106,9 +113,12 @@ const VideoPlaylist = () => {
                     title="Develop WordPress widget using ChatGPT - Bangla Tutorial"
                   >
                     <div className="thumb">
-                      <img
+                      <Image
                         src="https://i.ytimg.com/vi/Etm14hS_ST8/default.jpg"
-                        alt=" "
+                        alt="YouTube thumbnail"
+                        width={120}
+                        height={90}
+                        unoptimized={false}
                       />
                       <span className="tm2">10:52</span>
                     </div>
@@ -128,9 +138,12 @@ const VideoPlaylist = () => {
                     title="Cleaning up unnecessary assets | Bangla Tutorial"
                   >
                     <div className="thumb">
-                      <img
+                      <Image
                         src="https://i.ytimg.com/vi/AW5qI0pYlog/default.jpg"
-                        alt=" "
+                        alt="YouTube thumbnail"
+                        width={120}
+                        height={90}
+                        unoptimized={false}
                       />
                       <span className="tm3">8:32</span>
                     </div>
@@ -150,9 +163,12 @@ const VideoPlaylist = () => {
                     title="How to enable docs archive link in breadcrumb in Docly WordPress theme"
                   >
                     <div className="thumb">
-                      <img
+                      <Image
                         src="https://i.ytimg.com/vi/DWtIodEJGNo/default.jpg"
-                        alt=" "
+                        alt="YouTube thumbnail"
+                        width={120}
+                        height={90}
+                        unoptimized={false}
                       />
                       <span className="tm4">1:19</span>
                     </div>
@@ -173,9 +189,12 @@ const VideoPlaylist = () => {
                     title="How to edit / create the Sign in, Sign up pages with Docly theme"
                   >
                     <div className="thumb">
-                      <img
+                      <Image
                         src="https://i.ytimg.com/vi/LqSkHNlH29U/default.jpg"
-                        alt=" "
+                        alt="YouTube thumbnail"
+                        width={120}
+                        height={90}
+                        unoptimized={false}
                       />
                       <span className="tm5">2:36</span>
                     </div>

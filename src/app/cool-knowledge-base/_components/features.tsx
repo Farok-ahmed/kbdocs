@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const Features = () => {
@@ -44,7 +45,7 @@ const Features = () => {
                   }}
                   viewport={{ once: true, amount: 0.2 }}
                 >
-                  <img src={item.image} alt="" />
+                  <Image src={item.image} alt="" width={80} height={80} />
                   <div className="media-body">
                     <Link href="">
                       <h3>{item.title}</h3>

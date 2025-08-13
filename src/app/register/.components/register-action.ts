@@ -1,3 +1,4 @@
+"use server"
 import { redirect } from 'next/navigation';
 
 const RegisterAction = async (formData:FormData) => {

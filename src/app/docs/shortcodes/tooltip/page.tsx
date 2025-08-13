@@ -1,5 +1,7 @@
 "use client";
+import blogGridPost1 from "@/assets/img/blog-grid/blog_grid_post1.jpg";
 import DocsLayout from "@/components/DocsLayout";
+import Image from "next/image";
 import Link from "next/link";
 import { Tooltip } from "react-tooltip";
 import TooltipeDynamic from "./.components/tooltipe-dynamic";
@@ -53,7 +55,7 @@ const TooltipPage = () => {
       <div className="tooltipster-box">
         <div className="tooltipster-content">
           <div id="tooltipTwo" className="tip_content">
-            <img src="/img/blog-grid/blog_grid_post1.jpg" alt="" />
+            <Image src={blogGridPost1} alt="" />
             <div className="text">
               <p>
                 Me old mucker bamboozled horse play fantastic skive off baking

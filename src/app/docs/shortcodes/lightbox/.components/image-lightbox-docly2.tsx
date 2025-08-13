@@ -1,4 +1,7 @@
+import home2Large from "@/assets/img/home2-large.jpg";
+import imgPointer2 from "@/assets/img/img-pointer2.jpg";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 interface Hotspot {
@@ -74,7 +77,7 @@ const ImageLightboxDocly2 = () => {
             data-toggle="modal"
             data-target="#exampleModal2"
           >
-            <img src="/img/img-pointer2.jpg" alt="" />
+            <Image src={imgPointer2} alt="" />
           </Link>
           <h6>
             How to edit <Link href="#">Docly2</Link>
@@ -112,13 +115,12 @@ const ImageLightboxDocly2 = () => {
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
               style={{ position: "relative", cursor: "default" }}
             >
-              <img
+              <Image
                 className=""
-                src="/img/home2-large.jpg"
+                src={home2Large}
                 alt="large"
                 style={{
                   maxHeight: "100vh",
-
                   maxWidth: "100%",
                   display: "block",
                 }}

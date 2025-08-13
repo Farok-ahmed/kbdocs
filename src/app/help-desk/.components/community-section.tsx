@@ -1,9 +1,13 @@
+import com1 from "@/assets/img/home_support/com_1.png";
+import com2 from "@/assets/img/home_support/com_2.png";
+import com3 from "@/assets/img/home_support/com_3.png";
 import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type CommunityBox = {
   id: number;
-  icon: string;
+  icon: string | StaticImageData;
   title: string;
   linkText: string;
   linkUrl: string;
@@ -13,7 +17,7 @@ type CommunityBox = {
 const communityBoxes: CommunityBox[] = [
   {
     id: 1,
-    icon: "/img/home_support/com_1.png",
+  icon: com1,
     title: "Find answers and ask new questions",
     linkText: "How to Search Communities",
     linkUrl: "#",
@@ -21,7 +25,7 @@ const communityBoxes: CommunityBox[] = [
   },
   {
     id: 2,
-    icon: "/img/home_support/com_2.png",
+  icon: com2,
     title: "Manage the people and discussions you follow",
     linkText: "How to Search Communities",
     linkUrl: "#",
@@ -29,7 +33,7 @@ const communityBoxes: CommunityBox[] = [
   },
   {
     id: 3,
-    icon: "/img/home_support/com_3.png",
+  icon: com3,
     title: "Award points, level up, and earn new privileges",
     linkText: "How to Search Communities",
     linkUrl: "#",
@@ -50,7 +54,7 @@ const CommunitySection = () => {
             viewport={{ once: true }}
           >
             <div className="icon-container">
-              <img src={box.icon} alt="community" />
+              <Image src={box.icon} alt="community" />
             </div>
             <div className="community-content">
               <h3 className="com-title">{box.title}</h3>
