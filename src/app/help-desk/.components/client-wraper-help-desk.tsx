@@ -712,7 +712,7 @@ const ClientWrapperHelpDesk = () => {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                 viewport={{ once: true }}
               >
-                <Image src={journalism} alt="journalism" />
+                <Image src={journalism} alt="journalism" priority style={{width:"auto",height:"auto"}} />
               </motion.div>
               {/* /.journalism-feature-image --> */}
             </div>
