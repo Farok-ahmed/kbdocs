@@ -1,4 +1,3 @@
-
 import { BreadcrumbProps } from "@/types/breadcrumb-types";
 import Link from "next/link";
 import SearchBreadcrumb from "./search-breadcrumb";
@@ -7,7 +6,6 @@ type Props = {
   breadcrumb: BreadcrumbProps[];
 };
 const Breadcrumb = ({ breadcrumb }: Props) => {
-  
   return (
     <>
       <SearchBreadcrumb />

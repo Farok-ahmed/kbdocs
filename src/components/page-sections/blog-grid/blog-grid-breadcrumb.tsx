@@ -1,4 +1,3 @@
-
 import shap01 from "@/assets/img/blog-classic/shap_01.png";
 import shap02 from "@/assets/img/blog-classic/shap_02.png";
 import bLeaf from "@/assets/img/home_one/b_leaf.svg";
@@ -17,26 +16,10 @@ const BlogGridBreadcrumb = () => {
     <>
       <section className="breadcrumb_area">
         <Image className="p_absolute bl_left" src={vIcon} alt="" />
-        <Image
-          className="p_absolute bl_right"
-          src={bLeaf}
-          alt=""
-        />
-        <Image
-          className="p_absolute star"
-          src={bannerBg}
-          alt=""
-        />
-        <Image
-          className="p_absolute wave_shap_one"
-          src={shap01}
-          alt=""
-        />
-        <Image
-          className="p_absolute wave_shap_two"
-          src={shap02}
-          alt=""
-        />
+        <Image className="p_absolute bl_right" src={bLeaf} alt="" />
+        <Image className="p_absolute star" src={bannerBg} alt="" />
+        <Image className="p_absolute wave_shap_one" src={shap01} alt="" />
+        <Image className="p_absolute wave_shap_two" src={shap02} alt="" />
         <Image
           className="p_absolute one wow fadeInRight"
           src={bManTwo}
@@ -49,7 +32,7 @@ const BlogGridBreadcrumb = () => {
           alt=""
         />
         <div className="container">
-          <SearchFieldBlog/>
+          <SearchFieldBlog />
         </div>
       </section>
       <section className="page_breadcrumb">

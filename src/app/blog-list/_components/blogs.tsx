@@ -215,7 +215,12 @@ const Blogs = (): ReactElement => {
                     </Link>
                     <div className="media post_author">
                       <div className="round_img">
-                        <Image src={post.author.image} alt="" width={40} height={40} />
+                        <Image
+                          src={post.author.image}
+                          alt=""
+                          width={40}
+                          height={40}
+                        />
                       </div>
                       <div className="media-body author_text">
                         <Link href="#">
@@ -251,7 +256,12 @@ const Blogs = (): ReactElement => {
                     </Link>
                     <div className="media post_author">
                       <div className="round_img">
-                        <Image src={post.author.image} alt="" width={40} height={40} />
+                        <Image
+                          src={post.author.image}
+                          alt=""
+                          width={40}
+                          height={40}
+                        />
                       </div>
                       <div className="media-body author_text">
                         <Link href="#">

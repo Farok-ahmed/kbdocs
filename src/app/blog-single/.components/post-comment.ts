@@ -17,24 +17,22 @@ export async function postComment(
   if (!name || !email || !comment) {
     return {
       status: "error",
-      message: "Please fill all required fields."
+      message: "Please fill all required fields.",
     };
   }
 
   try {
-    
-
     console.log("Comment received:", { name, email, website, comment });
 
     return {
       status: "success",
-      message: "Comment posted successfully!"
+      message: "Comment posted successfully!",
     };
   } catch (error) {
     console.error(error);
     return {
       status: "error",
-      message: "Something went wrong while posting your comment."
+      message: "Something went wrong while posting your comment.",
     };
   }
 }

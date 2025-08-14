@@ -1,5 +1,4 @@
 "use client";
-
 import { useActionState } from "react";
 import { CommentFormState, postComment } from "./post-comment";
 import SubmitButton from "./submit-button";
@@ -11,20 +10,22 @@ export default function CommentBox() {
   return (
     <div className="blog_comment_box">
       <h2 className="c_head">Leave a Comment</h2>
-      <p>Your email address will not be published. Required fields are marked *</p>
+      <p>
+        Your email address will not be published. Required fields are marked *
+      </p>
 
       {state.message && (
         <div
           style={{
             color: state.status === "error" ? "red" : "green",
-            marginBottom: "10px"
+            marginBottom: "10px",
           }}
         >
           {state.message}
         </div>
       )}
 
-      <form action={formAction} className="get_quote_form row" >
+      <form action={formAction} className="get_quote_form row">
         <div className="col-md-6 form-group">
           <input
             required

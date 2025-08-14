@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import internetImg from "@/assets/img/home_two/Internet.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -19,10 +19,7 @@ export default function CallToAction() {
               viewport={{ once: true, amount: 0.5 }}
             >
               <div className="media">
-                <Image
-                  src={internetImg}
-                  alt="Internet"
-                />
+                <Image src={internetImg} alt="Internet" />
                 <div className="media-body">
                   <h2 className="h_title">You will love our solutions</h2>
                   <p>

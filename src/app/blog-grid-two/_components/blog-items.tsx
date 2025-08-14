@@ -36,7 +36,12 @@ const BlogItems = () => {
                   <p>{post.excerpt}</p>
                   <div className="media post_author">
                     <div className="round_img">
-                      <Image src={post?.author?.avatar} alt="" width={40} height={40} />
+                      <Image
+                        src={post?.author?.avatar}
+                        alt=""
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <div className="media-body author_text">
                       <h4>{post?.author?.name}</h4>

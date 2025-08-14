@@ -22,7 +22,10 @@ const CodePage = () => {
                 />
               </h2>
             </div>
-            <h4 id="from-an-html-element" className="c_head load-order-2 smooth-scroll-heading">
+            <h4
+              id="from-an-html-element"
+              className="c_head load-order-2 smooth-scroll-heading"
+            >
               HTML Code Blocks
               <Link
                 className="anchorjs-link "
@@ -445,7 +448,10 @@ const CodePage = () => {
                 </div>
               </div>
             </div>
-            <h4 id="css-code" className="c_head load-order-2 smooth-scroll-heading">
+            <h4
+              id="css-code"
+              className="c_head load-order-2 smooth-scroll-heading"
+            >
               CSS Source Code
               <Link
                 className="anchorjs-link "
@@ -594,7 +600,10 @@ const CodePage = () => {
                 </div>
               </div>
             </div>
-            <h4 id="javascript-code" className="c_head load-order-2 smooth-scroll-heading">
+            <h4
+              id="javascript-code"
+              className="c_head load-order-2 smooth-scroll-heading"
+            >
               JavaScript Source Code
               <Link
                 className="anchorjs-link "
@@ -824,7 +833,10 @@ const CodePage = () => {
                 </div>
               </div>
             </div>
-            <h4 id="php-code" className="c_head load-order-2 smooth-scroll-heading">
+            <h4
+              id="php-code"
+              className="c_head load-order-2 smooth-scroll-heading"
+            >
               PHP Source Code
               <Link
                 className="anchorjs-link "

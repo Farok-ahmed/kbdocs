@@ -50,11 +50,7 @@ const BlogGridPosts = () => {
                     animationDelay: `${index * 0.2}s`,
                   }}
                 >
-                  <Image 
-                    src={post.image} 
-                    alt={`Image for ${post.title}`} 
-                    
-                  />
+                  <Image src={post.image} alt={`Image for ${post.title}`} />
                   <div className="grid_post_content">
                     <div className="post_tag">
                       <a href="#">{post.readTime}</a>
@@ -69,7 +65,6 @@ const BlogGridPosts = () => {
                         <Image
                           src={post.author.avatar}
                           alt={`Author ${post.author.name} `}
-                         
                         />
                       </div>
                       <div className="media-body author_text">

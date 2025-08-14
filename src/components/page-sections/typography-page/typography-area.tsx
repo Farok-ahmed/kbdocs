@@ -1,6 +1,5 @@
-
 import Link from "next/link";
-import HighlightText from './.components/highlight-text';
+import HighlightText from "./.components/highlight-text";
 
 const TypographyArea = () => {
   return (

@@ -8,16 +8,8 @@ const Banner = () => {
   return (
     <section className="breadcrumb_area breadcrumb_area_four">
       <Image className="p_absolute bl_left" src={vIcon} alt="" />
-      <Image
-        className="p_absolute bl_right"
-        src={bLeaf}
-        alt=""
-      />
-      <Image
-        className="p_absolute one wow fadeInRight"
-        src={bManTwo}
-        alt=""
-      />
+      <Image className="p_absolute bl_right" src={bLeaf} alt="" />
+      <Image className="p_absolute one wow fadeInRight" src={bManTwo} alt="" />
       <div className="container">
         <div className="breadcrumb_content_two text-center">
           <h2>Contact</h2>

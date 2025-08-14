@@ -1,5 +1,3 @@
-
-
 import android from "@/assets/img/home_one/icon/android.png";
 import envelope from "@/assets/img/home_one/icon/envelope.png";
 import folder from "@/assets/img/home_one/icon/folder.png";

@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { useActionState, useEffect, useState } from "react";
-import ContactFormAction, { type ContactFormState } from "./contact-form-action";
+import ContactFormAction, {
+    type ContactFormState,
+} from "./contact-form-action";
 import ContactFormSubmit from "./contact-submit";
 
 interface UIFormData {
@@ -99,11 +101,13 @@ const ContactForm = () => {
         </motion.h2>
         <p>Please email us, we’ll happy to assist you.</p>
       </div>
-      <form action={formAction}  className="contact_form">
+      <form action={formAction} className="contact_form">
         <div className="form-group">
           <h6>What type of project you need?</h6>
           {state?.errors?.projectTypes && (
-            <div className="text-danger mb-2">{state.errors.projectTypes[0]}</div>
+            <div className="text-danger mb-2">
+              {state.errors.projectTypes[0]}
+            </div>
           )}
           <div className="box_info">
             {projectTypeOptions.map((option) => (
@@ -136,9 +140,14 @@ const ContactForm = () => {
                   id={`budget${option.id}`}
                   value={option.value}
                   checked={formData.budgetRange === option.value}
-                  onChange={(e) => handleInputChange("budgetRange", e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("budgetRange", e.target.value)
+                  }
                 />
-                <label className="form-check-label" htmlFor={`budget${option.id}`}>
+                <label
+                  className="form-check-label"
+                  htmlFor={`budget${option.id}`}
+                >
                   {option.label}
                 </label>
               </div>
@@ -160,9 +169,14 @@ const ContactForm = () => {
                   id={`week${option.id}`}
                   value={option.value}
                   checked={formData.deadline === option.value}
-                  onChange={(e) => handleInputChange("deadline", e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("deadline", e.target.value)
+                  }
                 />
-                <label className="form-check-label" htmlFor={`week${option.id}`}>
+                <label
+                  className="form-check-label"
+                  htmlFor={`week${option.id}`}
+                >
                   {option.label}
                 </label>
               </div>
@@ -177,7 +191,9 @@ const ContactForm = () => {
             )}
             <input
               type="text"
-              className={`form-control ${state?.errors?.fullName ? "is-invalid" : ""}`}
+              className={`form-control ${
+                state?.errors?.fullName ? "is-invalid" : ""
+              }`}
               name="fullName"
               id="name"
               placeholder="Enter your name here"
@@ -192,7 +208,9 @@ const ContactForm = () => {
             )}
             <input
               type="email"
-              className={`form-control ${state?.errors?.email ? "is-invalid" : ""}`}
+              className={`form-control ${
+                state?.errors?.email ? "is-invalid" : ""
+              }`}
               name="email"
               id="email"
               placeholder="info@KbDoc.com"
@@ -224,7 +242,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
           <div className="col-lg-12 form-group">
-          <ContactFormSubmit/>
+            <ContactFormSubmit />
           </div>
         </div>
       </form>

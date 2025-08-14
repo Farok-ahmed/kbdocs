@@ -1,5 +1,3 @@
-
-
 import android from "@/assets/img/home_one/icon/android.png";
 import management from "@/assets/img/home_one/icon/management.png";
 import newspaper from "@/assets/img/home_one/icon/newspaper.png";
@@ -437,7 +435,7 @@ const LayoutsPage = () => {
                     Share your email so KbDoc can send you updates about the API
                     and developer platform.
                   </p>
-                  <Newsletter/>
+                  <Newsletter />
                   <p>
                     You can unsubscribe at any time. Read our privacy policy{" "}
                     <Link href="#">here</Link>

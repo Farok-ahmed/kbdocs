@@ -1,4 +1,3 @@
-
 import error404Bg from "@/assets/img/404_bg.png";
 import error404One from "@/assets/img/404_one.png";
 import error404Three from "@/assets/img/404_three.png";
@@ -39,7 +38,7 @@ const NotFoundComponent = () => {
               Sorry for the inconvenience. Go to our homepage or check out our
               latest collections for Fashion, Chair, Decoration...
             </p>
-           <SearchField />
+            <SearchField />
             <Link href={pages.home} className="action_btn box_shadow_none">
               <i className="arrow_left"></i>Back to Home Page
             </Link>

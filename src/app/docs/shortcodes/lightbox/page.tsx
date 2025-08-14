@@ -1,13 +1,9 @@
-"use client";
-
 import DocsLayout from "@/components/DocsLayout";
 import Link from "next/link";
-import { useState } from "react";
 import ImageLightbox from "./.components/image-lightbox";
 import ModalLightbox from "./.components/modal-lightbox";
 
 const LightBox = () => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <DocsLayout>
@@ -22,7 +18,10 @@ const LightBox = () => {
           <ImageLightbox />
           <div className="image_pointer mt-5">
             <div className="shortcode_title">
-              <h4 className="load-order-2 smooth-scroll-heading" id="modal-lightbox">
+              <h4
+                className="load-order-2 smooth-scroll-heading"
+                id="modal-lightbox"
+              >
                 Modal Lightbox
                 <Link
                   className="anchorjs-link "

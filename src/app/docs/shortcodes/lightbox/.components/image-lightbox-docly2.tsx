@@ -1,3 +1,4 @@
+"use client";
 import home2Large from "@/assets/img/home2-large.jpg";
 import imgPointer2 from "@/assets/img/img-pointer2.jpg";
 import { AnimatePresence, motion } from "framer-motion";
@@ -77,7 +78,11 @@ const ImageLightboxDocly2 = () => {
             data-toggle="modal"
             data-target="#exampleModal2"
           >
-            <Image src={imgPointer2} alt=""  style={{width:"auto",height:"auto"}} />
+            <Image
+              src={imgPointer2}
+              alt=""
+              style={{ width: "auto", height: "auto" }}
+            />
           </Link>
           <h6>
             How to edit <Link href="#">Docly2</Link>
@@ -120,6 +125,8 @@ const ImageLightboxDocly2 = () => {
                 src={home2Large}
                 alt="large"
                 style={{
+                  width: "auto",
+                  height: "auto",
                   maxHeight: "100vh",
                   maxWidth: "100%",
                   display: "block",

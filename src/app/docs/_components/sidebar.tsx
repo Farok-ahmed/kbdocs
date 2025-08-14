@@ -23,7 +23,12 @@ const mainNavItems: Array<{
   href: string;
   icon: NavIcon;
   active: boolean;
-  children: Array<{ id: string; title: string; href: string; active?: boolean }>;
+  children: Array<{
+    id: string;
+    title: string;
+    href: string;
+    active?: boolean;
+  }>;
 }> = [
   {
     id: "home",
@@ -61,7 +66,7 @@ const mainNavItems: Array<{
     id: "layouts",
     title: "Layouts",
     href: "/docs/layouts",
-  icon: codingIcon,
+    icon: codingIcon,
     active: false,
     children: [
       { id: "both-sidebar", title: "Both Sidebar", href: "/docs/layouts" },
@@ -87,7 +92,7 @@ const mainNavItems: Array<{
     id: "tour",
     title: "Tour",
     href: "/docs/tour",
-  icon: chat1Icon,
+    icon: chat1Icon,
     active: false,
     children: [
       {
@@ -106,7 +111,7 @@ const mainNavItems: Array<{
     id: "content",
     title: "Content",
     href: "/typography",
-  icon: documentIcon,
+    icon: documentIcon,
     active: false,
     children: [
       { id: "typography", title: "Typography", href: "/typography" },
@@ -125,46 +130,57 @@ const mainNavItems: Array<{
     id: "changelog",
     title: "Change Log",
     href: "/docs/changelog",
-  icon: document2Icon,
+    icon: document2Icon,
     active: false,
     children: [],
   },
 ];
 
 // Additional navigation sections
-const codingNavItems: Array<{ id: string; title: string; href: string; icon: NavIcon }> = [
+const codingNavItems: Array<{
+  id: string;
+  title: string;
+  href: string;
+  icon: NavIcon;
+}> = [
   {
     id: "account",
     title: "Account",
     href: "",
-  icon: accountIcon,
+    icon: accountIcon,
   },
   {
     id: "development",
     title: "Development",
     href: "",
-  icon: codingIcon,
+    icon: codingIcon,
   },
 ];
 
-const bottomNavItems: Array<{ id: string; title: string; href: string; icon: NavIcon; hasArrow?: boolean }> = [
+const bottomNavItems: Array<{
+  id: string;
+  title: string;
+  href: string;
+  icon: NavIcon;
+  hasArrow?: boolean;
+}> = [
   {
     id: "location",
     title: "Unlted States",
     href: "",
-  icon: unitedStatesIcon,
+    icon: unitedStatesIcon,
   },
   {
     id: "language",
     title: "English",
     href: "",
-  icon: editIcon,
+    icon: editIcon,
   },
   {
     id: "signin",
     title: "Sign In",
     href: "",
-  icon: usersIcon,
+    icon: usersIcon,
     hasArrow: true,
   },
 ];

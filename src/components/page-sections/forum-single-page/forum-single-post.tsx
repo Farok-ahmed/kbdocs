@@ -10,7 +10,7 @@ const ForumSinglePost = () => {
         <div className="col-lg-9">
           <div className="forum-post-top">
             <Link className="author-avatar" href="#">
-              <Image src={authorAvatar} alt=""  />
+              <Image src={authorAvatar} alt="" />
             </Link>
             <div className="forum-post-author">
               <Link className="author-name" href="#">

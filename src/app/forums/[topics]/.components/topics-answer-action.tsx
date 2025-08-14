@@ -7,12 +7,7 @@ const TopicsAnswerAction = () => {
       <div className="answer-action">
         <div className="action-content">
           <div className="image-wrap">
-            <Image
-              src={AnswerImg}
-              alt="answer action"
-              width={64}
-              height={64}
-            />
+            <Image src={AnswerImg} alt="answer action" width={64} height={64} />
           </div>
 
           <div className="content">

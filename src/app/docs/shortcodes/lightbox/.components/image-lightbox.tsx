@@ -1,10 +1,10 @@
-import { useState } from "react";
-
+"use client";
 import lightboxImage from "@/assets/img/image-lightbox.jpg";
 import lightboxPreview from "@/assets/img/lightbox-preview.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 const ImageLightbox = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -52,6 +52,8 @@ const ImageLightbox = () => {
                 alt="lightbox"
                 onClick={() => setIsOpen(false)}
                 style={{
+                  width: "auto",
+                  height: "auto",
                   maxHeight: "90vh",
                   cursor: "zoom-out",
                   maxWidth: "100vw",

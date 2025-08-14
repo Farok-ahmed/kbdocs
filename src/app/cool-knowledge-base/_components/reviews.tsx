@@ -116,7 +116,10 @@ const Reviews = () => {
                 className="item"
               >
                 <div className="author_img">
-                  <Image src={activeTestimonial.photo} alt={activeTestimonial.name} />
+                  <Image
+                    src={activeTestimonial.photo}
+                    alt={activeTestimonial.name}
+                  />
                 </div>
                 <p>{activeTestimonial.review}</p>
                 <h5>{activeTestimonial.name}</h5>

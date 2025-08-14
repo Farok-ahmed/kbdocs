@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import bellImg from "@/assets/img/home_two/Bell.png";
 import channelImg from "@/assets/img/home_two/Channel.png";
 import cloud1Img from "@/assets/img/home_two/cloud1.png";

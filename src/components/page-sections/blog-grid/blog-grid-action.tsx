@@ -6,11 +6,7 @@ const BlogGridAction = () => {
   return (
     <>
       <section className="doc_action_area_three">
-        <Image
-          className="p_absolute shadows"
-          src={shadowAction}
-          alt=""
-        />
+        <Image className="p_absolute shadows" src={shadowAction} alt="" />
         <Image className="p_absolute b_man" src={man} alt="" />
         <div className="container">
           <div className="row">

@@ -1,5 +1,4 @@
 "use client";
-
 import spinnerLogoImg from "@/assets/img/spinner_logo.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";

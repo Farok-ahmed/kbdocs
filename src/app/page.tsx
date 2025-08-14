@@ -1,5 +1,3 @@
-
-
 import DefaultLayout from "@/components/layout";
 import Banner from "@/components/page-sections/banner";
 import CallToAction from "@/components/page-sections/call-to-action";

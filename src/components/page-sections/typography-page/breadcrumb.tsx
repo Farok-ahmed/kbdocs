@@ -8,26 +8,10 @@ const Breadcrumb = () => {
   return (
     <>
       <div className="breadcrumb_area_three">
-        <Image
-          className="p_absolute one"
-          src={leafLeftImg}
-          alt=""
-        />
-        <Image
-          className="p_absolute two"
-          src={man01Img}
-          alt=""
-        />
-        <Image
-          className="p_absolute three"
-          src={man02Img}
-          alt=""
-        />
-        <Image
-          className="p_absolute four"
-          src={leafRightImg}
-          alt=""
-        />
+        <Image className="p_absolute one" src={leafLeftImg} alt="" />
+        <Image className="p_absolute two" src={man01Img} alt="" />
+        <Image className="p_absolute three" src={man02Img} alt="" />
+        <Image className="p_absolute four" src={leafRightImg} alt="" />
         <div className="container">
           <div className="breadcrumb_text">
             <h2>

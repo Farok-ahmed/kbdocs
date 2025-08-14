@@ -14,7 +14,7 @@ const ForumSingleComments = () => {
             <div className="col-lg-9">
               <div className="forum-post-top">
                 <Link className="author-avatar" href="#">
-                  <Image src={authorAvatar} alt=""  />
+                  <Image src={authorAvatar} alt="" />
                 </Link>
                 <div className="forum-post-author">
                   <Link className="author-name" href="#">
@@ -94,7 +94,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <Image src={authorAvatar} alt="author avatar"  />
+                <Image src={authorAvatar} alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">
@@ -239,7 +239,7 @@ const ForumSingleComments = () => {
           <div className="forum-comment">
             <div className="forum-post-top">
               <Link className="author-avatar" href="#">
-                <Image src={authorAvatar} alt="author avatar"  />
+                <Image src={authorAvatar} alt="author avatar" />
               </Link>
               <div className="forum-post-author">
                 <Link className="author-name" href="#">

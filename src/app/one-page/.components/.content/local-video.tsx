@@ -73,7 +73,7 @@ const LocalVideo: React.FC = () => {
           your pages.
         </p>
         <div className="code-preview" id="inline-popups">
-          <Image src={imgPointer2} alt="" />
+          <Image src={imgPointer2} alt="" style={{ width: "auto", height: "auto" }} />
           <Link
             onClick={handleOpen}
             className="popup-youtube video_icon"

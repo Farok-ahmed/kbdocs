@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import briefcaseImg from "@/assets/img/home_two/Briefcase.png";
 import settingIconImg from "@/assets/img/home_two/setting-icon.png";
 import { motion } from "framer-motion";

@@ -1,3 +1,4 @@
+"use client"
 import imgLarge from "@/assets/img/img-large.jpg";
 import imgPointer1 from "@/assets/img/img-pointer1.jpg";
 import { AnimatePresence, motion } from "framer-motion";
@@ -77,7 +78,11 @@ const ModalLightbox = () => {
             data-toggle="modal"
             data-target="#exampleModal"
           >
-            <Image src={imgPointer1} alt=""  style={{width:"auto",height:"auto"}} />
+            <Image
+              src={imgPointer1}
+              alt=""
+              style={{ width: "auto", height: "auto" }}
+            />
           </Link>
           <h6>
             How to edit <Link href="#">KbDoc</Link>
@@ -120,6 +125,8 @@ const ModalLightbox = () => {
                 src={imgLarge}
                 alt="large"
                 style={{
+                  width: "auto",
+                  height: "auto",
                   maxHeight: "100vh",
                   maxWidth: "100%",
                   display: "block",

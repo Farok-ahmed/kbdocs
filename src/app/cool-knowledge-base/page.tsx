@@ -1,4 +1,3 @@
-
 import DefaultLayout from "@/components/layout";
 import Link from "next/link";
 import CoolBanner from "./_components/cool-banner";

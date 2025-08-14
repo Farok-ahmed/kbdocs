@@ -1,5 +1,3 @@
-
-
 import android from "@/assets/img/home_one/icon/android.png";
 import management from "@/assets/img/home_one/icon/management.png";
 import newspaper from "@/assets/img/home_one/icon/newspaper.png";

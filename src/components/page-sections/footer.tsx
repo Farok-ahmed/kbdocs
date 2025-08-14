@@ -1,5 +1,4 @@
 "use client";
-
 import cloudImg from "@/assets/img/home_two/cloud.png";
 import emailIconImg from "@/assets/img/home_two/email-icon.png";
 import emailIconTwoImg from "@/assets/img/home_two/email-icon_two.png";
@@ -20,7 +19,13 @@ export default function Footer() {
     <footer
       className={`footer_area f_bg_color ${isHomePage ? "footer_p_top" : ""}`}
     >
-      <Image className="p_absolute leaf" src={vImg} alt="" width={180} height={125} />
+      <Image
+        className="p_absolute leaf"
+        src={vImg}
+        alt=""
+        width={180}
+        height={125}
+      />
       <motion.div
         // fade in left animation
         initial={{ opacity: 0, x: -50 }}
@@ -30,26 +35,11 @@ export default function Footer() {
         className="p_absolute f_man wow fadeInLeft"
         data-wow-delay="0.4s"
       >
-        <Image
-          src={fManImg}
-          alt=""
-        />
+        <Image src={fManImg} alt="" />
       </motion.div>
-      <Image
-        className="p_absolute f_cloud"
-        src={cloudImg}
-        alt=""
-      />
-      <Image
-        className="p_absolute f_email"
-        src={emailIconImg}
-        alt=""
-      />
-      <Image
-        className="p_absolute f_email_two"
-        src={emailIconTwoImg}
-        alt=""
-      />
+      <Image className="p_absolute f_cloud" src={cloudImg} alt="" />
+      <Image className="p_absolute f_email" src={emailIconImg} alt="" />
+      <Image className="p_absolute f_email_two" src={emailIconTwoImg} alt="" />
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -58,10 +48,7 @@ export default function Footer() {
         className="p_absolute f_man_two wow fadeInLeft"
         data-wow-delay="0.2s"
       >
-        <Image
-          src={manImg}
-          alt=""
-        />
+        <Image src={manImg} alt="" />
       </motion.div>
       <div className="footer_top">
         <div className="container">

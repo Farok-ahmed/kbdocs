@@ -58,28 +58,28 @@ const ForumSingleSidebar = () => {
             <h4 className="c_head">Ticket Categories</h4>
             <ul className="list-unstyled ticket_categories">
               <li>
-                <Image src={cmm5} alt="category"  />
+                <Image src={cmm5} alt="category" />
                 <Link href="#">Docs WordPress Theme</Link>{" "}
                 <span className="count">10</span>
               </li>
               <li>
-                <Image src={cmm4} alt="category"  />
+                <Image src={cmm4} alt="category" />
                 <Link href="#">Product Landing Page</Link>
                 <span className="count count-fill">13</span>
                 <span className="count">54</span>
               </li>
               <li>
-                <Image src={cmm2} alt="category"/>
+                <Image src={cmm2} alt="category" />
                 <Link href="#">Knowledge base Template</Link>
                 <span className="count">142</span>
               </li>
               <li>
-                <Image src={cmm8} alt="category"  />
+                <Image src={cmm8} alt="category" />
                 <Link href="#">Startup and App WP Theme</Link>{" "}
                 <span className="count">13</span>
               </li>
               <li>
-                <Image src={cmm9} alt="category"  />
+                <Image src={cmm9} alt="category" />
                 <Link href="#">Clean Email Template</Link>{" "}
                 <span className="count">123</span>
               </li>

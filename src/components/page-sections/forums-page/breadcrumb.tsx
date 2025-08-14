@@ -13,26 +13,10 @@ const breadcrumb = () => {
     <>
       <section className="breadcrumb_area">
         <Image className="p_absolute bl_left" src={vIcon} alt="" />
-        <Image
-          className="p_absolute bl_right"
-          src={bLeaf}
-          alt=""
-        />
-        <Image
-          className="p_absolute star"
-          src={bannerBg}
-          alt=""
-        />
-        <Image
-          className="p_absolute wave_shap_one"
-          src={shap01}
-          alt=""
-        />
-        <Image
-          className="p_absolute wave_shap_two"
-          src={shap02}
-          alt=""
-        />
+        <Image className="p_absolute bl_right" src={bLeaf} alt="" />
+        <Image className="p_absolute star" src={bannerBg} alt="" />
+        <Image className="p_absolute wave_shap_one" src={shap01} alt="" />
+        <Image className="p_absolute wave_shap_two" src={shap02} alt="" />
         <Image
           className="p_absolute one wow fadeInRight"
           src={bManTwo}

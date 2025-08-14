@@ -1,4 +1,3 @@
-
 import FunFactSection from "../fun-fact";
 
 const DocCounter = () => {

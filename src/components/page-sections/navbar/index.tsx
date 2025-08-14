@@ -170,7 +170,16 @@ export default function Navbar({
                               <Link href={subItem.href} className="nav-link">
                                 {subItem.subTitle ? (
                                   <>
-                                    {subItem?.icon && <Image src={subItem.icon} alt="" style={{width:"auto",height:"auto"}} />}
+                                    {subItem?.icon && (
+                                      <Image
+                                        src={subItem.icon}
+                                        alt=""
+                                        style={{
+                                          width: "auto",
+                                          height: "auto",
+                                        }}
+                                      />
+                                    )}
                                     <div className="text">
                                       <h5>{subItem.title}</h5>
                                       <p>{subItem.subTitle}</p>

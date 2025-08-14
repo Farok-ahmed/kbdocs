@@ -88,23 +88,43 @@ const CanUsePage = () => {
               </h6>
               <ul className="list-unstyled caniuse_agents_list">
                 <li className="caniuse_agents_item light_blue">
-                  <Image src={desktop1} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={desktop1}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">72</span>
                 </li>
                 <li className="caniuse_agents_item light_blue">
-                  <Image src={desktop2} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={desktop2}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">64*</span>
                 </li>
                 <li className="caniuse_agents_item light_red">
-                  <Image src={desktop3} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={desktop3}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">No</span>
                 </li>
                 <li className="caniuse_agents_item light_blue">
-                  <Image src={desktop4} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={desktop4}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">42</span>
                 </li>
                 <li className="caniuse_agents_item light_blue">
-                  <Image src={desktop5} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={desktop5}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">45</span>
                 </li>
               </ul>
@@ -125,23 +145,43 @@ const CanUsePage = () => {
               </h6>
               <ul className="list-unstyled caniuse_agents_list">
                 <li className="caniuse_agents_item blue">
-                  <Image src={mobile1} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={mobile1}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">9.0</span>
                 </li>
                 <li className="caniuse_agents_item blue">
-                  <Image src={mobile2} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={mobile2}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">86</span>
                 </li>
                 <li className="caniuse_agents_item light_red">
-                  <Image src={mobile3} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={mobile3}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">No</span>
                 </li>
                 <li className="caniuse_agents_item blue">
-                  <Image src={mobile4} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={mobile4}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">76</span>
                 </li>
                 <li className="caniuse_agents_item blue">
-                  <Image src={mobile5} alt=""  style={{width:"auto",height:"auto"}} />
+                  <Image
+                    src={mobile5}
+                    alt=""
+                    style={{ width: "auto", height: "auto" }}
+                  />
                   <span className="agents_version">76*</span>
                 </li>
               </ul>

@@ -238,7 +238,12 @@ const DocumentationArea = () => {
                           }}
                         >
                           <div className="icon">
-                            <Image src={item.icon} alt={item.title} width={45} height={45} />
+                            <Image
+                              src={item.icon}
+                              alt={item.title}
+                              width={45}
+                              height={45}
+                            />
                           </div>
                           <div className="media-body">
                             <Link href="">

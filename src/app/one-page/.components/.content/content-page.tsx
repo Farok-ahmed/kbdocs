@@ -770,11 +770,7 @@ const ContentPage: React.FC = () => {
                   />
                 </div>
                 <div className="col-md-4 text-center">
-                  <Image
-                    src={img3}
-                    className="img-thumbnail"
-                    alt="Thumbnail"
-                  />
+                  <Image src={img3} className="img-thumbnail" alt="Thumbnail" />
                 </div>
               </div>
             </div>

@@ -1,28 +1,17 @@
-"use client";
 import DefaultLayout from "@/components/layout";
-import { use, useMemo, useState } from "react";
 import { topicsListWithFilteredForums } from "../forum-data";
 import BreadcrumbTopic from "./.components/breadcrumb-topic";
 import CallToActionTopic from "./.components/call-to-action-topic";
-import CommunitiesForumTopics from "./.components/communities-forum-topics";
-import TopicsAnswerAction from "./.components/topics-answer-action";
-import TopicsHeader from "./.components/topics-header";
-import TopicsPagination from "./.components/topics-pagination";
-import TopicsPosts from "./.components/topics-posts";
 import TopicsSidebar from "./.components/topics-sidebar";
+import TopicsClient from "./topics-client";
 
-const ITEMS_PER_PAGE = 6;
-const TopicsPage = ({ params }: { params: Promise<{ topics: string }> }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const { topics } = use(params);
-  const getTopics = topicsListWithFilteredForums(topics);
+interface PageProps {
+  params: Promise<{ topics: string }>; 
+}
 
-  // Calculate the items for the current page
-  const currentTableData = useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const lastPageIndex = firstPageIndex + ITEMS_PER_PAGE;
-    return getTopics.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, getTopics]);
+export default async function TopicsPage({ params }: PageProps) {
+  const { topics } = await params; 
+  const filteredTopics = topicsListWithFilteredForums(topics);
 
   return (
     <DefaultLayout>
@@ -31,16 +20,7 @@ const TopicsPage = ({ params }: { params: Promise<{ topics: string }> }) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
-              <CommunitiesForumTopics />
-              <TopicsAnswerAction />
-              <TopicsHeader />
-              <TopicsPosts getTopics={currentTableData} />
-              <TopicsPagination
-                currentPage={currentPage}
-                totalCount={getTopics.length}
-                pageSize={ITEMS_PER_PAGE}
-                onPageChange={(page: number) => setCurrentPage(page)}
-              />
+              <TopicsClient topics={filteredTopics} />
             </div>
             <TopicsSidebar />
           </div>
@@ -49,6 +29,4 @@ const TopicsPage = ({ params }: { params: Promise<{ topics: string }> }) => {
       <CallToActionTopic />
     </DefaultLayout>
   );
-};
-
-export default TopicsPage;
+}

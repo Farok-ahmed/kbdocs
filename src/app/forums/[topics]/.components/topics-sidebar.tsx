@@ -55,9 +55,9 @@ const TopicsSidebar = () => {
             <h4 className="c_head">Ticket Categories</h4>
 
             <ul className="list-unstyled ticket_categories">
-        {TicketCategories.map((category) => (
+              {TicketCategories.map((category) => (
                 <li key={category.id}>
-          <Image src={category.icon} alt="category" />
+                  <Image src={category.icon} alt="category" />
                   <Link href="#">{category.name}</Link>
                   {category.activeCount && (
                     <span className="count count-fill">

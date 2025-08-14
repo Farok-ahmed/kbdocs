@@ -207,7 +207,11 @@ export default function Sidebar() {
               className={`nav-item  ${openItemId === item.id ? "active" : ""}`}
             >
               <Link href={item.href} className="nav-link">
-                <Image src={item.icon} alt=""  style={{width:30,height:"auto"}} />
+                <Image
+                  src={item.icon}
+                  alt=""
+                  style={{ width: 30, height: "auto" }}
+                />
                 {item.title}
               </Link>
 
@@ -245,7 +249,11 @@ export default function Sidebar() {
           {codingNavItems.map((item) => (
             <li key={item.id} className="nav-item">
               <Link href={item.href} className="nav-link">
-                <Image src={item.icon} alt=""  style={{width:30,height:"auto"}} />
+                <Image
+                  src={item.icon}
+                  alt=""
+                  style={{ width: 30, height: "auto" }}
+                />
                 {item.title}
               </Link>
             </li>
@@ -257,7 +265,11 @@ export default function Sidebar() {
           {bottomNavItems.map((item) => (
             <li key={item.id} className="nav-item">
               <Link href={item.href} className="nav-link">
-                <Image src={item.icon} alt=""  style={{width:30,height:"auto"}} />
+                <Image
+                  src={item.icon}
+                  alt=""
+                  style={{ width: 30, height: "auto" }}
+                />
                 {item.title} {item.hasArrow && <i className="arrow_right"></i>}
               </Link>
             </li>

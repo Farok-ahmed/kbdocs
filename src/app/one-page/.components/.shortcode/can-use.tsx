@@ -32,23 +32,23 @@ const CanUse = () => {
           </h6>
           <ul className="list-unstyled caniuse_agents_list">
             <li className="caniuse_agents_item light_blue">
-              <Image src={desktopIcon1} alt="" />
+              <Image src={desktopIcon1} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">72</span>
             </li>
             <li className="caniuse_agents_item light_blue">
-              <Image src={desktopIcon2} alt="" />
+              <Image src={desktopIcon2} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">64*</span>
             </li>
             <li className="caniuse_agents_item light_red">
-              <Image src={desktopIcon3} alt="" />
+              <Image src={desktopIcon3} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">No</span>
             </li>
             <li className="caniuse_agents_item light_blue">
-              <Image src={desktopIcon4} alt="" />
+              <Image src={desktopIcon4} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">42</span>
             </li>
             <li className="caniuse_agents_item light_blue">
-              <Image src={desktopIcon5} alt="" />
+              <Image src={desktopIcon5} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">45</span>
             </li>
           </ul>
@@ -69,23 +69,23 @@ const CanUse = () => {
           </h6>
           <ul className="list-unstyled caniuse_agents_list">
             <li className="caniuse_agents_item blue">
-              <Image src={mobileIcon1} alt="" />
+              <Image src={mobileIcon1} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">9.0</span>
             </li>
             <li className="caniuse_agents_item blue">
-              <Image src={mobileIcon2} alt="" />
+              <Image src={mobileIcon2} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">86</span>
             </li>
             <li className="caniuse_agents_item light_red">
-              <Image src={mobileIcon3} alt="" />
+              <Image src={mobileIcon3} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">No</span>
             </li>
             <li className="caniuse_agents_item blue">
-              <Image src={mobileIcon4} alt="" />
+              <Image src={mobileIcon4} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">76</span>
             </li>
             <li className="caniuse_agents_item blue">
-              <Image src={mobileIcon5} alt="" />
+              <Image src={mobileIcon5} alt="" style={{ width: "auto", height: "auto" }} />
               <span className="agents_version">76*</span>
             </li>
           </ul>

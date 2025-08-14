@@ -1,9 +1,9 @@
-"use server"
-import { redirect } from 'next/navigation';
+"use server";
+import { redirect } from "next/navigation";
 
-const RegisterAction = async (formData:FormData) => {
+const RegisterAction = async (formData: FormData) => {
   await new Promise((res) => setTimeout(res, 1500));
   redirect("/login");
-}
+};
 
 export default RegisterAction;

@@ -1,4 +1,3 @@
-"use client";
 import DocsLayout from "@/components/DocsLayout";
 import Link from "next/link";
 import CustomTabs from "./_components/CustomTabs";

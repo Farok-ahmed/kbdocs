@@ -50,26 +50,10 @@ const SearchBreadcrumb = () => {
     <>
       <section className="breadcrumb_area">
         <Image className="p_absolute bl_left" src={vImg} alt="" />
-        <Image
-          className="p_absolute bl_right"
-          src={bLeafImg}
-          alt=""
-        />
-        <Image
-          className="p_absolute star"
-          src={bannerBgImg}
-          alt=""
-        />
-        <Image
-          className="p_absolute wave_shap_one"
-          src={shap01Img}
-          alt=""
-        />
-        <Image
-          className="p_absolute wave_shap_two"
-          src={shap02Img}
-          alt=""
-        />
+        <Image className="p_absolute bl_right" src={bLeafImg} alt="" />
+        <Image className="p_absolute star" src={bannerBgImg} alt="" />
+        <Image className="p_absolute wave_shap_one" src={shap01Img} alt="" />
+        <Image className="p_absolute wave_shap_two" src={shap02Img} alt="" />
         <Image
           className="p_absolute one wow fadeInRight"
           src={bManTwoImg}

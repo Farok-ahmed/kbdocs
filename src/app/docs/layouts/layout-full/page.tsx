@@ -1,4 +1,3 @@
-
 import android from "@/assets/img/home_one/icon/android.png";
 import briefcase from "@/assets/img/home_one/icon/briefcase.png";
 import coding from "@/assets/img/home_one/icon/coding.png";
@@ -509,7 +508,7 @@ const LayoutFull = () => {
                   Share your email so KbDoc can send you updates about the API
                   and developer platform.
                 </p>
-                <Newsletter/>
+                <Newsletter />
                 <p>
                   You can unsubscribe at any time. Read our privacy policy{" "}
                   <Link href="#">here</Link>

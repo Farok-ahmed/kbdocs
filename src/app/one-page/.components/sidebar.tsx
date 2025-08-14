@@ -110,6 +110,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
                         src={item.icon}
                         alt={item.label}
                         className="mCS_img_loaded"
+                        style={{ width: "auto", height: "auto" }}
                       />
                       {item.label}
                     </Link>

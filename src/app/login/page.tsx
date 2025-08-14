@@ -1,16 +1,12 @@
-
-
 import bottomOrnamate from "@/assets/img/signup/bottom_ornamate.png";
 import door from "@/assets/img/signup/door.png";
 import gmail from "@/assets/img/signup/gmail.png";
 import topOrnamate from "@/assets/img/signup/top_ornamate.png";
 import Image from "next/image";
 import Link from "next/link";
-import LoginForm from './.components/form';
+import LoginForm from "./.components/form";
 
 export default function LoginPage() {
-  
-
   return (
     <section className="signup_area">
       <div className="row ml-0 mr-0">
@@ -26,11 +22,7 @@ export default function LoginPage() {
             src={bottomOrnamate}
             alt="bottom"
           />
-          <Image
-            className="position-absolute middle"
-            src={door}
-            alt="bottom"
-          />
+          <Image className="position-absolute middle" src={door} alt="bottom" />
           <div className="round"></div>
         </div>
         <div className="sign_right signup_right">
@@ -42,7 +34,11 @@ export default function LoginPage() {
                 <Link href="/register">Sign up here</Link>
               </p>
               <Link href="" className="btn-google">
-                <Image src={gmail} alt="" style={{width:24,height:"auto"}} />
+                <Image
+                  src={gmail}
+                  alt=""
+                  style={{ width: 24, height: "auto" }}
+                />
                 <span className="btn-text">Sign in with Gmail</span>
               </Link>
             </div>

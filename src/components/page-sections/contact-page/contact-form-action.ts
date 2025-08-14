@@ -50,7 +50,5 @@ export default async function ContactFormAction(
     return { success: false, errors };
   }
 
- 
-
   return { success: true };
 }

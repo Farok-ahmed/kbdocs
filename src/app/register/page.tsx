@@ -4,12 +4,9 @@ import manImage from "@/assets/img/signup/man_image.png";
 import topOrnamate from "@/assets/img/signup/top_ornamate.png";
 import Image from "next/image";
 import Link from "next/link";
-import RegisterForm from './.components/register-form';
-
+import RegisterForm from "./.components/register-form";
 
 export default function RegisterPage() {
- 
-
   return (
     <section className="signup_area signup_area_height">
       <div className="row ml-0 mr-0">
@@ -44,7 +41,12 @@ export default function RegisterPage() {
                 Already have an account? <Link href="/login">Sign in</Link>
               </p>
               <Link href="" className="btn-google">
-                <Image src={gmail} alt="" width={24} style={{height:"auto"}} />
+                <Image
+                  src={gmail}
+                  alt=""
+                  width={24}
+                  style={{ height: "auto" }}
+                />
                 <span className="btn-text">Sign up with Google</span>
               </Link>
             </div>

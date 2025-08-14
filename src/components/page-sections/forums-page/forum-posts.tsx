@@ -13,7 +13,11 @@ const ForumPosts = () => {
           >
             <div className="col-md-6 post-content">
               <div className="author-avatar forum-icon">
-                <Image src={forum.icon} alt="community post"  style={{width:"auto",height:"auto"}}  />
+                <Image
+                  src={forum.icon}
+                  alt="community post"
+                  style={{ width: "auto", height: "auto" }}
+                />
               </div>
               <div className="entry-content">
                 <h3 className="post-title">
@@ -53,7 +57,7 @@ const ForumPosts = () => {
                           <Image
                             alt="Eh Jewel"
                             src={forum.authorAvatar}
-                            style={{width:"auto",height:"auto"}}
+                            style={{ width: "auto", height: "auto" }}
                             className="avatar photo"
                           />
                         </span>

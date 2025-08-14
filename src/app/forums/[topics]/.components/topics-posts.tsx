@@ -12,7 +12,7 @@ const TopicsPosts = ({ getTopics }: any) => {
           >
             <div className="post-content">
               <div className="author-avatar">
-                <Image src={topic.authorAvatar} alt="community post" />
+                <Image src={topic.authorAvatar} alt="community post" style={{ width: "auto", height: "auto" }} />
               </div>
               <div className="entry-content">
                 <h3 className="post-title">

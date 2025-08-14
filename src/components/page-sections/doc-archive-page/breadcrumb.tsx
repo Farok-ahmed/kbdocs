@@ -1,4 +1,3 @@
-
 import SearchBreadcrumb from "@/components/search-breadcrumb";
 import { formattedDate } from "@/utils/date-formate";
 import Link from "next/link";
@@ -15,7 +14,7 @@ const Breadcrumb = () => {
     { name: "Docs", link: "/docs" },
     { name: "KbDoc WordPress Theme", link: "" },
   ];
-  
+
   // Default date for display
   // You can replace this with a dynamic date if needed
   const defaultDate = new Date();

@@ -1,5 +1,4 @@
 "use client";
-
 import shap01 from "@/assets/img/blog-classic/shap_01.png";
 import shap02 from "@/assets/img/blog-classic/shap_02.png";
 import bLeaf from "@/assets/img/home_one/b_leaf.svg";
@@ -263,15 +262,8 @@ export default function DocsLayout({ children, type = "both" }: Props) {
                 </motion.span>
               </motion.button>
               <Link className="sticky_logo" href="/">
-                <Image
-                  src={logoW}
-                  alt="logo"
-                  style={{ display: 'none' }}
-                />
-                <Image
-                  src={logo}
-                  alt="logo"
-                />
+                <Image src={logoW} alt="logo" style={{ display: "none" }} />
+                <Image src={logo} alt="logo" />
               </Link>
             </div>
             <div className="mobile_menu_right">
@@ -465,26 +457,10 @@ export default function DocsLayout({ children, type = "both" }: Props) {
           <>
             <section className="breadcrumb_area">
               <Image className="p_absolute bl_left" src={vIcon} alt="" />
-              <Image
-                className="p_absolute bl_right"
-                src={bLeaf}
-                alt=""
-              />
-              <Image
-                className="p_absolute star"
-                src={bannerBg}
-                alt=""
-              />
-              <Image
-                className="p_absolute wave_shap_one"
-                src={shap01}
-                alt=""
-              />
-              <Image
-                className="p_absolute wave_shap_two"
-                src={shap02}
-                alt=""
-              />
+              <Image className="p_absolute bl_right" src={bLeaf} alt="" />
+              <Image className="p_absolute star" src={bannerBg} alt="" />
+              <Image className="p_absolute wave_shap_one" src={shap01} alt="" />
+              <Image className="p_absolute wave_shap_two" src={shap02} alt="" />
               <Image
                 className="p_absolute one wow fadeInRight"
                 src={bManTwo}
@@ -622,11 +598,7 @@ export default function DocsLayout({ children, type = "both" }: Props) {
           </div>
         </section>
         <footer className="simple_footer">
-          <Image
-            className="leaf_right"
-            src={leafFooter}
-            alt=""
-          />
+          <Image className="leaf_right" src={leafFooter} alt="" />
           <div className="container">
             <div className="row align-items-center">
               <div className="col-sm-6">

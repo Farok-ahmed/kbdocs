@@ -1,10 +1,10 @@
-"use client"
-import { Tooltip } from 'react-tooltip';
+"use client";
+import { Tooltip } from "react-tooltip";
 
 const HighlightText = () => {
   return (
     <>
-    <div className="highlight_text">
+      <div className="highlight_text">
         <h5 className="h5 regular">Text Tooltips</h5>
         <p>
           He nicked it chip shop argy-bargy brilliant get stuffed mate
@@ -51,7 +51,7 @@ const HighlightText = () => {
         </p>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HighlightText
+export default HighlightText;

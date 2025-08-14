@@ -320,7 +320,11 @@ const BlogSinglePage = async ({
                       <ul className="list-unstyled reply_comment">
                         <li>
                           <div className="media comment_author">
-                            <Image className="img_rounded" src={comment02} alt="" />
+                            <Image
+                              className="img_rounded"
+                              src={comment02}
+                              alt=""
+                            />
                             <div className="media-body">
                               <div className="comment_info">
                                 <h3>Hans Down</h3>
@@ -340,7 +344,11 @@ const BlogSinglePage = async ({
                         </li>
                         <li>
                           <div className="media comment_author">
-                            <Image className="img_rounded" src={comment03} alt="" />
+                            <Image
+                              className="img_rounded"
+                              src={comment03}
+                              alt=""
+                            />
                             <div className="media-body">
                               <div className="comment_info">
                                 <h3>Hans Down</h3>

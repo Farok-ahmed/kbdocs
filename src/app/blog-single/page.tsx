@@ -129,7 +129,7 @@ const BlogSinglePage = () => {
                       telling get stuffed mate up the duff haggle lost the plot
                       off his nut wind up loo, I don't want no agro.
                     </p>
-                      <Image src={singlePostImgTwo} alt="Blog secondary image" />
+                    <Image src={singlePostImgTwo} alt="Blog secondary image" />
                     <p>
                       I will keep the rest of the values to default so that the
                       config file will have the defaults Sylius settings. If the
@@ -201,7 +201,11 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <Image src={related2} alt="Related post" style={{width:"auto",height:"auto"}} />
+                        <Image
+                          src={related2}
+                          alt="Related post"
+                          style={{ width: "auto", height: "auto" }}
+                        />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">18 Min Read</Link>
@@ -231,7 +235,11 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <Image src={related3} alt="Related post" style={{width:"auto",height:"auto"}} />
+                        <Image
+                          src={related3}
+                          alt="Related post"
+                          style={{ width: "auto", height: "auto" }}
+                        />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">10 Min Read</Link>
@@ -261,7 +269,11 @@ const BlogSinglePage = () => {
                           animationName: "fadeInUp",
                         }}
                       >
-                        <Image src={related6} alt="Related post" style={{width:"auto",height:"auto"}} />
+                        <Image
+                          src={related6}
+                          alt="Related post"
+                          style={{ width: "auto", height: "auto" }}
+                        />
                         <div className="grid_post_content">
                           <div className="post_tag">
                             <Link href="#">9 Min Read</Link>
@@ -288,7 +300,11 @@ const BlogSinglePage = () => {
                   <ul className="comment_box list-unstyled">
                     <li className="post_comment">
                       <div className="media comment_author">
-                        <Image className="img_rounded" src={comment01} alt="Comment author" />
+                        <Image
+                          className="img_rounded"
+                          src={comment01}
+                          alt="Comment author"
+                        />
                         <div className="media-body">
                           <div className="comment_info">
                             <h3>Fletch Skinner</h3>
@@ -310,7 +326,11 @@ const BlogSinglePage = () => {
                       <ul className="list-unstyled reply_comment">
                         <li>
                           <div className="media comment_author">
-                            <Image className="img_rounded" src={comment02} alt="Comment author" />
+                            <Image
+                              className="img_rounded"
+                              src={comment02}
+                              alt="Comment author"
+                            />
                             <div className="media-body">
                               <div className="comment_info">
                                 <h3>Hans Down</h3>
@@ -330,7 +350,11 @@ const BlogSinglePage = () => {
                         </li>
                         <li>
                           <div className="media comment_author">
-                            <Image className="img_rounded" src={comment03} alt="Comment author" />
+                            <Image
+                              className="img_rounded"
+                              src={comment03}
+                              alt="Comment author"
+                            />
                             <div className="media-body">
                               <div className="comment_info">
                                 <h3>Hans Down</h3>
@@ -385,7 +409,11 @@ const BlogSinglePage = () => {
               <div className="blog_sidebar pl-40">
                 <div className="widget about_widget">
                   <div className="img">
-                    <Image src={aboutImg} alt="About"  style={{width:"auto",height:"auto"}} />
+                    <Image
+                      src={aboutImg}
+                      alt="About"
+                      style={{ width: "auto", height: "auto" }}
+                    />
                   </div>
                   <div className="text">
                     <Link href="#">
@@ -572,22 +600,46 @@ const BlogSinglePage = () => {
                   <h4 className="c_head">Instragram</h4>
                   <div className="instragram_info">
                     <Link href="#" className="instragram_item">
-                      <Image src={insta01} alt="Instagram"  style={{width:"auto",height:"auto"}} />
+                      <Image
+                        src={insta01}
+                        alt="Instagram"
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta02} alt="Instagram"  style={{width:"auto",height:"auto"}} />
+                      <Image
+                        src={insta02}
+                        alt="Instagram"
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta03} alt="Instagram"  style={{width:"auto",height:"auto"}} />
+                      <Image
+                        src={insta03}
+                        alt="Instagram"
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta04} alt="Instagram"  style={{width:"auto",height:"auto"}} />
+                      <Image
+                        src={insta04}
+                        alt="Instagram"
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta05} alt="Instagram" style={{width:"auto",height:"auto"}} />
+                      <Image
+                        src={insta05}
+                        alt="Instagram"
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </Link>
                     <Link href="#" className="instragram_item">
-                      <Image src={insta06} alt="Instagram" style={{width:"auto",height:"auto"}} />
+                      <Image
+                        src={insta06}
+                        alt="Instagram"
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </Link>
                   </div>
                 </div>
