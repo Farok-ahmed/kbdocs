@@ -39,7 +39,7 @@ export default function CallToAction() {
               viewport={{ once: true, amount: 0.5 }}
             >
               <div>
-                <Link href="" className="action_btn">
+                <Link href="/doc-archive" className="action_btn">
                   View All Docs <i className="arrow_right"></i>
                 </Link>
               </div>

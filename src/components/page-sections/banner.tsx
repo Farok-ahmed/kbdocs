@@ -69,7 +69,7 @@ export default function Banner() {
       <div className="container">
         <div className="doc_banner_text_two text-center">
           <h2>Looking for help?</h2>
-          <p>KnowAll is a fully featured knowledge base theme for WordPress.</p>
+          <p>kbDoc is a fully featured knowledge base theme for WordPress.</p>
           <form
             action="#"
             onSubmit={(e) => e.preventDefault()}

@@ -156,7 +156,7 @@ export default function Footer() {
                     <Link href={pages.helpDesk}>Help Desk</Link>
                   </li>
                   <li>
-                    <Link href="/">Knowledge Base</Link>
+                    <Link href="/doc-archive">Knowledge Base</Link>
                   </li>
                   <li>
                     <Link href="/forums">Live Chat</Link>
@@ -192,7 +192,7 @@ export default function Footer() {
                     <Link href="/docs">Doc Topic</Link>
                   </li>
                   <li>
-                    <Link href="#">Free Training</Link>
+                    <Link href="/docs/shortcodes/tooltip">Tooltip</Link>
                   </li>
                   <li>
                     <Link href="/doc-archive">Doc Archive</Link>
@@ -204,10 +204,10 @@ export default function Footer() {
                     <Link href="/one-page">Onepage Docs</Link>
                   </li>
                   <li>
-                    <Link href="#">Conversion Tracking</Link>
+                    <Link href="/docs/content/keyboard-shortcuts">Keyboard Shortcuts</Link>
                   </li>
                   <li>
-                    <Link href="/docs/content/cheatsheet">Cheat Sheet</Link>
+                    <Link href="/docs/content/cheatsheet">Cheatseet</Link>
                   </li>
                 </ul>
               </motion.div>

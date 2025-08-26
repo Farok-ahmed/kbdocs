@@ -46,7 +46,7 @@ export default function Solution() {
                 Horse play barmy Oxford bonnet are you taking the piss cheeky
                 mufty nice one young delinquent.
               </p>
-              <Link href="" className="learn_btn c_blue">
+              <Link href="/doc-archive" className="learn_btn c_blue">
                 Go To Documentation
                 <i className="arrow_right"></i>
               </Link>
@@ -69,7 +69,7 @@ export default function Solution() {
                 Horse play barmy Oxford bonnet are you taking the piss cheeky
                 mufty nice one young delinquent.
               </p>
-              <Link href="" className="learn_btn c_blue">
+              <Link href="/doc-archive" className="learn_btn c_blue">
                 Go To Documentation
                 <i className="arrow_right"></i>
               </Link>

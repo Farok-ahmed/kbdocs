@@ -34,7 +34,7 @@ export default function CoolKnowledgeBasePage() {
               </div>
             </div>
             <div className="col-lg-3 col-sm-4">
-              <Link href="" className="action_btn">
+              <Link href="/forum-topics" className="action_btn">
                 Discord Channel <i className="arrow_right"></i>
               </Link>
             </div>

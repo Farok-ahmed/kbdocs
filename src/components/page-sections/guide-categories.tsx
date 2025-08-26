@@ -45,11 +45,11 @@ export default function GuideCategories() {
       image: folderImg,
       delay: "0s",
       links: [
-        { id: 1, text: "Setup home page layout", href: "" },
-        { id: 2, text: "BBpress sidebar layout styles", href: "" },
-        { id: 3, text: "Knowledgebase page setup", href: "" },
-        { id: 4, text: "Creating home page blocks", href: "" },
-        { id: 5, text: "How do i add FAQ post", href: "" },
+        { id: 1, text: "Setup home page layout", href: "/docs/shortcodes/can-use" },
+        { id: 2, text: "BBpress sidebar layout styles", href: "/docs/shortcodes/can-use" },
+        { id: 3, text: "Knowledgebase page setup", href: "/docs/shortcodes/can-use" },
+        { id: 4, text: "Creating home page blocks", href: "/docs/shortcodes/can-use" },
+        { id: 5, text: "How do i add FAQ post", href: "/docs/shortcodes/can-use" },
       ],
     },
     {
@@ -58,11 +58,11 @@ export default function GuideCategories() {
       image: infoImg,
       delay: "0.2s",
       links: [
-        { id: 1, text: "How To Install Manual Theme", href: "" },
-        { id: 2, text: "Theme license information", href: "" },
-        { id: 3, text: "How do i create tree structure menu", href: "" },
-        { id: 4, text: "How do I login forum section", href: "" },
-        { id: 5, text: "How do I login forum section", href: "" },
+        { id: 1, text: "How To Install Manual Theme", href: "/docs/shortcodes/can-use" },
+        { id: 2, text: "Theme license information", href: "/docs/shortcodes/can-use" },
+        { id: 3, text: "How do i create tree structure menu", href: "/docs/shortcodes/can-use" },
+        { id: 4, text: "How do I login forum section", href: "/docs/shortcodes/can-use" },
+        { id: 5, text: "How do I login forum section", href: "/docs/shortcodes/can-use" },
       ],
     },
     {
@@ -71,11 +71,11 @@ export default function GuideCategories() {
       image: weatherImg,
       delay: "0.4s",
       links: [
-        { id: 1, text: "Mailbox and User Settings", href: "" },
-        { id: 2, text: "Preparing your server for installation", href: "" },
-        { id: 3, text: "Managing Docs in KbDoc", href: "" },
-        { id: 4, text: "How do i add FAQ post", href: "" },
-        { id: 5, text: "Creating home page blocks", href: "" },
+        { id: 1, text: "Mailbox and User Settings", href: "/docs/shortcodes/can-use" },
+        { id: 2, text: "Preparing your server for installation", href: "/docs/shortcodes/can-use" },
+        { id: 3, text: "Managing Docs in KbDoc", href: "/docs/shortcodes/can-use" },
+        { id: 4, text: "How do i add FAQ post", href: "/docs/shortcodes/can-use" },
+        { id: 5, text: "Creating home page blocks", href: "/docs/shortcodes/can-use" },
       ],
     },
     {
@@ -84,11 +84,11 @@ export default function GuideCategories() {
       image: settingsImg,
       delay: "0s",
       links: [
-        { id: 1, text: "Do I need to know coding", href: "" },
-        { id: 2, text: "Managing Docs in KbDoc", href: "" },
-        { id: 3, text: "Working with Conversations", href: "" },
-        { id: 4, text: "Copying Email to KbDoc", href: "" },
-        { id: 5, text: "Knowledgebase page setup", href: "" },
+        { id: 1, text: "Do I need to know coding", href: "/docs/shortcodes/can-use" },
+        { id: 2, text: "Managing Docs in KbDoc", href: "/docs/shortcodes/can-use" },
+        { id: 3, text: "Working with Conversations", href: "/docs/shortcodes/can-use" },
+        { id: 4, text: "Copying Email to KbDoc", href: "/docs/shortcodes/can-use" },
+        { id: 5, text: "Knowledgebase page setup", href: "/docs/shortcodes/can-use" },
       ],
     },
     {
@@ -97,11 +97,11 @@ export default function GuideCategories() {
       image: memoImg,
       delay: "0.4s",
       links: [
-        { id: 1, text: "Setup home page layout", href: "" },
-        { id: 2, text: "BBpress sidebar layout styles", href: "" },
-        { id: 3, text: "Knowledgebase page setup", href: "" },
-        { id: 4, text: "Creating home page blocks", href: "" },
-        { id: 5, text: "How do i add FAQ post", href: "" },
+        { id: 1, text: "Setup home page layout", href: "/docs/shortcodes/can-use" },
+        { id: 2, text: "BBpress sidebar layout styles", href: "/docs/shortcodes/can-use" },
+        { id: 3, text: "Knowledgebase page setup", href: "/docs/shortcodes/can-use" },
+        { id: 4, text: "Creating home page blocks", href: "/docs/shortcodes/can-use" },
+        { id: 5, text: "How do i add FAQ post", href: "/docs/shortcodes/can-use" },
       ],
     },
     {
@@ -110,11 +110,11 @@ export default function GuideCategories() {
       image: shareImg,
       delay: "0.6s",
       links: [
-        { id: 1, text: "How do I contact Customer Care?", href: "" },
-        { id: 2, text: "How to enable labs features", href: "" },
-        { id: 3, text: "Knowledgebase page setup", href: "" },
-        { id: 4, text: "How do I login forum section", href: "" },
-        { id: 5, text: "Mailbox and User Settings", href: "" },
+        { id: 1, text: "How do I contact Customer Care?", href: "/docs/shortcodes/can-use" },
+        { id: 2, text: "How to enable labs features", href: "/docs/shortcodes/can-use" },
+        { id: 3, text: "Knowledgebase page setup", href: "/docs/shortcodes/can-use" },
+        { id: 4, text: "How do I login forum section", href: "/docs/shortcodes/can-use" },
+        { id: 5, text: "Mailbox and User Settings", href: "/docs/shortcodes/can-use" },
       ],
     },
   ];
@@ -168,7 +168,7 @@ export default function GuideCategories() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="" className="doc_border_btn">
+                  <Link href="/docs" className="doc_border_btn">
                     More <i className="arrow_right"></i>
                   </Link>
                 </motion.div>
@@ -177,7 +177,7 @@ export default function GuideCategories() {
           </div>
         </div>
         <div className="text-center">
-          <Link href="" className="doc_border_btn all_doc_btn wow fadeinUp">
+          <Link href="/doc-archive" className="doc_border_btn all_doc_btn wow fadeinUp">
             View All Docs<i className="arrow_right"></i>
           </Link>
         </div>

@@ -89,14 +89,14 @@ const TagsArea = () => {
                         <ul className="list-unstyled tag_list">
                           {section.links.map((link, linkIndex) => (
                             <li key={linkIndex}>
-                              <Link href="">
+                              <Link href="/docs/shortcodes/can-use">
                                 <i className="icon_document_alt"></i>
                                 {link}
                               </Link>
                             </li>
                           ))}
                         </ul>
-                        <Link href="" className="learn_btn">
+                        <Link href="/docs" className="learn_btn">
                           View All
                           <i className="arrow_right"></i>
                         </Link>

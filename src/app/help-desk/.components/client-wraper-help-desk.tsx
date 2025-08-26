@@ -85,7 +85,7 @@ const ClientWrapperHelpDesk = () => {
       icon: rc2,
       title: "Integrations",
       posts: "624 Posts",
-      link: "",
+      link: "/forums",
       delay: 0.7,
     },
     {
@@ -757,7 +757,7 @@ const ClientWrapperHelpDesk = () => {
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <Link href="#" className="action_btn">
+              <Link href="/forums" className="action_btn">
                 Join the community <i className="arrow_right"></i>
               </Link>
             </motion.div>

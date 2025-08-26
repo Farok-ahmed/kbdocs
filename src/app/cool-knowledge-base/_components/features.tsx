@@ -10,21 +10,21 @@ const Features = () => {
       title: "Knowledge Base",
       description: "Oxford bonnet are you taking the piss cheeky mufty.",
       image: "/img/home_one/Lamp_idea.png",
-      link: "",
+      link: "/doc-archive",
     },
     {
       id: 2,
       title: "Community Forums",
       description: "Oxford bonnet are you taking the piss cheeky mufty.",
       image: "/img/home_one/chat.png",
-      link: "",
+      link: "/forums",
     },
     {
       id: 3,
       title: "Documentation",
       description: "Oxford bonnet are you taking the piss cheeky mufty.",
       image: "/img/home_one/Duplicate.png",
-      link: "",
+      link: "/doc-archive",
     },
   ];
   return (
@@ -47,11 +47,11 @@ const Features = () => {
                 >
                   <Image src={item.image} alt="" width={80} height={80} />
                   <div className="media-body">
-                    <Link href="">
+                    <Link href={item.link}>
                       <h3>{item.title}</h3>
                     </Link>
                     <p>{item.description}</p>
-                    <Link href="" className="learn_btn">
+                    <Link href={item.link} className="learn_btn">
                       Learn More <i className="arrow_right"></i>
                     </Link>
                   </div>

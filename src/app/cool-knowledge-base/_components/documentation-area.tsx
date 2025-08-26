@@ -246,7 +246,7 @@ const DocumentationArea = () => {
                             />
                           </div>
                           <div className="media-body">
-                            <Link href="">
+                            <Link href="/docs/shortcodes/can-use">
                               <h5>{item.title}</h5>
                             </Link>
                             <p>{item.description}</p>
