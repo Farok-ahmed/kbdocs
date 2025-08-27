@@ -37,7 +37,7 @@ const ForumSidebar = () => {
             {TicketCategories.map((category) => (
               <li key={category.id}>
                 <Image src={category.icon} alt="category" />
-                <Link href="#">{category.name}</Link>
+                <Link href="/forum-topics">{category.name}</Link>
                 {category.activeCount && (
                   <span className="count count-fill">
                     {category.activeCount}

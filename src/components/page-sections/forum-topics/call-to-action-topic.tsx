@@ -17,7 +17,7 @@ const CallToActionTopic = () => {
               />
               <h2 className="action-title">New to Communities?</h2>
             </div>
-            <Link href="#" className="action_btn">
+            <Link href="/register" className="action_btn">
               Join the community <i className="arrow_right"></i>
             </Link>
           </div>

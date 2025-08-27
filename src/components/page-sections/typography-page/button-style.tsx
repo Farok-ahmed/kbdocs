@@ -59,8 +59,8 @@ const ButtonStyle = () => {
           <Link href="#" className="doc_border_btn arrow_btn_medium">
             View All Docs<i className="arrow_right"></i>
           </Link>
-          <Link href="#" className="doc_border_btn arrow_btn_big">
-            Live Chat Now<i className="icon_chat_alt"></i>
+          <Link href="/register" className="doc_border_btn arrow_btn_big">
+            Get Started<i className="icon_chat_alt"></i>
           </Link>
           <Link className="nav_btn icon_btn arrow_btn_small" href="#">
             <i className="icon_house_alt"></i>View All Docs

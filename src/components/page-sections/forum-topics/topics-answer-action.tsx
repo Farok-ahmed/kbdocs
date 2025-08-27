@@ -18,7 +18,7 @@ const TopicsAnswerAction = () => {
         </div>
 
         <div className="action-button-container">
-          <Link href="#" className="action_btn btn-ans">
+          <Link href="/contact" className="action_btn btn-ans">
             Ask a Question
           </Link>
         </div>

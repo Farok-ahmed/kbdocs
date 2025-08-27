@@ -40,7 +40,7 @@ const BlogSinglePage = () => {
                   <h4>Jason Response</h4>
                 </Link>
                 <div className="post_tag">
-                  <Link href="#">April 16, 2020</Link>
+                  <Link href="#">April 16, 2025</Link>
                   <Link href="#">18 Min Read</Link>
                   <Link className="c_blue" href="#">
                     WordPress

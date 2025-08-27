@@ -757,7 +757,7 @@ const ClientWrapperHelpDesk = () => {
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <Link href="/forums" className="action_btn">
+              <Link href="/register" className="action_btn">
                 Join the community <i className="arrow_right"></i>
               </Link>
             </motion.div>

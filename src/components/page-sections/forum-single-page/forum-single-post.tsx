@@ -43,7 +43,7 @@ const ForumSinglePost = () => {
         </div>
         <div className="col-lg-3">
           <div className="action-button-container">
-            <Link href="#" className="action_btn btn-ans ask-btn">
+            <Link href="/contact" className="action_btn btn-ans ask-btn">
               Ask Question
             </Link>
           </div>

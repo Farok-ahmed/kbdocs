@@ -78,11 +78,11 @@ export default function Solution() {
         </div>
         <div className="text-center">
           <Link
-            href=""
+            href="/register"
             className="doc_border_btn all_doc_btn wow fadeInUp"
             data-wow-delay="0.6s"
           >
-            Live Chat Now<i className="icon_chat_alt"></i>
+            Get Started<i className="icon_chat_alt"></i>
           </Link>
         </div>
       </div>

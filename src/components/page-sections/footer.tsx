@@ -117,19 +117,19 @@ export default function Footer() {
                 <h3 className="f_title">Company</h3>
                 <ul className="list-unstyled link_list">
                   <li>
-                    <Link href="#">About Us</Link>
+                    <Link href="/login">Sign in</Link>
                   </li>
                   <li>
-                    <Link href="#">Testimonials</Link>
+                    <Link href="/register">Sign up</Link>
                   </li>
                   <li>
-                    <Link href="#">Affiliates</Link>
+                    <Link href="/typography">Typography</Link>
                   </li>
                   <li>
-                    <Link href="#">Partners</Link>
+                    <Link href="/page-not-found">404 Page</Link>
                   </li>
                   <li>
-                    <Link href="#">Careers</Link>
+                    <Link href="/typography">Careers</Link>
                   </li>
                   <li>
                     <Link href="#">KbDoc for Good</Link>
@@ -159,19 +159,19 @@ export default function Footer() {
                     <Link href="/doc-archive">Knowledge Base</Link>
                   </li>
                   <li>
-                    <Link href="/forums">Live Chat</Link>
+                    <Link href="/typography">Live Chat</Link>
                   </li>
                   <li>
                     <Link href="#">Integrations</Link>
                   </li>
                   <li>
-                    <Link href="#">Reports</Link>
+                    <Link href="/forums">Forums</Link>
                   </li>
                   <li>
-                    <Link href="#">iOS & Android</Link>
+                    <Link href="/forum-topics">Topics</Link>
                   </li>
                   <li>
-                    <Link href="#">Messages</Link>
+                    <Link href="/forum-single">Messages</Link>
                   </li>
                 </ul>
               </motion.div>
