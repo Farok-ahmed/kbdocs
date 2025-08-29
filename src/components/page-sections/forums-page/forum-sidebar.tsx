@@ -55,7 +55,7 @@ const ForumSidebar = () => {
           <ul className="list-unstyled w_tag_list style-light">
             {tagsData.map((tag) => (
               <li key={tag.id}>
-                <Link href="#">{tag.name}</Link>
+                <Link href="/forum-topics">{tag.name}</Link>
               </li>
             ))}
           </ul>

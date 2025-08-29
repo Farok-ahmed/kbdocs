@@ -94,43 +94,43 @@ const ForumSingleSidebar = () => {
             <h4 className="c_head">Tags</h4>
             <ul className="list-unstyled w_tag_list style-light">
               <li>
-                <Link href="#">Swagger</Link>
+                <Link href="/forum-topics">Swagger</Link>
               </li>
               <li>
-                <Link href="#">KbDoc</Link>
+                <Link href="/forum-topics">KbDoc</Link>
               </li>
               <li>
-                <Link href="#">weCare</Link>
+                <Link href="/forum-topics">weCare</Link>
               </li>
               <li>
-                <Link href="#">Business</Link>
+                <Link href="/forum-topics">Business</Link>
               </li>
               <li>
-                <Link href="#">Download</Link>
+                <Link href="/forum-topics">Download</Link>
               </li>
               <li>
-                <Link href="#">Doc</Link>
+                <Link href="/forum-topics">Doc</Link>
               </li>
               <li>
-                <Link href="#">WordPress</Link>
+                <Link href="/forum-topics">WordPress</Link>
               </li>
               <li>
-                <Link href="#">Design</Link>
+                <Link href="/forum-topics">Design</Link>
               </li>
               <li>
-                <Link href="#">ui/ux</Link>
+                <Link href="/forum-topics">ui/ux</Link>
               </li>
               <li>
-                <Link href="#">Doc Design</Link>
+                <Link href="/forum-topics">Doc Design</Link>
               </li>
               <li>
-                <Link href="#">DocAll</Link>
+                <Link href="/forum-topics">DocAll</Link>
               </li>
               <li>
-                <Link href="#">Productboard</Link>
+                <Link href="/forum-topics">Productboard</Link>
               </li>
               <li>
-                <Link href="#">Magento</Link>
+                <Link href="/forum-topics">Magento</Link>
               </li>
             </ul>
           </div>

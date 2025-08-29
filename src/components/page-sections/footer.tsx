@@ -159,10 +159,10 @@ export default function Footer() {
                     <Link href="/doc-archive">Knowledge Base</Link>
                   </li>
                   <li>
-                    <Link href="/typography">Live Chat</Link>
+                    <Link href="/forum-single">Live Chat</Link>
                   </li>
                   <li>
-                    <Link href="#">Integrations</Link>
+                    <Link href="/doc-archive">Documentation</Link>
                   </li>
                   <li>
                     <Link href="/forums">Forums</Link>
